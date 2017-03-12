@@ -2,6 +2,7 @@
  * Monochrome is a simple, responsive blog theme built for Jekyll.
  */
 /*- Base reset -*/
+@import "https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.scss";
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -87,10 +88,8 @@ a {
   left: 0; }
 
 /*- Typography -*/
-@import url(https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css);
-
 body {
-  font-family: "Computer Modern", sans-serif;
+  font-family: "Computer Modern", serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -145,7 +144,7 @@ blockquote {
     /* 24px/18px */ }
 
 /*- Typography for big screen, based on 18px font-size -*/
-@media (min-width: 940px) {
+@media (min-width: 640px) {
   p, ul, ol {
     font-size: 1em;
     /* 18px */

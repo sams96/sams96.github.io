@@ -2,8 +2,9 @@
 ---
 
 @import "{{ site.theme }}";
+@import "https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css"
 
-$font-stack: 	Computer Modern Roman;
+$font-stack: 	Latin Modern;
 
 body {
 	font: 100% $font-stack;

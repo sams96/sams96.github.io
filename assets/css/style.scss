@@ -4,7 +4,7 @@
 @import "{{ site.theme }}";
 @import "https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css"
 
-$font-stack: 	Latin Modern;
+$font-stack: 	Computer Modern Serif;
 
 body {
 	font: 100% $font-stack;

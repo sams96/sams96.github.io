@@ -87,7 +87,7 @@ a {
   left: 0; }
 
 /*- Typography -*/
-@import "https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css";
+@import url(https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css);
 
 body {
   font-family: "Computer Modern", sans-serif;

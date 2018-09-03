@@ -32,7 +32,7 @@ $text-dark-color: #000000;
 html {
 	background-color: $background-color;
 	font-size: 16px;
-	@media (min-width: 940px) {
+	@media (min-width: 36em) {
 		font-size: 18px;
 	}
 	line-height: 1.5;
@@ -40,7 +40,7 @@ html {
 }
 
 body {
- max-width: 720px;
+ max-width: 36em;
  margin: 0 auto;
  padding: 0 10px;
 }

@@ -9,7 +9,7 @@
     padding: 0.33334em 0;
     font-size: 1.5em;
     font-weight: 400;
-    @media (min-width: 940px) {
+    @media (min-width: 36em) {
       font-size: 1em;
     }
     &:hover {
@@ -40,7 +40,7 @@
 }
 
 #nav-links {
-  @media (max-width: 940px) {
+  @media (max-width: 36em) {
     display:none;
   }   
   a {
@@ -65,14 +65,14 @@
 
 #nav-menu {
   @include icon-position(right);
-  @media (min-width: 940px) {
+  @media (min-width: 36em) {
     display:none;
   }
 }
 
 #nav-menu-left {
   @include icon-position(left);
-  @media (min-width: 940px) {
+  @media (min-width: 36em) {
     display:none;
   }
 }
@@ -123,7 +123,7 @@
 .fixed {
   position: fixed;
   width: 100%;
-  @media (min-width: 940px) {
+  @media (min-width: 36em) {
     position: static;
   }
 }
@@ -165,7 +165,7 @@
 
 #post-page {
   margin-bottom: 1.5em;
-  @media (min-width: 940px) {
+  @media (min-width: 36em) {
       margin-bottom: 1.3334em;
     }
 }
@@ -185,7 +185,7 @@
   line-height: 1.5em; /* 24px/16px */
   margin-bottom: 1.5em; /* 24px/16px */
   font-weight: 200;
-  @media (min-width: 940px) {
+  @media (min-width: 36em) {
     display: block;
     color: lighten($text-color, 25%);
     line-height: 1.3334em; /* 24px/18px */
@@ -219,7 +219,7 @@ code {
 .content ul, .content ol {
   line-height: 1.5em; /* 24px/16px */
   padding-left: 1.5em;
-  @media (min-width: 940px) {
+  @media (min-width: 36em) {
     line-height: 1.33334em; /* 24px/18px */
   }
 }

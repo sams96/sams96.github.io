@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Sam Smith</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <id>http://localhost:4000</id>
- <updated>2017-04-10T15:33:36+01:00</updated>
+ <link href="/atom.xml" rel="self"/>
+ <id></id>
+ <updated>2018-09-03T12:52:35+01:00</updated>
  <author>
    <name>Sam Smith</name>
    <uri></uri>
@@ -14,9 +14,19 @@
  
 
  <entry>
+   <title>test</title>
+   <link href="/test"/>
+   <id>/test</id>
+   <updated>2018-09-03T00:00:00+01:00</updated>
+   <content type="html">&lt;p&gt;This is just a test to try and find out the text width on this site, thank you for reading.&lt;/p&gt; &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sapien ligula, posuere rhoncus hendrerit ac, viverra quis sapien. Praesent sit amet consectetur augue. Pellentesque habitant morbi tristique senectus et netus...</content>
+ </entry>
+
+ 
+
+ <entry>
    <title>Wye</title>
-   <link href="http://localhost:4000/wye"/>
-   <id>http://localhost:4000/wye</id>
+   <link href="/wye"/>
+   <id>/wye</id>
    <updated>2017-04-02T00:00:00+01:00</updated>
    <content type="html">&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/ss9679/33547847840/in/dateposted-public/&quot; title=&quot;Matterhorn&quot;&gt;
 	&lt;img src=&quot;https://c1.staticflickr.com/4/3946/33547847840_a7332de4ec_c.jpg&quot; width=&quot;720&quot; height=&quot;720&quot; alt=&quot;Wye&quot; /&gt;
@@ -29,8 +39,8 @@
 
  <entry>
    <title>Rocks</title>
-   <link href="http://localhost:4000/rocks"/>
-   <id>http://localhost:4000/rocks</id>
+   <link href="/rocks"/>
+   <id>/rocks</id>
    <updated>2017-03-04T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/ss9679/33172757860/in/dateposted-public/&quot; title=&quot;Matterhorn&quot;&gt;
 	&lt;img src=&quot;https://c1.staticflickr.com/4/3943/33172757860_a93993b156_c.jpg&quot; width=&quot;720&quot; height=&quot;720&quot; alt=&quot;Rocks&quot; /&gt;
@@ -43,8 +53,8 @@
 
  <entry>
    <title>Matterhorn</title>
-   <link href="http://localhost:4000/matterhorn"/>
-   <id>http://localhost:4000/matterhorn</id>
+   <link href="/matterhorn"/>
+   <id>/matterhorn</id>
    <updated>2016-07-30T00:00:00+01:00</updated>
    <content type="html">&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/ss9679/28385500243/in/dateposted-public/&quot; title=&quot;Matterhorn&quot;&gt;
 	&lt;img src=&quot;https://c1.staticflickr.com/9/8541/28385500243_60285890b4_k.jpg&quot; width=&quot;720&quot; height=&quot;720&quot; alt=&quot;Matterhorn&quot; /&gt;

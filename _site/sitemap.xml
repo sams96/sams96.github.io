@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/matterhorn</loc>
+<loc>/matterhorn</loc>
 <lastmod>2016-07-30T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/rocks</loc>
+<loc>/rocks</loc>
 <lastmod>2017-03-04T00:00:00+00:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/wye</loc>
+<loc>/wye</loc>
 <lastmod>2017-04-02T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/404</loc>
+<loc>/test</loc>
+<lastmod>2018-09-03T00:00:00+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/about</loc>
+<loc>/404</loc>
 </url>
 <url>
-<loc>http://localhost:4000/</loc>
+<loc>/about</loc>
+</url>
+<url>
+<loc>/</loc>
 </url>
 </urlset>

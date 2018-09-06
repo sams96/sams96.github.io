@@ -1,11 +1,11 @@
 # Site settings
 title: Sam Smith
 description: ""
-url: ""
+url: "mondoman712.github.io"
 author:
   name: "Sam Smith"
   email: "sams96@mail.com"
-  url: ""
+  url: "mondoman712.github.io"
 
 # Build settings
   baseurl: / # Change this to your relative path (ex: /blog/), or leave just a /
@@ -29,6 +29,7 @@ defaults:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
+#  - jekyll-archives
 
 # Custom variables
 version: "1.0.0"

@@ -4,12 +4,22 @@
  <title>Sam Smith</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-09-03T22:32:36+01:00</updated>
+ <updated>2018-09-06T17:54:05+01:00</updated>
  <author>
    <name>Sam Smith</name>
-   <uri></uri>
+   <uri>mondoman712.github.io</uri>
    <email>sams96@mail.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>Subways</title>
+   <link href="http://localhost:4000/subways"/>
+   <id>http://localhost:4000/subways</id>
+   <updated>2018-09-06T00:00:00+01:00</updated>
+   <content type="html">&lt;p&gt;This is the remnants of a failed attempt at a photo project looking at Birmingham’s pedestrian subways. I never really thought it was a very good idea for a project but I decided to take it on because I wanted to try shooting a project and it was the best...</content>
+ </entry>
 
  
 

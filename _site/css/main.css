@@ -86,6 +86,9 @@ a {
 .left {
   left: 0; }
 
+hr {
+  width: 15%; }
+
 /*- Typography -*/
 body {
   font-family: serif;

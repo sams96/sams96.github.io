@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Sam Smith</title>
- <link href="mondoman712.github.io/atom.xml" rel="self"/>
- <id>mondoman712.github.io</id>
- <updated>2018-09-27T18:12:30+01:00</updated>
+ <link href="http://localhost:4000/atom.xml" rel="self"/>
+ <id>http://localhost:4000</id>
+ <updated>2018-09-28T00:25:53+01:00</updated>
  <author>
    <name>Sam Smith</name>
    <uri>mondoman712.github.io</uri>
@@ -15,8 +15,8 @@
 
  <entry>
    <title>Subways</title>
-   <link href="mondoman712.github.io/subways"/>
-   <id>mondoman712.github.io/subways</id>
+   <link href="http://localhost:4000/subways"/>
+   <id>http://localhost:4000/subways</id>
    <updated>2018-09-07T00:00:00+01:00</updated>
    <content type="html">&lt;p&gt;This is the remnants of a failed attempt at a photo project looking at Birmingham’s pedestrian subways. I never really thought it was a very good idea for a project but I decided to give it a go anyway because I wanted to try shooting a project and it was...</content>
  </entry>
@@ -25,8 +25,8 @@
 
  <entry>
    <title>Scrap Collectors</title>
-   <link href="mondoman712.github.io/scrap"/>
-   <id>mondoman712.github.io/scrap</id>
+   <link href="http://localhost:4000/scrap"/>
+   <id>http://localhost:4000/scrap</id>
    <updated>2018-09-03T00:00:00+01:00</updated>
    <content type="html">&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/ss9679/29518221107/in/dateposted/&quot; title=&quot;Scrap Collectors&quot;&gt; &lt;img src=&quot;https://farm2.staticflickr.com/1894/29518221107_09a9ff1bfa_b.jpg&quot; width=&quot;1024&quot; height=&quot;1024&quot; alt=&quot;Scrap Collectors&quot; /&gt; &lt;/a&gt; &lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt; I took this photo in Ma Tau Kok, Hong Kong on the way to visit the Kowloon Walled City Park. I don’t really remember much about my intentions behind the photo beyond &lt;em&gt;this...</content>
  </entry>

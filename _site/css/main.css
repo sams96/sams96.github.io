@@ -405,6 +405,7 @@ blockquote {
 
 img {
   max-width: 100%;
+  height: 36em;
   display: block;
   margin: 0 auto;
   margin-bottom: 24px;

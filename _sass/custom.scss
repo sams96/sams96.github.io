@@ -1,3 +1,16 @@
 /*- Custom style -*/
 
 // -- Put custom style under this point -- //
+
+* { 
+	margin: 0;
+	padding: 0;
+}
+.imgbox {
+	display: grid;
+	height: 100%;
+}
+.centre-fit {
+	max-height: 100vh;
+	margin: auto;
+}

@@ -8,7 +8,13 @@ categories: [photography]
 tags: [photography]
 ---
 
+This set of images begins where the [last portfolio](/portfolio-i) leaves off
+and primarily shows my travels during the summer of 2017, with the last image
+being the only one outside of that.
 <!--break-->
+
+<i class="caption">Untitled</i>
+<br>
 
 <a href="https://www.flickr.com/photos/ss9679/39727749280/" 
 	title="West Lake">
@@ -25,10 +31,20 @@ tags: [photography]
 <br>
 
 <a href="https://www.flickr.com/photos/ss9679/37747419706/"
-	title="Koishikawa K?rakuen Garden">
+	title="Koishikawa K&#333;rakuen Garden">
 <img src="https://farm5.staticflickr.com/4464/37747419706_337c3f2323_b.jpg" 
-	alt="Koishikawa K?rakuen Garden"></a>
-<i class="caption">Koishikawa K&#333rakuen Garden</i>
+	alt="Koishikawa K&#333;rakuen Garden"></a>
+<i class="caption">Koishikawa K&#333;rakuen Garden</i>
+<br>
+
+<a href="https://www.flickr.com/photos/ss9679/30891949597/" 
+	title="Tensouchi">
+<img src="https://farm5.staticflickr.com/4814/30891949597_b239a7a1c4_b.jpg" 
+	alt="Tensouchi"></a>
+<i class="caption">Tensouchi</i>
+<br>
+
+<i class="caption">Red Gum</i>
 <br>
 
 <a href="https://www.flickr.com/photos/ss9679/40922135730/"
@@ -38,6 +54,8 @@ tags: [photography]
 <i class="caption">Tasman Island</i>
 <br>
 
+<i class="caption">Lake Gordon</i>
+<br>
 
 <a href="https://www.flickr.com/photos/ss9679/38932945371/" 
 	title="Adelaide Palm House">
@@ -46,9 +64,19 @@ tags: [photography]
 <i class="caption">Adelaide Palm House</i>
 <br>
 
+<i class="caption">Escalators</i>
+<br>
+
 <a href="https://www.flickr.com/photos/ss9679/39470041022/"
 	title="Ulsanbawi">
 <img src="https://farm5.staticflickr.com/4691/39470041022_912d3cfdc4_b.jpg" 
 	alt="Ulsanbawi"></a>
 <i class="caption">Ulsanbawi</i>
+<br>
+
+<a href="https://www.flickr.com/photos/ss9679/44977963555/"
+	title="Clifton Boulevard">
+<img src="https://farm5.staticflickr.com/4896/44977963555_6bbb65fe79_b.jpg"
+	alt="Clifton Boulevard"></a>
+<i class="caption">Clifton Boulevard</i>
 <br>

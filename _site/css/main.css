@@ -88,7 +88,8 @@ a {
   left: 0; }
 
 hr {
-  width: 15%; }
+  width: 15%;
+  align: center; }
 
 /*- Typography -*/
 body {
@@ -744,3 +745,25 @@ footer {
 .centre-fit {
   max-height: 100vh;
   margin: auto; }
+
+.page {
+  height: 100vh;
+  position: relative; }
+
+.wider {
+  height: 100vh;
+  position: relative;
+  max-width: 80em;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px; }
+
+.bl {
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+.br {
+  position: absolute;
+  bottom: 0;
+  right: 0; }

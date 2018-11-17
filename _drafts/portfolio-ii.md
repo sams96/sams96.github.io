@@ -10,7 +10,10 @@ tags: [photography]
 
 This set of images begins where the [last portfolio](/portfolio-i) leaves off
 and primarily shows my travels during the summer of 2017, with the last image
-being the only one outside of that.
+being the only one outside of that. I have again chosen to stick to black and
+white images taken with my Hasselblad for consistency, and because it's what I
+primary set-up. I am planning on doing one of these with the colour photos that
+I've taken since I started shooting square.
 <!--break-->
 
 <i class="caption">Untitled</i>
@@ -44,6 +47,10 @@ being the only one outside of that.
 <i class="caption">Tensouchi</i>
 <br>
 
+<a href="https://www.flickr.com/photos/ss9679/45808891812/"
+	title="Red Gum">
+<img src="https://farm2.staticflickr.com/1969/45808891812_7435c22ef9_b.jpg"
+	alt="Red Gum"></a>
 <i class="caption">Red Gum</i>
 <br>
 
@@ -54,6 +61,10 @@ being the only one outside of that.
 <i class="caption">Tasman Island</i>
 <br>
 
+<a href="https://www.flickr.com/photos/ss9679/45907948121/"
+	title="Lake Gordon">
+<img src="https://farm5.staticflickr.com/4908/45907948121_ecbe1aa947_b.jpg"
+	alt="Lake Gordon"></a>
 <i class="caption">Lake Gordon</i>
 <br>
 
@@ -80,3 +91,6 @@ being the only one outside of that.
 	alt="Clifton Boulevard"></a>
 <i class="caption">Clifton Boulevard</i>
 <br>
+
+All of these images were shot on Ilford HP5+, and all but the last one pushed to
+ISO 800, which has become something of a default for me.

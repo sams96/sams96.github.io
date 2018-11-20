@@ -5,7 +5,7 @@ description:
 header: Portfolio II
 permalink: '/portfolio-ii'
 categories: [photography]
-tags: [photography]
+tags: [photography, portfolio]
 ---
 
 This set of images begins where the [last portfolio](/portfolio-i) leaves off
@@ -75,6 +75,10 @@ I've taken since I started shooting square.
 <i class="caption">Adelaide Palm House</i>
 <br>
 
+<a href="https://www.flickr.com/photos/ss9679/44144817870/" 
+	title="Escalators">
+<img src="https://farm5.staticflickr.com/4902/44144817870_e5b6b0696b_b.jpg" 
+	alt="Escalators"></a>
 <i class="caption">Escalators</i>
 <br>
 

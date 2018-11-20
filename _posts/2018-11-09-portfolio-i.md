@@ -5,7 +5,7 @@ description:
 header: Portfolio I
 permalink: '/portfolio-i'
 categories: [photography]
-tags: [photography]
+tags: [photography, portfolio]
 ---
 
 This series of photographs represents approximately a years worth of work,

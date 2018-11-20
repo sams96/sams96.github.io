@@ -767,3 +767,28 @@ footer {
   position: absolute;
   bottom: 0;
   right: 0; }
+
+.diptychl {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+  @media only screen and (min-width: 72em) {
+    .diptychl {
+      position: relative;
+      right: 18em; } }
+  @media only screen and (max-width: 71.999em) {
+    .diptychl {
+      padding-bottom: 1em; } }
+
+.diptychr {
+  max-width: 36em;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0; }
+  @media only screen and (min-width: 72em) {
+    .diptychr {
+      position: relative;
+      bottom: 35em;
+      left: 18em;
+      margin-bottom: -35em; } }

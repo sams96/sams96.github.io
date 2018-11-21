@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 
+title: Qingdao Diptych
 description: 
-header: 
+header: Qingdao Diptych
 permalink: '/qingdao-diptych'
 categories: [photography]
 tags: [photography]
@@ -24,4 +24,4 @@ tags: [photography]
 <br>
 This is a pair of photos that I took from the top floor of a pagoda in
 &#23567;&#40060;&#23665;&#20844;&#22253; (Xiaoyushan park, or Little Fish Hill
-Park) in Qingdao, China.<!--break-->
+Park) in Qingdao, China.

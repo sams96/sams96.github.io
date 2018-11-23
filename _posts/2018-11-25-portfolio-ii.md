@@ -16,6 +16,10 @@ primary set-up. I am planning on doing one of these with the colour photos that
 I've taken since I started shooting square.
 <!--break-->
 
+<a href="https://www.flickr.com/photos/ss9679/45260077484/" 
+	title="Untitled">
+<img src="https://farm5.staticflickr.com/4881/45260077484_a20909e0ac_b.jpg" 
+	alt="Untitled"></a>
 <i class="caption">Untitled</i>
 <br>
 
@@ -64,7 +68,7 @@ I've taken since I started shooting square.
 <a href="https://www.flickr.com/photos/ss9679/45907948121/"
 	title="Lake Gordon">
 <img src="https://farm5.staticflickr.com/4908/45907948121_ecbe1aa947_b.jpg"
-	alt="Lake Gordon"></a>
+	alt="Lake Gordon" id="gordon"></a>
 <i class="caption">Lake Gordon</i>
 <br>
 
@@ -97,4 +101,9 @@ I've taken since I started shooting square.
 <br>
 
 All of these images were shot on Ilford HP5+, and all but the last one pushed to
-ISO 800, which has become something of a default for me.
+ISO 800, which has become something of a default for me. Also, all [but
+one](#gordon) of these images were shot with the 150mm lens, which I bought in
+March of 2017 and also used for the last four images in [Portfolio
+I](/portfolio-i). I seem to use both of the lenses I own for my Hasselblad (the
+60mm and 150mm) pretty evenly but I find most of the images that I take that I
+really like have been with the 150mm.

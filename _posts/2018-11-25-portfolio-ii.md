@@ -98,7 +98,6 @@ I've taken since I started shooting square.
 <img src="https://farm5.staticflickr.com/4896/44977963555_6bbb65fe79_b.jpg"
 	alt="Clifton Boulevard"></a>
 <i class="caption">Clifton Boulevard</i>
-<br>
 
 All of these images were shot on Ilford HP5+, and all but the last one pushed to
 ISO 800, which has become something of a default for me. Also, all [but

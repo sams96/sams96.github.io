@@ -68,3 +68,30 @@
 		margin-bottom: -35em;
 	}
 }
+
+.dpls {
+	max-width: 24em;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	padding-bottom: 1em;
+	@media only screen and (min-width: 72em) {
+		position: relative;
+		right: 14em;
+	}
+
+}
+
+.dprs {
+	max-width: 24em;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	@media only screen and (min-width: 72em) {
+		position: relative;
+		bottom: 25em;
+		left: 14em;
+		margin-bottom: -23em;
+	}
+}

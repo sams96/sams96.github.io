@@ -13,7 +13,7 @@ and primarily shows my travels during the summer of 2017, with the last image
 being the only one outside of that. I have again chosen to stick to black and
 white images taken with my Hasselblad for consistency, and because it's what I
 primary set-up. I am planning on doing one of these with the colour photos that
-I've taken since I started shooting square.
+I've taken since I started shooting square format.
 <!--break-->
 
 <a href="https://www.flickr.com/photos/ss9679/45260077484/" 

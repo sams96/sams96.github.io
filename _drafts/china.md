@@ -347,28 +347,28 @@ This is the page with the text on
 
 <br>
 
-<div class="diptychl">
+<div class="dpls">
 <a href="https://www.flickr.com/gp/ss9679/58752v"
 	title="9501">
 <img src="https://farm5.staticflickr.com/4913/31067144187_f27e96e1e7_b.jpg"
 	alt="9501"></a>
 </div>
 
-<div class="diptychr">
+<div class="dprs">
 <a href="https://www.flickr.com/gp/ss9679/L8P3u6"
 	title="4906">
 <img src="https://farm5.staticflickr.com/4888/45094575075_6ed931e5c7_b.jpg"
 	alt="4906"></a>
 </div>
 
-<div class="diptychl">
+<div class="dpls">
 <a href="https://www.flickr.com/gp/ss9679/L1274X"
 	title="4806">
 <img src="https://farm5.staticflickr.com/4877/31067145097_fab675367f_b.jpg"
 	alt="4806"></a>
 </div>
 
-<div class="diptychr">
+<div class="dprs">
 <a href="https://www.flickr.com/gp/ss9679/fZ44U3"
 	title="9404">
 <img src="https://farm5.staticflickr.com/4867/45094575695_aa5ef5b2c7_b.jpg"
@@ -381,52 +381,134 @@ This is the page with the text on
 
 * * *
 
+<div class="wider" id="page18">
+
+<br><br><br>
+<br><br><br>
+
+<div class="diptychl">
 <a href="https://www.flickr.com/gp/ss9679/7pY26Y"
 	title="9403">
 <img src="https://farm5.staticflickr.com/4806/46006079881_822cb9e787_b.jpg"
 	alt="9403"></a>
+</div>
 
+<div class="diptychr">
 <a href="https://www.flickr.com/gp/ss9679/Ect2J4"
 	title="9803">
 <img src="https://farm5.staticflickr.com/4839/45094576085_eaf26ddd4c_b.jpg"
 	alt="9803"></a>
+</div>
+
+<p class="bl"><a href="#page17"><</a></p>
+<p class="br"><a href="#page19">></a></p>
+</div>
+
+* * *
+
+<div class="wider" id="page19">
+
+<br><br><br>
 
 <a href="https://www.flickr.com/gp/ss9679/8e3VD4"
 	title="10603">
 <img src="https://farm5.staticflickr.com/4904/46006080271_432831a07f_b.jpg"
 	alt="10603"></a>
 
+<p class="bl"><a href="#page18"><</a></p>
+<p class="br"><a href="#page20">></a></p>
+</div>
+
+* * *
+
+<div class="wider" id="page20">
+
+<br><br><br>
+<br><br><br>
+
+<div class="diptychl">
 <a href="https://www.flickr.com/gp/ss9679/e0NZW5"
 	title="9303">
 <img src="https://farm5.staticflickr.com/4872/46006080571_4b67b54358_b.jpg"
 	alt="9303"></a>
+</div>
 
+<div class="diptychr">
 <a href="https://www.flickr.com/photos/ss9679/44792065362/in/album-72157703835175974/"
 	title="Tamar St">
 <img src="https://farm2.staticflickr.com/1935/44792065362_a2d93c5c0c_b.jpg"
 alt="Tamar St"></a>
+</div>
+
+<p class="bl"><a href="#page19"><</a></p>
+<p class="br"><a href="#page21">></a></p>
+</div>
+
+* * *
+
+<div class="wider" id="page21">
+
+<br><br><br>
 
 <a href="https://www.flickr.com/photos/ss9679/36898865103/in/album-72157703835175974/" 
 	title="&#21335;&#20140;&#36335;">
 <img src="https://farm5.staticflickr.com/4469/36898865103_d231e7df63_b.jpg" 
 	alt="&#21335;&#20140;&#36335;"></a>
 
+<p class="bl"><a href="#page20"><</a></p>
+<p class="br"><a href="#page22">></a></p>
+</div>
+
+* * *
+
+<div class="wider" id="page22">
+
+<br><br><br>
+<br><br><br>
+
+<div class="diptychl">
 <a href="https://www.flickr.com/gp/ss9679/mhm5G0"
 	title="10606">
 <img src="https://farm5.staticflickr.com/4917/46006081121_5c6d5f764c_b.jpg"
 	alt="10606"></a>
+</div>
 
+<div class="diptychr">
 <a href="https://www.flickr.com/gp/ss9679/7a69vk"
 	title="10609">
 <img src="https://farm5.staticflickr.com/4870/46006083281_d48ac035b9_b.jpg"
 	alt="10609"></a>
+</div>
+
+<p class="bl"><a href="#page21"><</a></p>
+<p class="br"><a href="#page23">></a></p>
+</div>
+
+* * *
+
+<div class="wider" id="page23">
+
+<br><br><br>
 
 <a href="https://www.flickr.com/gp/ss9679/x9k23A"
 	title="9812">
 <img src="https://farm5.staticflickr.com/4863/46006083921_a8fb76ecb4_b.jpg"
 	alt="9812"></a>
 
+<p class="bl"><a href="#page22"><</a></p>
+<p class="br"><a href="#page24">></a></p>
+</div>
+
+* * *
+
+<div class="wider" id="page24">
+
+<br><br><br>
+
 <a href="https://www.flickr.com/gp/ss9679/4hd5UY"
 	title="Victoria Harbour">
 <img src="https://farm5.staticflickr.com/4897/46006085141_a61c0e674b_b.jpg"
 	alt="Victoria Harbour"></a>
+
+<p class="bl"><a href="#page23"><</a></p>
+</div>

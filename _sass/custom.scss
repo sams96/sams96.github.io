@@ -69,6 +69,20 @@
 	}
 }
 
+.talldr {
+	max-width: 36em;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	@media only screen and (min-width: 72em) {
+		position: relative;
+		bottom: 47.5em;
+		left: 18em;
+		margin-bottom: -46.5em;
+	}
+}
+
 .dpls {
 	max-width: 24em;
 	margin: 0;

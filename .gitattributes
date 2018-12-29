@@ -1,0 +1,17 @@
+img/Burmese[[:space:]]Dogs/IMG_20180708_162149.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180710_124209.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180710_163217.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180711_120629.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180720_145141.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180724_153620.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180720_144436.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180724_141112.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180704_161832.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180711_114243.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180720_110126.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180724_160037.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180705_164205.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180708_091002.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180713_140312.jpg filter=lfs diff=lfs merge=lfs -text
+img/Burmese[[:space:]]Dogs/IMG_20180724_141048.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text

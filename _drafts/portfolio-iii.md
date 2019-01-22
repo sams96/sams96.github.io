@@ -40,6 +40,12 @@ tags: [photography, portfolio]
 	alt="Cascade Cavern"></a>
 <i class="caption">Cascade Cavern</i>
 
+<a href="https://www.flickr.com/photos/ss9679/45924706905/" 
+	title="Macaque">
+<img src="https://farm8.staticflickr.com/7925/45924706905_2c72230900_b.jpg"
+	alt="Macaque"></a>
+<i class="caption">Macaque</i>
+
 <a href="https://www.flickr.com/photos/ss9679/29518221107/"
 	title="Scrap Collectors">
 <img src="https://farm2.staticflickr.com/1894/29518221107_09a9ff1bfa_b.jpg"

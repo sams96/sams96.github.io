@@ -29,11 +29,17 @@ the dogs.
 <br>
 
 <img src="img/Burmese Dogs/IMG_20180705_164205.jpg">
+
 <img src="img/Burmese Dogs/IMG_20180708_091002.jpg">
+
 <img src="img/Burmese Dogs/IMG_20180708_162149.jpg">
+
 <img src="img/Burmese Dogs/IMG_20180710_124209.jpg">
+
 <img src="img/Burmese Dogs/IMG_20180711_114243.jpg">
+
 <img src="img/Burmese Dogs/IMG_20180713_140312.jpg">
+
 <img src="img/Burmese Dogs/IMG_20180720_110126.jpg">
 
 <div class="diptychl">
@@ -44,4 +50,5 @@ the dogs.
 </div>
 
 <img src="img/Burmese Dogs/IMG_20180724_141048.jpg">
+
 <img src="img/Burmese Dogs/IMG_20180724_160037.jpg">

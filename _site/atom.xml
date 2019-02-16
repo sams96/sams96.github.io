@@ -4,12 +4,22 @@
  <title>Sam Smith</title>
  <link href="mondoman712.github.io/atom.xml" rel="self"/>
  <id>mondoman712.github.io</id>
- <updated>2019-01-22T23:31:15+00:00</updated>
+ <updated>2019-02-16T17:22:19+00:00</updated>
  <author>
    <name>Sam Smith</name>
    <uri>mondoman712.github.io</uri>
    <email>sams96@mail.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>Campus Lights</title>
+   <link href="mondoman712.github.io/campus-lights"/>
+   <id>mondoman712.github.io/campus-lights</id>
+   <updated>2019-02-16T00:00:00+00:00</updated>
+   <content type="html">&lt;p&gt;As an astronomy student and hobbyist, light pollution has sort of become my environmental issue of choice. Not only is it an annoyance to astronomers, but also damaging to wildlife as well as our health and is a large energy sink. I have taken particular notice of the amount of...</content>
+ </entry>
 
  
 

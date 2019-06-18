@@ -4,12 +4,22 @@
  <title>Sam Smith</title>
  <link href="mondoman712.github.io/atom.xml" rel="self"/>
  <id>mondoman712.github.io</id>
- <updated>2019-02-16T17:22:19+00:00</updated>
+ <updated>2019-06-18T16:18:38+01:00</updated>
  <author>
    <name>Sam Smith</name>
    <uri>mondoman712.github.io</uri>
    <email>sams96@mail.com</email>
  </author>
+
+ 
+
+ <entry>
+   <title>Portfolio III - 2018</title>
+   <link href="mondoman712.github.io/portfolio-iii"/>
+   <id>mondoman712.github.io/portfolio-iii</id>
+   <updated>2019-06-18T00:00:00+01:00</updated>
+   <content type="html">&lt;p&gt;Having finished my &lt;a href=&quot;/portfolio-ii&quot;&gt;last portfolio&lt;/a&gt; at the end of 2017 I can now start doing them yearly, so this one covers 2018. This includes two trips to the Canary islands, one to Gran Canaria in March and another to Fuerteventura in December as well as another long trip around...</content>
+ </entry>
 
  
 

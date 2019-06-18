@@ -8,7 +8,19 @@ categories: [photography]
 tags: [photography, portfolio]
 ---
 
+Having finished my [last portfolio](/portfolio-ii) at the end of 2017 I can now
+start doing them yearly, so this one covers 2018. This includes two trips to the
+Canary islands, one to Gran Canaria in March and another to Fuerteventura in
+December as well as another long trip around Asia in the summer. 
+
 <!--break-->
+
+2018 is also the year during which I started to become more interested in
+collections of images rather than just single photos. I shot two rather short
+projects over the year, [Subways](/subways) and [Campus Lights](/campus-lights).
+I also attended a photo sequencing workshop at The Photo Parlour in Nottingham
+as part of the Off-Centre photo festival during which we looked at a selection
+of prints of my photos taken in China, which I have continued to work on.
 
 <a href="https://www.flickr.com/photos/ss9679/32250364118/"
 	title="Clifton Bridge">
@@ -66,7 +78,7 @@ tags: [photography, portfolio]
 
 <a href="https://www.flickr.com/photos/ss9679/46736268062/"
 	title="Ronghu Lake">
-<img src="https://farm5.staticflickr.com/4819/46736268062_76f28613bf_b.jpg"
+<img src="https://farm5.staticflickr.com/4819/46736268062_e598196832_b.jpg"
 	alt="Ronghu Lake"></a>
 <i class="caption">Ronghu Lake</i>
 
@@ -81,3 +93,9 @@ tags: [photography, portfolio]
 <img src="https://farm8.staticflickr.com/7905/46102759524_4e4d25cd88_b.jpg" 
 	alt="Towards Triquivijate"></a>
 <i class="caption">Towards Triquivijate</i>
+
+As usual all of these images were shot with my Hasselblad 500C/M and 60mm CF and
+150mm CF lenses on Ilford film, although with a bit more variation that last
+year as I have included one shot taken on Delta 100 and one on Pan F+ but the
+rest are my usual HP5+. There's also more photos taken with my 60mm lens
+included this year than there was last year.

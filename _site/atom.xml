@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Sam Smith</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <id>http://localhost:4000</id>
- <updated>2019-07-24T18:22:57+01:00</updated>
+ <link href="mondoman712.github.io/atom.xml" rel="self"/>
+ <id>mondoman712.github.io</id>
+ <updated>2019-07-24T18:23:47+01:00</updated>
  <author>
    <name>Sam Smith</name>
    <uri>mondoman712.github.io</uri>
@@ -15,8 +15,8 @@
 
  <entry>
    <title>Campus Lights Updates and Out-takes</title>
-   <link href="http://localhost:4000/campus-lights-updates"/>
-   <id>http://localhost:4000/campus-lights-updates</id>
+   <link href="mondoman712.github.io/campus-lights-updates"/>
+   <id>mondoman712.github.io/campus-lights-updates</id>
    <updated>2019-07-24T00:00:00+01:00</updated>
    <content type="html">&lt;p&gt;It’s 5 months since I posted my project &lt;a href=&quot;/campus-lights&quot;&gt;Campus Lights&lt;/a&gt;. Sadly I didn’t manage to make any progress with getting anything changed on campus, the person I’d emailed didn’t get back to me and my exams &amp;amp; dissertation took precedence so I didn’t pursue it any further.&lt;/p&gt; &lt;!--break--&gt; &lt;p&gt;I...</content>
  </entry>
@@ -25,8 +25,8 @@
 
  <entry>
    <title>Portfolio III - 2018</title>
-   <link href="http://localhost:4000/portfolio-iii"/>
-   <id>http://localhost:4000/portfolio-iii</id>
+   <link href="mondoman712.github.io/portfolio-iii"/>
+   <id>mondoman712.github.io/portfolio-iii</id>
    <updated>2019-06-18T00:00:00+01:00</updated>
    <content type="html">&lt;p&gt;Having finished my &lt;a href=&quot;/portfolio-ii&quot;&gt;last portfolio&lt;/a&gt; at the end of 2017 I can now start doing them yearly, so this one covers 2018. This includes two trips to the Canary islands, one to Gran Canaria in March and another to Fuerteventura in December as well as another long trip around...</content>
  </entry>
@@ -35,8 +35,8 @@
 
  <entry>
    <title>Campus Lights</title>
-   <link href="http://localhost:4000/campus-lights"/>
-   <id>http://localhost:4000/campus-lights</id>
+   <link href="mondoman712.github.io/campus-lights"/>
+   <id>mondoman712.github.io/campus-lights</id>
    <updated>2019-02-16T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;As an astronomy student and hobbyist, light pollution has sort of become my environmental issue of choice. Not only is it an annoyance to astronomers, but also damaging to wildlife as well as our health and is a large energy sink. I have taken particular notice of the amount of...</content>
  </entry>
@@ -45,8 +45,8 @@
 
  <entry>
    <title>Burmese Dogs</title>
-   <link href="http://localhost:4000/burmese-dogs"/>
-   <id>http://localhost:4000/burmese-dogs</id>
+   <link href="mondoman712.github.io/burmese-dogs"/>
+   <id>mondoman712.github.io/burmese-dogs</id>
    <updated>2019-01-21T00:00:00+00:00</updated>
    <content type="html">&lt;blockquote&gt;&quot;The pariah curs were baying the moon - it was only a quarter full and nearly down by midnight, but the dogs slept all day in the heat, and they had begun their moon-choruses already&quot; &lt;footer class=&quot;bq&quot;&gt;- George Orwell&lt;/footer&gt; &lt;/blockquote&gt; &lt;p&gt;&lt;br /&gt; &lt;img src=&quot;img/Burmese Dogs/IMG_20180704_161832.jpg&quot; /&gt; &lt;!--break--&gt; &lt;br /&gt;&lt;/p&gt; &lt;p&gt;It...</content>
  </entry>
@@ -55,8 +55,8 @@
 
  <entry>
    <title>Photo Series: Singaporean Architecture</title>
-   <link href="http://localhost:4000/singaporean-architecture"/>
-   <id>http://localhost:4000/singapore</id>
+   <link href="mondoman712.github.io/singaporean-architecture"/>
+   <id>mondoman712.github.io/singapore</id>
    <updated>2018-12-02T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;In another attempt at post-shooting photo series creation, I have put together a collection of architecture shots I took during my brief stay in Singapore in June of 2018.&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://www.flickr.com/gp/ss9679/82c85c&quot; title=&quot;8908&quot;&gt; &lt;img src=&quot;https://farm5.staticflickr.com/4832/31191762047_907b91899a_b.jpg&quot; alt=&quot;8908&quot; /&gt;&lt;/a&gt; &lt;!--break--&gt;&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://www.flickr.com/gp/ss9679/7HQk7g&quot; title=&quot;9004&quot;&gt; &lt;img src=&quot;https://farm5.staticflickr.com/4848/31191766097_9762ec1ab1_b.jpg&quot; alt=&quot;9004&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://www.flickr.com/gp/ss9679/3BngS1&quot; title=&quot;9002&quot;&gt; &lt;img src=&quot;https://farm5.staticflickr.com/4873/32259751248_857bb9ebed_b.jpg&quot; alt=&quot;9002&quot;...</content>
  </entry>
@@ -65,8 +65,8 @@
 
  <entry>
    <title>Portfolio II</title>
-   <link href="http://localhost:4000/portfolio-ii"/>
-   <id>http://localhost:4000/portfolio-ii</id>
+   <link href="mondoman712.github.io/portfolio-ii"/>
+   <id>mondoman712.github.io/portfolio-ii</id>
    <updated>2018-11-25T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;This set of images begins where the &lt;a href=&quot;/portfolio-i&quot;&gt;last portfolio&lt;/a&gt; leaves off and primarily shows my travels during the summer of 2017, with the last image being the only one outside of that. I have again chosen to stick to black and white images taken with my Hasselblad for consistency,...</content>
  </entry>
@@ -75,8 +75,8 @@
 
  <entry>
    <title>Qingdao Diptych</title>
-   <link href="http://localhost:4000/qingdao-diptych"/>
-   <id>http://localhost:4000/qingdao-diptych</id>
+   <link href="mondoman712.github.io/qingdao-diptych"/>
+   <id>mondoman712.github.io/qingdao-diptych</id>
    <updated>2018-11-21T00:00:00+00:00</updated>
    <content type="html">&lt;div class=&quot;diptychl&quot;&gt; &lt;a href=&quot;https://www.flickr.com/photos/ss9679/44647184712/&quot; title=&quot;Moon Over Qingdao&quot;&gt; &lt;img src=&quot;https://farm2.staticflickr.com/1866/44647184712_8eae88c304_b.jpg&quot; alt=&quot;Moon Over Qingdao&quot; /&gt;&lt;/a&gt; &lt;/div&gt; &lt;div class=&quot;diptychr&quot;&gt; &lt;a href=&quot;https://www.flickr.com/photos/ss9679/44711556062/&quot; title=&quot;Huiquan Cape&quot;&gt; &lt;img src=&quot;https://farm2.staticflickr.com/1886/44711556062_b55c427684_b.jpg&quot; alt=&quot;Huiquan Cape&quot; /&gt;&lt;/a&gt; &lt;/div&gt; &lt;p&gt;&lt;br /&gt; This is a pair of photos that I took from the top floor of a pagoda in 小鱼山公园 (Xiaoyushan park, or Little...</content>
  </entry>
@@ -85,8 +85,8 @@
 
  <entry>
    <title>Portfolio I</title>
-   <link href="http://localhost:4000/portfolio-i"/>
-   <id>http://localhost:4000/portfolio-i</id>
+   <link href="mondoman712.github.io/portfolio-i"/>
+   <id>mondoman712.github.io/portfolio-i</id>
    <updated>2018-11-09T00:00:00+00:00</updated>
    <content type="html">&lt;p&gt;This series of photographs represents approximately a years worth of work, starting in &lt;time&gt;April 2016&lt;/time&gt; when I got my Hasselblad. I chose to start then not because I feel that the change of camera increased the quality of images that I was producing but rather I wanted to keep the...</content>
  </entry>
@@ -95,8 +95,8 @@
 
  <entry>
    <title>Subways</title>
-   <link href="http://localhost:4000/subways"/>
-   <id>http://localhost:4000/subways</id>
+   <link href="mondoman712.github.io/subways"/>
+   <id>mondoman712.github.io/subways</id>
    <updated>2018-09-07T00:00:00+01:00</updated>
    <content type="html">&lt;p&gt;This is the remnants of a failed attempt at a photo project looking at Birmingham’s pedestrian subways. I never really thought it was a very good idea for a project but I decided to give it a go anyway because I wanted to try shooting a project and it was...</content>
  </entry>
@@ -105,8 +105,8 @@
 
  <entry>
    <title>Scrap Collectors</title>
-   <link href="http://localhost:4000/scrap"/>
-   <id>http://localhost:4000/scrap</id>
+   <link href="mondoman712.github.io/scrap"/>
+   <id>mondoman712.github.io/scrap</id>
    <updated>2018-09-03T00:00:00+01:00</updated>
    <content type="html">&lt;p&gt;&lt;a data-flickr-embed=&quot;true&quot; href=&quot;https://www.flickr.com/photos/ss9679/29518221107/in/dateposted/&quot; title=&quot;Scrap Collectors&quot;&gt; &lt;img src=&quot;https://farm2.staticflickr.com/1894/29518221107_09a9ff1bfa_b.jpg&quot; alt=&quot;Scrap Collectors&quot; /&gt; &lt;/a&gt; &lt;script async=&quot;&quot; src=&quot;//embedr.flickr.com/assets/client-code.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt; I took this photo in Ma Tau Kok, Hong Kong on the way to visit the Kowloon Walled City Park. I don’t really remember much about my intentions behind the photo beyond &lt;em&gt;this looks cool&lt;/em&gt;,...</content>
  </entry>

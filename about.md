@@ -6,7 +6,7 @@ description: This page describes Sam
 
 TODO: write an about page
 
-* [Github](https://github.com/mondoman712)
+* [Github](https://github.com/sams96)
 * [Flickr](https://flickr.com/photos/ss9679)
 * [Instagram](https://instagram.com/mondoman712)
 

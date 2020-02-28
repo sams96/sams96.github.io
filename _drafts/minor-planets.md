@@ -1,147 +1,20 @@
-<!DOCTYPE html>
-<html>
+---
+layout: post
+title: Observing Minor Planets
+description: 
+header: 
+permalink: '/minor-planets'
+categories: []
+tags: []
+---
 
-<head>
-	<!-- Meta -->
-	<meta charset="UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-	<meta name="generator" content="Jekyll">
-
-	<title>Sam Smith</title>
-  <meta name="description" content="">
-
-	<!-- CSS & fonts -->
-	<link rel="stylesheet" href="/css/main.css">
-
-	
-
-	<!-- RSS -->
-	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-
-</head>
-
-
-<body>
-	<div id="wrap">
-	  	
-	  	<!-- Navigation -->
-	  	<nav id="nav">
-	<div id="nav-list">
-		<a href="/">Home</a>
-
-		<!-- Nav pages -->
-	  
-	    
-	  
-	    
-	      <a href="/about" title="About">About</a>
-	    
-	  
-	    
-	  
-	    
-	  
-	    
-	  
-	    
-	  
-	    
-	  
-	    
-	  
-    
-    <!-- Nav links -->
-	  
-
-	</div>
-  
-  <!-- Nav footer -->
-	
-	  <footer>
-	
-	<!-- Your custom nav footer here -->
-	
-</footer>
-
-	
-
-</nav>
-
-    
-    <!-- Icon menu -->
-	  <a id="nav-menu">
-	  	<div id="menu"></div>
-	  </a>
-
-      <!-- Header -->
-      
-        <header id="header" class="parent justify-spaceBetween">
-  <div class="inner w100 relative">
-    <span class="f-left">  
-      <a href="/">
-        <h1>
-          <span></span>Sam Smith
-        </h1>
-      </a>
-    </span>
-    <span id="nav-links" class="absolute right bottom">
-      <!-- Nav pages -->
-	    
-	      
-	    
-	      
-	        <a href="/about" title="About">About</a>
-	      
-	    
-	      
-	    
-	      
-	    
-	      
-	    
-	      
-	    
-	      
-	    
-	      
-	    
-      
-      <!-- Nav links -->
-	    
-
-    </span>
-  </div>
-</header>
-
-
-
-
-      
-
-    <!-- Main content -->
-	  <div id="container">
-		  
-		<main>
-
-			<!-- Posts -->
-<ul id="posts">
-
-	
-
-	  <li class="post">
-	  	<h2><a href="/minor-planets">Observing Minor Planets</a></h2>
-      <time datetime="2019-11-18T18:36:29+08:00" class="by-line"> <i>18 Nov 2019</i> </time>
-      <p>
-      	<h3 id="abstract">Abstract</h3>
-<p>Orbit determination allows solar system objects to be tracked and studied over
+### Abstract
+Orbit determination allows solar system objects to be tracked and studied over
 long periods of time, which can give clues into how the solar system formed as
 well as evaluate the risk of an asteroid hitting the Earth. The aim of this
 experiment is to observe a number of minor planets over multiple nights and use
 the positions from the observations to determine orbital elements for the
-objects. We did this using the university’s 11” Schmidt-Cassegrain telescope on
+objects. We did this using the university's 11" Schmidt-Cassegrain telescope on
 a computerised equatorial mount and a colour CCD to collect images of the
 main-belt asteroids 30 Urania and 115 Thyra, near-Earth asteroid 433 Eros and
 comet 64P/Swift-Gehrels. We observed the objects on 6 separate nights over a
@@ -157,39 +30,39 @@ orbital elements for each object. The orbital elements we calculated almost all
 match those published by the Minor Planet Center to within the calculated
 uncertainty. Subsequently we found that we can use our orbital elements to
 predict the positions of the objects which should allow us to recover the
-objects for the foreseeable future.</p>
+objects for the foreseeable future.
 
-<h2 id="introduction">Introduction</h2>
-<p>While working on a star catalogue in January 1801, using a 75mm refracting
+## Introduction
+While working on a star catalogue in January 1801, using a 75mm refracting
 telescope located in the Royal Palace of Palermo in Italy, Italian priest and
 astronomer Giuseppe Piazzi logged a tiny star in Taurus which, on a second
 observation the following night, appeared to have moved. Piazzi tracked the
 object, making a total of 21 observations, until it moved too close to the
 sun to see. Within a few days of each other, around the start of 1802, Franz
-von Zach and Heinrich Olbers both used Carl Friedrich Gauss’ predicted
+von Zach and Heinrich Olbers both used Carl Friedrich Gauss' predicted
 positions, calculated using his newly theorised method of orbit determination,
 to recover the object after it returned into view from behind the sun. In March
 1802, while making further observations of the object, Olbers noticed a second
 small body with similar features which would later become known as Pallas. By
 June 1802 Piazzi had managed to convince the astronomical community of the time
-that the object he had discovered was a planet and had named it <em>Ceres
-Ferdinandea</em> after the patron goddess of Sicily and King Ferdinand of Bourbon,
-but it would later become known as just 1 Ceres (Foderà Serio et al., 2002). It was
+that the object he had discovered was a planet and had named it _Ceres
+Ferdinandea_ after the patron goddess of Sicily and King Ferdinand of Bourbon,
+but it would later become known as just 1 Ceres (Foder&agrave; Serio et al., 2002). It was
 not until later in the century, once more of these planets had been discovered,
 that they were reclassified as asteroids and were designated numbers in order of
-discovery.</p>
+discovery.
 
-<p>Johnson et al. (2014, Chapter 26) defines minor planets, or asteroids, as
-<em>small, naturally formed solid bodies that orbit the sun, are airless and show
-no detectable outflow of gas or dust.</em> In 1947, by which time 2046 asteroids had
+Johnson et al. (2014, Chapter 26) defines minor planets, or asteroids, as
+_small, naturally formed solid bodies that orbit the sun, are airless and show
+no detectable outflow of gas or dust._ In 1947, by which time 2046 asteroids had
 been discovered, Paul Herget was asked by the International Astronomical Union
 (IAU) to operate the newly founded Minor Planet Center (MPC) which would collect
 and distribute measurements of minor planets. It was run by Herget at the
 University of Cincinnati until 1978. Today the MPC also handles identification,
 designation and orbit determination and currently operates in the Smithsonian
-Astrophysical Observatory in Cambridge, Massachusetts and as part of the IAU.</p>
+Astrophysical Observatory in Cambridge, Massachusetts and as part of the IAU.
 
-<p>By the mid 20<sup>th</sup> century many astronomers had become bored and
+By the mid 20<sup>th</sup> century many astronomers had become bored and
 frustrated with asteroids as they frequently interfered with images taken while
 photographing other objects in the sky, and there had not been any recent
 scientific developments to increase interest in them (Whipple et al., 1968,
@@ -200,21 +73,21 @@ private space flight is becoming more common. The first dedicated mission to
 visit an asteroid was NEAR Shoemaker which orbited 433 Eros in 2000 and landed
 on it in 2001. The mission found that Eros is made up of approximately 1.2%
 aluminium (McCoy et al., 2001), which is a total of 6.6x10<sup>15</sup>kg or 62
-times the amount extracted from Earth since 1973.</p>
+times the amount extracted from Earth since 1973.
 
-<p>Over the past few years there have been multiple missions visiting comets and
-asteroids, such as the European Space Agency’s Rosetta probe which orbited comet
+Over the past few years there have been multiple missions visiting comets and
+asteroids, such as the European Space Agency's Rosetta probe which orbited comet
 67P/Churyumov-Gerasimenko along with the Philae lander which performed the first
-soft landing on a comet in 2014 (Pérez-Ayúcar et al., 2018). In
-January 2019 NASA’s New Horizons mission made a close approach of asteroid
+soft landing on a comet in 2014 (P&eacute;rez-Ay&uacute;car et al., 2018). In
+January 2019 NASA's New Horizons mission made a close approach of asteroid
 486958, nicknamed Ultima Thule, which is currently the most distant object
 visited by a spacecraft (Stern et al., 2018). Also the Japanese Hayabusa2
 mission entered orbit around a near-Earth asteroid in June 2018 and intends to
 return to Earth with samples from the asteroid in 2020 (Watanable et al., 2017).
 All of these missions collect data on the geology of these asteroids which can
-give clues into how the solar system was formed.</p>
+give clues into how the solar system was formed.
 
-<p>These missions rely on accurate orbit determination in order to direct the
+These missions rely on accurate orbit determination in order to direct the
 spacecraft into a close encounter or rendezvous with the solar system objects
 that they study.
 Orbit determination also allows the tracking and study of objects for longer
@@ -222,7 +95,7 @@ periods of time, and the ability to calculate the risk of Earth being hit by an
 asteroid.
 An object is classified as potentially hazardous if it has a minimum orbit
 intersection distance (MOID), the shortest distance between points on two
-orbits, with Earth’s orbit of 0.05au or less and an
+orbits, with Earth's orbit of 0.05au or less and an
 absolute magnitude of 22 or less (Gehrels et al., 1994).
 For asteroids the absolute magnitude uses a reference distance of
 1au instead of the more common 10pc used for
@@ -231,50 +104,46 @@ An absolute magnitude of 22 corresponds to a diameter of around
 75-240m; an impact from an asteroid this size could flatten a
 city.
 There are currently 1969 known potentially hazardous asteroids (PHAs)
-listed by the MPC.<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></p>
+listed by the MPC.[^1]
 
-<h2 id="orbital-elements">Orbital Elements</h2>
-<p><img src="img/minor-planets/elements.jpg" alt="elements" />
-\begin{figure}[t!]
-	\centering
-	\input{figures/elements}
-\caption{A diagram showing the four directional Keplerian orbital
-	elements: inclination, $\iota$; longitude of the ascending node,
-	$\Omega$; argument of periapsis, $\omega$; and the true anomaly, $\nu$.
-	The first three describe the orientation of the orbit in relation to a
-	reference plane, which in this case is Earth’s orbital plane, and the
-	true anomaly describes the position of the body in the
-	orbit.}\label{fig:elements}
-\end{figure}
+[^1]: From <a href="https://minorplanetcenter.net/iau/lists/PHAs.html">https://minorplanetcenter.net/iau/lists/PHAs.html</a>, last updated 2019-04-10 when retrieved
+
+## Orbital Elements
+![elements](img/minor-planets/elements.png)
+>Figure 1: A diagram showing the four directional Keplerian orbital elements:
+>inclination, &iota;; longitude of the ascending node, &Omega;; argument of
+>periapsis, &omega;; and the true anomaly, &nu;. The first three describe the
+>orientation of the orbit in relation to a reference plane, which in this case is
+>Earth's orbital plane, and the true anomaly describes the position of the body
+>in the orbit.
+
 The standard way of describing an orbit is by using the six Keplerian elements
-with, in the case of objects orbiting the sun, the Earth’s orbital plane as the
-reference plane and the First Point of Aries (\SI{0}{\degree}, \SI{0}{\degree}
-in ecliptic coordinates) as the reference direction.
-The elements that describe the shape and size of the orbit are the eccentricity,
-$e$, which describes how elongated the orbit is compared to a circle and the
-Semi-major axis, $a$, which is half the diameter across the widest part of the
-ellipse.
-Alternatively the shape of the orbit can be quantified by the apsis and
-periapsis, which are the longest and shortest distances from the orbiting body
-to the host body respectively.
-In the case of an object orbiting the sun these are known as the aphelion and
-perihelion \citep[Chapter~2.3]{Bate1971}.</p>
+with, in the case of objects orbiting the sun, the Earth's orbital plane as the
+reference plane and the First Point of Aries (0&#176;, 0&#176; in ecliptic
+coordinates) as the reference direction. The elements that describe the shape
+and size of the orbit are the eccentricity, $e$, which describes how elongated
+the orbit is compared to a circle and the Semi-major axis, _a_, which is half
+the diameter across the widest part of the ellipse. Alternatively the shape of
+the orbit can be quantified by the apsis and periapsis, which are the longest
+and shortest distances from the orbiting body to the host body respectively. In
+the case of an object orbiting the sun these are known as the aphelion and
+perihelion (Bate et al.,1971, Chapter 2.3).
 
-<p>The orientation of the orbital plane is described by the inclination, $\iota$,
+The orientation of the orbital plane is described by the inclination, &iota;,
 which is the angle between the orbital plane and the reference plane measured at
 the ascending node, as shown in figure~\ref{fig:elements}.
 The ascending node being the point at which the object passes through the
 reference plane northwards.
-The longitude of the ascending node, $\Omega$, is the angle between the
+The longitude of the ascending node, &Omega;, is the angle between the
 ascending node and the reference direction.
-The ellipse is oriented in the plane by the argument of periapsis, $\omega$,
-which is the angle between the ascending node and the periapsis.</p>
+The ellipse is oriented in the plane by the argument of periapsis, &omega;,
+which is the angle between the ascending node and the periapsis.
 
-<p>The true anomaly, $\nu$, is the angle between the periapsis and the position of
-the body at a given time. Alternatively, the time at which the body is at it’s
-periapsis can be used.</p>
+The true anomaly, &nu;, is the angle between the periapsis and the position of
+the body at a given time. Alternatively, the time at which the body is at it's
+periapsis can be used.
 
-<p>\subsection{Object Classification}\label{ssec:objclas}
+\subsection{Object Classification}\label{ssec:objclas}
 Asteroids are split into different groups based on their location in the solar
 system and gravitational relationship to planets.
 %Ceres is a main-belt asteroid, which means it is a member of the asteroid belt
@@ -283,13 +152,13 @@ system and gravitational relationship to planets.
 %system.
 Near-Earth objects are asteroids or comets with a perihelion distance of
 \SI{1.3}{\astronomicalunit} or less.
-They can be split into four subgroups based on their orbit compared to Earth’s:
+They can be split into four subgroups based on their orbit compared to Earth's:
 Amors orbit completely outside it, Apollos orbit mostly outside, Atens orbit
-mostly inside, and Atiras orbit completely within Earth’s orbit.
-Apollos and Amors make up \SI{92}{\percent} of the near-Earth object population.</p>
+mostly inside, and Atiras orbit completely within Earth's orbit.
+Apollos and Amors make up \SI{92}{\percent} of the near-Earth object population.
 
-<p>Trojans are asteroids that are gravitationally locked to one of the major
-planets, the largest trojan group being Jupiter’s, with \num{7039} identified
+Trojans are asteroids that are gravitationally locked to one of the major
+planets, the largest trojan group being Jupiter's, with \num{7039} identified
 Jovian trojans compared to only 22 identified Neptunian trojans.\footnote{From
 	\url{https://minorplanetcenter.net/iau/lists/Trojans.html}, last updated
 	\DTMdisplaydate{2018}{10}{28}{-1} when retrieved}
@@ -300,9 +169,9 @@ Currently Earth has only one identified trojan, a roughly \SI{200}{\metre} wide
 asteroid discovered in 2010, whereas Mars has nine.
 They orbit in areas approximately \SI{60}{\degree} in front of and behind the
 main body along the same orbit, which corresponds to the fourth and fifth
-Lagrange points of the planet’s orbit.</p>
+Lagrange points of the planet's orbit.
 
-<p>The Kuiper Belt is a group of small objects that exist beyond the orbit of
+The Kuiper Belt is a group of small objects that exist beyond the orbit of
 Neptune, from around \SIrange{30}{50}{\astronomicalunit}, they are rich in water
 ice and have similar properties to comets.
 The largest members are the dwarf planets Pluto, Makemake, and Haumea.
@@ -311,9 +180,9 @@ It is estimated that there are approximately \num{100000} objects at least
 \num{1500} have been discovered.
 The Kuiper belt is an area of interest at the moment due to the clues that it
 could hold on the formation of the main planets and the solar system as a whole
-\citep[Chapter~44]{johnson2014}.</p>
+\citep[Chapter~44]{johnson2014}.
 
-<p>Comets are objects that contain volatile materials and have highly eccentric
+Comets are objects that contain volatile materials and have highly eccentric
 orbits, such that when they come close enough to the sun the material starts to
 sublimate and the comet begins out-gassing.
 This can create a nebulous atmosphere around the comet itself that can reach
@@ -321,14 +190,14 @@ This can create a nebulous atmosphere around the comet itself that can reach
 \SIrange{e5}{e7}{\kilo\metre} long \citep{combi2004}.
 These large features, while very diffuse, can be very bright to an observer on
 Earth, to the point where they can occasionally be seen in the day time.
-Recorded observations date back to 613\BCE{}in China \citep{stephenson1984}.</p>
+Recorded observations date back to 613\BCE{}in China \citep{stephenson1984}.
 
-<p>\subsection{Object Detection and Observation}\label{ssec:odao}
+\subsection{Object Detection and Observation}\label{ssec:odao}
 While the telescope was not invented until the \nth{17} century, records of
 naked eye observations of comets going back to ancient China can still be used
 to calculate the date of their perihelions due to their fast movement across the
 sky.
-The earliest plausible record of Halley’s comet dates back to 240\BCE{}with more
+The earliest plausible record of Halley's comet dates back to 240\BCE{}with more
 detailed records not appearing unit 12\BCE.\@
 It was Edmond Halley who first recognised the periodicity of comets and
 predicted the return of his namesake.
@@ -336,9 +205,9 @@ Halley also contributed observations of the Great Comet of 1680 to Newton which
 he used in {\it Principia\/} to attempt to determine its orbit.
 The telescopes used by Newton and Halley were similar to the one used by Piazzi
 to discover Ceres over a century later, being very intricate instruments that
-used micrometer microscopes to measure positions.</p>
+used micrometer microscopes to measure positions.
 
-<p>In the late \nth{19} century German astronomer Max Wolf pioneered
+In the late \nth{19} century German astronomer Max Wolf pioneered
 the use of astrophotography to search for asteroids, using a lens intended for
 portraiture to get a very large (\SI{12 * 8}{\degree}) field of view compared to
 the longer focal length telescopes used by other astronomers at the time, which
@@ -348,9 +217,9 @@ usually be, which is designed to rotate the camera to move with or perpendicular
 to the direction of rotation of the Earth.
 This would move the camera with the stars throughout the exposure so any objects
 moving relative to the stars would appear as streaks on the photographic plate.
-Wolf used this method to discover a total of \num{228} minor planets.</p>
+Wolf used this method to discover a total of \num{228} minor planets.
 
-<p>Today sky surveys use computerised telescopes with charge-coupled device (CCD)
+Today sky surveys use computerised telescopes with charge-coupled device (CCD)
 cameras in order to automate the process as much as possible.
 This allows for objects to be found faster and for dimmer, and therefore smaller
 and/or more distant, objects to be discovered.
@@ -370,9 +239,9 @@ The LSST will use an \SI{8.4}{\meter} primary mirror to achieve a
 to Pan-STARRS which has a \SI{3.2}{\degree} field of view with
 \SI{1}{\arcsecond} pixel scale \citep{jones2009}.
 This should allow the LSST to detect many more solar system objects and detect
-potentially hazardous objects significantly earlier than Pan-STARRS.\@</p>
+potentially hazardous objects significantly earlier than Pan-STARRS.\@
 
-<p>Follow up observations are also often made with more general use observatories,
+Follow up observations are also often made with more general use observatories,
 depending on the interest in the object discovered.
 For example the object 1I/2017~U1, or \okina{}Oumuamua, was discovered in 2017
 by Robert Weryk with Pan-STARRS.\@
@@ -386,40 +255,40 @@ object, although no consensus has been reached.
 Observations were made with the Canada-France-Hawaii telescope, Keck 2
 observatory, and United Kingdom Infrared Telescope in Hawaii; the Very
 Large Telescope and Gemini South telescope in Chile \citep{meech2017}; as well
-as the Spitzer and Hubble space telescopes \citep{trilling2018}.</p>
+as the Spitzer and Hubble space telescopes \citep{trilling2018}.
 
-<p>\subsection{Orbit Determination}\label{ssec:orbdet}
+\subsection{Orbit Determination}\label{ssec:orbdet}
 Orbit determination is the calculation of the shape of an orbit using a set of
 observations.
-The first method for orbit determination was published in Newton’s
+The first method for orbit determination was published in Newton's
 {\it Principia\/} in 1687, this method was then refined by Euler in 1744 and
 again by Lambert in the 1760s.
-Newton’s method involves constructing an intricate diagram from three evenly
+Newton's method involves constructing an intricate diagram from three evenly
 spaced observations in order to calculate parabolic approximations of orbits of
 comets.
 After the discovery of Ceres by Piazzi, Gauss used his method for orbit
 determination to calculate positions which were used by both Olbers and von
 Zach to recover its orbit following its disappearance behind the sun
 \citep{gronchi2005}.
-Gauss’ method is also based on the use of three observations to find an orbit,
+Gauss' method is also based on the use of three observations to find an orbit,
 but it is often combined with the method of least squares, which was also
 introduced by Gauss, to determine more accurate orbits using more observations.
-Gauss’ method, which he did not publish until 1809, is based on transformations
-of the orbiting body’s position vector.
+Gauss' method, which he did not publish until 1809, is based on transformations
+of the orbiting body's position vector.
 The method of least squares, also devised by Gauss, is used to fit
 linear equations to a set of data and it can be applied in conjunction with his
 method for orbit determination to acquire a more accurate result.
-This allowed Olbers and von Zach to recover Ceres from Piazzi’s 21 initial
-observations.</p>
+This allowed Olbers and von Zach to recover Ceres from Piazzi's 21 initial
+observations.
 
-<p>Another method for orbit determination was introduced by the Finnish astronomer
-Yrj"o V"ais"al"a in 1939 which uses just two observations to get an
+Another method for orbit determination was introduced by the Finnish astronomer
+Yrj\"o V\"ais\"al\"a in 1939 which uses just two observations to get an
 imprecise prediction.
-V"ais"al"a’s method is commonly used for newly discovered objects in order to
+V\"ais\"al\"a's method is commonly used for newly discovered objects in order to
 be able to continually observe the object over the first few nights before a
-more accurate determination can be made \citep{bowell2002}.</p>
+more accurate determination can be made \citep{bowell2002}.
 
-<p>All of these methods are only used to find preliminary orbits, as they ignore
+All of these methods are only used to find preliminary orbits, as they ignore
 the effects of other phenomena that may effect the orbit, known as
 perturbations.
 These perturbations could be caused by the mass distribution within the object,
@@ -427,13 +296,13 @@ gravitational effects from other objects, and radiation pressure from the sun
 amongst others \citep[Chapter~2.3]{schutz2004}.
 Modern methods of orbit determination are usually in the form of computer
 programs.
-They often use some form of Gauss’ method to find a preliminary orbit with an
+They often use some form of Gauss' method to find a preliminary orbit with an
 N-body simulation to calculate the effect of the perturbations.
 The N-body simulation calculates the positions of any number of objects in a
 system and their gravitational effects on each other, which can be used to see
-how multiple asteroids with similar orbits might interact with one another.</p>
+how multiple asteroids with similar orbits might interact with one another.
 
-<p>NASA’s New Horizons mission launched in 2006 with the primary goal of performing
+NASA's New Horizons mission launched in 2006 with the primary goal of performing
 a flyby of Pluto, which it did in 2015.
 It also had the secondary goal of collecting data on Kuiper Belt objects,
 although no suitable candidates were found until June 2014 when the object
@@ -444,26 +313,26 @@ period, propulsive manoeuvres were made by New Horizons based on orbital
 parameters calculated using observations from this small proportion of the
 orbit.
 These manoeuvres put the spacecraft on a course to encounter the object to
-within \SI{3500}{\kilo\meter}, which it did successfully in January 2019.</p>
+within \SI{3500}{\kilo\meter}, which it did successfully in January 2019.
 
-<p>\section{Method}\label{sec:method}
+\section{Method}\label{sec:method}
 The intention of this project was to observe a number of solar system objects
 and determine their orbital elements.
 In order to do this we made images of a total of 9 different solar system
-objects on six nights over a month using the university’s telescope.
+objects on six nights over a month using the university's telescope.
 We also made a series of calibration images each night in order to remove
 artefacts from our final images, which we did by subtracting them from the
 images of the objects.
 Then we used the images to determine the positions of four of the objects at the
 time each image was made, and entered the times and positions into an orbit
-determination program.</p>
+determination program.
 
-<p>\subsection{Observation}\label{ssec:obs}
+\subsection{Observation}\label{ssec:obs}
 We used an \SI{11}{\inch} Schmidt-Cassegrain telescope (Celestron EdgeHD 1100)
 on a computerised equatorial mount (Celestron CGX).
 We made observations on six different nights between \DTMusedate{first} and
 \DTMusedate{last}.
-We used the Minor Planet Center’s observing target list
+We used the Minor Planet Center's observing target list
 tool\footnote{\url{https://minorplanetcenter.net/whatsup/index}} each night to
 identify and locate potential objects to observe.
 The use of known positions was purely to allow us to locate these objects and
@@ -473,9 +342,9 @@ for observing, we decided to make observations of about six different objects
 each night.
 This meant if we were unable to observe any of the objects for any reason
 we still had alternatives to look at.
-\enlargethispage{1.5\baselineskip}</p>
+\enlargethispage{1.5\baselineskip}
 
-<p>Before each observation session we would set up the telescope, the first thing
+Before each observation session we would set up the telescope, the first thing
 to do was make sure the mount was calibrated.
 If the mount is not calibrated correctly it will not point the telescope at the
 correct part of the sky when given coordinates.
@@ -487,9 +356,9 @@ automated positioning system, known as a go-to system.
 The telescope was then focused by pointing it at a bright star and placing a
 Bahtinov mask in front of the objective.
 The Bahtinov mask creates diffraction spikes which can then be aligned to
-achieve optimum focus.</p>
+achieve optimum focus.
 
-<p>We would then capture various types of calibration images to improve the
+We would then capture various types of calibration images to improve the
 signal-to-noise ratio and remove artefacts in our final images.
 Dark frames are taken with the same exposure time as the images of the objects
 but blocking all light from reaching the sensor.
@@ -503,13 +372,13 @@ final image; we took them by pointing the telescope at the wall of the
 observatory with the lights on.
 We usually took around five of each of the calibration frames to average out any
 random noise in them and to prevent that noise from being incorporated into our
-final images.</p>
+final images.
 
-<p>Each time we went to observe an object we would start by entering the
+Each time we went to observe an object we would start by entering the
 coordinates from the MPC into the telescope.
 We often found that the object would not be in the field of view at this point
 and we had to adjust the position of the telescope.
-This was due to the telescope mount’s go-to system not being accurate enough for
+This was due to the telescope mount's go-to system not being accurate enough for
 the small field of view (\SI{27*18}{\arcminute}) we were working with.
 The small field of view made it harder for us to locate the objects but
 theoretically it should have allowed us to ultimately find more accurate
@@ -520,10 +389,10 @@ Plate solving is the process of finding the position in the sky of the given
 image, which is done by comparing the relative positions of the stars in our
 images to a large database of known star positions.
 In order to confirm that we had found the target objects we would check the
-positions compared to the MPC’s predicted positions and make sure we could see
-an object where it should be.</p>
+positions compared to the MPC's predicted positions and make sure we could see
+an object where it should be.
 
-<p>Once we found the target object we would take at least five images of it so we
+Once we found the target object we would take at least five images of it so we
 could later find its average position over the different exposures, and to make
 sure that if the telescope were to move slightly during one of our exposures we
 still had plenty of images to use.
@@ -535,13 +404,13 @@ was positioned.
 The apparent brightness of the objects depends on their size, albedo, distance
 from the sun and distance from the Earth.
 We could only detect objects down to about \nth{15} magnitude so we were limited
-in the number of objects that we would be able to detect.</p>
+in the number of objects that we would be able to detect.
 
-<p>We kept notes on the image files of each object and the exposure times
+We kept notes on the image files of each object and the exposure times
 in a spreadsheet, which we also updated later to include links to each of the
-image files for convenience when we went to process them.</p>
+image files for convenience when we went to process them.
 
-<p>\subsection{Data Processing}\label{ssec:data}
+\subsection{Data Processing}\label{ssec:data}
 We processed the images with the calibration frames in order to achieve the
 greatest signal-to-noise ratio, potentially this gives us greater accuracy when
 calculating the positions of the objects.
@@ -559,13 +428,13 @@ to be offset by a pixel if any of our objects were primarily one of the colours
 used by the filter.
 However this offset is smaller than the size of the stars in our images so it
 should not affect our results.
-\enlargethispage{0.5\baselineskip}</p>
+\enlargethispage{0.5\baselineskip}
 
-<p>We then plate solved the images, which AstroImageJ does by uploading the images
+We then plate solved the images, which AstroImageJ does by uploading the images
 to a service called Astrometry.net \citep{lang2012}.
 This returns the position of the centre of the image in celestial coordinates,
 as well as the angular size of a pixel.
-This then allowed us to use AstroImageJ’s centroid tool, which finds the centre
+This then allowed us to use AstroImageJ's centroid tool, which finds the centre
 of brightness of an object, to establish the position of our target.
 We recorded this in a spreadsheet with the time at which the image was taken.
 We decided not to stack the calibrated light frames as some of the objects moved
@@ -578,25 +447,26 @@ Instead we averaged the positions of the objects in each separate frame.
 		observations}\label{tab:orbel}
 	\vspace{7pt}
 \begin{tabular}{lrrrr}
-	\bfseries Orbital Element &amp; \bfseries 30~Urania &amp; \bfseries 115~Thyra &amp;
-		\bfseries 433~Eros &amp; \bfseries 64P\\midrule</p>
+	\bfseries Orbital Element & \bfseries 30~Urania & \bfseries 115~Thyra &
+		\bfseries 433~Eros & \bfseries 64P\\\midrule
+	
+	Semi-major axis (\si{\astronomicalunit}) & \num{2.368(4)} &
+		\num{2.38(4)} & \num{1.4575(7)} & \num{4.44(3)}\\
+	Eccentricity & \num{0.128(2)} & \num{0.19(2)} & \num{0.2226(1)} & 
+		\num{0.686(2)}\\	
+	Period (years) & \num{3.64(1)} & \num{3.7(1)} & \num{1.760(1)} &
+		\num{9.35(8)}\\
+	Argument of perihelion (\si{\degree}) & \num{87.6(6)} & \num{97.16(7)} &
+		\num{178.8(1)} & \num{97.1(1)}\\
+	Ascending node (\si{\degree}) & \num{307.47(8)} & \num{308.8(4)} & 
+		\num{304.29(5)} & \num{300.03(6)}\\
+	Inclination (\si{\degree}) & \num{2.096(2)} & \num{11.60(3)} & 
+		\num{10.825(4)} & \num{8.94(1)}\\
+\end{tabular}
+\end{table}
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Semi-major axis (\si{\astronomicalunit}) &amp; \num{2.368(4)} &amp;
-	\num{2.38(4)} &amp; \num{1.4575(7)} &amp; \num{4.44(3)}\\
-Eccentricity &amp; \num{0.128(2)} &amp; \num{0.19(2)} &amp; \num{0.2226(1)} &amp; 
-	\num{0.686(2)}\\	
-Period (years) &amp; \num{3.64(1)} &amp; \num{3.7(1)} &amp; \num{1.760(1)} &amp;
-	\num{9.35(8)}\\
-Argument of perihelion (\si{\degree}) &amp; \num{87.6(6)} &amp; \num{97.16(7)} &amp;
-	\num{178.8(1)} &amp; \num{97.1(1)}\\
-Ascending node (\si{\degree}) &amp; \num{307.47(8)} &amp; \num{308.8(4)} &amp; 
-	\num{304.29(5)} &amp; \num{300.03(6)}\\
-Inclination (\si{\degree}) &amp; \num{2.096(2)} &amp; \num{11.60(3)} &amp; 
-	\num{10.825(4)} &amp; \num{8.94(1)}\\ \end{tabular} \end{table}
-</code></pre></div></div>
-
-<p>After finding the average position of the objects for each set of observations
-we converted the data into the MPC’s \num{80} column format which allowed us to
+After finding the average position of the objects for each set of observations
+we converted the data into the MPC's \num{80} column format which allowed us to
 enter it into a program called Find Orb \citep{gray2012}.
 The \num{80} column format has been in use since the Minor Planet Center was
 founded in 1947 and was originally designed for punch card based computers.
@@ -604,18 +474,18 @@ We used a spreadsheet to convert our data from the units we recorded the
 positions in, to the units required by the 80 column format, and to compile the
 data into the format.
 We then ran the orbit determination program, Find Orb, with our observations for
-each of the objects to ascertain the orbital elements.</p>
+each of the objects to ascertain the orbital elements.
 
-<p>The objects that we chose to focus on, from the nine objects that we made
+The objects that we chose to focus on, from the nine objects that we made
 observations of, were 30~Urania, 115~Thyra, 433~Eros, and 64P/Swift-Gehrels.
 We chose them because they are the objects for which we had the most data, and
 they represent a good selection of different types of objects, Urania and Thyra
 being main-belt asteroids, Eros a near-Earth object or more specifically an
 Amor, and Swift-Gehrels a comet.
 This should give us a spread of different semi-major axes, eccentricities and
-orbital periods.</p>
+orbital periods.
 
-<p>The only control over the uncertainty on the observation data is via the
+The only control over the uncertainty on the observation data is via the
 precision of the figures that were entered, which Find Orb uses to estimate the
 error on the positions.
 We entered our positions down to \SI{0.1}{\arcsecond} because we found that the
@@ -629,61 +499,61 @@ So with the averaging of multiple results the error will be less than
 Find Orb then gives errors on all of the results, calculated using the distances
 between our observations and the orbit, or residuals, except for the period.
 We calculated the errors on the periods by propagating the errors from the
-semi-major axes.</p>
+semi-major axes.
 
-<p>\section{Results}\label{sec:results}
+\section{Results}\label{sec:results}
 The orbital elements for the objects calculated using our observations, along
 with the uncertainties, are shown in table~\ref{tab:orbel}.
 Since they are both main-belt asteroids we expected to see similar periods
 and low eccentricities for Urania and Thyra, which is shown by our results.
 We also see a lower period for Eros and a larger period and high eccentricity
 for Swift-Gehrels, which are expected of near-Earth asteroids and comets
-respectively.</p>
+respectively.
 
-<p>Since we were always observing at roughly the same time of night and through a
+Since we were always observing at roughly the same time of night and through a
 short portion of the year, we would expect that the objects that were easier for
 us to see, i.e.\ that are brighter and further from the horizon, would have
 similar longitudes of their ascending nodes.
 However the MPC figures for the other objects that we observed shows that there
 is more of a spread than shown here, which suggests that the fact that all our
-objects were within \SI{10}{\degree} of each other is purely coincidental.</p>
+objects were within \SI{10}{\degree} of each other is purely coincidental.
 
-<p>There is quite a large inconsistency in the errors on the results, which could
+There is quite a large inconsistency in the errors on the results, which could
 be due to where in the orbit each of the objects were at the time of observing.
 The objects closer to their perihelion will be moving faster relative to the
 sun so there will be a larger difference in their positions between our
 observations and therefore the calculated orbits should be more accurate.
 Urania and Thyra were at perihelion on \DTMdisplaydate{2019}{01}{09}{-1} and
 \DTMdisplaydate{2019}{02}{23}{-1} respectively, which is \SI{4}{\percent} of
-Urania’s orbit and \SI{7}{\percent} of Thyra’s since our last observation on
+Urania's orbit and \SI{7}{\percent} of Thyra's since our last observation on
 \DTMusedate{last}.
 This is one possible explanation as to why Thyra generally has a larger amount
-of uncertainty in each of the elements than Urania.</p>
+of uncertainty in each of the elements than Urania.
 
-<p>\begin{figure}
+\begin{figure}
 	\centering
 	\input{figures/orb-el}
 	\caption{A plot of our results calculated using our observations in Find
 		Orb, divided the results published by MPC for each of our
 		objects}\label{fig:orbel}
-\end{figure}</p>
+\end{figure}
 
-<p>Swift-Gehrels reached its perihelion on \DTMdisplaydate{2018}{11}{03}{-1} which
+Swift-Gehrels reached its perihelion on \DTMdisplaydate{2018}{11}{03}{-1} which
 was during the time that we were observing.
 Eros reached its perihelion on \DTMdisplaydate{2019}{02}{01}{-1}, which is
 \SI{12}{\percent} of its orbit after our last observation, which would suggest
 it should have larger uncertainties on the orbital elements than all of the
 other objects.
-This could be due to Eros’ relative proximity to Earth during the time we
+This could be due to Eros' relative proximity to Earth during the time we
 observed it.
 Over the observation period Eros was around
 \SIrange{0.35}{0.51}{\astronomicalunit} from Earth whereas Urania and Thyra were
 both around \SI{1.5}{\astronomicalunit} away.
 This meant that Eros appeared to move much more quickly relative to the
 background sky, which would then reduce the proportional size of any error on
-our observations.\pagebreak</p>
+our observations.\pagebreak
 
-<p>\section{Discussion}\label{sec:disc}
+\section{Discussion}\label{sec:disc}
 The Minor Planet Center publishes orbital elements for objects calculated using
 observations from many sources going back as far as the initial discovery of
 Ceres in 1801.
@@ -691,16 +561,16 @@ Figure~\ref{fig:orbel} shows each of the orbital elements for each of the bodies
 that we calculated divided by those given by the MPC, which are known to a much
 higher degree of accuracy than our results.
 This comparison shows that our results almost always fit with those from the MPC
-to within our calculated uncertainties.</p>
+to within our calculated uncertainties.
 
-<p>Our results could have improved by taking observations on a greater number of
+Our results could have improved by taking observations on a greater number of
 nights over the same period, although we were limited by when we had good enough
 weather to observe.
 The best way to improve the accuracy of our determinations would be to make
-observations through a larger amount of the target bodies’ orbital periods,
-although we were limited in the amount of time we had to make our observations.</p>
+observations through a larger amount of the target bodies' orbital periods,
+although we were limited in the amount of time we had to make our observations.
 
-<p>\subsection{Errors on our Observations}\label{ssec:err}
+\subsection{Errors on our Observations}\label{ssec:err}
 \begin{figure}
 	\centering
 	\input{figures/obs}
@@ -721,9 +591,9 @@ compared to the mean position of that set of observations and compares that to
 the average plate solution error, average standard deviation and pixel size.
 The fact that the average plate solution error and the average standard
 deviation are very similar suggests that the primary source of random error on
-each of our observations could be the plate solution.</p>
+each of our observations could be the plate solution.
 
-<p>The average distance from our observed position to the MPC’s predicted position,
+The average distance from our observed position to the MPC's predicted position,
 for the same object at the same time, is \SI{8.6}{\arcsecond}.
 This distance is caused by any inaccuracies in the predictions from the MPC,
 which could have been created by perturbations, and any systematic error that
@@ -731,9 +601,9 @@ could have occurred in our observations.
 The systematic error could have come from how the positions of the stars and
 objects within the images were calculated, which would effect both the plate
 solutions and the acquisition of the position of the target object in the image.
-\pagebreak</p>
+\pagebreak
 
-<p>One potential way to reduce uncertainty on the positions of stars and our target
+One potential way to reduce uncertainty on the positions of stars and our target
 objects is to reduce the size of the stars in the image.
 The average full width at half maximum (FWHM) of Urania in our images was
 \SI{5.8}{\arcsecond}.
@@ -743,9 +613,9 @@ We had an issue with the telescope throughout our observations which caused
 stars towards the edges of the frame to be elongated, in order to reduce the
 effects of this we were careful to make sure our objects were close to the
 centre of the image, however it still could have contributed to random and
-systematic errors in our plate solutions.</p>
+systematic errors in our plate solutions.
 
-<p>\subsection{Object Recovery}\label{ssec:rec}
+\subsection{Object Recovery}\label{ssec:rec}
 \begin{figure}
 	\centering
 	\input{figures/ephemeris}
@@ -761,61 +631,61 @@ predicted positions to those published by the Minor Planet Center.
 This comparison, covering just over 3 years after our last observation, is shown
 in figure~\ref{fig:diff}, which gives the largest distance between predicted
 positions as \SI{48}{\arcsecond}, which is much less than the
-\SI{18}{\arcminute} field of view of the university’s telescope sensor on the
+\SI{18}{\arcminute} field of view of the university's telescope sensor on the
 short edge.
 This shows that our observations, taken over the space of a month, would be
 enough to continue to find an object for the at least the next three years.
 This would be useful in the case of a newly discovered object that may not be
 observable for a while, perhaps due to it moving behind the sun relative to the
 Earth, so the object could be found once it is visible again, as was the case
-with 1~Ceres.</p>
+with 1~Ceres.
 
-<p>This, however, does not take into account any perturbations which may change the
-orbital elements over time and cause both our predictions and the MPC’s to be
+This, however, does not take into account any perturbations which may change the
+orbital elements over time and cause both our predictions and the MPC's to be
 incorrect.
-We found that while making our observations 64P/Swift-Gehrels’ position would be
+We found that while making our observations 64P/Swift-Gehrels' position would be
 noticeably different to that published by the MPC which was likely due to
 outgassing as it was close to perihelion while we observed it.
 This was not a problem for the other objects as they were not outgassing and
 generally have more regular orbits as they are less eccentric and therefore
 are less likely to encounter other objects which may effect their orbits.
-\pagebreak</p>
+\pagebreak
 
-<p>\section{Conclusion}\label{sec:conc}
+\section{Conclusion}\label{sec:conc}
 Orbit determination is important because it allows us to track and study objects
 for longer periods of time and assess the risk of Earth being hit by an
 asteroid.
 Also the calculation of orbits of solar system objects and spacecraft allows for
 missions to make close encounters or rendezvous with distant objects such as the
-New Horizons mission’s close encounter with Ultima Thule.</p>
+New Horizons mission's close encounter with Ultima Thule.
 
-<p>During this project we successfully managed to determine orbital elements for
+During this project we successfully managed to determine orbital elements for
 the objects 30~Urania, 115~Thyra, 433~Eros and 64P/Swift-Gehrels using
 observations we made on 6 nights over a month in October/November 2018 using the
-university’s observatory.
+university's observatory.
 The orbital elements we found almost all agree with those published by the Minor
 Planet Center to within our calculated uncertainty.
 We also calculated that the predicted positions of the objects based on our
 orbital elements agree with those published by the MPC to within the field of
-view of the university’s telescope for at least three years.
+view of the university's telescope for at least three years.
 This suggests that we would be able to use our predictions to find the objects
 for future observation, which is an important part of the process of discovering
-new solar system objects.</p>
+new solar system objects.
 
-<p>One way in which we could extend this project would be to look at other
+One way in which we could extend this project would be to look at other
 categories of objects, such as the Jovian trojans, the moons of Jupiter or
 Saturn, or a Kuiper Belt object.
 The brightest Kuiper Belt object, Pluto, reaches about \nth{14} magnitude at its
 brightest.
 This means it would be possible for us to observe however due to its extremely
 long orbital period we would need a longer amount of time to get an accurate
-orbit.<br />
+orbit.  
 The largest Jovian trojan, 624~Hektor, ranges in apparent magnitude from around
 \num{12} to approximately \num{16}, which is brighter than the
 \nth{14} magnitude of Swift-Gehrels when we observed it, and there are many
 other Jovian trojans that can be bright enough for us to observe.
-Jupiter’s four largest moons, known as the Galilean moons after their
-discoverer, would be easily visible with the university’s telescope being bright
+Jupiter's four largest moons, known as the Galilean moons after their
+discoverer, would be easily visible with the university's telescope being bright
 enough to be seen with the naked eye, if they were not so close to their much
 brighter host.
 They have short orbital periods ranging from \num{1.7} days to \num{18} days.
@@ -824,194 +694,11 @@ enough for us to observe.
 Observing moons has another advantage, for the most part, all the moons of a
 given planet would be visible within the field of view of the telescope at one
 time allowing us to make more observations of the objects in the same amount of
-time.</p>
+time.
 
-<p>\bibliographystyle{astron}
-\bibliography{references}</p>
+\bibliographystyle{astron}
+\bibliography{references}
 
-<p>\blankpage%</p>
+\blankpage%
 
-<p>\end{document}</p>
-<div class="footnotes">
-  <ol>
-    <li id="fn:1">
-      <p>From <a href="https://minorplanetcenter.net/iau/lists/PHAs.html">https://minorplanetcenter.net/iau/lists/PHAs.html</a>, last updated 2019-04-10 when retrieved <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
-
-	
-      </p>
-	  </li>
-
-    
-
-	  <li class="post">
-	  	<h2><a href="/China">China</a></h2>
-      <time datetime="2019-09-04T09:27:43+08:00" class="by-line"> <i>04 Sep 2019</i> </time>
-      <p>
-      	<p>This is an attempt to translate a short book/zine that I’ve been working on into
-a web page. Click <a href="/China#page1">here</a> to start.<br /><br />
-	
-	<p align="right"><a href="/China">Read more</a></p>
-	
-      </p>
-	  </li>
-
-    
-
-	  <li class="post">
-	  	<h2><a href="/campus-lights-updates">Campus Lights Updates and Out-takes</a></h2>
-      <time datetime="2019-07-24T00:00:00+08:00" class="by-line"> <i>24 Jul 2019</i> </time>
-      <p>
-      	<p>It’s 5 months since I posted my project <a href="/campus-lights">Campus Lights</a>. Sadly I
-didn’t manage to make any progress with getting anything changed on campus, the
-person I’d emailed didn’t get back to me and my exams &amp; dissertation took
-precedence so I didn’t pursue it any further.</p>
-
-
-	
-	<p align="right"><a href="/campus-lights-updates">Read more</a></p>
-	
-      </p>
-	  </li>
-
-    
-
-	  <li class="post">
-	  	<h2><a href="/portfolio-iii">Portfolio III - 2018</a></h2>
-      <time datetime="2019-06-18T00:00:00+08:00" class="by-line"> <i>18 Jun 2019</i> </time>
-      <p>
-      	<p>Having finished my <a href="/portfolio-ii">last portfolio</a> at the end of 2017 I can now
-start doing them yearly, so this one covers 2018. This includes two trips to the
-Canary islands, one to Gran Canaria in March and another to Fuerteventura in
-December as well as another long trip around Asia in the summer.</p>
-
-
-	
-	<p align="right"><a href="/portfolio-iii">Read more</a></p>
-	
-      </p>
-	  </li>
-
-    
-
-	  <li class="post">
-	  	<h2><a href="/campus-lights">Campus Lights</a></h2>
-      <time datetime="2019-02-16T00:00:00+08:00" class="by-line"> <i>16 Feb 2019</i> </time>
-      <p>
-      	<p>As an astronomy student and hobbyist, light pollution has sort of become my
-environmental issue of choice. Not only is it an annoyance to astronomers, but
-also damaging to wildlife as well as our health and is a large energy sink. I
-have taken particular notice of the amount of light pollution on my university’s
-campus lately as I am back living on campus after 2 years of living elsewhere,
-and my dissertation involves using the telescope on the roof of the physics
-building. This is a university that seems to boast about being <em>green</em> but seems
-to ignore this aspect of the environment.
-
-	
-	<p align="right"><a href="/campus-lights">Read more</a></p>
-	
-      </p>
-	  </li>
-
-    
-
-	  <li class="post">
-	  	<h2><a href="/burmese-dogs">Burmese Dogs</a></h2>
-      <time datetime="2019-01-21T00:00:00+08:00" class="by-line"> <i>21 Jan 2019</i> </time>
-      <p>
-      	<blockquote>"The pariah curs were baying the moon - it was only a quarter full
-and nearly down by midnight, but the dogs slept all day in the heat, and they
-had begun their moon-choruses already" <footer class="bq">- George Orwell</footer>
-</blockquote>
-<p><br />
-<img src="img/Burmese Dogs/IMG_20180704_161832.jpg" />
-
-	
-	<p align="right"><a href="/burmese-dogs">Read more</a></p>
-	
-      </p>
-	  </li>
-
-    
-
-	  <li class="post">
-	  	<h2><a href="/singaporean-architecture">Photo Series: Singaporean Architecture</a></h2>
-      <time datetime="2018-12-02T00:00:00+08:00" class="by-line"> <i>02 Dec 2018</i> </time>
-      <p>
-      	<p>In another attempt at post-shooting photo series creation, I have put together a
-collection of architecture shots I took during my brief stay in Singapore in
-June of 2018.</p>
-
-<p><a href="https://www.flickr.com/gp/ss9679/82c85c" title="8908">
-<img src="https://farm5.staticflickr.com/4832/31191762047_907b91899a_b.jpg" alt="8908" /></a>
-
-	
-	<p align="right"><a href="/singaporean-architecture">Read more</a></p>
-	
-      </p>
-	  </li>
-
-    
-
-	  <li class="post">
-	  	<h2><a href="/portfolio-ii">Portfolio II</a></h2>
-      <time datetime="2018-11-25T00:00:00+08:00" class="by-line"> <i>25 Nov 2018</i> </time>
-      <p>
-      	<p>This set of images begins where the <a href="/portfolio-i">last portfolio</a> leaves off
-and primarily shows my travels during the summer of 2017, with the last image
-being the only one outside of that. I have again chosen to stick to black and
-white images taken with my Hasselblad for consistency, and because it’s what I
-primary set-up. I am planning on doing one of these with the colour photos that
-I’ve taken since I started shooting square format.
-
-	
-	<p align="right"><a href="/portfolio-ii">Read more</a></p>
-	
-      </p>
-	  </li>
-
-    
-
-</ul>
-
-
-	  </main>
-		
-		  <!-- Pagination links -->
-      
-        <div class="pagination">
-          
-            <span class="page-item">&laquo;</span>
-          
-        
-          
-            
-              <span class="page-item">1</span>
-            
-          
-            
-              <a href="/page2/" class="page-item">2</a>
-            
-          
-        
-          
-            <a href="/page2/" class="page-item">&raquo;</a>
-          
-        </div>
-        
-
-	  </div>
-	    
-	    <!-- Footer -->
-	    <footer></footer>
-
-
-	    <!-- Script -->
-      <script src="/js/main.js"></script>	
-
-
-	</div>
-</body>
-</html>
+\end{document}

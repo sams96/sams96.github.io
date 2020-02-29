@@ -3,7 +3,7 @@ name: github pages
 on:
   push:
     branches:
-      - master
+      - source
 
 jobs:
   deploy:
@@ -25,7 +25,6 @@ jobs:
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          external_repository: sams96/sams96.github.io
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: master
           publish_dir: ./public

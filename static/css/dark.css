@@ -1,0 +1,34 @@
+html, footer {
+	background: black;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
+	background: black;
+	color: #FEFEFD;
+}
+
+a:link {
+	color: #358CFF;
+}
+
+a:visited {
+	color: #800080;
+}
+
+#post-page{}
+
+.caption {
+	color: #808080;
+}
+
+.by-line {
+	color: #808080;
+}
+
+#nav-links a {
+	color: #FEFEFD;
+}
+
+#header {
+	border-bottom: 1px solid #80808080;
+}

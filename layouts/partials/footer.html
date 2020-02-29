@@ -1,8 +1,0 @@
-<p>© {{ if isset .Site.Params "author"}}{{ .Site.Params.author }}, {{end}}{{ now.Year }}
-</p>
-<nav>
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.footer }}
-    <a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
-    {{ end }}
-</nav>

@@ -98,9 +98,8 @@ th, td {
 /* Code */
 pre {
     padding: 1em;
-    background-color: #f1f1f1;
+    background-color: #ffffff;
     max-width: 100%;
-    overflow: scroll;
 }
 
 code,
@@ -155,6 +154,7 @@ i.caption {
 
 header {
     display: flex;
+	align-items: center;
     justify-content: space-between;
 }
 
@@ -172,10 +172,11 @@ header h2 {
 }
 
 header nav {
-    margin-top: 2.5em;
+    margin-top: 3em;
     max-width: 100%;
     text-align: right;
-    margin-bottom: 1em;
+    vertical-align: bottom;
+    margin-bottom: 0;
 }
 
 header nav a {

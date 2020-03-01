@@ -1,0 +1,116 @@
+<!doctype html><html><head><meta charset=utf-8><meta name=HandheldFriendly content="True"><meta name=viewport content="width=device-width,initial-scale=1"><meta name=referrer content="no-referrer-when-downgrade"><title>Rgeo - A Go package for basic, fast, local reverse geocoding - Sam Smith</title><meta name=description content><link rel=alternate type=application/rss+xml title=RSS href=/rss/><link rel=icon type=image/x-icon href=/favicon.ico><link rel=apple-touch-icon-precomposed href=/favicon.png><link rel=stylesheet href="/css/style.css?rnd=1583027544"><meta property="og:title" content="Rgeo - A Go package for basic, fast, local reverse geocoding"><meta property="og:description" content="Rgeo is a fast, simple solution for local reverse geocoding, Rather than relying
+on external software or online APIs, rgeo packages all of the data it needs in
+your binary. This means it will only ever work down to the level of cities , but
+if that&rsquo;s all you need then this is the library for you."><meta property="og:type" content="article"><meta property="og:url" content="/rgeo/"><meta property="article:published_time" content="2020-03-01T00:00:00+00:00"><meta property="article:modified_time" content="2020-03-01T00:00:00+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="Rgeo - A Go package for basic, fast, local reverse geocoding"><meta name=twitter:description content="Rgeo is a fast, simple solution for local reverse geocoding, Rather than relying
+on external software or online APIs, rgeo packages all of the data it needs in
+your binary. This means it will only ever work down to the level of cities , but
+if that&rsquo;s all you need then this is the library for you."></head><body><div class=container><header class=site-header><h1 class=site-title><a href=/>Sam Smith</a></h1><nav><a href=/posts/>Archive</a>
+<a href=/about/ title=About>About</a></nav></header><main><article class=post><header><h1>Rgeo - A Go package for basic, fast, local reverse geocoding</h1></header><div class=article-date>01 Mar 2020</div><div class=content><p>Rgeo is a fast, simple solution for local reverse geocoding, Rather than relying
+on external software or online APIs, rgeo packages all of the data it needs in
+your binary. This means it will only ever work down to the level of cities , but
+if that&rsquo;s all you need then this is the library for you.</p><p>Rgeo uses data from <a href=https://naturalearthdata.com>naturalearthdata.com</a>, if
+your coordinates are going to be near specific borders I would advise checking
+the data beforehand (links to which are in the files). If you want to use your
+own dataset, check out
+<a href=https://github.com/sams96/rgeo/tree/master/datagen>datagen</a>.</p><h2 id=key-features>Key Features</h2><ul><li><strong>Fast</strong> - So I haven&rsquo;t <em>actually</em> benchmarked other reverse geocoding tools
+but on my laptop rgeo can run at under 800ns/op.</li><li><strong>Local</strong> - Rgeo doesn&rsquo;t require pinging some API, most of which either cost
+money to use or have severe rate limits.</li><li><strong>Lightweight</strong> - The rgeo repo is 141MB, which is large for a Go package but
+compared to the 800GB needed for a full planet install of
+<a href=https://nominatim.org/release-docs/latest/admin/Installation/#hardware>Nominatim</a>
+it&rsquo;s miniscule.</li></ul><h2 id=installation>Installation</h2><p>Download with</p><pre><code>go get github.com/sams96/rgeo
+</code></pre><p>and add</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=font-weight:700>import</span> <span style=color:#b84>&#34;github.com/sams96/rgeo&#34;</span>
+</code></pre></div><p>to the top of your Go file to include it in your project.</p><h2 id=usage>Usage</h2><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go>r, err <span style=font-weight:700>:=</span> <span style=color:#900;font-weight:700>New</span>(Provinces10, Cities10)
+<span style=font-weight:700>if</span> err <span style=font-weight:700>!=</span> <span style=font-weight:700>nil</span> {
+	<span style=color:#998;font-style:italic>// Handle error
+</span><span style=color:#998;font-style:italic></span>}
+
+loc, err <span style=font-weight:700>:=</span> r.<span style=color:#900;font-weight:700>ReverseGeocode</span>([]<span style=color:#458;font-weight:700>float64</span>{<span style=color:#099>141.35</span>, <span style=color:#099>43.07</span>})
+<span style=font-weight:700>if</span> err <span style=font-weight:700>!=</span> <span style=font-weight:700>nil</span> {
+	<span style=color:#998;font-style:italic>// Handle error
+</span><span style=color:#998;font-style:italic></span>}
+
+fmt.<span style=color:#900;font-weight:700>Println</span>(loc)
+<span style=color:#998;font-style:italic>// Output: &lt;Location&gt; Sapporo, Hokkaido, Japan (JPN), Asia
+</span></code></pre></div><p>First initialise rgeo using <code>rgeo.New</code>,</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=font-weight:700>func</span> <span style=color:#900;font-weight:700>New</span>(datasets <span style=font-weight:700>...</span><span style=font-weight:700>func</span>() []<span style=color:#458;font-weight:700>byte</span>) (<span style=font-weight:700>*</span>Rgeo, <span style=color:#458;font-weight:700>error</span>)
+</code></pre></div><p>which takes any non-zero number of datasets as arguments. The included datasets
+are:</p><ul><li><code>Countries110</code> - Just country information, smallest and lowest detail of the
+included datasets.</li><li><code>Countries10</code> - The same as above but with more detail.</li><li><code>Provinces10</code> - Includes province information as well as country, so can
+still be used alone.</li><li><code>Cities10</code> - Just city information, if you want provinces and/or countries as
+well use one of the above datasets with it.
+Once initialised you can use <code>ReverseGeocode</code> on the value returned by <code>New</code>,
+with your coordinates to get the location information. See the <a href=https://pkg.go.dev/github.com/sams96/rgeo>Go
+Docs</a> for more information on usage.</li></ul><p>Then use <code>ReverseGeocode</code> to get the location information of the given coordinate.</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=font-weight:700>func</span> (r <span style=font-weight:700>*</span>Rgeo) <span style=color:#900;font-weight:700>ReverseGeocode</span>(loc geom.Coord) (Location, <span style=color:#458;font-weight:700>error</span>)
+</code></pre></div><p>The input is a <a href=https://github.com/twpayne/go-geom><code>geom.Coord</code></a>, which is just
+a <code>[]float64</code> with the longitude in the zeroth position and the latitude in the
+first position (i.e. <code>[]float64{lon, lat}</code>). <code>ReverseGeocode</code> returns a
+<code>Location</code>, which looks like this:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go><span style=font-weight:700>type</span> Location <span style=font-weight:700>struct</span> {
+	<span style=color:#998;font-style:italic>// Commonly used country name
+</span><span style=color:#998;font-style:italic></span>	Country <span style=color:#458;font-weight:700>string</span> <span style=color:#b84>`json:&#34;country,omitempty&#34;`</span>
+
+	<span style=color:#998;font-style:italic>// Formal name of country
+</span><span style=color:#998;font-style:italic></span>	CountryLong <span style=color:#458;font-weight:700>string</span> <span style=color:#b84>`json:&#34;country_long,omitempty&#34;`</span>
+
+	<span style=color:#998;font-style:italic>// ISO 3166-1 alpha-1 and alpha-2 codes
+</span><span style=color:#998;font-style:italic></span>	CountryCode2 <span style=color:#458;font-weight:700>string</span> <span style=color:#b84>`json:&#34;country_code_2,omitempty&#34;`</span>
+	CountryCode3 <span style=color:#458;font-weight:700>string</span> <span style=color:#b84>`json:&#34;country_code_3,omitempty&#34;`</span>
+
+	Continent <span style=color:#458;font-weight:700>string</span> <span style=color:#b84>`json:&#34;continent,omitempty&#34;`</span>
+	Region    <span style=color:#458;font-weight:700>string</span> <span style=color:#b84>`json:&#34;region,omitempty&#34;`</span>
+	SubRegion <span style=color:#458;font-weight:700>string</span> <span style=color:#b84>`json:&#34;subregion,omitempty&#34;`</span>
+
+	Province <span style=color:#458;font-weight:700>string</span> <span style=color:#b84>`json:&#34;province,omitempty&#34;`</span>
+
+	<span style=color:#998;font-style:italic>// ISO 3166-2 code
+</span><span style=color:#998;font-style:italic></span>	ProvinceCode <span style=color:#458;font-weight:700>string</span> <span style=color:#b84>`json:&#34;province_code,omitempty&#34;`</span>
+
+	City <span style=color:#458;font-weight:700>string</span> <span style=color:#b84>`json:&#34;city,omitempty&#34;`</span>
+}
+</code></pre></div><p>So, to put it all together:</p><div class=highlight><pre style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-go data-lang=go>r, err <span style=font-weight:700>:=</span> rgeo.<span style=color:#900;font-weight:700>New</span>(Countries110)
+<span style=font-weight:700>if</span> err <span style=font-weight:700>!=</span> <span style=font-weight:700>nil</span> {
+	<span style=color:#998;font-style:italic>// Handle error
+</span><span style=color:#998;font-style:italic></span>}
+
+loc, err <span style=font-weight:700>:=</span> r.<span style=color:#900;font-weight:700>ReverseGeocode</span>([]<span style=color:#458;font-weight:700>float64</span>{<span style=color:#099>0</span>, <span style=color:#099>52</span>})
+<span style=font-weight:700>if</span> err <span style=font-weight:700>!=</span> <span style=font-weight:700>nil</span> {
+	<span style=color:#998;font-style:italic>// Handle error
+</span><span style=color:#998;font-style:italic></span>}
+
+fmt.<span style=color:#900;font-weight:700>Printf</span>(<span style=color:#b84>&#34;%s\n&#34;</span>, loc.Country)
+fmt.<span style=color:#900;font-weight:700>Printf</span>(<span style=color:#b84>&#34;%s\n&#34;</span>, loc.CountryLong)
+fmt.<span style=color:#900;font-weight:700>Printf</span>(<span style=color:#b84>&#34;%s\n&#34;</span>, loc.CountryCode2)
+fmt.<span style=color:#900;font-weight:700>Printf</span>(<span style=color:#b84>&#34;%s\n&#34;</span>, loc.CountryCode3)
+fmt.<span style=color:#900;font-weight:700>Printf</span>(<span style=color:#b84>&#34;%s\n&#34;</span>, loc.Continent)
+fmt.<span style=color:#900;font-weight:700>Printf</span>(<span style=color:#b84>&#34;%s\n&#34;</span>, loc.Region)
+fmt.<span style=color:#900;font-weight:700>Printf</span>(<span style=color:#b84>&#34;%s\n&#34;</span>, loc.SubRegion)
+
+<span style=color:#998;font-style:italic>// Output: United Kingdom
+</span><span style=color:#998;font-style:italic>// United Kingdom of Great Britain and Northern Ireland
+</span><span style=color:#998;font-style:italic>// GB
+</span><span style=color:#998;font-style:italic>// GBR
+</span><span style=color:#998;font-style:italic>// Europe
+</span><span style=color:#998;font-style:italic>// Europe
+</span><span style=color:#998;font-style:italic>// Northern Europe
+</span></code></pre></div><h2 id=projects-using-rgeo>Projects using rgeo</h2><p>Currently the only project that I know of is my own
+<a href=https://github.com/sams96/rgeoSrv>rgeoSrv</a>, which aims to wrap rgeo into a
+microservice. I am also planning on writing a command line appication to apply
+IPTC location tags to images that already contain geolocation information.</p><h2 id=how-it-works>How it works</h2><p>The data used by rgeo is made from a collection of GeoJSON files aquired from
+<a href=https://github.com/nvkelso/natural-earth-vector/tree/master/geojson>Natural Earth
+Data</a>,
+which are packaged into Go files by
+<a href=https://github.com/sams96/rgeo/tree/master/datagen>datagen</a>. The go files
+contain functions which return byte slices that contain the base 64 encoded,
+gzipped GeoJSON files. They&rsquo;re packaged into function because that seems to be
+the only way to have the Go compiler ignore them if they aren&rsquo;t used (so your
+program isn&rsquo;t inflated by huge data files that you aren&rsquo;t using).</p><p><code>New</code> takes the datasets, decodes the data and parses the GeoJSON. It creates an
+<code>Rgeo</code> struct which contains an <a href=https://github.com/golang/geo>s2</a> shape index,
+a map to store the location information of each area and an s2 contains point
+query. The shape index contains s2 polygons for each of the areas in the given
+dataset, and the contains point query is what goes from the input coordinates to
+a shape. The map is then used to get the location information from the shape.</p><p>One thing I discovered through working on this is initialising s2 loops and
+polygons is very slow and there&rsquo;s no way to store them that doesn&rsquo;t have to run
+all the validation code upon loading them. I found that going from creating the
+s2 types every time to using geom&rsquo;s <code>IsPointInRing</code> function yields a ~100x
+speed increase. I used s2 types because I wrote rgeo to be used many times in a
+program rather than a few, and s2&rsquo;s contains point query is <em>very</em> fast
+(although I don&rsquo;t have any benchmarks to hand).</p></div><div class=article-info><div class=article-taxonomies><ul class=article-categories><li><a href=/categories/programming>programming</a></li></ul><ul class=article-tags><li><a href=/tags/golang>#golang</a></li></ul></div></div></article></main><footer class=site-footer><p>© Sam Smith, 2020</p><nav><a href=/categories/ title=Categories>Categories</a>
+<a href=/tags/ title=Tags>Tags</a></nav></footer></div></body></html>

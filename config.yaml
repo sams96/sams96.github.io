@@ -1,16 +1,15 @@
 baseURL: /
-title: "Sam Smith"
+title: Sam Smith
 
 paginate: 10
 disablePathToLower: true
 languageCode: en-gb
 theme: "anubis"
+summaryLength: 999999999999
 
 params:
-  author: "Sam Smith"
+  author: Sam Smith
   dark_css: "css/dark.css"
-
-summaryLength: 999999999999
 
 menu:
   main:
@@ -43,6 +42,8 @@ taxonomies:
   tag: tags
 
 markup:
+  highlight:
+    style: trac
   goldmark:
     renderer:
       unsafe: true

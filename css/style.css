@@ -116,6 +116,7 @@ blockquote {
     border-left: 2px solid #cccccc;
     padding: 0.1em 1em;
     margin-left: 0.75em;
+    padding-right: 0.1em;
 }
 
 footer.bq {
@@ -214,7 +215,7 @@ main h1 {
 /* Articles */
 
 article:not(:last-of-type) {
-    padding-bottom: 2em;
+    padding-bottom: 1em;
 }
 
 .post-list:not(:last-of-type):after {
@@ -223,6 +224,7 @@ article:not(:last-of-type) {
     width: 5em;
     height: 1px;
     margin: 0 auto;
+	margin-top: 1em;
     background-color: #d1d1d1;
   }
 

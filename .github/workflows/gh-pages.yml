@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - source
+  repository_dispatch:
+    types: [scheduler]
 
 jobs:
   deploy:
@@ -18,6 +20,16 @@ jobs:
         with:
           hugo-version: '0.65.3'
           extended: true
+
+      - name: Add scheduler
+        run: |
+          mkdir -p static/.github/workflows
+          TIME=$(for d in $(cat content/post/* | awk '/date: / {gsub(/"/, "", $2); print $2 }'); do expr $(date -d $d +\%s) - $(date +\%s); done | awk '$1>=0' | sort -nk 1 | head -n 1);
+          if [ "$TIME" ]
+          then
+            echo -e "name: scheduler\non:\n\tschedule:\n\t\t- cron: '*/" $(expr $TIME / 60 + 1) "* * * *'\n\njobs:\n\tdeploy:\n\t\truns-on: ubuntu-latest\n\t\tsteps:\n\t\t\t- uses: peter-evans/repository-dispatch@v1\n\t\t\t\twith:\n\t\t\t\t\ttoken: \${{ secrets.REPO_ACESS_TOKEN }}\n\t\t\t\t\trepository: sams96/sams96/github.io\n\t\t\t\t\tevent-type: scheduler"
+          fi
+
 
       - name: Build
         run: hugo --minify

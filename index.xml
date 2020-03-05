@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Smith</title><link>/</link><description>Sam Smith</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Rgeo - A Go package for basic, fast, local reverse geocoding</title><link>/rgeo/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>/rgeo/</guid><description>&lt;p>Rgeo is a fast, simple solution for local reverse geocoding, Rather than relying
-on external software or online APIs, rgeo packages all of the data it needs in
-your binary. This means it will only ever work down to the level of cities , but
-if that&amp;rsquo;s all you need then this is the library for you.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Smith</title><link>/</link><description>Sam Smith</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Rgeo - A Go package for basic, fast, local reverse geocoding</title><link>/rgeo/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>/rgeo/</guid><description>&lt;p>&lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a> is a fast, simple solution for local
+reverse geocoding, Rather than relying on external software or online APIs, rgeo
+packages all of the data it needs in your binary. This means it will only ever
+work down to the level of cities , but if that&amp;rsquo;s all you need then this is the
+library for you.&lt;/p>
 &lt;p>Rgeo uses data from &lt;a href="https://naturalearthdata.com">naturalearthdata.com&lt;/a>, if
 your coordinates are going to be near specific borders I would advise checking
 the data beforehand (links to which are in the files). If you want to use your
@@ -713,5 +714,8 @@ like to me.&lt;/p></description></item><item><title>About</title><link>/about/</
 &lt;li>&lt;a href="https://instagram.com/mondoman712">Instagram&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;p>This site was built with &lt;a href="https://gohugo.io">Hugo&lt;/a> with a modified
-&lt;a href="https://github.com/mitrichius/hugo-theme-anubis">Anubis&lt;/a> theme and is hosted on
-&lt;a href="https://pages.github.com">Github Pages&lt;/a>.&lt;/p></description></item></channel></rss>
+&lt;a href="https://github.com/mitrichius/hugo-theme-anubis">Anubis&lt;/a> theme (with credit to
+the &lt;a href="https://github.com/dyutibarma/monochrome">monochrome&lt;/a> which this site used
+to be based on, &lt;a href="https://leejo.github.io">leejo.github.io&lt;/a> and the default
+&lt;a href="https://www.latex-project.org">LaTeX&lt;/a> theme which were both inspirations for
+this theme), and is hosted on &lt;a href="https://pages.github.com">Github Pages&lt;/a>.&lt;/p></description></item></channel></rss>

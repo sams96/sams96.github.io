@@ -121,6 +121,10 @@ blockquote {
     padding-right: 0.1em;
 }
 
+figcaption{
+	font-style: italic;
+}
+
 footer.bq {
 	font-style: normal;
 	float: right;

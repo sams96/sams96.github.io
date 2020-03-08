@@ -1,13 +1,11 @@
 ---
-categories:
-- photography
-date: "2018-11-09T00:00:00Z"
-description: null
-header: Portfolio I
-tags:
-- portfolio
 title: Portfolio I
 url: /portfolio-i
+date: "2018-11-09T00:00:00Z"
+tags:
+- portfolio
+categories:
+- photography
 ---
 
 This series of photographs represents approximately a years worth of work,

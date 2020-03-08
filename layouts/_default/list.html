@@ -9,6 +9,7 @@
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
                 </h2>
             </header>
+            {{ partial "articleInfoDate.html" . }}
             {{ partial "articleInfoFull.html" . }}
         </div>
     {{ end }}

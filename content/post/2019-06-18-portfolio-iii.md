@@ -1,13 +1,11 @@
 ---
-categories:
-- photography
-date: "2019-06-18T00:00:00Z"
-description: null
-header: Portfolio III - 2018
-tags:
-- portfolio
 title: Portfolio III - 2018
 url: /portfolio-iii
+date: "2019-06-18T00:00:00Z"
+categories:
+- photography
+tags:
+- portfolio
 ---
 
 Having finished my [last portfolio](/portfolio-ii) at the end of 2017 I can now

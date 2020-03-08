@@ -438,14 +438,14 @@ div.diptychl {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	padding-bottom: 1em;
+	padding-bottom: 0em;
 	margin-top: 0.5em;
 }
 
 @media only screen and (min-width: 88em) {
 	div.diptychl {
 		position: relative;
-		right: 21.5em;
+		right: 21.25em;
 	}
 }
 
@@ -462,9 +462,9 @@ div.diptychr {
 @media only screen and (min-width: 88em) {
 	div.diptychr {
 	position: relative;
-	bottom: 43.5em;
-	left: 21.5em;
-	margin-bottom: -43em;
+	bottom: 42.5em;
+	left: 21.25em;
+	margin-bottom: -42.5em;
 	}
 }
 

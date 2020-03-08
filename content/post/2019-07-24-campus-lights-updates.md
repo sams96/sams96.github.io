@@ -1,11 +1,12 @@
 ---
-categories:
-- photography
-date: "2019-07-24T00:00:00Z"
-header: Campus Lights Updates and Out-takes
-tags:
 title: Campus Lights Updates and Out-takes
 url: /campus-lights-updates
+date: "2019-07-24T00:00:00Z"
+categories:
+- photography
+tags:
+- Campus Lights
+- UK
 ---
 
 It's 5 months since I posted my project [Campus Lights](/campus-lights). Sadly I

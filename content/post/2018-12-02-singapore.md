@@ -1,13 +1,11 @@
 ---
-categories:
-- photography
-date: "2018-12-02T00:00:00Z"
-description: null
-header: null
-tags:
-- photo series
 title: 'Photo Series: Singaporean Architecture'
 url: /singaporean-architecture
+date: "2018-12-02T00:00:00Z"
+categories:
+- photography
+tags:
+- photo series
 ---
 
 In another attempt at post-shooting photo series creation, I have put together a

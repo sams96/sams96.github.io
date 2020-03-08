@@ -1,13 +1,14 @@
 ---
-categories:
-- photography
-date: "2019-02-16T00:00:00Z"
-dark: true
-header: Campus Lights
-tags:
-- photo series
 title: Campus Lights
 url: /campus-lights
+date: "2019-02-16T00:00:00Z"
+dark: true
+categories:
+- photography
+tags:
+- photo series
+- Campus Lights
+- UK
 ---
 
 As an astronomy student and hobbyist, light pollution has sort of become my

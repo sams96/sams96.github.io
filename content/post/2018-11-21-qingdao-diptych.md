@@ -1,12 +1,10 @@
 ---
-categories:
-- photography
-date: "2018-11-21T00:00:00Z"
-description: null
-header: Qingdao Diptych
-tags:
 title: Qingdao Diptych
 url: /qingdao-diptych
+date: "2018-11-21T00:00:00Z"
+categories:
+- photography
+tags:
 ---
 
 <div class="diptychl">

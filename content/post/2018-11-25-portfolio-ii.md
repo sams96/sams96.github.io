@@ -1,13 +1,11 @@
 ---
-categories:
-- photography
 date: "2018-11-25T00:00:00Z"
-description: null
-header: Portfolio II
-tags:
-- portfolio
 title: Portfolio II
 url: /portfolio-ii
+categories:
+- photography
+tags:
+- portfolio
 ---
 
 This set of images begins where the [last portfolio](/portfolio-i) leaves off

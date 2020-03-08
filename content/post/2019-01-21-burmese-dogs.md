@@ -1,13 +1,11 @@
 ---
-categories:
-- photography
-date: "2019-01-21T00:00:00Z"
-description: null
-header: Burmese Dogs
-tags:
-- photo series
 title: Burmese Dogs
 url: /burmese-dogs
+date: "2019-01-21T00:00:00Z"
+categories:
+- photography
+tags:
+- photo series
 ---
 
 <blockquote>"The pariah curs were baying the moon - it was only a quarter full

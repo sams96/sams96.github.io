@@ -1,7 +1,7 @@
 ---
 title: Portfolio III - 2018
 url: /portfolio-iii
-date: "2019-06-18T00:00:00Z"
+date: "2019-06-18"
 categories:
 - photography
 tags:

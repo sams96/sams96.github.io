@@ -1,7 +1,7 @@
 ---
 title: 'Photo Series: Singaporean Architecture'
 url: /singaporean-architecture
-date: "2018-12-02T00:00:00Z"
+date: "2018-12-02"
 categories:
 - photography
 tags:

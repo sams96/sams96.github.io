@@ -1,7 +1,7 @@
 ---
 title: Qingdao Diptych
 url: /qingdao-diptych
-date: "2018-11-21T00:00:00Z"
+date: "2018-11-21"
 categories:
 - photography
 tags:

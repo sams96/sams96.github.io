@@ -1,7 +1,7 @@
 ---
 title: Campus Lights
 url: /campus-lights
-date: "2019-02-16T00:00:00Z"
+date: "2019-02-16"
 dark: true
 categories:
 - photography

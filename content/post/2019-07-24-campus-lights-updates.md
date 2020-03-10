@@ -1,7 +1,7 @@
 ---
 title: Campus Lights Updates and Out-takes
 url: /campus-lights-updates
-date: "2019-07-24T00:00:00Z"
+date: "2019-07-24"
 categories:
 - photography
 tags:

@@ -1,5 +1,5 @@
 ---
-date: "2018-11-25T00:00:00Z"
+date: "2018-11-25"
 title: Portfolio II
 url: /portfolio-ii
 categories:

@@ -1,7 +1,7 @@
 ---
 title: 'Photo Series: New York Architecture'
 url: /ny-architecture
-date: "2020-03-15T00:00:00Z"
+date: "2020-03-15"
 categories:
 - photography
 tags:

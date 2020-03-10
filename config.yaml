@@ -6,6 +6,7 @@ disablePathToLower: true
 languageCode: en-gb
 theme: "anubis"
 summaryLength: 999999999999
+googleAnalytics: UA-160189334-1
 
 params:
   author: Sam Smith

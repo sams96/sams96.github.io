@@ -1,7 +1,7 @@
 ---
 title: Burmese Dogs
 url: /burmese-dogs
-date: "2019-01-21T00:00:00Z"
+date: "2019-01-21"
 categories:
 - photography
 tags:

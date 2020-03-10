@@ -1,7 +1,7 @@
 ---
 title: Portfolio I
 url: /portfolio-i
-date: "2018-11-09T00:00:00Z"
+date: "2018-11-09"
 tags:
 - portfolio
 categories:

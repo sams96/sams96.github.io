@@ -12,6 +12,7 @@ In another attempt at post-shooting photo series creation, I have put together a
 collection of architecture shots I took during my brief stay in Singapore in
 June of 2018.
 
+</br>
 <a href="https://www.flickr.com/gp/ss9679/82c85c"
 	title="8908">
 <img src="https://farm5.staticflickr.com/4832/31191762047_907b91899a_b.jpg"

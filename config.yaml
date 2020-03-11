@@ -26,17 +26,17 @@ menu:
       weight: 1
 
   footer:
-    - identifier: tags
-      name: Tags
-      title: Tags
-      url: /tags/
-      weight: 0
-
     - identifier: categories
       name: Categories
       title: Categories
       url: /categories/
       weight: 0
+
+    - identifier: tags
+      name: Tags
+      title: Tags
+      url: /tags/
+      weight: 1
 
 taxonomies:
   category: categories
@@ -48,3 +48,7 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+      autoHeadingIDType: github

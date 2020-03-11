@@ -1,7 +1,6 @@
 /* Basic */
-@import url('https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/font/serif/cmun-serif.css');
 html {
-	font-family: serif, 'SimSun', 中易宋体;
+	font-family: 'Computer Modern Serif', serif;
 	/* 1 */
 	-ms-text-size-adjust: 100%;
 	/* 2 */
@@ -21,6 +20,7 @@ body {
     margin: 0 auto;
 
 	text-align: justify;
+	overflow: auto;
 }
 
 article,
@@ -102,13 +102,14 @@ pre {
     padding: 1em;
     background-color: #ffffff;
     max-width: 100%;
+	white-space: pre-wrap;
+	word-break: keep-all;
 }
 
 code,
 pre,
 kbd {
-    font-family: monospace;
-    font-size: 0.90em;
+	font-family: 'Computer Modern Typewriter', monospace;
     line-height: 154%;
 }
 
@@ -135,8 +136,14 @@ footer.bq {
 }
 
 p {
+	text-indent: 0;
     margin-top: 0.5em;
-    margin-bottom: 0.5em;
+	margin-bottom: 0;
+}
+
+p + p {
+    margin-top: 0;
+	text-indent: 2em;
 }
 
 hr {
@@ -442,13 +449,6 @@ div.diptychl {
 	margin-top: 0.5em;
 }
 
-@media only screen and (min-width: 88em) {
-	div.diptychl {
-		position: relative;
-		right: 21.25em;
-	}
-}
-
 div.diptychr {
 	/*
 	 * max-width: 36em;
@@ -460,11 +460,16 @@ div.diptychr {
 }
 
 @media only screen and (min-width: 88em) {
+	div.diptychl {
+		position: relative;
+		right: 21.25em;
+	}
+
 	div.diptychr {
-	position: relative;
-	bottom: 42.5em;
-	left: 21.25em;
-	margin-bottom: -42.5em;
+		position: relative;
+		bottom: 42.5em;
+		left: 21.25em;
+		margin-bottom: -42.5em;
 	}
 }
 

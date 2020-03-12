@@ -41,14 +41,12 @@ documenting what the campus looks like before it hopefully gets darker.
 <img src="https://farm8.staticflickr.com/7886/31900698137_70fdc71352_b.jpg"
 	alt="Campus Lights 2"></a>
 
-<div class="diptychl">
+<div id="diptych">
 <a href="https://www.flickr.com/gp/ss9679/c2341k"
 	title="Campus Lights 3">
 <img src="https://farm8.staticflickr.com/7803/31900698147_2ae67c10fc_b.jpg"
 	alt="Campus Lights 3"></a>
-</div>
 
-<div class="diptychr">
 <a href="https://www.flickr.com/gp/ss9679/5RWCzN"
 	title="Campus Lights 4">
 <img src="https://farm8.staticflickr.com/7898/31900698267_d1feb7d27c_b.jpg"
@@ -110,14 +108,12 @@ documenting what the campus looks like before it hopefully gets darker.
 <img src="https://farm5.staticflickr.com/4818/45927543055_b11527b8e8_b.jpg"
 	alt="Campus Lights 15"></a>
 
-<div class="diptychl">
+<div id="diptych">
 <a href="https://www.flickr.com/gp/ss9679/9ZHoZ9"
 	title="Campus Lights 16">
 <img src="https://farm8.staticflickr.com/7927/46842026631_7ffa0e3d3a_b.jpg"
 	alt="Campus Lights 16"></a>
-</div>
 
-<div class="diptychr">
 <a href="https://www.flickr.com/gp/ss9679/71zkik"
 	title="Campus Lights 17">
 <img src="https://farm8.staticflickr.com/7857/45927543795_003ac6c862_b.jpg"

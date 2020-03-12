@@ -15,20 +15,16 @@ suggest, I did explore beyond Manhattan but not as much and I found Manhattan to
 be the most interesting photographically.
 
 </br>
-<div class="diptychl">
+<div id="diptych">
 <a href="https://www.flickr.com/gp/ss9679/oV1Xud" title="NY01">
 	<img src="https://live.staticflickr.com/65535/49633040842_b33a8b50d1_b.jpg"
 		width="1024" height="1024" alt="NY01">
 </a>
 
-</div>
-
-<div class="diptychr">
 <a href="https://www.flickr.com/gp/ss9679/59PQ07" title="NY02">
 	<img src="https://live.staticflickr.com/65535/49633042192_1daf8dc26a_b.jpg"
 		width="1024" height="1024" alt="NY02">
 </a>
-
 </div>
 
 <!--more-->
@@ -63,28 +59,24 @@ be the most interesting photographically.
 		width="1024" height="1024" alt="NY08">
 </a>
 
-<div class="diptychl">
+<div id="diptych">
 <a href="https://www.flickr.com/gp/ss9679/Y301v2" title="NY09">
 	<img src="https://live.staticflickr.com/65535/49632251138_4ec3eba940_b.jpg"
 		width="1024" height="1024" alt="NY09">
 </a>
-</div>
 
-<div class="diptychr">
 <a href="https://www.flickr.com/gp/ss9679/0A2oSd" title="NY10">
 	<img src="https://live.staticflickr.com/65535/49632247938_030f53014f_b.jpg"
 		width="1024" height="1024" alt="NY10">
 </a>
 </div>
 
-<div class="diptychl">
+<div id="diptych">
 <a href="https://www.flickr.com/gp/ss9679/6PjzK0" title="NY11">
 	<img src="https://live.staticflickr.com/65535/49632248943_fab5e1c586_b.jpg"
 		width="1024" height="1024" alt="NY11">
 </a>
-</div>
 
-<div class="diptychr">
 <a href="https://www.flickr.com/gp/ss9679/pcar39" title="NY12">
 	<img src="https://live.staticflickr.com/65535/49632770811_baae22e15f_b.jpg"
 		width="1024" height="1024" alt="NY12">

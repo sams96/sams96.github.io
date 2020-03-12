@@ -7,14 +7,12 @@ categories:
 tags:
 ---
 
-<div class="diptychl">
+<div id="diptych">
 <a href="https://www.flickr.com/photos/ss9679/44647184712/"
 	title="Moon Over Qingdao">
 <img src="https://farm2.staticflickr.com/1866/44647184712_8eae88c304_b.jpg"
 	alt="Moon Over Qingdao"></a>
-</div>
 
-<div class="diptychr">
 <a href="https://www.flickr.com/photos/ss9679/44711556062/"
 	title="Huiquan Cape">
 <img src="https://farm2.staticflickr.com/1886/44711556062_b55c427684_b.jpg"

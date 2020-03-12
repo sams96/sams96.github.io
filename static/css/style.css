@@ -48,11 +48,11 @@ h1 {
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 h3 {
-    font-size: 1.1em;
+    font-size: 1.0em;
 }
 
 /* Links */
@@ -84,17 +84,23 @@ a:active {
 }
 
 table {
-    max-width: 100%;
+	margin: 1em auto;
+	width: 95%;
     border-spacing: 0;
+	border-collapse: collapse;
 }
 
 thead {
-    background: lightgrey;
+    border-bottom: thin solid #000000;
 }
 
 th, td {
-    padding: 0.5em 1em;
-    border: 1px double lightgrey;
+    padding: 0.25em 0.25em;
+}
+
+caption {
+	margin: 0 auto;
+	font-style: italic;
 }
 
 /* Code */
@@ -438,53 +444,29 @@ footer a {
     }
 }
 
-div.diptychl {
-	/*
-	max-width: 36em;
-	*/
-	margin: 0;
-	padding: 0;
-	border: 0;
-	padding-bottom: 0em;
-	margin-top: 0.5em;
+#diptych {
+	display: block;
+	width: 89em;
+	margin: 0 auto;
+	position: relative;
+	right: 21.5em;
 }
 
-div.diptychr {
-	/*
-	 * max-width: 36em;
-	 */
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	border: 0;
+#diptych img {
+	height: auto;
+	width: 42em;
+	box-sizing: border-box;
+	float: left;
+	margin: 0 .25em .5em;
 }
 
-@media only screen and (min-width: 88em) {
-	div.diptychl {
-		position: relative;
-		right: 21.25em;
+@media only screen and (max-width: 88em) {
+	#diptych {
+		width: 100%;
+		position: static;
 	}
 
-	div.diptychr {
-		position: relative;
-		bottom: 42.5em;
-		left: 21.25em;
-		margin-bottom: -42.5em;
-	}
-}
-
-div.talldr {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
-@media only screen and (min-width: 88em) {
-	div.talldr {
-		position: relative;
-		bottom: 57.5em;
-		left: 21.5em;
-		margin-bottom: -57.5em;
+	#diptych img {
+		margin: 0 auto .5em;
 	}
 }

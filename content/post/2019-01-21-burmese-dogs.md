@@ -42,10 +42,8 @@ the dogs.
 
 <img src="/img/Burmese Dogs/IMG_20180720_110126.jpg">
 
-<div class="diptychl">
+<div id="diptych">
 <img src="/img/Burmese Dogs/IMG_20180720_144436.jpg">
-</div>
-<div class="talldr">
 <img src="/img/Burmese Dogs/IMG_20180720_145141.jpg">
 </div>
 

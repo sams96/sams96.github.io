@@ -22,17 +22,15 @@ alt="Campus Lights 1">&lt;/a>&lt;/p>
 title="Campus Lights 2">
 &lt;img src="https://farm8.staticflickr.com/7886/31900698137_70fdc71352_b.jpg"
 alt="Campus Lights 2">&lt;/a>&lt;/p>
-&lt;div class="diptychl">
+&lt;div id="diptych">
 &lt;a href="https://www.flickr.com/gp/ss9679/c2341k"
 title="Campus Lights 3">
 &lt;img src="https://farm8.staticflickr.com/7803/31900698147_2ae67c10fc_b.jpg"
 alt="Campus Lights 3">&lt;/a>
-&lt;/div>
-&lt;div class="diptychr">
-&lt;a href="https://www.flickr.com/gp/ss9679/5RWCzN"
+&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/5RWCzN"
 title="Campus Lights 4">
 &lt;img src="https://farm8.staticflickr.com/7898/31900698267_d1feb7d27c_b.jpg"
-alt="Campus Lights 4">&lt;/a>
+alt="Campus Lights 4">&lt;/a>&lt;/p>
 &lt;/div>
 &lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/A197YU"
 title="Campus Lights 5">
@@ -78,17 +76,15 @@ alt="Campus Lights 14">&lt;/a>&lt;/p>
 title="Campus Lights 15">
 &lt;img src="https://farm5.staticflickr.com/4818/45927543055_b11527b8e8_b.jpg"
 alt="Campus Lights 15">&lt;/a>&lt;/p>
-&lt;div class="diptychl">
+&lt;div id="diptych">
 &lt;a href="https://www.flickr.com/gp/ss9679/9ZHoZ9"
 title="Campus Lights 16">
 &lt;img src="https://farm8.staticflickr.com/7927/46842026631_7ffa0e3d3a_b.jpg"
 alt="Campus Lights 16">&lt;/a>
-&lt;/div>
-&lt;div class="diptychr">
-&lt;a href="https://www.flickr.com/gp/ss9679/71zkik"
+&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/71zkik"
 title="Campus Lights 17">
 &lt;img src="https://farm8.staticflickr.com/7857/45927543795_003ac6c862_b.jpg"
-alt="Campus Lights 17">&lt;/a>
+alt="Campus Lights 17">&lt;/a>&lt;/p>
 &lt;/div>
 &lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/3X7Q5o"
 title="Campus Lights 18">
@@ -157,10 +153,8 @@ the dogs.&lt;/p>
 &lt;img src="/img/Burmese Dogs/IMG_20180711_114243.jpg">
 &lt;img src="/img/Burmese Dogs/IMG_20180713_140312.jpg">
 &lt;img src="/img/Burmese Dogs/IMG_20180720_110126.jpg">
-&lt;div class="diptychl">
+&lt;div id="diptych">
 &lt;img src="/img/Burmese Dogs/IMG_20180720_144436.jpg">
-&lt;/div>
-&lt;div class="talldr">
 &lt;img src="/img/Burmese Dogs/IMG_20180720_145141.jpg">
 &lt;/div>
 &lt;img src="/img/Burmese Dogs/IMG_20180724_141048.jpg">

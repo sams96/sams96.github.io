@@ -26,3 +26,13 @@ a:visited {
 .site-footer {
     border-top: thin solid #FEFEFD80;
 }
+
+@media (max-width: 840px) {
+    header nav {
+        background: #1d1c21;
+    }
+
+	.site-header {
+		border-bottom: none;
+	}
+}

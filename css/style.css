@@ -117,6 +117,7 @@ pre,
 kbd {
 	font-family: 'Computer Modern Typewriter', monospace;
     line-height: 154%;
+	text-align: left;
 }
 
 /* Styles */

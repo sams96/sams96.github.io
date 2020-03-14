@@ -52,3 +52,9 @@ markup:
       attribute: true
       autoHeadingID: true
       autoHeadingIDType: github
+
+privacy:
+  googleAnalytics:
+    anonymizeIP: true
+    respectDoNotTrack: true
+    useSessionStorage: true

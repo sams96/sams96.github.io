@@ -321,6 +321,13 @@ article img {
     margin: 0 auto .5em;
 }
 
+article figure {
+	max-width: 100%;
+	display: block;
+    height: auto;
+    margin: 0 auto .5em;
+}
+
 .read-more {
     text-align: right;
 }

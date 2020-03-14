@@ -12,7 +12,7 @@ tags:
 and nearly down by midnight, but the dogs slept all day in the heat, and they
 had begun their moon-choruses already" <footer class="bq">- George Orwell</footer>
 </blockquote><br>
-<img src="/img/Burmese Dogs/IMG_20180704_161832.jpg">
+{{< figure src="/burmese-dogs/burmese-dogs-01.jpg" >}}
 <!--more-->
 <br>
 
@@ -28,25 +28,25 @@ the dogs.
 
 <br>
 
-<img src="/img/Burmese Dogs/IMG_20180705_164205.jpg">
+{{< figure src="burmese-dogs-02.jpg" >}}
 
-<img src="/img/Burmese Dogs/IMG_20180708_091002.jpg">
+{{< figure src="burmese-dogs-03.jpg" >}}
 
-<img src="/img/Burmese Dogs/IMG_20180708_162149.jpg">
+{{< figure src="burmese-dogs-04.jpg" >}}
 
-<img src="/img/Burmese Dogs/IMG_20180710_124209.jpg">
+{{< figure src="burmese-dogs-05.jpg" >}}
 
-<img src="/img/Burmese Dogs/IMG_20180711_114243.jpg">
+{{< figure src="burmese-dogs-06.jpg" >}}
 
-<img src="/img/Burmese Dogs/IMG_20180713_140312.jpg">
+{{< figure src="burmese-dogs-07.jpg" >}}
 
-<img src="/img/Burmese Dogs/IMG_20180720_110126.jpg">
+{{< figure src="burmese-dogs-08.jpg" >}}
 
 <div id="diptych">
-<img src="/img/Burmese Dogs/IMG_20180720_144436.jpg">
-<img src="/img/Burmese Dogs/IMG_20180720_145141.jpg">
+{{< figure src="burmese-dogs-09.jpg" >}}
+{{< figure src="burmese-dogs-10.jpg" >}}
 </div>
 
-<img src="/img/Burmese Dogs/IMG_20180724_141048.jpg">
+{{< figure src="burmese-dogs-11.jpg" >}}
 
-<img src="/img/Burmese Dogs/IMG_20180724_160037.jpg">
+{{< figure src="burmese-dogs-12.jpg" >}}

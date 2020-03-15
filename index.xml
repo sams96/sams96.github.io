@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Smith</title><link>/</link><description>Sam Smith</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Rgeo — A Go package for basic, fast, local reverse geocoding</title><link>/rgeo/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>/rgeo/</guid><description>&lt;p>&lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a> is a fast, simple solution for local
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Smith</title><link>/</link><description>Sam Smith</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 15 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>Photo Series: New York Architecture</title><link>/ny-architecture/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>/ny-architecture/</guid><description>&lt;p>Just 15 months after I posted my &lt;a href="/singaporean-architecture">Singapore Architecture photo
+series&lt;/a>, I have decided to revisit this theme with
+some photos I took in New York last September. Despite what this series might
+suggest, I did explore beyond Manhattan but not as much and I found Manhattan to
+be the most interesting photographically.&lt;/p>
+&lt;/br>
+&lt;div id="diptych">
+&lt;a href="https://www.flickr.com/gp/ss9679/oV1Xud" title="NY01">
+&lt;img src="https://live.staticflickr.com/65535/49633040842_b33a8b50d1_b.jpg"
+width="1024" height="1024" alt="NY01">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/59PQ07" title="NY02">
+&lt;img src="https://live.staticflickr.com/65535/49633042192_1daf8dc26a_b.jpg"
+width="1024" height="1024" alt="NY02">
+&lt;/a>
+&lt;/div>
+&lt;a href="https://www.flickr.com/gp/ss9679/1p00N3" title="NY03">
+&lt;img src="https://live.staticflickr.com/65535/49633044712_b783d582a4_b.jpg"
+width="1024" height="1024" alt="NY03">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/2s95CJ" title="NY04">
+&lt;img src="https://live.staticflickr.com/65535/49632773191_c76ccb258e_b.jpg"
+width="1024" height="1024" alt="NY04">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/mr1M8a" title="NY05">
+&lt;img src="https://live.staticflickr.com/65535/49632251568_970b164cab_b.jpg"
+width="1024" height="1024" alt="NY05">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/n792pm" title="NY06">
+&lt;img src="https://live.staticflickr.com/65535/49633042917_f65c674795_b.jpg"
+width="1024" height="1024" alt="NY06">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/43aKc2" title="NY07">
+&lt;img src="https://live.staticflickr.com/65535/49632771396_7714e8f194_b.jpg"
+width="1024" height="1024" alt="NY07">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/2C2Hg9" title="NY08">
+&lt;img src="https://live.staticflickr.com/65535/49632250813_62dcfd4714_b.jpg"
+width="1024" height="1024" alt="NY08">
+&lt;/a>
+&lt;div id="diptych">
+&lt;a href="https://www.flickr.com/gp/ss9679/Y301v2" title="NY09">
+&lt;img src="https://live.staticflickr.com/65535/49632251138_4ec3eba940_b.jpg"
+width="1024" height="1024" alt="NY09">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/0A2oSd" title="NY10">
+&lt;img src="https://live.staticflickr.com/65535/49632247938_030f53014f_b.jpg"
+width="1024" height="1024" alt="NY10">
+&lt;/a>
+&lt;/div>
+&lt;div id="diptych">
+&lt;a href="https://www.flickr.com/gp/ss9679/6PjzK0" title="NY11">
+&lt;img src="https://live.staticflickr.com/65535/49632248943_fab5e1c586_b.jpg"
+width="1024" height="1024" alt="NY11">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/pcar39" title="NY12">
+&lt;img src="https://live.staticflickr.com/65535/49632770811_baae22e15f_b.jpg"
+width="1024" height="1024" alt="NY12">
+&lt;/a>
+&lt;/div>
+&lt;/br>
+This series was shot with my Hasselblad 500C/M with Ilford HP5+ shot at EI 800
+and developed in HC-110 1+49 for 11 minutes.</description></item><item><title>Rgeo — A Go package for basic, fast, local reverse geocoding</title><link>/rgeo/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>/rgeo/</guid><description>&lt;p>&lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a> is a fast, simple solution for local
 reverse geocoding, Rather than relying on external software or online APIs, rgeo
 packages all of the data it needs in your binary. This means it will only ever
 work down to the level of cities , but if that&amp;rsquo;s all you need then this is the
@@ -376,7 +438,9 @@ Missing the dark: health effects of light pollution. Environ Health Perspect.
 and nearly down by midnight, but the dogs slept all day in the heat, and they
 had begun their moon-choruses already" &lt;footer class="bq">- George Orwell&lt;/footer>
 &lt;/blockquote>&lt;br>
-&lt;img src="/img/Burmese Dogs/IMG_20180704_161832.jpg">
+&lt;figure>
+&lt;img src="/burmese-dogs/burmese-dogs-01.jpg"/>
+&lt;/figure>
 &lt;br>
 &lt;p>It was on the first night of the 3 day trek from Kalaw to Inle Lake, in a small
 hilltop village, at about 4 a.m when, as we discovered later in the morning, we
@@ -387,19 +451,41 @@ during July 2018. I found the similarities between Burma as I visited it and how
 George Orwell wrote about it to be quite interesting, especially with regards to
 the dogs.&lt;/p>
 &lt;br>
-&lt;img src="/img/Burmese Dogs/IMG_20180705_164205.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180708_091002.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180708_162149.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180710_124209.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180711_114243.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180713_140312.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180720_110126.jpg">
+&lt;figure>
+&lt;img src="burmese-dogs-02.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-03.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-04.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-05.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-06.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-07.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-08.jpg"/>
+&lt;/figure>
 &lt;div id="diptych">
-&lt;img src="/img/Burmese Dogs/IMG_20180720_144436.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180720_145141.jpg">
+&lt;figure>
+&lt;img src="burmese-dogs-09.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-10.jpg"/>
+&lt;/figure>
 &lt;/div>
-&lt;img src="/img/Burmese Dogs/IMG_20180724_141048.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180724_160037.jpg"></description></item><item><title>Photo Series: Singaporean Architecture</title><link>/singaporean-architecture/</link><pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate><guid>/singaporean-architecture/</guid><description>&lt;p>In another attempt at post-shooting photo series creation, I have put together a
+&lt;figure>
+&lt;img src="burmese-dogs-11.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-12.jpg"/>
+&lt;/figure></description></item><item><title>Photo Series: Singaporean Architecture</title><link>/singaporean-architecture/</link><pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate><guid>/singaporean-architecture/</guid><description>&lt;p>In another attempt at post-shooting photo series creation, I have put together a
 collection of architecture shots I took during my brief stay in Singapore in
 June of 2018.&lt;/p>
 &lt;/br>

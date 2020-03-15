@@ -42,7 +42,7 @@ the dogs.
 
 {{< figure src="burmese-dogs-08.jpg" >}}
 
-<div id="diptych">
+<div class="diptych">
 {{< figure src="burmese-dogs-09.jpg" >}}
 {{< figure src="burmese-dogs-10.jpg" >}}
 </div>

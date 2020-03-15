@@ -14,8 +14,7 @@ some photos I took in New York last September. Despite what this series might
 suggest, I did explore beyond Manhattan but not as much and I found Manhattan to
 be the most interesting photographically.
 
-</br>
-<div id="diptych">
+<div class="diptych">
 <a href="https://www.flickr.com/gp/ss9679/oV1Xud" title="NY01">
 	<img src="https://live.staticflickr.com/65535/49633040842_b33a8b50d1_b.jpg"
 		width="1024" height="1024" alt="NY01">
@@ -59,7 +58,7 @@ be the most interesting photographically.
 		width="1024" height="1024" alt="NY08">
 </a>
 
-<div id="diptych">
+<div class="diptych">
 <a href="https://www.flickr.com/gp/ss9679/Y301v2" title="NY09">
 	<img src="https://live.staticflickr.com/65535/49632251138_4ec3eba940_b.jpg"
 		width="1024" height="1024" alt="NY09">
@@ -71,7 +70,7 @@ be the most interesting photographically.
 </a>
 </div>
 
-<div id="diptych">
+<div class="diptych">
 <a href="https://www.flickr.com/gp/ss9679/6PjzK0" title="NY11">
 	<img src="https://live.staticflickr.com/65535/49632248943_fab5e1c586_b.jpg"
 		width="1024" height="1024" alt="NY11">
@@ -83,6 +82,5 @@ be the most interesting photographically.
 </a>
 </div>
 
-</br>
 This series was shot with my Hasselblad 500C/M with Ilford HP5+ shot at EI 800
 and developed in HC-110 1+49 for 11 minutes.

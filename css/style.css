@@ -148,7 +148,7 @@ p {
 	margin-bottom: 0;
 }
 
-p + p {
+p:not(:empty) + p:not(:empty) {
     margin-top: 0;
 	text-indent: 2em;
 }
@@ -163,11 +163,11 @@ ul ol, ol ol, ul ul {
     margin: 0em 2em;
 }
 
-i.caption {
+figcaption {
   display: block;
   color: grey;
   line-height: 1em; /* 24px/16px */
-  margin-bottom: 1em; /* 24px/16px */
+  margin-bottom: 1.5em; /* 24px/16px */
   font-weight: 200;
 }
 
@@ -264,7 +264,7 @@ article header h1 a {
 .article-info {
     font-size: 0.75em;
     color: grey;
-    margin-top: 1em;
+    margin-top: 0.25em;
 }
 
 .article-info a {
@@ -328,8 +328,37 @@ article figure {
     margin: 0 auto .5em;
 }
 
+.diptych figure {
+	margin: 0;
+}
+
+article img + p:not(:empty),
+article figure + p:not(:empty),
+.diptych + p:not(:empty) {
+	margin-top: 1em;
+}
+
+article p:not(:empty) + img,
+article p:not(:empty) + figure,
+article p:not(:empty) + .diptych {
+	margin-top: 1em;
+}
+
+.content figure:first-child,
+.content .diptych:first-child {
+	margin-top: 1em;
+}
+
 .read-more {
+	margin-top: 0;
+	margin-bottom: 0;
     text-align: right;
+}
+
+.post-list-footer {
+    display: flex;
+    justify-content: space-between;
+	margin-top: 0.5em;
 }
 
 .divider {
@@ -452,15 +481,16 @@ footer a {
     }
 }
 
-#diptych {
+.diptych {
 	display: block;
 	width: 89em;
 	margin: 0 auto;
 	position: relative;
 	right: 21.5em;
+	overflow: auto;
 }
 
-#diptych img {
+.diptych img {
 	height: auto;
 	width: 42em;
 	box-sizing: border-box;
@@ -469,12 +499,12 @@ footer a {
 }
 
 @media only screen and (max-width: 88em) {
-	#diptych {
+	.diptych {
 		width: 100%;
 		position: static;
 	}
 
-	#diptych img {
+	.diptych img {
 		margin: 0 auto .5em;
 	}
 }

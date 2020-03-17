@@ -12,7 +12,7 @@ This set of images begins where the [last portfolio](/portfolio-i) leaves off
 and primarily shows my travels during the summer of 2017, with the last image
 being the only one outside of that. I have again chosen to stick to black and
 white images taken with my Hasselblad for consistency, and because it's what I
-primary set-up. I am planning on doing one of these with the colour photos that
+primarily use. I am planning on doing one of these with the colour photos that
 I've taken since I started shooting square format.
 <!--more-->
 

@@ -11,8 +11,8 @@ tags:
 Just 15 months after I posted my [Singapore Architecture photo
 series](/singaporean-architecture), I have decided to revisit this theme with
 some photos I took in New York last September. Despite what this series might
-suggest, I did explore beyond Manhattan but not as much and I found Manhattan to
-be the most interesting photographically.
+suggest, I did explore beyond Manhattan but not as much because I found
+Manhattan to be the most interesting photographically.
 
 <div class="diptych">
 <a href="https://www.flickr.com/gp/ss9679/oV1Xud" title="NY01">

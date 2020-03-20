@@ -344,9 +344,9 @@ article p:not(:empty) + .diptych {
 	margin-top: 1em;
 }
 
-.content figure:first-child,
-.content .diptych:first-child {
-	margin-top: 1em;
+.content > figure:first-child,
+.content > .diptych:first-child {
+	margin-top: .5em;
 }
 
 .read-more {

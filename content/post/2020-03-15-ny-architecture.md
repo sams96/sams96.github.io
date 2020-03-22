@@ -82,5 +82,5 @@ Manhattan to be the most interesting photographically.
 </a>
 </div>
 
-This series was shot with my Hasselblad 500C/M with Ilford HP5+ shot at EI 800
-and developed in HC-110 1+49 for 11 minutes.
+This series was shot with my Hasselblad 500C/M and CF 150mm lens, on Ilford HP5+
+shot at EI 800 and developed in HC-110 1+49 for 11 minutes.

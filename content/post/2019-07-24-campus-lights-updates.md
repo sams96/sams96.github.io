@@ -6,6 +6,7 @@ categories:
 - photography
 tags:
 - Campus Lights
+- Nottingham
 - UK
 ---
 

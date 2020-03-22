@@ -8,6 +8,7 @@ categories:
 tags:
 - photo series
 - Campus Lights
+- Nottingham
 - UK
 ---
 

@@ -14,11 +14,11 @@ I was recently looking through all the photos I took during my 4 years living in
 Nottingham to see if I could come up with some kind of series out of them. After
 cutting it down to all the black & white images that turned out reasonably I had
 just over 200 photos so I needed to come up with some more specific ideas. One
-theme I tend to shoot a lot is where natire meets the man-made, which lead me to
-put together this series. I got the title, and some inspiration, from [Robin
-Friend's Bastard Countryside](https://www.robinfriend.co.uk/bastard-countryside)
-(watch [this video](https://www.youtube.com/watch?v=EkS_jxaej90) for a good
-introduction).
+theme I tend to shoot a lot is where nature meets the built environment, which
+lead me to put together this series. I got the title, and some inspiration, from
+[Robin Friend's Bastard
+Countryside](https://www.robinfriend.co.uk/bastard-countryside) (watch [this
+video](https://www.youtube.com/watch?v=EkS_jxaej90) for a good introduction).
 {{< figure src="https://live.staticflickr.com/65535/49677907261_b15da35fdf_b.jpg"
 	link="https://www.flickr.com/gp/ss9679/wV9P16" alt="Edgeland Nottingham 01" >}}
 <!--more-->
@@ -48,6 +48,7 @@ introduction).
 	link="https://www.flickr.com/gp/ss9679/7xzLnf" alt="Edgeland Nottingham 11" >}}
 {{< figure src="https://live.staticflickr.com/65535/49678183097_7ea871e27f_b.jpg"
 	link="https://www.flickr.com/gp/ss9679/Da5K39" alt="Edgeland Nottingham 12" >}}
+<a name="13"></a>
 {{< figure src="https://live.staticflickr.com/65535/49678182452_2af61c9f1f_b.jpg"
 	link="https://www.flickr.com/gp/ss9679/2PBMdd" alt="Edgeland Nottingham 13" >}}
 {{< figure src="https://live.staticflickr.com/65535/49677899821_958f55134e_b.jpg"
@@ -76,3 +77,13 @@ introduction).
 	link="https://www.flickr.com/gp/ss9679/2mF6oF" alt="Edgeland Nottingham 23" >}}
 {{< figure src="https://live.staticflickr.com/65535/49678176282_caf9bc1af9_b.jpg"
 	link="https://www.flickr.com/gp/ss9679/9whZv5" alt="Edgeland Nottingham 24" >}}
+
+This series was shot with my Hasselblad 500C/M, CF 60mm and 150mm lenses, and
+Ilford HP5+ at EI 800 and developed in HC-110 1+49 for 11 minutes, except for
+[image 13](#13), which was shot on Ilford FP4+ at EI 400 and developed in HC-110
+1+49 for 16 minutes.
+
+In Feburary 2019 I started shooting a series with a similar theme in a small
+nature reserve in Nottingham on Fuji Pro 400H, but I've never been able to get
+acceptable scans from the 2 rolls I shot. If I do manage to get something useful
+from them I might put together a part 2 to this project.

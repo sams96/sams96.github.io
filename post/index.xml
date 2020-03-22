@@ -57,8 +57,8 @@ width="1024" height="1024" alt="NY11">
 width="1024" height="1024" alt="NY12">
 &lt;/a>
 &lt;/div>
-&lt;p>This series was shot with my Hasselblad 500C/M with Ilford HP5+ shot at EI 800
-and developed in HC-110 1+49 for 11 minutes.&lt;/p></description></item><item><title>Rgeo — A Go package for basic, fast, local reverse geocoding</title><link>/rgeo/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>/rgeo/</guid><description>&lt;p>&lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a> is a fast, simple solution for local
+&lt;p>This series was shot with my Hasselblad 500C/M and CF 150mm lens, on Ilford HP5+
+shot at EI 800 and developed in HC-110 1+49 for 11 minutes.&lt;/p></description></item><item><title>Rgeo — A Go package for basic, fast, local reverse geocoding</title><link>/rgeo/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>/rgeo/</guid><description>&lt;p>&lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a> is a fast, simple solution for local
 reverse geocoding, Rather than relying on external software or online APIs, rgeo
 packages all of the data it needs in your binary. This means it will only ever
 work down to the level of cities , but if that&amp;rsquo;s all you need then this is the

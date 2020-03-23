@@ -2,7 +2,6 @@
 title: Edgeland Nottingham
 url: /edgeland-nottingham
 date: 2020-03-29
-draft: false
 categories:
 - photography
 tags:

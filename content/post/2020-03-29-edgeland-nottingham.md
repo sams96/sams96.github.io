@@ -45,8 +45,8 @@ video](https://www.youtube.com/watch?v=EkS_jxaej90) for a good introduction).
 	link="https://www.flickr.com/gp/ss9679/75Y74h" alt="Edgeland Nottingham 10" >}}
 {{< figure src="https://live.staticflickr.com/65535/49678183597_6ba960c26c_b.jpg"
 	link="https://www.flickr.com/gp/ss9679/7xzLnf" alt="Edgeland Nottingham 11" >}}
-{{< figure src="https://live.staticflickr.com/65535/49678183097_7ea871e27f_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/Da5K39" alt="Edgeland Nottingham 12" >}}
+{{< figure src="https://live.staticflickr.com/65535/49678183097_f8bfec9f97_b.jpg"
+	link="https://www.flickr.com/gp/ss9679/80oN72" alt="Edgeland Nottingham 12" >}}
 <a name="13"></a>
 {{< figure src="https://live.staticflickr.com/65535/49678182452_2af61c9f1f_b.jpg"
 	link="https://www.flickr.com/gp/ss9679/2PBMdd" alt="Edgeland Nottingham 13" >}}
@@ -61,8 +61,8 @@ video](https://www.youtube.com/watch?v=EkS_jxaej90) for a good introduction).
 	link="https://www.flickr.com/gp/ss9679/U0MzJ6" alt="Edgeland Nottingham 17" >}}
 </div>
 <div class="diptych">
-{{< figure src="https://live.staticflickr.com/65535/49677897421_0d7f02aa36_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/w44M05" alt="Edgeland Nottingham 18" >}}
+{{< figure src="https://live.staticflickr.com/65535/49677897421_fe42b8c968_b.jpg"
+	link="https://www.flickr.com/gp/ss9679/wSBo8Q" alt="Edgeland Nottingham 18" >}}
 {{< figure src="https://live.staticflickr.com/65535/49678178802_097f0b0037_b.jpg"
 	link="https://www.flickr.com/gp/ss9679/wB5n1j" alt="Edgeland Nottingham 19" >}}
 </div>

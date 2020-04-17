@@ -1,0 +1,5 @@
+name: scheduler helper
+
+on:
+  repository_dispatch:
+    types: [scheduler]

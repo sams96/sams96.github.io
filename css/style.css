@@ -1,7 +1,6 @@
 /* Basic */
-@import url('https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/font/serif/cmun-serif.css');
 html {
-	font-family: serif, 'SimSun', 中易宋体;
+	font-family: 'Computer Modern Serif', serif;
 	/* 1 */
 	-ms-text-size-adjust: 100%;
 	/* 2 */
@@ -21,6 +20,7 @@ body {
     margin: 0 auto;
 
 	text-align: justify;
+	overflow: auto;
 }
 
 article,
@@ -48,11 +48,11 @@ h1 {
 }
 
 h2 {
-    font-size: 1.2em;
+    font-size: 1.3em;
 }
 
 h3 {
-    font-size: 1.1em;
+    font-size: 1.0em;
 }
 
 /* Links */
@@ -84,17 +84,23 @@ a:active {
 }
 
 table {
-    max-width: 100%;
+	margin: 1em auto;
+	width: 95%;
     border-spacing: 0;
+	border-collapse: collapse;
 }
 
 thead {
-    background: lightgrey;
+    border-bottom: thin solid #000000;
 }
 
 th, td {
-    padding: 0.5em 1em;
-    border: 1px double lightgrey;
+    padding: 0.25em 0.25em;
+}
+
+caption {
+	margin: 0 auto;
+	font-style: italic;
 }
 
 /* Code */
@@ -102,14 +108,16 @@ pre {
     padding: 1em;
     background-color: #ffffff;
     max-width: 100%;
+	white-space: pre-wrap;
+	word-break: keep-all;
 }
 
 code,
 pre,
 kbd {
-    font-family: monospace;
-    font-size: 0.90em;
+	font-family: 'Computer Modern Typewriter', monospace;
     line-height: 154%;
+	text-align: left;
 }
 
 /* Styles */
@@ -119,6 +127,10 @@ blockquote {
     padding: 0.1em 1em;
     margin-left: 0.75em;
     padding-right: 0.1em;
+}
+
+figcaption{
+	font-style: italic;
 }
 
 footer.bq {
@@ -131,8 +143,14 @@ footer.bq {
 }
 
 p {
+	text-indent: 0;
     margin-top: 0.5em;
-    margin-bottom: 0.5em;
+	margin-bottom: 0;
+}
+
+p:not(:empty) + p:not(:empty) {
+    margin-top: 0;
+	text-indent: 2em;
 }
 
 hr {
@@ -145,11 +163,11 @@ ul ol, ol ol, ul ul {
     margin: 0em 2em;
 }
 
-i.caption {
+figcaption {
   display: block;
   color: grey;
   line-height: 1em; /* 24px/16px */
-  margin-bottom: 1em; /* 24px/16px */
+  margin-bottom: 1.5em; /* 24px/16px */
   font-weight: 200;
 }
 
@@ -246,7 +264,12 @@ article header h1 a {
 .article-info {
     font-size: 0.75em;
     color: grey;
-    margin-top: 1em;
+    margin-top: 0.25em;
+	text-align: left;
+}
+
+.post .article-info {
+	margin-top: 2em;
 }
 
 .article-info a {
@@ -303,8 +326,46 @@ article img {
     margin: 0 auto .5em;
 }
 
+article figure {
+	max-width: 100%;
+	display: block;
+    height: auto;
+    margin: 0 auto .5em;
+}
+
+.diptych figure {
+	margin: 0;
+}
+
+article img + p:not(:empty),
+article figure + p:not(:empty),
+.diptych + p:not(:empty) {
+	margin-top: 1em;
+}
+
+article p:not(:empty) + img,
+article p:not(:empty) + figure,
+article p:not(:empty) + .diptych {
+	margin-top: 1em;
+}
+
+.content > figure:first-child,
+.content > .diptych:first-child {
+	margin-top: .5em;
+}
+
 .read-more {
+	margin-top: auto;
+	margin-bottom: 0;
+	margin-left: auto;
     text-align: right;
+	white-space: nowrap;
+}
+
+.post-list-footer {
+    display: flex;
+    justify-content: space-between;
+	margin-top: 0.5em;
 }
 
 .divider {
@@ -328,7 +389,7 @@ article img {
 .pagination {
     display: flex;
     justify-content: space-between;
-    margin-top: 3em;
+    margin-top: 1em;
 }
 
 .pagination {
@@ -364,6 +425,7 @@ footer {
     border-top: thin solid #f1f1f1;
     display: flex;
     justify-content: space-between;
+	margin-top: 0.5em;
 }
 
 footer nav {
@@ -427,55 +489,30 @@ footer a {
     }
 }
 
-div.diptychl {
-	/*
-	max-width: 36em;
-	*/
-	margin: 0;
-	padding: 0;
-	border: 0;
-	padding-bottom: 1em;
-	margin-top: 0.5em;
-}
-
-@media only screen and (min-width: 88em) {
-	div.diptychl {
-		position: relative;
-		right: 21.5em;
-	}
-}
-
-div.diptychr {
-	/*
-	 * max-width: 36em;
-	 */
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
-@media only screen and (min-width: 88em) {
-	div.diptychr {
+.diptych {
+	display: block;
+	width: 89em;
+	margin: 0 auto 0.5em;
 	position: relative;
-	bottom: 43.5em;
-	left: 21.5em;
-	margin-bottom: -43em;
+	right: 21.5em;
+	overflow: auto;
+}
+
+.diptych img {
+	height: auto;
+	width: 42em;
+	box-sizing: border-box;
+	float: left;
+	margin: 0 .25em 0em;
+}
+
+@media only screen and (max-width: 88em) {
+	.diptych {
+		width: 100%;
+		position: static;
 	}
-}
 
-div.talldr {
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	border: 0;
-}
-
-@media only screen and (min-width: 88em) {
-	div.talldr {
-		position: relative;
-		bottom: 57.5em;
-		left: 21.5em;
-		margin-bottom: -57.5em;
+	.diptych img {
+		margin: 0 auto .5em;
 	}
 }

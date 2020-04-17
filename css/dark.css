@@ -7,15 +7,9 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
 	color: #FEFEFD;
 }
 
-a:link {
-	color: #358CFF;
-}
-
 a:visited {
-	color: #800080;
+	color: #FEFEFD;
 }
-
-#post-page{}
 
 .caption {
 	color: #808080;
@@ -25,10 +19,20 @@ a:visited {
 	color: #808080;
 }
 
-#nav-links a {
-	color: #FEFEFD;
+.site-header {
+	border-bottom: thin solid #FEFEFD80;
 }
 
-#header {
-	border-bottom: 1px solid #80808080;
+.site-footer {
+    border-top: thin solid #FEFEFD80;
+}
+
+@media (max-width: 840px) {
+    header nav {
+        background: #1d1c21;
+    }
+
+	.site-header {
+		border-bottom: none;
+	}
 }

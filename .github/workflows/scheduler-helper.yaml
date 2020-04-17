@@ -3,3 +3,10 @@ name: scheduler helper
 on:
   repository_dispatch:
     types: [scheduler]
+
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - name: do something
+            run: echo "Something"

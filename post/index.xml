@@ -1,7 +1,190 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sam Smith</title><link>/post/</link><description>Sam Smith (Posts)</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Wed, 04 Mar 2020 01:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Scrap Collectors</title><link>/post/scheduler-test/</link><pubDate>Wed, 04 Mar 2020 01:00:00 +0000</pubDate><guid>/post/scheduler-test/</guid><description/></item><item><title>Rgeo - A Go package for basic, fast, local reverse geocoding</title><link>/rgeo/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>/rgeo/</guid><description>&lt;p>Rgeo is a fast, simple solution for local reverse geocoding, Rather than relying
-on external software or online APIs, rgeo packages all of the data it needs in
-your binary. This means it will only ever work down to the level of cities , but
-if that&amp;rsquo;s all you need then this is the library for you.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Sam Smith</title><link>/post/</link><description>Sam Smith (Posts)</description><generator>Hugo -- gohugo.io</generator><language>en-gb</language><lastBuildDate>Sun, 29 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Edgeland Nottingham</title><link>/edgeland-nottingham/</link><pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate><guid>/edgeland-nottingham/</guid><description>&lt;p>I was recently looking through all the photos I took during my 4 years living in
+Nottingham to see if I could come up with some kind of series out of them. After
+cutting it down to all the black &amp;amp; white images that turned out reasonably I had
+just over 200 photos so I needed to come up with some more specific ideas. One
+theme I tend to shoot a lot is where nature meets the built environment, which
+lead me to put together this series. I got the title, and some inspiration, from
+&lt;a href="https://www.robinfriend.co.uk/bastard-countryside">Robin Friend&amp;rsquo;s Bastard
+Countryside&lt;/a> (watch &lt;a href="https://www.youtube.com/watch?v=EkS_jxaej90">this
+video&lt;/a> for a good introduction).
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/wV9P16">
+&lt;img src="https://live.staticflickr.com/65535/49677907261_b15da35fdf_b.jpg"
+alt="Edgeland Nottingham 01"/> &lt;/a>
+&lt;/figure>
+&lt;/p>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/vY9d8z">
+&lt;img src="https://live.staticflickr.com/65535/49678189002_d46acab72d_b.jpg"
+alt="Edgeland Nottingham 02"/> &lt;/a>
+&lt;/figure>
+&lt;div class="diptych">
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/49Z0rv">
+&lt;img src="https://live.staticflickr.com/65535/49677372518_ca8eb5a6cb_b.jpg"
+alt="Edgeland Nottingham 03"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/Sx387e">
+&lt;img src="https://live.staticflickr.com/65535/49678187492_d1d20ea420_b.jpg"
+alt="Edgeland Nottingham 04"/> &lt;/a>
+&lt;/figure>
+&lt;/div>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/gNokj6">
+&lt;img src="https://live.staticflickr.com/65535/49678186927_0afd7d1e44_b.jpg"
+alt="Edgeland Nottingham 05"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/8eon2u">
+&lt;img src="https://live.staticflickr.com/65535/49677370828_48723182f9_b.jpg"
+alt="Edgeland Nottingham 06"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/6QjUJ9">
+&lt;img src="https://live.staticflickr.com/65535/49677903971_0b91d77ab3_b.jpg"
+alt="Edgeland Nottingham 07"/> &lt;/a>
+&lt;/figure>
+&lt;div class="diptych">
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/8w37b5">
+&lt;img src="https://live.staticflickr.com/65535/49677903371_335e092e64_b.jpg"
+alt="Edgeland Nottingham 08"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/G0dnz6">
+&lt;img src="https://live.staticflickr.com/65535/49678184582_8532b4efe3_b.jpg"
+alt="Edgeland Nottingham 09"/> &lt;/a>
+&lt;/figure>
+&lt;/div>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/75Y74h">
+&lt;img src="https://live.staticflickr.com/65535/49677368713_b33701a9f3_b.jpg"
+alt="Edgeland Nottingham 10"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/7xzLnf">
+&lt;img src="https://live.staticflickr.com/65535/49678183597_6ba960c26c_b.jpg"
+alt="Edgeland Nottingham 11"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/80oN72">
+&lt;img src="https://live.staticflickr.com/65535/49678183097_f8bfec9f97_b.jpg"
+alt="Edgeland Nottingham 12"/> &lt;/a>
+&lt;/figure>
+&lt;a name="13">&lt;/a>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/2PBMdd">
+&lt;img src="https://live.staticflickr.com/65535/49678182452_2af61c9f1f_b.jpg"
+alt="Edgeland Nottingham 13"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/866zm4">
+&lt;img src="https://live.staticflickr.com/65535/49677899821_958f55134e_b.jpg"
+alt="Edgeland Nottingham 14"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/JxmAL0">
+&lt;img src="https://live.staticflickr.com/65535/49677365738_3efd014227_b.jpg"
+alt="Edgeland Nottingham 15"/> &lt;/a>
+&lt;/figure>
+&lt;div class="diptych">
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/XgZ11a">
+&lt;img src="https://live.staticflickr.com/65535/49678180717_dd813cb984_b.jpg"
+alt="Edgeland Nottingham 16"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/U0MzJ6">
+&lt;img src="https://live.staticflickr.com/65535/49678180057_37b2b9475c_b.jpg"
+alt="Edgeland Nottingham 17"/> &lt;/a>
+&lt;/figure>
+&lt;/div>
+&lt;div class="diptych">
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/wSBo8Q">
+&lt;img src="https://live.staticflickr.com/65535/49677897421_fe42b8c968_b.jpg"
+alt="Edgeland Nottingham 18"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/wB5n1j">
+&lt;img src="https://live.staticflickr.com/65535/49678178802_097f0b0037_b.jpg"
+alt="Edgeland Nottingham 19"/> &lt;/a>
+&lt;/figure>
+&lt;/div>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/1BKU6A">
+&lt;img src="https://live.staticflickr.com/65535/49677896256_ce4298d310_b.jpg"
+alt="Edgeland Nottingham 20"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/32250364118/in/dateposted/">
+&lt;img src="https://live.staticflickr.com/4917/32250364118_71c01d81f0_b.jpg"
+alt="Edgeland Nottingham 21"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/8e206B">
+&lt;img src="https://live.staticflickr.com/65535/49678177442_9fdf3cc50e_b.jpg"
+alt="Edgeland Nottingham 22"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/2mF6oF">
+&lt;img src="https://live.staticflickr.com/65535/49677894876_5c63cae53c_b.jpg"
+alt="Edgeland Nottingham 23"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/9whZv5">
+&lt;img src="https://live.staticflickr.com/65535/49678176282_caf9bc1af9_b.jpg"
+alt="Edgeland Nottingham 24"/> &lt;/a>
+&lt;/figure>
+&lt;p>This series was shot with my Hasselblad 500C/M, CF 60mm and 150mm lenses, and
+Ilford HP5+ at EI 800 and developed in HC-110 1+49 for 11 minutes, except for
+&lt;a href="#13">image 13&lt;/a>, which was shot on Ilford FP4+ at EI 400 and developed in HC-110
+1+49 for 16 minutes.&lt;/p>
+&lt;p>In Feburary 2019 I started shooting a series with a similar theme in a small
+nature reserve in Nottingham on Fuji Pro 400H, but I&amp;rsquo;ve never been able to get
+acceptable scans from the 2 rolls I shot. If I do manage to get something useful
+from them I might put together a part 2 to this project.&lt;/p></description></item><item><title>Photo Series: New York Architecture</title><link>/ny-architecture/</link><pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate><guid>/ny-architecture/</guid><description>&lt;p>Just 15 months after I posted my &lt;a href="/singaporean-architecture">Singapore Architecture photo
+series&lt;/a>, I have decided to revisit this theme with
+some photos I took in New York last September. Despite what this series might
+suggest, I did explore beyond Manhattan but not as much because I found
+Manhattan to be the most interesting photographically.&lt;/p>
+&lt;div class="diptych">
+&lt;a href="https://www.flickr.com/gp/ss9679/oV1Xud" title="NY01">
+&lt;img src="https://live.staticflickr.com/65535/49633040842_b33a8b50d1_b.jpg"
+width="1024" height="1024" alt="NY01">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/59PQ07" title="NY02">
+&lt;img src="https://live.staticflickr.com/65535/49633042192_1daf8dc26a_b.jpg"
+width="1024" height="1024" alt="NY02">
+&lt;/a>
+&lt;/div>
+&lt;a href="https://www.flickr.com/gp/ss9679/1p00N3" title="NY03">
+&lt;img src="https://live.staticflickr.com/65535/49633044712_b783d582a4_b.jpg"
+width="1024" height="1024" alt="NY03">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/2s95CJ" title="NY04">
+&lt;img src="https://live.staticflickr.com/65535/49632773191_c76ccb258e_b.jpg"
+width="1024" height="1024" alt="NY04">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/mr1M8a" title="NY05">
+&lt;img src="https://live.staticflickr.com/65535/49632251568_970b164cab_b.jpg"
+width="1024" height="1024" alt="NY05">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/n792pm" title="NY06">
+&lt;img src="https://live.staticflickr.com/65535/49633042917_f65c674795_b.jpg"
+width="1024" height="1024" alt="NY06">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/43aKc2" title="NY07">
+&lt;img src="https://live.staticflickr.com/65535/49632771396_7714e8f194_b.jpg"
+width="1024" height="1024" alt="NY07">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/2C2Hg9" title="NY08">
+&lt;img src="https://live.staticflickr.com/65535/49632250813_62dcfd4714_b.jpg"
+width="1024" height="1024" alt="NY08">
+&lt;/a>
+&lt;div class="diptych">
+&lt;a href="https://www.flickr.com/gp/ss9679/Y301v2" title="NY09">
+&lt;img src="https://live.staticflickr.com/65535/49632251138_4ec3eba940_b.jpg"
+width="1024" height="1024" alt="NY09">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/0A2oSd" title="NY10">
+&lt;img src="https://live.staticflickr.com/65535/49632247938_030f53014f_b.jpg"
+width="1024" height="1024" alt="NY10">
+&lt;/a>
+&lt;/div>
+&lt;div class="diptych">
+&lt;a href="https://www.flickr.com/gp/ss9679/6PjzK0" title="NY11">
+&lt;img src="https://live.staticflickr.com/65535/49632248943_fab5e1c586_b.jpg"
+width="1024" height="1024" alt="NY11">
+&lt;/a>
+&lt;a href="https://www.flickr.com/gp/ss9679/pcar39" title="NY12">
+&lt;img src="https://live.staticflickr.com/65535/49632770811_baae22e15f_b.jpg"
+width="1024" height="1024" alt="NY12">
+&lt;/a>
+&lt;/div>
+&lt;p>This series was shot with my Hasselblad 500C/M and CF 150mm lens, on Ilford HP5+
+shot at EI 800 and developed in HC-110 1+49 for 11 minutes.&lt;/p></description></item><item><title>Rgeo — A Go package for basic, fast, local reverse geocoding</title><link>/rgeo/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>/rgeo/</guid><description>&lt;p>&lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a> is a fast, simple solution for local
+reverse geocoding, Rather than relying on external software or online APIs, rgeo
+packages all of the data it needs in your binary. This means it will only ever
+work down to the level of cities , but if that&amp;rsquo;s all you need then this is the
+library for you.&lt;/p>
 &lt;p>Rgeo uses data from &lt;a href="https://naturalearthdata.com">naturalearthdata.com&lt;/a>, if
 your coordinates are going to be near specific borders I would advise checking
 the data beforehand (links to which are in the files). If you want to use your
@@ -134,34 +317,41 @@ for which I also swapped out a couple of photos. I consider this to be the final
 version of the project and I am very happy with how it turned out.&lt;/p>
 &lt;p>Also reddit user &lt;a href="https://www.reddit.com/user/ISUOnFilm">ISUOnFilm&lt;/a> created
 &lt;a href="https://www.reddit.com/r/AnalogCommunity/comments/axqfab/campus_lights_2_my_version_of_a_project_by/">their own version&lt;/a>
-of the project which I think turned out really well.&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/X932W6"
-title="Campus Lights 10">
+of the project which I think turned out really well.
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/X932W6">
 &lt;img src="https://live.staticflickr.com/65535/48366107342_cc00f4b651_b.jpg"
-alt="Campus Lights 10">&lt;/a>
-&lt;i class="caption">Replacement for Campus Lights 10 in Emulsive version&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/1r5U0L"
-title="Campus Lights 24">
+alt="Campus Lights 10"/> &lt;/a>&lt;figcaption>
+&lt;p>Replacement for Campus Lights 10 in Emulsive version&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/1r5U0L">
 &lt;img src="https://live.staticflickr.com/65535/48365976091_d2be5d79f1_b.jpg"
-alt="Campus Lights 24">&lt;/a>
-&lt;i class="caption">Replacement for Campus Lights 24 in Emulsive version&lt;/i>&lt;/p>
+alt="Campus Lights 24"/> &lt;/a>&lt;figcaption>
+&lt;p>Replacement for Campus Lights 24 in Emulsive version&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
 &lt;p>The following 3 photos are ones that I took for the project, didn&amp;rsquo;t make it into
 the final cut but I still wanted to share.&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/x06ue6"
-title="Campus Lights Out-take 1">
+&lt;p>&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/x06ue6">
 &lt;img src="https://live.staticflickr.com/65535/48365982971_a562428381_b.jpg"
-alt="Campus Lights Out-take 1">&lt;/a>
-&lt;i class="caption">Campus Lights Out-take 1&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/034t81"
-title="Campus Lights Out-take 2">
+alt="Campus Lights Out-take 1"/> &lt;/a>&lt;figcaption>
+&lt;p>Campus Lights Out-take 1&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/034t81">
 &lt;img src="https://live.staticflickr.com/65535/48365984271_ac0d5f5e18_b.jpg"
-alt="Campus Lights Out-take 2">&lt;/a>
-&lt;i class="caption">Campus Lights Out-take 2&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/278p73"
-title="Campus Lights Out-take 3">
+alt="Campus Lights Out-take 2"/> &lt;/a>&lt;figcaption>
+&lt;p>Campus Lights Out-take 2&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/278p73">
 &lt;img src="https://live.staticflickr.com/65535/48366118977_03fa2d6a43_b.jpg"
-alt="Campus Lights Out-take 3">&lt;/a>
-&lt;i class="caption">Campus Lights Out-take 3&lt;/i>&lt;/p>
+alt="Campus Lights Out-take 3"/> &lt;/a>&lt;figcaption>
+&lt;p>Campus Lights Out-take 3&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
 &lt;p>Overall I am very pleased with how the project turned out and with how it was
 received. My main goal with projects going forward is to try something longer
 term, and I hope to revisit the topic of light pollution at some point.&lt;/p></description></item><item><title>Portfolio III - 2018</title><link>/portfolio-iii/</link><pubDate>Tue, 18 Jun 2019 00:00:00 +0000</pubDate><guid>/portfolio-iii/</guid><description>&lt;p>Having finished my &lt;a href="/portfolio-ii">last portfolio&lt;/a> at the end of 2017 I can now
@@ -174,66 +364,79 @@ projects over the year, &lt;a href="/subways">Subways&lt;/a> and &lt;a href="/ca
 I also attended a photo sequencing workshop at The Photo Parlour in Nottingham
 as part of the Off-Centre photo festival during which we looked at a selection
 of prints of my photos taken in China, which I have continued to work on.&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/32250364118/"
-title="Clifton Bridge">
+&lt;p>&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/32250364118/">
 &lt;img src="https://farm5.staticflickr.com/4917/32250364118_71c01d81f0_b.jpg"
-alt="Clifton Bridge">&lt;/a>
-&lt;i class="caption">Clifton Bridge&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/44863472221/"
-title="Barranco de los Mocanes">
+alt="Clifton Bridge"/> &lt;/a>&lt;figcaption>
+&lt;p>Clifton Bridge&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/44863472221/">
 &lt;img src="https://farm2.staticflickr.com/1905/44863472221_252dc7ca43_b.jpg"
-alt="Barranco de los Mocanes">&lt;/a>
-&lt;i class="caption">Barranco de los Mocanes&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/32813812768/"
-title="Two Leaves">
+alt="Barranco de los Mocanes"/> &lt;/a>&lt;figcaption>
+&lt;p>Barranco de los Mocanes&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/32813812768/">
 &lt;img src="https://farm5.staticflickr.com/4906/32813812768_4bf2ed4307_b.jpg"
-alt="Two Leaves">&lt;/a>
-&lt;i class="caption">Two Leaves&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/772aw3"
-title="Subways 1">
+alt="Two Leaves"/> &lt;/a>&lt;figcaption>
+&lt;p>Two Leaves&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/772aw3">
 &lt;img src="https://farm2.staticflickr.com/1875/44447904432_9f203051d9_b.jpg"
-alt="Subways 1">&lt;/a>
-&lt;i class="caption">Subways 1&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/41974662751/"
-title="Cascade Cavern">
+alt="Subways 1"/> &lt;/a>&lt;figcaption>
+&lt;p>Subways 1&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/41974662751/">
 &lt;img src="https://farm1.staticflickr.com/981/41974662751_e0932b8de2_b.jpg"
-alt="Cascade Cavern">&lt;/a>
-&lt;i class="caption">Cascade Cavern&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/45924706905/"
-title="Macaque">
+alt="Cascade Cavern"/> &lt;/a>&lt;figcaption>
+&lt;p>Cascade Cavern&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/45924706905/">
 &lt;img src="https://farm8.staticflickr.com/7925/45924706905_2c72230900_b.jpg"
-alt="Macaque">&lt;/a>
-&lt;i class="caption">Macaque&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/29518221107/"
-title="Scrap Collectors">
+alt="Macaque"/> &lt;/a>&lt;figcaption>
+&lt;p>Macaque&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/29518221107/">
 &lt;img src="https://farm2.staticflickr.com/1894/29518221107_09a9ff1bfa_b.jpg"
-alt="Scrap Collectors">&lt;/a>
-&lt;i class="caption">Scrap Collectors&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/45732883865/"
-title="Victoria Harbour">
+alt="Scrap Collectors"/> &lt;/a>&lt;figcaption>
+&lt;p>Scrap Collectors&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/45732883865/">
 &lt;img src="https://farm5.staticflickr.com/4808/45732883865_5d24fd799e_b.jpg"
-alt="Victoria Harbour">&lt;/a>
-&lt;i class="caption">Victoria Harbour&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/45825968235/"
-title="Queen&amp;#x27;s Road Central">
+alt="Victoria Harbour"/> &lt;/a>&lt;figcaption>
+&lt;p>Victoria Harbour&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/45825968235/">
 &lt;img src="https://farm8.staticflickr.com/7875/45825968235_3e1931654f_b.jpg"
-alt="Queen&amp;#x27;s Road Central">&lt;/a>
-&lt;i class="caption">Queen's Road Central&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/46736268062/"
-title="Ronghu Lake">
+alt="Queen&amp;amp;#x27;s Road Central"/> &lt;/a>&lt;figcaption>
+&lt;p>Queen's Road Central&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/46736268062/">
 &lt;img src="https://farm5.staticflickr.com/4819/46736268062_e598196832_b.jpg"
-alt="Ronghu Lake">&lt;/a>
-&lt;i class="caption">Ronghu Lake&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/29970182107/"
-title="Yuzhong">
+alt="Ronghu Lake"/> &lt;/a>&lt;figcaption>
+&lt;p>Ronghu Lake&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/29970182107/">
 &lt;img src="https://farm2.staticflickr.com/1979/29970182107_aa19a5f9ca_b.jpg"
-alt="Yuzhong">&lt;/a>
-&lt;i class="caption">Yuzhong&lt;/i>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/46102759524/"
-title="Towards Triquivijate">
+alt="Yuzhong"/> &lt;/a>&lt;figcaption>
+&lt;p>Yuzhong&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/46102759524/">
 &lt;img src="https://farm8.staticflickr.com/7905/46102759524_4e4d25cd88_b.jpg"
-alt="Towards Triquivijate">&lt;/a>
-&lt;i class="caption">Towards Triquivijate&lt;/i>&lt;/p>
+alt="Towards Triquivijate"/> &lt;/a>&lt;figcaption>
+&lt;p>Towards Triquivijate&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
 &lt;p>As usual all of these images were shot with my Hasselblad 500C/M and 60mm CF and
 150mm CF lenses on Ilford film, although with a bit more variation that last
 year as I have included one shot taken on Delta 100 and one on Pan F+ but the
@@ -253,112 +456,108 @@ show the darkest the university gets within term time.&lt;/p>
 &lt;p>I have been in contact with a relevant member of staff about the situation and
 they seemed to be very receptive to this and I am awaiting an update. My main
 goal with this project is to raise some awareness for this issue while also
-documenting what the campus looks like before it hopefully gets darker.&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/VEbu5C"
-title="Campus Lights 1">
+documenting what the campus looks like before it hopefully gets darker.
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/VEbu5C">
 &lt;img src="https://farm5.staticflickr.com/4831/31900698007_e92b62e09e_b.jpg"
-alt="Campus Lights 1">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/gw5Rk5"
-title="Campus Lights 2">
+alt="Campus Lights 1"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/gw5Rk5">
 &lt;img src="https://farm8.staticflickr.com/7886/31900698137_70fdc71352_b.jpg"
-alt="Campus Lights 2">&lt;/a>&lt;/p>
-&lt;div class="diptychl">
-&lt;a href="https://www.flickr.com/gp/ss9679/c2341k"
-title="Campus Lights 3">
+alt="Campus Lights 2"/> &lt;/a>
+&lt;/figure>
+&lt;/p>
+&lt;div class="diptych">
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/c2341k">
 &lt;img src="https://farm8.staticflickr.com/7803/31900698147_2ae67c10fc_b.jpg"
-alt="Campus Lights 3">&lt;/a>
-&lt;/div>
-&lt;div class="diptychr">
-&lt;a href="https://www.flickr.com/gp/ss9679/5RWCzN"
-title="Campus Lights 4">
+alt="Campus Lights 3"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/5RWCzN">
 &lt;img src="https://farm8.staticflickr.com/7898/31900698267_d1feb7d27c_b.jpg"
-alt="Campus Lights 4">&lt;/a>
+alt="Campus Lights 4"/> &lt;/a>
+&lt;/figure>
 &lt;/div>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/A197YU"
-title="Campus Lights 5">
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/A197YU">
 &lt;img src="https://farm5.staticflickr.com/4842/46116785244_8e91eec034_b.jpg"
-alt="Campus Lights 5">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/NZ7Ww9"
-title="Campus Lights 6">
+alt="Campus Lights 5"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/NZ7Ww9">
 &lt;img src="https://farm5.staticflickr.com/4870/46842025301_b3121043a5_b.jpg"
-alt="Campus Lights 6">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/DA3717"
-title="Campus Lights 7">
+alt="Campus Lights 6"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/DA3717">
 &lt;img src="https://farm8.staticflickr.com/7812/46116785624_d7506e0dd3_b.jpg"
-alt="Campus Lights 7">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/DB97ZX"
-title="Campus Lights 8">
+alt="Campus Lights 7"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/DB97ZX">
 &lt;img src="https://farm8.staticflickr.com/7898/46116785974_47aa11dd05_b.jpg"
-alt="Campus Lights 8">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/vi4b53"
-title="Campus Lights 9">
+alt="Campus Lights 8"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/vi4b53">
 &lt;img src="https://farm8.staticflickr.com/7803/39876984053_68614575ed_b.jpg"
-alt="Campus Lights 9">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/bZ64e1"
-title="Campus Lights 10">
+alt="Campus Lights 9"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/bZ64e1">
 &lt;img src="https://farm8.staticflickr.com/7872/46116786284_8df3f80a80_b.jpg"
-alt="Campus Lights 10">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/QDjiXV"
-title="Campus Lights 11">
+alt="Campus Lights 10"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/QDjiXV">
 &lt;img src="https://farm8.staticflickr.com/7861/45927541825_ccc5f59cb9_b.jpg"
-alt="Campus Lights 11">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/nt38Cq"
-title="Campus Lights 12">
+alt="Campus Lights 11"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/nt38Cq">
 &lt;img src="https://farm8.staticflickr.com/7901/39876984473_580b50ddc2_b.jpg"
-alt="Campus Lights 12">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/499q0q"
-title="Campus Lights 13">
+alt="Campus Lights 12"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/499q0q">
 &lt;img src="https://farm5.staticflickr.com/4813/45927542275_0530682b0a_b.jpg"
-alt="Campus Lights 13">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/5z2T8F"
-title="Campus Lights 14">
+alt="Campus Lights 13"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/5z2T8F">
 &lt;img src="https://farm8.staticflickr.com/7910/39876985383_00cd00fd57_b.jpg"
-alt="Campus Lights 14">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/5665A7"
-title="Campus Lights 15">
+alt="Campus Lights 14"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/5665A7">
 &lt;img src="https://farm5.staticflickr.com/4818/45927543055_b11527b8e8_b.jpg"
-alt="Campus Lights 15">&lt;/a>&lt;/p>
-&lt;div class="diptychl">
-&lt;a href="https://www.flickr.com/gp/ss9679/9ZHoZ9"
-title="Campus Lights 16">
+alt="Campus Lights 15"/> &lt;/a>
+&lt;/figure>
+&lt;div class="diptych">
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/9ZHoZ9">
 &lt;img src="https://farm8.staticflickr.com/7927/46842026631_7ffa0e3d3a_b.jpg"
-alt="Campus Lights 16">&lt;/a>
-&lt;/div>
-&lt;div class="diptychr">
-&lt;a href="https://www.flickr.com/gp/ss9679/71zkik"
-title="Campus Lights 17">
+alt="Campus Lights 16"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/71zkik">
 &lt;img src="https://farm8.staticflickr.com/7857/45927543795_003ac6c862_b.jpg"
-alt="Campus Lights 17">&lt;/a>
+alt="Campus Lights 17"/> &lt;/a>
+&lt;/figure>
 &lt;/div>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/3X7Q5o"
-title="Campus Lights 18">
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/3X7Q5o">
 &lt;img src="https://farm5.staticflickr.com/7871/46200161945_0f39d11c9e_b.jpg"
-alt="Campus Lights 18">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/1N90MY"
-title="Campus Lights 19">
+alt="Campus Lights 18"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/1N90MY">
 &lt;img src="https://farm5.staticflickr.com/4867/46842027101_a67a68619a_b.jpg"
-alt="Campus Lights 19">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/G515HS"
-title="Campus Lights 20">
+alt="Campus Lights 19"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/G515HS">
 &lt;img src="https://farm8.staticflickr.com/7828/45927544575_cea9d3f515_b.jpg"
-alt="Campus Lights 20">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/kH186M"
-title="Campus Lights 21">
+alt="Campus Lights 20"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/kH186M">
 &lt;img src="https://farm5.staticflickr.com/4827/46116789514_b37174263f_b.jpg"
-alt="Campus Lights 21">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/yq2n75"
-title="Campus Lights 22">
+alt="Campus Lights 21"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/yq2n75">
 &lt;img src="https://farm8.staticflickr.com/7911/46200162345_1835a7fcae_b.jpg"
-alt="Campus Lights 22">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/rmvZ7k"
-title="Campus Lights 23">
+alt="Campus Lights 22"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/rmvZ7k">
 &lt;img src="https://farm8.staticflickr.com/7915/46842027631_4f9e8a89dc_b.jpg"
-alt="Campus Lights 23">&lt;/a>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/1CJ40C"
-title="Campus Lights 24">
+alt="Campus Lights 23"/> &lt;/a>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/gp/ss9679/1CJ40C">
 &lt;img src="https://farm5.staticflickr.com/4897/46116790304_58fc70356e_b.jpg"
-alt="Campus Lights 24">&lt;/a>
-&lt;br>&lt;/p>
+alt="Campus Lights 24"/> &lt;/a>
+&lt;/figure>
 &lt;p>This series was shot on my Hasselblad 500C/M with 150mm CF lens and Rollei CR200
 film, developed by Palm Labs in Birmingham and scanned with my Epson 4180.&lt;/p>
 &lt;h2 id="references">References&lt;/h2>
@@ -379,7 +578,9 @@ Missing the dark: health effects of light pollution. Environ Health Perspect.
 and nearly down by midnight, but the dogs slept all day in the heat, and they
 had begun their moon-choruses already" &lt;footer class="bq">- George Orwell&lt;/footer>
 &lt;/blockquote>&lt;br>
-&lt;img src="/img/Burmese Dogs/IMG_20180704_161832.jpg">
+&lt;figure>
+&lt;img src="/burmese-dogs/burmese-dogs-01.jpg"/>
+&lt;/figure>
 &lt;br>
 &lt;p>It was on the first night of the 3 day trek from Kalaw to Inle Lake, in a small
 hilltop village, at about 4 a.m when, as we discovered later in the morning, we
@@ -390,27 +591,48 @@ during July 2018. I found the similarities between Burma as I visited it and how
 George Orwell wrote about it to be quite interesting, especially with regards to
 the dogs.&lt;/p>
 &lt;br>
-&lt;img src="/img/Burmese Dogs/IMG_20180705_164205.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180708_091002.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180708_162149.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180710_124209.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180711_114243.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180713_140312.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180720_110126.jpg">
-&lt;div class="diptychl">
-&lt;img src="/img/Burmese Dogs/IMG_20180720_144436.jpg">
+&lt;figure>
+&lt;img src="burmese-dogs-02.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-03.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-04.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-05.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-06.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-07.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-08.jpg"/>
+&lt;/figure>
+&lt;div class="diptych">
+&lt;figure>
+&lt;img src="burmese-dogs-09.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-10.jpg"/>
+&lt;/figure>
 &lt;/div>
-&lt;div class="talldr">
-&lt;img src="/img/Burmese Dogs/IMG_20180720_145141.jpg">
-&lt;/div>
-&lt;img src="/img/Burmese Dogs/IMG_20180724_141048.jpg">
-&lt;img src="/img/Burmese Dogs/IMG_20180724_160037.jpg"></description></item><item><title>Photo Series: Singaporean Architecture</title><link>/singaporean-architecture/</link><pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate><guid>/singaporean-architecture/</guid><description>&lt;p>In another attempt at post-shooting photo series creation, I have put together a
+&lt;figure>
+&lt;img src="burmese-dogs-11.jpg"/>
+&lt;/figure>
+&lt;figure>
+&lt;img src="burmese-dogs-12.jpg"/>
+&lt;/figure></description></item><item><title>Photo Series: Singaporean Architecture</title><link>/singaporean-architecture/</link><pubDate>Sun, 02 Dec 2018 00:00:00 +0000</pubDate><guid>/singaporean-architecture/</guid><description>&lt;p>In another attempt at post-shooting photo series creation, I have put together a
 collection of architecture shots I took during my brief stay in Singapore in
 June of 2018.&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/82c85c"
+&lt;/br>
+&lt;a href="https://www.flickr.com/gp/ss9679/82c85c"
 title="8908">
 &lt;img src="https://farm5.staticflickr.com/4832/31191762047_907b91899a_b.jpg"
-alt="8908">&lt;/a>&lt;/p>
+alt="8908">&lt;/a>
 &lt;p>&lt;a href="https://www.flickr.com/gp/ss9679/7HQk7g"
 title="9004">
 &lt;img src="https://farm5.staticflickr.com/4848/31191766097_9762ec1ab1_b.jpg"
@@ -442,177 +664,178 @@ alt="8909">&lt;/a>&lt;/p></description></item><item><title>Portfolio II</title><
 and primarily shows my travels during the summer of 2017, with the last image
 being the only one outside of that. I have again chosen to stick to black and
 white images taken with my Hasselblad for consistency, and because it&amp;rsquo;s what I
-primary set-up. I am planning on doing one of these with the colour photos that
+primarily use. I am planning on doing one of these with the colour photos that
 I&amp;rsquo;ve taken since I started shooting square format.&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/45260077484/"
-title="Untitled">
+&lt;p>&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/45260077484/">
 &lt;img src="https://farm5.staticflickr.com/4881/45260077484_a20909e0ac_b.jpg"
-alt="Untitled">&lt;/a>
-&lt;i class="caption">Untitled&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/39727749280/"
-title="West Lake">
+alt="Untitled"/> &lt;/a>&lt;figcaption>
+&lt;p>Untitled&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/39727749280/">
 &lt;img src="https://farm1.staticflickr.com/784/39727749280_d721b89617_b.jpg"
-alt="West Lake">&lt;/a>
-&lt;i class="caption">West Lake&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/27601292798/"
-title="Great Wall">
+alt="West Lake"/> &lt;/a>&lt;figcaption>
+&lt;p>West Lake&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/27601292798/">
 &lt;img src="https://farm1.staticflickr.com/786/27601292798_65e7e77c6a_b.jpg"
-alt="Great Wall">&lt;/a>
-&lt;i class="caption">Great Wall&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/37747419706/"
-title="Koishikawa K&amp;#333;rakuen Garden">
+alt="Great Wall"/> &lt;/a>&lt;figcaption>
+&lt;p>Great Wall&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/37747419706/">
 &lt;img src="https://farm5.staticflickr.com/4464/37747419706_337c3f2323_b.jpg"
-alt="Koishikawa K&amp;#333;rakuen Garden">&lt;/a>
-&lt;i class="caption">Koishikawa Kōrakuen Garden&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/30891949597/"
-title="Tensouchi">
+alt="Koishikawa K&amp;amp;#333;rakuen Garden"/> &lt;/a>&lt;figcaption>
+&lt;p>Koishikawa Kōrakuen Garden&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/30891949597/">
 &lt;img src="https://farm5.staticflickr.com/4814/30891949597_b239a7a1c4_b.jpg"
-alt="Tensouchi">&lt;/a>
-&lt;i class="caption">Tensouchi&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/45808891812/"
-title="Red Gum">
+alt="Tensouchi"/> &lt;/a>&lt;figcaption>
+&lt;p>Tensouchi&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/45808891812/">
 &lt;img src="https://farm2.staticflickr.com/1969/45808891812_7435c22ef9_b.jpg"
-alt="Red Gum">&lt;/a>
-&lt;i class="caption">Red Gum&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/40922135730/"
-title="Tasman Island">
+alt="Red Gum"/> &lt;/a>&lt;figcaption>
+&lt;p>Red Gum&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/40922135730/">
 &lt;img src="https://farm2.staticflickr.com/1760/40922135730_59023441f1_b.jpg"
-alt="Tasman Island">&lt;/a>
-&lt;i class="caption">Tasman Island&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/45907948121/"
-title="Lake Gordon">
+alt="Tasman Island"/> &lt;/a>&lt;figcaption>
+&lt;p>Tasman Island&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/45907948121/">
 &lt;img src="https://farm5.staticflickr.com/4908/45907948121_ecbe1aa947_b.jpg"
-alt="Lake Gordon" id="gordon">&lt;/a>
-&lt;i class="caption">Lake Gordon&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/38932945371/"
-title="Adelaide Palm House">
+alt="Lake Gordon"/> &lt;/a>&lt;figcaption>
+&lt;p>Lake Gordon&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/38932945371/">
 &lt;img src="https://farm5.staticflickr.com/4601/38932945371_c58686ce45_b.jpg"
-alt="Adelaide Palm House">&lt;/a>
-&lt;i class="caption">Adelaide Palm House&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/44144817870/"
-title="Escalators">
+alt="Adelaide Palm House"/> &lt;/a>&lt;figcaption>
+&lt;p>Adelaide Palm House&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/44144817870/">
 &lt;img src="https://farm5.staticflickr.com/4902/44144817870_e5b6b0696b_b.jpg"
-alt="Escalators">&lt;/a>
-&lt;i class="caption">Escalators&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/39470041022/"
-title="Ulsanbawi">
+alt="Escalators"/> &lt;/a>&lt;figcaption>
+&lt;p>Escalators&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/39470041022/">
 &lt;img src="https://farm5.staticflickr.com/4691/39470041022_912d3cfdc4_b.jpg"
-alt="Ulsanbawi">&lt;/a>
-&lt;i class="caption">Ulsanbawi&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/44977963555/"
-title="Clifton Boulevard">
+alt="Ulsanbawi"/> &lt;/a>&lt;figcaption>
+&lt;p>Ulsanbawi&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/44977963555/">
 &lt;img src="https://farm5.staticflickr.com/4896/44977963555_6bbb65fe79_b.jpg"
-alt="Clifton Boulevard">&lt;/a>
-&lt;i class="caption">Clifton Boulevard&lt;/i>&lt;/p>
+alt="Clifton Boulevard"/> &lt;/a>&lt;figcaption>
+&lt;p>Clifton Boulevard&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
 &lt;p>All of these images were shot on Ilford HP5+, and all but the last one pushed to
 ISO 800, which has become something of a default for me. Also, all &lt;a href="#gordon">but
 one&lt;/a> of these images were shot with the 150mm lens, which I bought in
 March of 2017 and also used for the last four images in &lt;a href="/portfolio-i">Portfolio
 I&lt;/a>. I seem to use both of the lenses I own for my Hasselblad (the
 60mm and 150mm) pretty evenly but I find most of the images that I take that I
-really like have been with the 150mm.&lt;/p></description></item><item><title>Qingdao Diptych</title><link>/qingdao-diptych/</link><pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate><guid>/qingdao-diptych/</guid><description>&lt;div class="diptychl">
+really like have been with the 150mm.&lt;/p></description></item><item><title>Qingdao Diptych</title><link>/qingdao-diptych/</link><pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate><guid>/qingdao-diptych/</guid><description>&lt;div class="diptych">
 &lt;a href="https://www.flickr.com/photos/ss9679/44647184712/"
 title="Moon Over Qingdao">
 &lt;img src="https://farm2.staticflickr.com/1866/44647184712_8eae88c304_b.jpg"
 alt="Moon Over Qingdao">&lt;/a>
-&lt;/div>
-&lt;div class="diptychr">
 &lt;a href="https://www.flickr.com/photos/ss9679/44711556062/"
 title="Huiquan Cape">
 &lt;img src="https://farm2.staticflickr.com/1886/44711556062_b55c427684_b.jpg"
 alt="Huiquan Cape">&lt;/a>
 &lt;/div>
-&lt;br>
-This is a pair of photos that I took from the top floor of a pagoda in
-&amp;#23567;&amp;#40060;&amp;#23665;&amp;#20844;&amp;#22253; (Xiaoyushan park, or Little Fish Hill
-Park) in Qingdao, China.</description></item><item><title>Portfolio I</title><link>/portfolio-i/</link><pubDate>Fri, 09 Nov 2018 00:00:00 +0000</pubDate><guid>/portfolio-i/</guid><description>&lt;p>This series of photographs represents approximately a years worth of work,
+&lt;p>This is a pair of photos that I took from the top floor of a pagoda in
+小鱼山公园 (Xiaoyushan park, or Little Fish Hill
+Park) in Qingdao, China.&lt;/p></description></item><item><title>Portfolio I</title><link>/portfolio-i/</link><pubDate>Fri, 09 Nov 2018 00:00:00 +0000</pubDate><guid>/portfolio-i/</guid><description>&lt;p>This series of photographs represents approximately a years worth of work,
 starting in &lt;time>April 2016&lt;/time> when I got my Hasselblad. I chose to start
 then not because I feel that the change of camera increased the quality of
 images that I was producing but rather I wanted to keep the format consistent
 throughout. Also it was about a year after I started shooting film, and when I
 started pursuing photography as a hobby.&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/26425484751/"
-title="Under the Bridge">
+&lt;p>&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/26425484751/">
 &lt;img src="https://farm2.staticflickr.com/1481/26425484751_ca29dbd18a_b.jpg"
-alt="Under the Bridge">&lt;/a>
-&lt;i class="caption">Under the Bridge&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/27426121894/"
-title="Ruined House">
+alt="Under the Bridge"/> &lt;/a>&lt;figcaption>
+&lt;p>Under the Bridge&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/27426121894/">
 &lt;img src="https://farm8.staticflickr.com/7437/27426121894_31706534e7_b.jpg"
-alt="Ruined House">&lt;/a>
-&lt;i class="caption">Ruined House&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/28282682892/"
-title="Llyn Cau">
+alt="Ruined House"/> &lt;/a>&lt;figcaption>
+&lt;p>Ruined House&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/28282682892/">
 &lt;img src="https://farm8.staticflickr.com/7440/28282682892_a0b78a27d3_b.jpg"
-alt="Llyn Cau">&lt;/a>
-&lt;i class="caption">Llyn Cau&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/28298352473/"
-title="Mauerpark Karaoke">
+alt="Llyn Cau"/> &lt;/a>&lt;figcaption>
+&lt;p>Llyn Cau&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/28298352473/">
 &lt;img src="https://farm9.staticflickr.com/8582/28298352473_71d687ae86_b.jpg"
-alt="Mauerpark Karaoke">&lt;/a>
-&lt;i class="caption">Mauerpark Karaoke&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/28529132240/"
-title="Wetzsteinhorn">
+alt="Mauerpark Karaoke"/> &lt;/a>&lt;figcaption>
+&lt;p>Mauerpark Karaoke&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/28529132240/">
 &lt;img src="https://farm9.staticflickr.com/8828/28529132240_c1b893424f_b.jpg"
-alt="Wetzsteinhorn">&lt;/a>
-&lt;i class="caption">Wetzsteinhorn&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/28385500243/"
-title="Matterhorn">
+alt="Wetzsteinhorn"/> &lt;/a>&lt;figcaption>
+&lt;p>Wetzsteinhorn&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/28385500243/">
 &lt;img src="https://farm9.staticflickr.com/8541/28385500243_a666f4bb79_b.jpg"
-alt="Matterhorn">&lt;/a>
-&lt;i class="caption">Matterhorn&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/33172757860/"
-title="Rocks">
+alt="Matterhorn"/> &lt;/a>&lt;figcaption>
+&lt;p>Matterhorn&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/33172757860/">
 &lt;img src="https://farm4.staticflickr.com/3943/33172757860_a93993b156_b.jpg"
-alt="Rocks">&lt;/a>
-&lt;i class="caption">Rocks&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/33547847840/"
-title="Wye">
+alt="Rocks"/> &lt;/a>&lt;figcaption>
+&lt;p>Rocks&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/33547847840/">
 &lt;img src="https://farm4.staticflickr.com/3946/33547847840_0fc1620d68_b.jpg"
-alt="Wye">&lt;/a>
-&lt;i class="caption">Wye&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/33296099653/"
-title="Fire Exit">
+alt="Wye"/> &lt;/a>&lt;figcaption>
+&lt;p>Wye&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/33296099653/">
 &lt;img src="https://farm4.staticflickr.com/3928/33296099653_008b61b158_b.jpg"
-alt="Fire Exit">&lt;/a>
-&lt;i class="caption">Fire Exit&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/34058489572/"
-title="Bickenhill Plantation">
+alt="Fire Exit"/> &lt;/a>&lt;figcaption>
+&lt;p>Fire Exit&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/34058489572/">
 &lt;img src="https://farm3.staticflickr.com/2878/34058489572_ec53b3ed29_b.jpg"
-alt="Bickenhill Plantation">&lt;/a>
-&lt;i class="caption">Bickenhill Plantation&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/33441511774/"
-title="Nyhavn">
+alt="Bickenhill Plantation"/> &lt;/a>&lt;figcaption>
+&lt;p>Bickenhill Plantation&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/33441511774/">
 &lt;img src="https://farm5.staticflickr.com/4188/33441511774_e848155c88_b.jpg"
-alt="Nyhavn">&lt;/a>
-&lt;i class="caption">Nyhavn&lt;/i>
-&lt;br>&lt;/p>
-&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/34427864245/"
-title="Tarn Hows Road">
+alt="Nyhavn"/> &lt;/a>&lt;figcaption>
+&lt;p>Nyhavn&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;figure>&lt;a href="https://www.flickr.com/photos/ss9679/34427864245/">
 &lt;img src="https://farm5.staticflickr.com/4156/34427864245_b419920446_b.jpg"
-alt="Tarn Hows Road">&lt;/a>
-&lt;i class="caption">Tarn Hows Road&lt;/i>&lt;/p>
+alt="Tarn Hows Road"/> &lt;/a>&lt;figcaption>
+&lt;p>Tarn Hows Road&lt;/p>
+&lt;/figcaption>
+&lt;/figure>
+&lt;/p>
 &lt;p>Between taking these photos at least a year and a half ago, compiling this
 series 6 months ago and now, my opinion of these images doesn&amp;rsquo;t seem to have
 changed too much. I think I can put this down to the memories I have attached to
@@ -621,22 +844,23 @@ Birmingham&amp;rsquo;s pedestrian subways. I never really thought it was a very 
 for a project but I decided to give it a go anyway because I wanted to try
 shooting a project and it was the best idea that I had, also the subways are the
 sort of thing that I usually like to shoot anyway.&lt;/p>
+&lt;/br>
 &lt;a href="https://www.flickr.com/gp/ss9679/772aw3" title="Subways 1">
 &lt;img src="https://farm2.staticflickr.com/1875/44447904432_9f203051d9_b.jpg"
 alt="Subways 1">&lt;/a>
-&lt;p>&lt;br>&lt;br>
+&lt;/br>
 Everything in this series was shot with my Hasselblad 500C/M and Zeiss 60mm
 Distagon CF with Ilford HP5+ rated at 800 and developed with Kodak HC-110 at a
 dilution of 1+49 for 11 minutes. This is what I shoot most of the time anyway
 but I thought that the pushed HP5+ would work well for the sort of gritty feel
 of the subways. I shot 3 separate rolls of film on 3 different days in May of
-2018. I have chosen 12 of the 23 pictures that I took that I feel fit the scope
+2018\. I have chosen 12 of the 23 pictures that I took that I feel fit the scope
 of the project.
-&lt;br>&lt;br>&lt;/p>
+&lt;br>&lt;br>
 &lt;a href="https://www.flickr.com/gp/ss9679/L370T7" title="Subways 2">
 &lt;img src="https://farm2.staticflickr.com/1900/43780054014_f946c62a8e_b.jpg"
 alt="Subways 2">&lt;/a>
-&lt;br>&lt;br>
+&lt;/br>
 The intention behind the project was to capture the feeling of the subways,
 which I think I was at least partially successful in doing. I think photos 2, 8
 and 9 capture some of the dread and uncertainty I, at least used to, feel when
@@ -654,7 +878,7 @@ alt="Subways 3">&lt;/a>
 &lt;a href="https://www.flickr.com/gp/ss9679/191w4E" title="Subways 4">
 &lt;img src="https://farm2.staticflickr.com/1848/43780020194_3e68ef687b_b.jpg"
 alt="Subways 4">&lt;/a>
-&lt;br>&lt;br>
+&lt;/br>
 I gave up on the project mostly just because I'd lost interest in it. I visited
 almost all of the subways that I managed to find, some a few times, and despite
 only shooting 23 images I was starting to feel like there wasn't really any new
@@ -684,16 +908,17 @@ alt="Subways 11">&lt;/a>
 &lt;a href="https://www.flickr.com/gp/ss9679/Sy06u1" title="Subways 12">
 &lt;img src="https://farm2.staticflickr.com/1876/29560354447_95e3690f70_b.jpg"
 alt="Subways 12">&lt;/a>
-&lt;br>&lt;br>
+&lt;/br>
 &lt;p>See also:&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://www.flickr.com/photos/ss9679/sets/72157670945132397">Flickr album&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.reddit.com/r/AnalogCommunity/comments/9jdvur/subways_my_first_attempt_at_a_photography_project/">Reddit discussion&lt;/a>&lt;/li>
-&lt;/ul></description></item><item><title>Scrap Collectors</title><link>/post/2018-09-03-scrap/</link><pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate><guid>/post/2018-09-03-scrap/</guid><description>&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/29518221107/in/dateposted/"
+&lt;/ul></description></item><item><title>Scrap Collectors</title><link>/scrap-collectors/</link><pubDate>Mon, 03 Sep 2018 00:00:00 +0000</pubDate><guid>/scrap-collectors/</guid><description>&lt;p>&lt;a href="https://www.flickr.com/photos/ss9679/29518221107/in/dateposted/"
 title="Scrap Collectors">
 &lt;img src="https://farm2.staticflickr.com/1894/29518221107_09a9ff1bfa_b.jpg"
 alt="Scrap Collectors">
 &lt;/a>
+&lt;/br>
 I took this photo in Ma Tau Kok, Hong Kong on the way to visit the Kowloon
 Walled City Park. I don&amp;rsquo;t really remember much about my intentions behind the
 photo beyond &lt;em>this looks cool&lt;/em>, although that is how I shoot most of the time.

@@ -1,6 +1,27 @@
 /* Basic */
+@font-face {
+	font-family: "CMU";
+	font-style: normal;
+	src: url("https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font/font/Serif/cmunrm.woff") format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "CMU";
+	font-weight: bold;
+	src: url("https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font/font/Serif/cmunbx.woff") format("woff");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "CMU";
+	font-style: italic;
+	src: url("https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font/font/Serif/cmunti.woff") format("woff");
+	font-display: swap;
+}
+
 html {
-	font-family: 'Computer Modern Serif', serif;
+	font-family: "CMU", Georgia, serif;
 	/* 1 */
 	-ms-text-size-adjust: 100%;
 	/* 2 */

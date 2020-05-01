@@ -15,40 +15,40 @@ images that I was producing but rather I wanted to keep the format consistent
 throughout. Also it was about a year after I started shooting film, and when I
 started pursuing photography as a hobby. <!--more-->
 
-{{< figure src="https://farm2.staticflickr.com/1481/26425484751_ca29dbd18a_b.jpg"
+{{< myfig src="https://farm2.staticflickr.com/1481/26425484751_ca29dbd18a_b.jpg"
 	link="https://www.flickr.com/photos/ss9679/26425484751/" alt="Under the Bridge"
 	caption="Under the Bridge" >}}
-{{< figure src="https://farm8.staticflickr.com/7437/27426121894_31706534e7_b.jpg"
+{{< myfig src="https://farm8.staticflickr.com/7437/27426121894_31706534e7_b.jpg"
 	link="https://www.flickr.com/photos/ss9679/27426121894/" alt="Ruined House"
 	caption="Ruined House" >}}
-{{< figure src="https://farm8.staticflickr.com/7440/28282682892_a0b78a27d3_b.jpg"
+{{< myfig src="https://farm8.staticflickr.com/7440/28282682892_a0b78a27d3_b.jpg"
 	link="https://www.flickr.com/photos/ss9679/28282682892/" alt="Llyn Cau"
 	caption="Llyn Cau" >}}
-{{< figure src="https://farm9.staticflickr.com/8582/28298352473_71d687ae86_b.jpg"
+{{< myfig src="https://farm9.staticflickr.com/8582/28298352473_71d687ae86_b.jpg"
 	link="https://www.flickr.com/photos/ss9679/28298352473/" alt="Mauerpark Karaoke"
 	caption="Mauerpark Karaoke" >}}
-{{< figure src="https://farm9.staticflickr.com/8828/28529132240_c1b893424f_b.jpg"
+{{< myfig src="https://farm9.staticflickr.com/8828/28529132240_c1b893424f_b.jpg"
 	link="https://www.flickr.com/photos/ss9679/28529132240/" alt="Wetzsteinhorn"
 	caption="Wetzsteinhorn" >}}
-{{< figure src="https://farm9.staticflickr.com/8541/28385500243_a666f4bb79_b.jpg"
+{{< myfig src="https://farm9.staticflickr.com/8541/28385500243_a666f4bb79_b.jpg"
 	link="https://www.flickr.com/photos/ss9679/28385500243/" alt="Matterhorn"
 	caption="Matterhorn" >}}
-{{< figure src="https://farm4.staticflickr.com/3943/33172757860_a93993b156_b.jpg"
+{{< myfig src="https://farm4.staticflickr.com/3943/33172757860_a93993b156_b.jpg"
 	link="https://www.flickr.com/photos/ss9679/33172757860/" alt="Rocks"
 	caption="Rocks" >}}
-{{< figure src="https://farm4.staticflickr.com/3946/33547847840_0fc1620d68_b.jpg"
+{{< myfig src="https://farm4.staticflickr.com/3946/33547847840_0fc1620d68_b.jpg"
 	link="https://www.flickr.com/photos/ss9679/33547847840/" alt="Wye"
 	caption="Wye" >}}
-{{< figure src="https://farm4.staticflickr.com/3928/33296099653_008b61b158_b.jpg"
+{{< myfig src="https://farm4.staticflickr.com/3928/33296099653_008b61b158_b.jpg"
 	link="https://www.flickr.com/photos/ss9679/33296099653/" alt="Fire Exit"
 	caption="Fire Exit" >}}
-{{< figure src="https://farm3.staticflickr.com/2878/34058489572_ec53b3ed29_b.jpg"
+{{< myfig src="https://farm3.staticflickr.com/2878/34058489572_ec53b3ed29_b.jpg"
 	link="https://www.flickr.com/photos/ss9679/34058489572/" alt="Bickenhill Plantation"
 	caption="Bickenhill Plantation" >}}
-{{< figure src="https://farm5.staticflickr.com/4188/33441511774_e848155c88_b.jpg"
+{{< myfig src="https://farm5.staticflickr.com/4188/33441511774_e848155c88_b.jpg"
 	link="https://www.flickr.com/photos/ss9679/33441511774/" alt="Nyhavn"
 	caption="Nyhavn" >}}
-{{< figure src="https://farm5.staticflickr.com/4156/34427864245_b419920446_b.jpg"
+{{< myfig src="https://farm5.staticflickr.com/4156/34427864245_b419920446_b.jpg"
 	link="https://www.flickr.com/photos/ss9679/34427864245/" alt="Tarn Hows Road"
 	caption="Tarn Hows Road" >}}
 

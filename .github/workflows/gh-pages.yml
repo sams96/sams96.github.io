@@ -21,30 +21,32 @@ jobs:
           hugo-version: '0.65.3'
           extended: true
 
-      - name: Add scheduler
-        run: |
-          TIME=$(for d in $(cat $(find content/post -name "*.md") | awk '/date: / {gsub(/"/, "", $2); print $2 }'); do if [ "$d" != "null" ]; then expr $(date -d $d +\%s) - $(date +\%s); fi; done | awk '$1>=0' | sort -nk 1 | head -n 1);
-          if [ "$TIME" ]
-          then
-            RUNAT=$(date -d "+$TIME seconds" "+%Y-%m-%dT%H:%M:%SZ")
-            curl https://api.cronhooks.io/schedules \
-              -X POST \
-              -H 'Content-Type: application/json' \
-              -H 'Authorization: Bearer ${{ secrets.CRONHOOKS_TOKEN }}' \
-              -d \
-              '{
-                "title": "Run github pages action",
-                "url": "https://github.com/repos/:sams96/:sams96.github.io/dispatches",
-                "timezone": "europe/london",
-                "method": "POST",
-                "payload": {
-                  "event_type": "scheduler"
-                },
-                "contentType": "application/json; charset=utf-8",
-                "isRecurring": false,
-                "runAt": "'$RUNAT'"
-              }'
-            fi
+# TODO: Get scheduler to work
+#
+#      - name: Add scheduler
+#        run: |
+#          TIME=$(for d in $(cat $(find content/post -name "*.md") | awk '/date: / {gsub(/"/, "", $2); print $2 }'); do if [ "$d" != "null" ]; then expr $(date -d $d +\%s) - $(date +\%s); fi; done | awk '$1>=0' | sort -nk 1 | head -n 1);
+#          if [ "$TIME" ]
+#          then
+#            RUNAT=$(date -d "+$TIME seconds" "+%Y-%m-%dT%H:%M:%SZ")
+#            curl https://api.cronhooks.io/schedules \
+#              -X POST \
+#              -H 'Content-Type: application/json' \
+#              -H 'Authorization: Bearer ${{ secrets.CRONHOOKS_TOKEN }}' \
+#              -d \
+#              '{
+#                "title": "Run github pages action",
+#                "url": "https://github.com/repos/:sams96/:sams96.github.io/dispatches",
+#                "timezone": "europe/london",
+#                "method": "POST",
+#                "payload": {
+#                  "event_type": "scheduler"
+#                },
+#                "contentType": "application/json; charset=utf-8",
+#                "isRecurring": false,
+#                "runAt": "'$RUNAT'"
+#              }'
+#            fi
 
       - name: Build
         run: hugo --minify
@@ -55,4 +57,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: master
           publish_dir: ./public
-          keep_files: true
+#          keep_files: true

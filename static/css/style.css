@@ -259,6 +259,7 @@ article:not(:last-of-type) {
     padding-bottom: 1em;
 }
 
+.post-fist:not(:first-of-type):before,
 .post-list:not(:last-of-type):after {
     display: block;
     content: "";

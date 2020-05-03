@@ -1,17 +1,35 @@
 {{ define "main" }}
 
     <h1>{{ i18n .Title }}</h1>
-    {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-    {{ range $pages }}
-        <div class="post-short-list">
-            <header>
-                <h2>
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </h2>
-            </header>
-            {{ partial "articleInfoDate.html" . }}
-            {{ partial "articleInfoFull.html" . }}
-        </div>
-    {{ end }}
+
+	{{ $type := .Type }}
+	{{ $.Scratch.Set "count" 1 }}
+
+	{{ range (.Site.RegularPages.GroupByDate "2006") }}
+		{{ if (gt .Key 2000) }}
+
+		{{ range (where .Pages "Type" $type) }}
+			{{ if (eq ($.Scratch.Get "count") 1) }}
+				{{ $.Scratch.Set "count" 0 }}
+					<h2 class="post-fist">{{ .Date.Format "2006" }}</h2>
+				{{ end }}
+			{{ end }}
+
+			{{ $.Scratch.Set "count" 1 }}
+				{{ range (where .Pages "Type" $type) }}
+					{{ if (ne .Params.hidden true) }}
+						<div class="post-short-list">
+							<header>
+								<h2>
+									<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+								</h2>
+							</header>
+							{{ partial "articleInfoDate.html" . }}
+							{{ partial "articleInfoFull.html" . }}
+						</div>
+					{{ end }}
+				{{ end }}
+			{{ end }}
+		{{ end }}
 
 {{ end }}

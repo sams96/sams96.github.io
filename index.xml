@@ -360,10 +360,10 @@ it&amp;rsquo;s miniscule.&lt;/li>
 &lt;pre>&lt;code>go get github.com/sams96/rgeo
 &lt;/code>&lt;/pre>
 &lt;p>and add&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">&lt;span style="font-weight:bold">import&lt;/span> &lt;span style="color:#b84">&amp;#34;github.com/sams96/rgeo&amp;#34;&lt;/span>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">&lt;span style="font-weight:bold">import&lt;/span> &lt;span style="color:#b84">&amp;#34;github.com/sams96/rgeo&amp;#34;&lt;/span>
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>to the top of your Go file to include it in your project.&lt;/p>
 &lt;h2 id="usage">Usage&lt;/h2>
-&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">r, err &lt;span style="font-weight:bold">:=&lt;/span> &lt;span style="color:#900;font-weight:bold">New&lt;/span>(Provinces10, Cities10)
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">r, err &lt;span style="font-weight:bold">:=&lt;/span> &lt;span style="color:#900;font-weight:bold">New&lt;/span>(Provinces10, Cities10)
 &lt;span style="font-weight:bold">if&lt;/span> err &lt;span style="font-weight:bold">!=&lt;/span> &lt;span style="font-weight:bold">nil&lt;/span> {
 &lt;span style="color:#998;font-style:italic">// Handle error
 &lt;/span>&lt;span style="color:#998;font-style:italic">&lt;/span>}
@@ -374,7 +374,7 @@ loc, err &lt;span style="font-weight:bold">:=&lt;/span> r.&lt;span style="color:
 fmt.&lt;span style="color:#900;font-weight:bold">Println&lt;/span>(loc)
 &lt;span style="color:#998;font-style:italic">// Output: &amp;lt;Location&amp;gt; Sapporo, Hokkaido, Japan (JPN), Asia
 &lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>First initialise rgeo using &lt;code>rgeo.New&lt;/code>,&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">&lt;span style="font-weight:bold">func&lt;/span> &lt;span style="color:#900;font-weight:bold">New&lt;/span>(datasets &lt;span style="font-weight:bold">...&lt;/span>&lt;span style="font-weight:bold">func&lt;/span>() []&lt;span style="color:#458;font-weight:bold">byte&lt;/span>) (&lt;span style="font-weight:bold">*&lt;/span>Rgeo, &lt;span style="color:#458;font-weight:bold">error&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">&lt;span style="font-weight:bold">func&lt;/span> &lt;span style="color:#900;font-weight:bold">New&lt;/span>(datasets &lt;span style="font-weight:bold">...&lt;/span>&lt;span style="font-weight:bold">func&lt;/span>() []&lt;span style="color:#458;font-weight:bold">byte&lt;/span>) (&lt;span style="font-weight:bold">*&lt;/span>Rgeo, &lt;span style="color:#458;font-weight:bold">error&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>which takes any non-zero number of datasets as arguments. The included datasets
 are:&lt;/p>
 &lt;ul>
@@ -390,12 +390,12 @@ with your coordinates to get the location information. See the &lt;a href="https
 Docs&lt;/a> for more information on usage.&lt;/li>
 &lt;/ul>
 &lt;p>Then use &lt;code>ReverseGeocode&lt;/code> to get the location information of the given coordinate.&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">&lt;span style="font-weight:bold">func&lt;/span> (r &lt;span style="font-weight:bold">*&lt;/span>Rgeo) &lt;span style="color:#900;font-weight:bold">ReverseGeocode&lt;/span>(loc geom.Coord) (Location, &lt;span style="color:#458;font-weight:bold">error&lt;/span>)
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">&lt;span style="font-weight:bold">func&lt;/span> (r &lt;span style="font-weight:bold">*&lt;/span>Rgeo) &lt;span style="color:#900;font-weight:bold">ReverseGeocode&lt;/span>(loc geom.Coord) (Location, &lt;span style="color:#458;font-weight:bold">error&lt;/span>)
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>The input is a &lt;a href="https://github.com/twpayne/go-geom">&lt;code>geom.Coord&lt;/code>&lt;/a>, which is just
 a &lt;code>[]float64&lt;/code> with the longitude in the zeroth position and the latitude in the
 first position (i.e. &lt;code>[]float64{lon, lat}&lt;/code>). &lt;code>ReverseGeocode&lt;/code> returns a
 &lt;code>Location&lt;/code>, which looks like this:&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">&lt;span style="font-weight:bold">type&lt;/span> Location &lt;span style="font-weight:bold">struct&lt;/span> {
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">&lt;span style="font-weight:bold">type&lt;/span> Location &lt;span style="font-weight:bold">struct&lt;/span> {
 &lt;span style="color:#998;font-style:italic">// Commonly used country name
 &lt;/span>&lt;span style="color:#998;font-style:italic">&lt;/span> Country &lt;span style="color:#458;font-weight:bold">string&lt;/span> &lt;span style="color:#b84">`json:&amp;#34;country,omitempty&amp;#34;`&lt;/span>
 &lt;span style="color:#998;font-style:italic">// Formal name of country
@@ -412,7 +412,7 @@ Province &lt;span style="color:#458;font-weight:bold">string&lt;/span> &lt;span 
 City &lt;span style="color:#458;font-weight:bold">string&lt;/span> &lt;span style="color:#b84">`json:&amp;#34;city,omitempty&amp;#34;`&lt;/span>
 }
 &lt;/code>&lt;/pre>&lt;/div>&lt;p>So, to put it all together:&lt;/p>
-&lt;div class="highlight">&lt;pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">r, err &lt;span style="font-weight:bold">:=&lt;/span> rgeo.&lt;span style="color:#900;font-weight:bold">New&lt;/span>(Countries110)
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">&lt;code class="language-go" data-lang="go">r, err &lt;span style="font-weight:bold">:=&lt;/span> rgeo.&lt;span style="color:#900;font-weight:bold">New&lt;/span>(Countries110)
 &lt;span style="font-weight:bold">if&lt;/span> err &lt;span style="font-weight:bold">!=&lt;/span> &lt;span style="font-weight:bold">nil&lt;/span> {
 &lt;span style="color:#998;font-style:italic">// Handle error
 &lt;/span>&lt;span style="color:#998;font-style:italic">&lt;/span>}

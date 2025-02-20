@@ -1,12 +1,13 @@
-baseURL: /
+baseURL: "https://sams96.github.io"
 title: Sam Smith
 
-paginate: 10
 disablePathToLower: true
 languageCode: en-gb
 theme: "anubis"
 summaryLength: 999999999999
-googleAnalytics: UA-160189334-1
+
+pagination:
+  pagerSize: 10
 
 params:
   author: Sam Smith
@@ -52,9 +53,3 @@ markup:
       attribute: true
       autoHeadingID: true
       autoHeadingIDType: github
-
-privacy:
-  googleAnalytics:
-    anonymizeIP: true
-    respectDoNotTrack: true
-    useSessionStorage: true

@@ -22,6 +22,10 @@
 	<link rel="stylesheet" href="{{ "css/dark.css" | absURL }}?rnd={{ now.Unix }}" />
 {{ end }}
 
+{{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 
@@ -30,7 +34,3 @@
 <meta property="article:modified_time" content="">
 <meta property="article:tag" content="">
 <meta property="article:publisher" content="https://www.facebook.com/XXX"> -->
-
-{{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
-    {{ template "_internal/google_analytics_async.html" . }}
-{{ end }}

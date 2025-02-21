@@ -26,8 +26,6 @@ during July 2018. I found the similarities between Burma as I visited it and how
 George Orwell wrote about it to be quite interesting, especially with regards to
 the dogs.
 
-<br>
-
 {{< myfig src="burmese-dogs-02.jpg" >}}
 
 {{< myfig src="burmese-dogs-03.jpg" >}}

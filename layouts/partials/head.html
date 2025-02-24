@@ -26,6 +26,9 @@
   {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
 {{ end }}
 
+<script type="module" src="../js/comments.js"></script>
+<link rel="stylesheet" href="../css/comments.css">
+
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/twitter_cards.html" . }}
 

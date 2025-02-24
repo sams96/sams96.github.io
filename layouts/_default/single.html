@@ -9,6 +9,19 @@
             {{ .Content }}
         </div>
         {{ partial "articleInfoFull.html" . }}
+
+		{{ with .Params.tootlink }}
+			<div id="mastodon-comments">
+			<h2>Comments</h2>
+			<p>You can comment on this post by replying to <a href={{ . }}> this
+		post.</a></p>
+				<oom-comments mastodon={{ . }}>
+			</br>
+				</oom-comments>
+			</div>
+		{{ end }}
+
+	<meta name="fediverse:creator" content="@mondoman712@toot.io">
     </article>
 
 {{ end }}

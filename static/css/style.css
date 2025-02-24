@@ -70,10 +70,12 @@ h1 {
 
 h2 {
     font-size: 1.3em;
+	margin-bottom: 0;
 }
 
 h3 {
     font-size: 1.0em;
+	margin-bottom: 0;
 }
 
 /* Links */
@@ -139,6 +141,7 @@ kbd {
 	font-family: 'Computer Modern Typewriter', monospace;
     line-height: 154%;
 	text-align: left;
+	font-size: 16px;
 }
 
 /* Styles */

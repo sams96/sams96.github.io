@@ -6,6 +6,7 @@ categories:
   - programming
 tags:
   - golang
+tootLink: "https://toot.io/@mondoman712/114071633084030867"
 ---
 
 I've been working on web backends in Go for the past 5 years, and on various

@@ -2,6 +2,12 @@
 
     <h1>{{ i18n .Title }}</h1>
 
+    <div class="article-info">
+		{{ with .OutputFormats.Get "rss" -}}
+			<a href="{{ .Permalink }}">RSS feed</a>
+		{{ end }}
+	</div>
+
 	{{ $type := .Type }}
 	{{ $.Scratch.Set "count" 1 }}
 

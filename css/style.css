@@ -541,3 +541,27 @@ footer a {
 		margin: 0 auto .5em;
 	}
 }
+
+#mastodon-stats {
+	display: none;
+}
+
+#mastodon-comments-list {
+	font-family: sans-serif;
+	--font-size: 12px;
+	margin-top: 12px !important;
+}
+
+#mastodon-comments:before {
+    display: block;
+    content: "";
+    width: 5em;
+    height: 1px;
+    margin: 0 auto;
+	margin-top: 1em;
+    background-color: #d1d1d1;
+}
+
+#mastodon-comments {
+	--comment-padding: 1em;
+}

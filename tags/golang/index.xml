@@ -1,4 +1,212 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on Sam Smith</title><link>https://sams96.github.io/tags/golang/</link><description>Recent content in Golang on Sam Smith</description><generator>Hugo</generator><language>en-gb</language><lastBuildDate>Sun, 01 Mar 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://sams96.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>Portfolio V - 2020</title><link>https://sams96.github.io/portfolio-v/</link><pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate><guid>https://sams96.github.io/portfolio-v/</guid><description>&lt;p>This year was, unlike the previous few, without any major travel. Although I did
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on Sam Smith</title><link>https://sams96.github.io/tags/golang/</link><description>Recent content in Golang on Sam Smith</description><generator>Hugo</generator><language>en-gb</language><lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sams96.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>Applying Hexagonal Architecture to a Mid-Size Go Backend</title><link>https://sams96.github.io/go-project-layout/</link><pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate><guid>https://sams96.github.io/go-project-layout/</guid><description>&lt;p>I&amp;rsquo;ve been working on web backends in Go for the past 5 years, and on various
+projects of covering a range of ages from brand new greenfield projects to one
+built on top of a core that predates the Go language. The needs of these
+backends tend not to be overly complex, handling user management, payments, and
+a relativly simple product. They&amp;rsquo;re maintained by teams of 2-20 backend
+engineers and work with a SPA web frontend communicating with JSON over HTTP.&lt;/p>
+&lt;p>With my most recent work being mostly greenfield, I&amp;rsquo;ve been thinking more about
+how I can apply what I&amp;rsquo;ve learned from my colleagues working on older projects,
+and avoid decisions made in the name of moving fast which cause a lot of pain
+further down the line.&lt;/p>
+&lt;/br>
+&lt;p>What needs to be considered when it comes to layout out a project is finding the
+right balance of flexibility without over-abstracting. You want to be able to
+move quickly and adapt to ever-changing requirements without being slowed down
+by your own code. This heavily depends on what you&amp;rsquo;re working on, but I&amp;rsquo;m going
+present what I find works for me for the type of projects I have experience
+working on.&lt;/p>
+&lt;p>I arrived at this layout not purely by attempting to apply hexagonal
+architecture to the projects I have worked on. It is something that I have read
+about and is often brought up when it comes to Go project layouts, but I have
+arrived here mostly through my experience and by thinking about how to find the
+right level of abstraction that works well for these projects.&lt;/p>
+&lt;p>Hexagonal architecture splits packages into one of two types: the application&amp;rsquo;s
+core and its adapters. The core being the part that defines your application&amp;rsquo;s
+business logic and ties the adapters together, and the adapters being wrappers
+around external services or other external communication. I would further add a
+third type to this, which is utility packages that fill neither of the above
+roles.&lt;/p>
+&lt;h2 id="core">Core&lt;/h2>
+&lt;p>Core packages should contain all of your main type definitions which the
+adapters will also be built around, as well as functions defining the actions
+that can take place. In the simplest case this could just be a wrapper around a
+database function, but it could also involve much more, including validation and
+coordination of different adapters.&lt;/p>
+&lt;p>You can split your core where you have clear seperation between domains. A
+simple example of this is splitting the user management away from the actual
+functionality of your application (assuming that the functionailty isn&amp;rsquo;t heavily
+relieant on user management). If your application is small, you can just leave
+it all in one package. If you aren&amp;rsquo;t sure, just leave it in one package until
+clear lines emerge&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
+&lt;p>Below I have used a simple user management package as an example framework for a
+core package. I have omitted contexts (which you really should be passing) and
+imports for brevity. &lt;em>All code samples in this article are for illustrative
+purposes only, don&amp;rsquo;t expect them to work as is&lt;/em>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">package&lt;/span> users
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">type&lt;/span> User &lt;span style="font-weight:bold">struct&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	ID uuid.UUID
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	Email &lt;span style="color:#458;font-weight:bold">string&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">type&lt;/span> UserStorer &lt;span style="font-weight:bold">interface&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="color:#900;font-weight:bold">NewUser&lt;/span>(email, password &lt;span style="color:#458;font-weight:bold">string&lt;/span>) (&lt;span style="font-weight:bold">*&lt;/span>User, &lt;span style="color:#458;font-weight:bold">error&lt;/span>)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">type&lt;/span> Manager &lt;span style="font-weight:bold">struct&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	store UserStorer
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> &lt;span style="color:#900;font-weight:bold">NewManager&lt;/span>(store UserStorer) &lt;span style="font-weight:bold">*&lt;/span>Manager {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">return&lt;/span> &lt;span style="font-weight:bold">&amp;amp;&lt;/span>Manager{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>		store: store,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> (m &lt;span style="font-weight:bold">*&lt;/span>Manager) &lt;span style="color:#900;font-weight:bold">New&lt;/span>(email, password &lt;span style="color:#458;font-weight:bold">string&lt;/span>) (&lt;span style="font-weight:bold">*&lt;/span>User, &lt;span style="color:#458;font-weight:bold">error&lt;/span>) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">...&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>UserStorer&lt;/code> here will likely only have one definition. Even though as
+developers we like the idea of having flexibility to swap out the database
+easily, in my experience in a commercial setting it&amp;rsquo;s very unlikely to happen.
+I also don&amp;rsquo;t think it&amp;rsquo;s really needed for testing, I would just write
+integration tests here and run against the DB instead of mocking it. That said,
+I like to have the interface defined here anyway because it fits nicely with the
+philosphy of core package and having it define what the adapters do.&lt;/p>
+&lt;p>Ideally, your core packages won&amp;rsquo;t be dependant on each other and you can keep
+everything entirely separate, however this often isn&amp;rsquo;t the case. In some simple
+cases, you can just rely on the layer above (the driving adapter, see below) to
+call separate functions in different core packages. For more complex
+dependencies, I think it&amp;rsquo;s fine for the core packages to sometimes be dependant
+on one another (i.e my user manager might include a manager of another domain).
+The Go compiler&amp;rsquo;s blocking of circular dependencies should prevent things from
+getting too complex here.&lt;/p>
+&lt;h2 id="adapters">Adapters&lt;/h2>
+&lt;p>Adapters are what let your core code communicate with the outside world. They
+generally exist either as a wrapper around some third party service in order for
+it to conform to an interface that has been defined in the core, the obvious
+example being your database layer, or as an API calling the functions in your
+core package. These are sometimes referred to as &lt;em>driven&lt;/em> and &lt;em>driving&lt;/em>
+adapters.&lt;/p>
+&lt;h3 id="driven-adapters">Driven Adapters&lt;/h3>
+&lt;p>Driven adapters are those called by your core package, and should satisy the
+interface defined there. The most common example, and the one I&amp;rsquo;ve used as an
+example below is a database but they could also easily be a key-value store or
+object storage. Beyond that, the same pattern can be used to send analytics
+events or transactional emails.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">package&lt;/span> postgres
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">type&lt;/span> DB &lt;span style="font-weight:bold">struct&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	db &lt;span style="font-weight:bold">*&lt;/span>sqlx.DB
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> &lt;span style="color:#900;font-weight:bold">NewDB&lt;/span>(&lt;span style="color:#998;font-style:italic">/* connection info */&lt;/span>) &lt;span style="font-weight:bold">*&lt;/span>DB { &lt;span style="font-weight:bold">...&lt;/span> }
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> (db &lt;span style="font-weight:bold">*&lt;/span>DB) &lt;span style="color:#900;font-weight:bold">NewUser&lt;/span>(email, password &lt;span style="color:#458;font-weight:bold">string&lt;/span>) (&lt;span style="font-weight:bold">*&lt;/span>User, &lt;span style="color:#458;font-weight:bold">error&lt;/span>) { &lt;span style="font-weight:bold">...&lt;/span> }
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I would keep all of the code relating to a single external service in the same
+package, so even if you have multiple core packages interacting with one. If
+it&amp;rsquo;s a single db, all of the database code can go in one place&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>.&lt;/p>
+&lt;h3 id="driving-adapters">Driving Adapters&lt;/h3>
+&lt;p>A driving adapter is one that calls the functions in your core, and makes them
+available externally. For this example I&amp;rsquo;m going to use a simple &lt;em>REST&lt;/em>&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> API
+for our user service, designed for some SPA frontend, as this is what I have
+most commonly encountered.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">package&lt;/span> webapi
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">type&lt;/span> Handlers &lt;span style="font-weight:bold">struct&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	users &lt;span style="font-weight:bold">*&lt;/span>users.Manager
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> &lt;span style="color:#900;font-weight:bold">NewHandlers&lt;/span>(users &lt;span style="font-weight:bold">*&lt;/span>users.Manager) &lt;span style="font-weight:bold">*&lt;/span>Handlers {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">return&lt;/span> &lt;span style="font-weight:bold">&amp;amp;&lt;/span>Handlers{users: users}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> (h &lt;span style="font-weight:bold">*&lt;/span>Handlers) &lt;span style="color:#900;font-weight:bold">Route&lt;/span>(mux &lt;span style="font-weight:bold">*&lt;/span>http.ServeMux) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	mux.&lt;span style="color:#900;font-weight:bold">HandleFunc&lt;/span>(&lt;span style="color:#b84">&amp;#34;POST /register&amp;#34;&lt;/span>, h.handlePostRegister)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> (h &lt;span style="font-weight:bold">*&lt;/span>Handlers) &lt;span style="color:#900;font-weight:bold">handlePostRegister&lt;/span>(w http.ResponseWriter, r &lt;span style="font-weight:bold">*&lt;/span>http.Request) {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">var&lt;/span> req postRegisterRequest
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	err &lt;span style="font-weight:bold">:=&lt;/span> json.&lt;span style="color:#900;font-weight:bold">NewDecoder&lt;/span>(r.Body).&lt;span style="color:#900;font-weight:bold">Decode&lt;/span>(&lt;span style="font-weight:bold">&amp;amp;&lt;/span>req)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">if&lt;/span> err &lt;span style="font-weight:bold">!=&lt;/span> &lt;span style="font-weight:bold">nil&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>		&lt;span style="color:#998;font-style:italic">/* handle error */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	user, err &lt;span style="font-weight:bold">:=&lt;/span> h.users.&lt;span style="color:#900;font-weight:bold">New&lt;/span>(req.Email, req.Password)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">if&lt;/span> err &lt;span style="font-weight:bold">!=&lt;/span> &lt;span style="font-weight:bold">nil&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>		&lt;span style="color:#998;font-style:italic">/* handle error */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	resp &lt;span style="font-weight:bold">:=&lt;/span> postRegisterResponse{
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>		UserID: user.ID,
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	err = json.&lt;span style="color:#900;font-weight:bold">NewEncoder&lt;/span>(w).&lt;span style="color:#900;font-weight:bold">Encode&lt;/span>(&lt;span style="font-weight:bold">&amp;amp;&lt;/span>resp)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">if&lt;/span> err &lt;span style="font-weight:bold">!=&lt;/span> &lt;span style="font-weight:bold">nil&lt;/span> {
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>		&lt;span style="color:#998;font-style:italic">/* handle error */&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	}
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	w.&lt;span style="color:#900;font-weight:bold">WriteHeader&lt;/span>(http.StatusCreated)
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>When it comes to factoring this package, I like to divide it by intended
+consumer, so routes for your SPA frontend go in one place, and webhook handlers
+go in another etc. That way the request and reply formats and expectations of
+all routes in one package is the same, as is the authentication.&lt;/p>
+&lt;h2 id="utilities">Utilities&lt;/h2>
+&lt;p>Utility packages are those that don&amp;rsquo;t fit into either previous category, by both
+not implementing business logic and not interacting direcltly with an external
+service. Aside from any convenience abstractions that you want to reuse in
+multiple packages, the main thing I expect to fit this category in our web app
+is authorization. Auth &lt;em>kind of&lt;/em> fits in with the driving adapter, but also
+splits of nicely, and if you&amp;rsquo;re exposing multiple APIs you&amp;rsquo;re probably going to
+reuse some of the code.&lt;/p>
+&lt;p>Also, don&amp;rsquo;t take this category as a suggestion to create a &lt;code>utils&lt;/code> package.
+Generically named packages like this are recommended against in go, and &lt;em>A
+little copying is better than a little dependancy&lt;/em>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>.&lt;/p>
+&lt;h2 id="conclusion-and-other-thoughts">Conclusion and other thoughts&lt;/h2>
+&lt;p>When it comes to the folder structure, I would advise keeping everything as flat
+as possible, Subfolders are nice where you have a bunch of non-go files related
+to a package, such as your database migrations. You probably don&amp;rsquo;t need a &lt;code>src&lt;/code>,
+&lt;code>pkg&lt;/code>, or &lt;code>internal&lt;/code> folder to contain other packages. You can just leave
+everything in the top level of your repo. These make sense in very large
+projects like &lt;a href="https://github.com/moby/moby">Moby&lt;/a> or
+&lt;a href="https://github.com/kubernetes/kubernetes">Kubernetes&lt;/a>, but for our web service
+you&amp;rsquo;re just making things harder to find. Leave it at the top level until that
+starts to cause issues.&lt;/p>
+&lt;/br>
+&lt;p>As I said at the top, this is the layout that I&amp;rsquo;ve arrived at from my experience
+working on commercial web backends in Go. I think it&amp;rsquo;s a practical level of
+abstraction to stay flexible without spending too much time or adding too much
+complexity.&lt;/p>
+&lt;p>You might think that there isn&amp;rsquo;t actually much to what I have
+suggested here, but that&amp;rsquo;s part of the point. You don&amp;rsquo;t need much abstraction
+and not having it will help reduce the mental load of working on your codebase,
+allowing you to focus on productive work and for new developers to be onboarded
+more easily.&lt;/p>
+&lt;h3 id="further-reading">Further Reading&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://alistair.cockburn.us/hexagonal-architecture/">Hexagonal architecture&lt;/a> - Alistair Cockburn&lt;/li>
+&lt;li>&lt;a href="https://go.dev/blog/package-names">Package names&lt;/a> - Sameer Ajmani&lt;/li>
+&lt;li>&lt;a href="https://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html">Less is exponentially more&lt;/a> - Rob Pike&lt;/li>
+&lt;/ul>
+&lt;div class="footnotes" role="doc-endnotes">
+&lt;hr>
+&lt;ol>
+&lt;li id="fn:1">
+&lt;p>&lt;a href="https://grugbrain.dev/#grug-on-factring-your-code">Don&amp;rsquo;t factor early&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:2">
+&lt;p>At least until you start splitting your tables into different schemas.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:3">
+&lt;p>This isn&amp;rsquo;t actually REST, but is often referred to as REST, see
+&lt;a href="https://htmx.org/essays/how-did-rest-come-to-mean-the-opposite-of-rest/">&lt;em>How Did REST Come To Mean The Opposite of REST?&lt;/em>&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;li id="fn:4">
+&lt;p>From &lt;a href="https://www.youtube.com/watch?v=PAAkCSZUG1c&amp;amp;t=568s">Go Proverbs with Rob Pike&lt;/a>
+at Gopherfest 2015&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
+&lt;/li>
+&lt;/ol>
+&lt;/div></description></item><item><title>Portfolio V - 2020</title><link>https://sams96.github.io/portfolio-v/</link><pubDate>Sun, 19 Dec 2021 00:00:00 +0000</pubDate><guid>https://sams96.github.io/portfolio-v/</guid><description>&lt;p>This year was, unlike the previous few, without any major travel. Although I did
 move from the UK to Switzerland, which did give me a new place to explore and
 photograph. Even with that I took a fraction of the number of photos I usually
 take in a year in 2020, which left me with not much to choose from for this

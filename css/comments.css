@@ -12,7 +12,8 @@ oom-comments li {
   margin: 32px 0;
 }
 oom-comments article {
-  max-width: 600px;
+	width: 100%;
+	max-width: 600px;
 }
 oom-comments ul ul {
   margin-left: 64px;

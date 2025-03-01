@@ -1,0 +1,2 @@
+{{ $i := (add ($.Site.Taxonomies.categories | len) -1) }}
+{{ range $key, $value := $.Site.Taxonomies.categories }}{{ if and (eq ($.Site.Taxonomies.categories | len) 2) (not $i) }} and {{ else if (not $i) }}, and {{ else if (not (eq ($.Site.Taxonomies.categories | len) (add $i 1))) }}, {{ end }}<a href="{{ (print "/categories/" $key) | absURL }}">{{ $key }}</a>{{ $i = (add $i -1) }}{{ end }}.

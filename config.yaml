@@ -2,7 +2,6 @@ baseURL: "https://sams96.github.io"
 title: Sam Smith
 
 disablePathToLower: true
-languageCode: en-gb
 theme: "anubis"
 summaryLength: 999999999999
 
@@ -12,6 +11,10 @@ pagination:
 params:
   author: Sam Smith
   dark_css: "css/dark.css"
+  sitename: Sam Smith's Blog
+  description: |
+    My blog! I write about (mostly analog) photography and (mostly golang)
+    programming
 
 menu:
   main:
@@ -53,3 +56,11 @@ markup:
       attribute: true
       autoHeadingID: true
       autoHeadingIDType: github
+  tableOfContents:
+    ordered: true
+
+languages:
+  en:
+    languageName: "English"
+    languagecode: "en-gb"
+    weight: 1

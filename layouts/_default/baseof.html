@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
+<head itemscope itemtype="https://schema.org/Blog">
     {{ block "head" . }}
         {{ partial "head.html" . }}
     {{ end }}
@@ -12,7 +12,7 @@
                 {{ partial "header.html" . }}
             {{ end }}
         </header>
-        <main>
+        <main id="main">
             {{ block "main" . }}{{ end }}
         </main>
         <footer class="site-footer">

@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Smith</title><link>https://sams96.github.io/</link><description>Recent content on Sam Smith</description><generator>Hugo</generator><language>en-gb</language><lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sams96.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Applying Hexagonal Architecture to a Mid-Size Go Backend</title><link>https://sams96.github.io/go-project-layout/</link><pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate><guid>https://sams96.github.io/go-project-layout/</guid><description>&lt;p>I&amp;rsquo;ve been working on web backends in Go for the past 5 years, and on various
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Smith</title><link>https://sams96.github.io/</link><description>Recent content on Sam Smith</description><generator>Hugo</generator><language>en-gb</language><lastBuildDate>Sat, 08 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sams96.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Rgeo — 5 Years On</title><link>https://sams96.github.io/rgeo-5-years-on/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://sams96.github.io/rgeo-5-years-on/</guid><description>&lt;p>5 years ago I wrote &lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a>, a small Go package
+for reverse geocoding (you input some coordinates, it gives you information
+about the location). Today I am putting the projected on an indefinite hiatus.&lt;/p>
+&lt;/br>
+&lt;p>That&amp;rsquo;s maybe a tad dramatic for my little project that I barely touch anyway,
+but I thought I should be clear about the fact that I&amp;rsquo;m not really working on it
+at all, and I thought I&amp;rsquo;d just write up my thoughts about it here.&lt;/p>
+&lt;/br>
+&lt;p>In the time since, Rgeo has been noticed somewhat (much more than I expected),
+gaining over 50 stars on GitHub and getting some really nice contributions. I am
+very happy with how the project has been received by others, despite my neglect.&lt;/p>
+&lt;p>My main motivation for writing Rgeo in the first place was as a portfolio piece,
+something that I could show prospective employers to prove that I can write
+decent Go code, since at that time I didn&amp;rsquo;t have any professional experience. It
+served that purpose well, I got a job writing Go not long after the initial
+release. And after that I lost the motivation to work on it, since I had a full
+time job writing Go.&lt;/p>
+&lt;p>I have been reflecting on this project recently because, despite the fact that I
+am still waiting Go professionally, I&amp;rsquo;ve had some more motivation to work on my
+own projects, but not this project. I don&amp;rsquo;t have any use for the package myself
+so I’m not finding issues nor coming up with new features to add.&lt;/p>
+&lt;h2 id="what-to-use-now">What to use now&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/smilyorg/tinygpkg">smilyorg/tinygpkg&lt;/a> - Very nice package
+inspired by Rgeo. It uses a different approach to vastly reduce startup time at
+the cost of slightly slower queries.&lt;/li>
+&lt;li>&lt;a href="https://github.com/authenticvision/rgeo">authenticvision/rgeo&lt;/a> - The most
+active fork of Rgeo, and most of the contributions I’ve had have come from
+these guys.&lt;/li>
+&lt;li>Rgeo - There’s no external API calls here so I don’t really see there being
+any security concerns, and I will try to keep dependencies up to date and be
+better at merging any fixes that come in. There just won’t be any new features
+for the time being (not that there has been for a while).&lt;/li>
+&lt;/ul>
+&lt;h2 id="rgeo-v20">Rgeo v2.0&lt;/h2>
+&lt;p>I have an idea of what I would like to do for a version 2 if I ever come back to
+this project, and that is to split the querying logic (which would stay in the
+main package) from the parts specific to the natural earth data geojson files
+used (which would go into a new sub-package). This would provide a more general
+use for the package in handling data from any source while still giving easy
+access to the same existing functionality. I also like
+&lt;a href="https://github.com/SaTae66">SaTae66&lt;/a>’s snapping PR, but I wonder if similarly
+things could be generalised and more tools could be provided, for example
+querying for the closest geojson feature to a given point.&lt;/p></description><comments>https://toot.io/@mondoman712/114126461240720151</comments></item><item><title>Applying Hexagonal Architecture to a Mid-Size Go Backend</title><link>https://sams96.github.io/go-project-layout/</link><pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate><guid>https://sams96.github.io/go-project-layout/</guid><description>&lt;p>I&amp;rsquo;ve been working on web backends in Go for the past 5 years, and on various
 projects of covering a range of ages from brand new greenfield projects to one
 built on top of a core that predates the Go language. The needs of these
 backends tend not to be overly complex, handling user management, payments, and

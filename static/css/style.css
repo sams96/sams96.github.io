@@ -1,3 +1,7 @@
+:root {
+	--color-grey: #595959;
+}
+
 /* Basic */
 @font-face {
 	font-family: "CMU";
@@ -192,11 +196,11 @@ ul ol, ol ol, ul ul {
 }
 
 figcaption {
-  display: block;
-  color: grey;
-  line-height: 1em; /* 24px/16px */
-  margin-bottom: 1.5em; /* 24px/16px */
-  font-weight: 200;
+	display: block;
+	color: var(--color-grey);
+	line-height: 1em; /* 24px/16px */
+	margin-bottom: 1.5em; /* 24px/16px */
+	font-weight: 200;
 }
 
 /* Header */
@@ -292,7 +296,7 @@ article header h1 a {
 
 .article-info {
     font-size: 0.75em;
-    color: grey;
+    color: var(--color-grey);
     margin-top: 0.25em;
 	text-align: left;
 }
@@ -302,7 +306,7 @@ article header h1 a {
 }
 
 .article-info a {
-    color: grey;
+    color: var(--color-grey);
 }
 
 .article-info a:hover {
@@ -321,7 +325,7 @@ article header h1 a {
 .article-date {
     white-space: nowrap;
     font-size: 0.75em;
-    color: grey;
+    color: var(--color-grey);
     font-style: italic;
 }
 

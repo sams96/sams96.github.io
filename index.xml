@@ -1,4 +1,103 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Smith</title><link>https://sams96.github.io/</link><description>Recent content on Sam Smith</description><generator>Hugo</generator><language>en-gb</language><lastBuildDate>Sat, 08 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sams96.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Rgeo — 5 Years On</title><link>https://sams96.github.io/rgeo-5-years-on/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://sams96.github.io/rgeo-5-years-on/</guid><description>&lt;p>5 years ago I wrote &lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a>, a small Go package
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Smith</title><link>https://sams96.github.io/</link><description>Recent content on Sam Smith</description><generator>Hugo</generator><language>en-gb</language><lastBuildDate>Tue, 27 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sams96.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Always Sort by ID — An Interesting Gotcha</title><link>https://sams96.github.io/always-sort-by-ID/</link><pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate><guid>https://sams96.github.io/always-sort-by-ID/</guid><description>&lt;p>If you&amp;rsquo;re writing a database query for your web service and there&amp;rsquo;s pagination,
+you should always sort by a unique field like ID. This should also be done on
+top of any other sorting. Otherwise you can get double entries or lose results
+across pages.&lt;/p>
+&lt;/br>
+&lt;p>A sort can be non-determinstic, as in if you have multiple items with the same
+value in the field you are sorting by, there are multiple valid ways to sort it.
+This can be okay, until you need that sorting to persist through multiple
+queries, as you will when using pagination. This means that your query for your
+second page could sort your results differently and give the same entry again,
+or completely miss an entry. In the example below, both tables show valid ways
+to sort by Customer Name, but give different results which in this case leads to
+one order being missed and another shown twice.&lt;/p>
+&lt;h3 id="page-1">Page 1&lt;/h3>
+&lt;p>The first two results are returned.&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;/th>
+ &lt;th>&lt;strong>ID&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>Customer name&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>Item Ordered&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>1&lt;/td>
+ &lt;td>Alan&lt;/td>
+ &lt;td>Apple&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>2&lt;/td>
+ &lt;td>Betty&lt;/td>
+ &lt;td>Banana&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;/td>
+ &lt;td>3&lt;/td>
+ &lt;td>Betty&lt;/td>
+ &lt;td>Grape&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;/td>
+ &lt;td>4&lt;/td>
+ &lt;td>Callum&lt;/td>
+ &lt;td>Apple&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;h3 id="page-2">Page 2&lt;/h3>
+&lt;p>Now with an offset of 2 the third and forth results are returned, but because we
+are sorting in an non-determinstic way, the order has changed and we get
+different results than expected.&lt;/p>
+&lt;table>
+ &lt;thead>
+ &lt;tr>
+ &lt;th>&lt;/th>
+ &lt;th>&lt;strong>ID&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>Customer name&lt;/strong>&lt;/th>
+ &lt;th>&lt;strong>Item Ordered&lt;/strong>&lt;/th>
+ &lt;/tr>
+ &lt;/thead>
+ &lt;tbody>
+ &lt;tr>
+ &lt;td>&lt;/td>
+ &lt;td>1&lt;/td>
+ &lt;td>Alan&lt;/td>
+ &lt;td>Apple&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>&lt;/td>
+ &lt;td>3&lt;/td>
+ &lt;td>Betty&lt;/td>
+ &lt;td>Grape&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>2&lt;/td>
+ &lt;td>Betty&lt;/td>
+ &lt;td>Banana&lt;/td>
+ &lt;/tr>
+ &lt;tr>
+ &lt;td>-&amp;gt;&lt;/td>
+ &lt;td>4&lt;/td>
+ &lt;td>Callum&lt;/td>
+ &lt;td>Apple&lt;/td>
+ &lt;/tr>
+ &lt;/tbody>
+&lt;/table>
+&lt;p>This only applies when using the classic &lt;code>LIMIT&lt;/code> and &lt;code>OFFSET&lt;/code> method of
+pagination. &lt;a href="https://www.citusdata.com/blog/2016/03/30/five-ways-to-paginate/">Other methods are
+available&lt;/a>,
+but those tend to come with other downsides that make them less viable for the
+type of web services I work on, requiring either more resources or less
+flexibility.&lt;/p>
+&lt;p>The simple solution here is to just always include a sort by a unique ID, on top
+of any existing sorting or any requested by the client. That way your sorting is
+always deterministic and no results are lost.&lt;/p></description></item><item><title>Rgeo — 5 Years On</title><link>https://sams96.github.io/rgeo-5-years-on/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://sams96.github.io/rgeo-5-years-on/</guid><description>&lt;p>5 years ago I wrote &lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a>, a small Go package
 for reverse geocoding (you input some coordinates, it gives you information
 about the location). Today I am putting the projected on an indefinite hiatus.&lt;/p>
 &lt;/br>

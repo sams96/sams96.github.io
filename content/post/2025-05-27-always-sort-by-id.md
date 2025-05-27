@@ -4,7 +4,7 @@ url: /always-sort-by-ID
 date: 2025-05-27
 categories:
   - programming
-#tootLink: "https://toot.io/@mondoman712/114071633084030867"
+tootLink: "https://toot.io/@mondoman712/114581276592302845"
 ---
 
 If you're writing a database query for your web service and there's pagination,

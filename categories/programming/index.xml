@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on Sam Smith</title><link>https://sams96.github.io/categories/programming/</link><description>Recent content in Programming on Sam Smith</description><generator>Hugo</generator><language>en-gb</language><lastBuildDate>Tue, 27 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sams96.github.io/categories/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Always Sort by ID — An Interesting Gotcha</title><link>https://sams96.github.io/always-sort-by-ID/</link><pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate><guid>https://sams96.github.io/always-sort-by-ID/</guid><description>&lt;p>If you&amp;rsquo;re writing a database query for your web service and there&amp;rsquo;s pagination,
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on Sam Smith</title><link>https://samsm.ch/categories/programming/</link><description>Recent content in Programming on Sam Smith</description><generator>Hugo</generator><language>en-gb</language><lastBuildDate>Tue, 27 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://samsm.ch/categories/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Always Sort by ID — An Interesting Gotcha</title><link>https://samsm.ch/always-sort-by-ID/</link><pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate><guid>https://samsm.ch/always-sort-by-ID/</guid><description>&lt;p>If you&amp;rsquo;re writing a database query for your web service and there&amp;rsquo;s pagination,
 you should always sort by a unique field like ID. This should also be done on
 top of any other sorting. Otherwise you can get double entries or lose results
 across pages.&lt;/p>
@@ -97,7 +97,7 @@ type of web services I work on, requiring either more resources or less
 flexibility.&lt;/p>
 &lt;p>The simple solution here is to just always include a sort by a unique ID, on top
 of any existing sorting or any requested by the client. That way your sorting is
-always deterministic and no results are lost.&lt;/p></description><comments>https://toot.io/@mondoman712/114581276592302845</comments></item><item><title>Rgeo — 5 Years On</title><link>https://sams96.github.io/rgeo-5-years-on/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://sams96.github.io/rgeo-5-years-on/</guid><description>&lt;p>5 years ago I wrote &lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a>, a small Go package
+always deterministic and no results are lost.&lt;/p></description><comments>https://toot.io/@mondoman712/114581276592302845</comments></item><item><title>Rgeo — 5 Years On</title><link>https://samsm.ch/rgeo-5-years-on/</link><pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate><guid>https://samsm.ch/rgeo-5-years-on/</guid><description>&lt;p>5 years ago I wrote &lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a>, a small Go package
 for reverse geocoding (you input some coordinates, it gives you information
 about the location). Today I am putting the projected on an indefinite hiatus.&lt;/p>
 &lt;/br>
@@ -140,7 +140,7 @@ use for the package in handling data from any source while still giving easy
 access to the same existing functionality. I also like
 &lt;a href="https://github.com/SaTae66">SaTae66&lt;/a>’s snapping PR, but I wonder if similarly
 things could be generalised and more tools could be provided, for example
-querying for the closest geojson feature to a given point.&lt;/p></description><comments>https://toot.io/@mondoman712/114126461240720151</comments></item><item><title>Applying Hexagonal Architecture to a Mid-Size Go Backend</title><link>https://sams96.github.io/go-project-layout/</link><pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate><guid>https://sams96.github.io/go-project-layout/</guid><description>&lt;p>I&amp;rsquo;ve been working on web backends in Go for the past 5 years, and on various
+querying for the closest geojson feature to a given point.&lt;/p></description><comments>https://toot.io/@mondoman712/114126461240720151</comments></item><item><title>Applying Hexagonal Architecture to a Mid-Size Go Backend</title><link>https://samsm.ch/go-project-layout/</link><pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate><guid>https://samsm.ch/go-project-layout/</guid><description>&lt;p>I&amp;rsquo;ve been working on web backends in Go for the past 5 years, and on various
 projects of covering a range of ages from brand new greenfield projects to one
 built on top of a core that predates the Go language. The needs of these
 backends tend not to be overly complex, handling user management, payments, and
@@ -348,7 +348,7 @@ more easily.&lt;/p>
 at Gopherfest 2015&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
 &lt;/li>
 &lt;/ol>
-&lt;/div></description><comments>https://toot.io/@mondoman712/114071633084030867</comments></item><item><title>Rgeo — A Go package for basic, fast, local reverse geocoding</title><link>https://sams96.github.io/rgeo/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>https://sams96.github.io/rgeo/</guid><description>&lt;p>&lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a> is a fast, simple solution for local
+&lt;/div></description><comments>https://toot.io/@mondoman712/114071633084030867</comments></item><item><title>Rgeo — A Go package for basic, fast, local reverse geocoding</title><link>https://samsm.ch/rgeo/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>https://samsm.ch/rgeo/</guid><description>&lt;p>&lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a> is a fast, simple solution for local
 reverse geocoding, Rather than relying on external software or online APIs, rgeo
 packages all of the data it needs in your binary. This means it will only ever
 work down to the level of cities , but if that&amp;rsquo;s all you need then this is the

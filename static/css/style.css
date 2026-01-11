@@ -388,6 +388,7 @@ article p:not(:empty) + .diptych {
 }
 
 .read-more {
+    font-size: 0.75em;
 	margin-top: auto;
 	margin-bottom: 0;
 	margin-left: auto;

@@ -6,7 +6,7 @@ description: This page describes Sam
 
 I use this blog to post about whatever I find interesting, which so far has been
 {{< catlist >}}If you want to follow, I have an [RSS
-feed](https://sams96.github.io/index.xml) for the whole blog, as well as
+feed](/index.xml) for the whole blog, as well as
 separate ones for each category and tag that can be found on their pages. I will
 also try to post about new conent on my
 [mastodon](https://toot.io/@mondoman712). You can also find me on:

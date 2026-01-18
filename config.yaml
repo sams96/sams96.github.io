@@ -2,7 +2,6 @@ baseURL: "https://samsm.ch"
 title: Sam Smith
 
 disablePathToLower: true
-theme: "anubis"
 summaryLength: 999999999999
 
 pagination:

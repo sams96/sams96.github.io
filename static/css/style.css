@@ -25,27 +25,21 @@
 }
 
 html {
-	font-family: "CMU", Georgia, serif;
-	/* 1 */
-	-ms-text-size-adjust: 100%;
-	/* 2 */
-	-webkit-text-size-adjust: 100%;
-	/* 2 */
+	font-family: "CMU", georgia, serif;
 }
 
 body {
     background: #ffffff;
     color: #333;
-    font-size: 18px;
-	font-weight: 400;
 	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
 
 	max-width: 38em;
     margin: 0 auto;
 
 	text-align: justify;
 	overflow: auto;
+
+	font-size: large;
 }
 
 article,
@@ -354,6 +348,7 @@ article header h1 a {
 
 article img {
     max-width: 100%;
+	width: 100%;
     display: block;
     height: auto;
     margin: 1rem auto 1rem;

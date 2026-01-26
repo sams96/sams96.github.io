@@ -71,11 +71,13 @@
 {{ end }}
 
 {{ with .OutputFormats.Get "rss" -}}
-  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+	{{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
 {{ end }}
 
-<script type="module" src="../js/comments.js"></script>
-<link defer rel="stylesheet" href="../css/comments.css">
+{{ if isset .Params "tootlink" -}}
+	<script type="module" src="../js/comments.js"></script>
+	<link defer rel="stylesheet" href="../css/comments.css">
+{{ end }}
 
 <base href="{{ .Permalink }}" />
 <link rel="canonical" href="{{ .Permalink }}" itemprop="url" />

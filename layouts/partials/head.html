@@ -65,7 +65,7 @@
 <!-- date tag -->
 <meta property="og:updated_time" content={{ .Lastmod.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
 
-<link preload rel="stylesheet" href="{{ "css/style.css" | absURL }}?rnd={{ now.Unix }}" />
+<style> {{ readFile "static/css/style.css" | safeCSS }} </style>
 {{ if .Params.Dark }}
 	<link rel="stylesheet" href="{{ "css/dark.css" | absURL }}?rnd={{ now.Unix }}" />
 {{ end }}

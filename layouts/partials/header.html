@@ -6,5 +6,4 @@
     {{ range .Site.Menus.main }}
     <a class="{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
     {{ end }}
-	<a rel="me" href="https://toot.io/@mondoman712" hidden></a>
 </nav>

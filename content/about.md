@@ -11,9 +11,9 @@ separate ones for each category and tag that can be found on their pages. I will
 also try to post about new conent on my
 [mastodon](https://toot.io/@mondoman712). You can also find me on:
 
-* [Github](https://github.com/sams96)
-* [Flickr](https://flickr.com/photos/ss9679)
-* [Instagram](https://instagram.com/mondoman712)
+* <a rel="me" href="https://github.com/sams96"/>Github</a>
+* <a rel="me" href="https://flickr.com/photos/ss9679"/>Flickr</a>
+* <a rel="me" href="https://instagram.com/mondoman712"/>Instagram</a>
 
 
 This site was built with [Hugo](https://gohugo.io) with a modified

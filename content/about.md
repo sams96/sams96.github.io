@@ -1,19 +1,30 @@
 ---
 layout: page
-title: About
+title: About...
 description: This page describes Sam
 ---
 
-I use this blog to post about whatever I find interesting, which so far has been
-{{< catlist >}}If you want to follow, I have an [RSS
-feed](/index.xml) for the whole blog, as well as
-separate ones for each category and tag that can be found on their pages. I will
-also try to post about new conent on my
-[mastodon](https://toot.io/@mondoman712). You can also find me on:
+### Me
 
+he/him. I'm a software engineer by trade, specifically working on web backends
+in Clojure, and previously in Go. You can also find me on:
+
+* <a rel="me" href="https://toot.io/@mondoman712"/>Mastodon</a>
 * <a rel="me" href="https://github.com/sams96"/>Github</a>
 * <a rel="me" href="https://flickr.com/photos/ss9679"/>Flickr</a>
-* <a rel="me" href="https://instagram.com/mondoman712"/>Instagram</a>
+
+You can contact me at sam at this domain, or send me a
+[webmention](https://webmention.io/samsm.ch/webmention).
+
+### This Site
+
+I use this blog to post about whatever I find interesting, which so far has been
+{{< catlist >}}If you want to follow, I recommend using RSS. I have a feed for
+the whole site [here](/index.xml), and for each [category](/categories/) and
+[Tag](/tags/) that can be found on their respective pages. Personally I use
+[ReadYou](https://github.com/ReadYouApp/ReadYou), but many others are available.
+You could also get updates by email by feeding the RSS links into a service like
+[feedrabbit](https://feedrabbit.com/) or [RSS by email](https://rssby.email/).
 
 
 This site was built with [Hugo](https://gohugo.io) with a modified

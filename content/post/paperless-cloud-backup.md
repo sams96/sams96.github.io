@@ -2,8 +2,8 @@
 title: Paperless cloud backups
 url: /paperless-cloud-backup
 date:
-categories:
-  - homelab
+# categories:
+#   - homelab
 tags:
 build:
   list: never

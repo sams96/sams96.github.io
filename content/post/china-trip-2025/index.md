@@ -2,9 +2,9 @@
 title: 'Notes on a trip to China'
 url: /china-trip-2025
 date:
-categories:
- - travel
- - photography
+# categories:
+#  - travel
+#  - photography
 tags:
 build:
   list: never

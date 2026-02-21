@@ -6,8 +6,9 @@ categories:
  - travel
  - photography
 tags:
-draft: true
 build:
+  list: never
+  publishResources: false
   render: always
 ---
 
@@ -18,7 +19,8 @@ also visited the nearby Chongqing and Guiyang. This post is a collection of my
 thoughts and opinions on the places we visited, along with some photos I took
 during the trip.
 
-{{< myfig src="/china-trip/24008.avif" loading="eager"
+<!-- TODO re-add path -->
+{{< myfig src="24008.avif" loading="eager"
 	caption="*文殊 wen shu* temple, Chengdu" >}}
 
 <!--more-->

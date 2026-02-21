@@ -1,347 +1,347 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on Sam Smith</title><link>https://samsm.ch/tags/golang/</link><description>Recent content in Golang on Sam Smith</description><generator>Hugo</generator><language>en-gb</language><lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://samsm.ch/tags/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>Applying Hexagonal Architecture to a Mid-Size Go Backend</title><link>https://samsm.ch/go-project-layout/</link><pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate><guid>https://samsm.ch/go-project-layout/</guid><description>&lt;p>I&amp;rsquo;ve been working on web backends in Go for the past 5 years, and on various
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Golang on Sam Smith</title><link>https://samsm.ch/tags/golang/</link><description>Recent content in Golang on Sam Smith</description><generator>Hugo</generator><language>en-gb</language><lastBuildDate>Wed, 26 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://samsm.ch/tags/golang/index.xml" rel="self" type="application/rss+xml"/><item><title>Applying Hexagonal Architecture to a Mid-Size Go Backend</title><link>https://samsm.ch/go-project-layout/</link><pubDate>Wed, 26 Feb 2025 00:00:00 +0000</pubDate><guid>https://samsm.ch/go-project-layout/</guid><description>&lt;p&gt;I&amp;rsquo;ve been working on web backends in Go for the past 5 years, and on various
 projects of covering a range of ages from brand new greenfield projects to one
 built on top of a core that predates the Go language. The needs of these
 backends tend not to be overly complex, handling user management, payments, and
 a relativly simple product. They&amp;rsquo;re maintained by teams of 2-20 backend
-engineers and work with a SPA web frontend communicating with JSON over HTTP.&lt;/p>
-&lt;p>With my most recent work being mostly greenfield, I&amp;rsquo;ve been thinking more about
+engineers and work with a SPA web frontend communicating with JSON over HTTP.&lt;/p&gt;
+&lt;p&gt;With my most recent work being mostly greenfield, I&amp;rsquo;ve been thinking more about
 how I can apply what I&amp;rsquo;ve learned from my colleagues working on older projects,
 and avoid decisions made in the name of moving fast which cause a lot of pain
-further down the line.&lt;/p>
-&lt;/br>
-&lt;p>What needs to be considered when it comes to layout out a project is finding the
+further down the line.&lt;/p&gt;
+&lt;/br&gt;
+&lt;p&gt;What needs to be considered when it comes to layout out a project is finding the
 right balance of flexibility without over-abstracting. You want to be able to
 move quickly and adapt to ever-changing requirements without being slowed down
 by your own code. This heavily depends on what you&amp;rsquo;re working on, but I&amp;rsquo;m going
 present what I find works for me for the type of projects I have experience
-working on.&lt;/p>
-&lt;p>I arrived at this layout not purely by attempting to apply hexagonal
+working on.&lt;/p&gt;
+&lt;p&gt;I arrived at this layout not purely by attempting to apply hexagonal
 architecture to the projects I have worked on. It is something that I have read
 about and is often brought up when it comes to Go project layouts, but I have
 arrived here mostly through my experience and by thinking about how to find the
-right level of abstraction that works well for these projects.&lt;/p>
-&lt;p>Hexagonal architecture splits packages into one of two types: the application&amp;rsquo;s
+right level of abstraction that works well for these projects.&lt;/p&gt;
+&lt;p&gt;Hexagonal architecture splits packages into one of two types: the application&amp;rsquo;s
 core and its adapters. The core being the part that defines your application&amp;rsquo;s
 business logic and ties the adapters together, and the adapters being wrappers
 around external services or other external communication. I would further add a
 third type to this, which is utility packages that fill neither of the above
-roles.&lt;/p>
-&lt;h2 id="core">Core&lt;/h2>
-&lt;p>Core packages should contain all of your main type definitions which the
+roles.&lt;/p&gt;
+&lt;h2 id="core"&gt;Core&lt;/h2&gt;
+&lt;p&gt;Core packages should contain all of your main type definitions which the
 adapters will also be built around, as well as functions defining the actions
 that can take place. In the simplest case this could just be a wrapper around a
 database function, but it could also involve much more, including validation and
-coordination of different adapters.&lt;/p>
-&lt;p>You can split your core where you have clear seperation between domains. A
+coordination of different adapters.&lt;/p&gt;
+&lt;p&gt;You can split your core where you have clear seperation between domains. A
 simple example of this is splitting the user management away from the actual
 functionality of your application (assuming that the functionailty isn&amp;rsquo;t heavily
 relieant on user management). If your application is small, you can just leave
 it all in one package. If you aren&amp;rsquo;t sure, just leave it in one package until
-clear lines emerge&lt;sup id="fnref:1">&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref">1&lt;/a>&lt;/sup>.&lt;/p>
-&lt;p>Below I have used a simple user management package as an example framework for a
+clear lines emerge&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;p&gt;Below I have used a simple user management package as an example framework for a
 core package. I have omitted contexts (which you really should be passing) and
-imports for brevity. &lt;em>All code samples in this article are for illustrative
-purposes only, don&amp;rsquo;t expect them to work as is&lt;/em>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">package&lt;/span> users
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">type&lt;/span> User &lt;span style="font-weight:bold">struct&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	ID uuid.UUID
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	Email &lt;span style="color:#458;font-weight:bold">string&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">type&lt;/span> UserStorer &lt;span style="font-weight:bold">interface&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="color:#900;font-weight:bold">NewUser&lt;/span>(email, password &lt;span style="color:#458;font-weight:bold">string&lt;/span>) (&lt;span style="font-weight:bold">*&lt;/span>User, &lt;span style="color:#458;font-weight:bold">error&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">type&lt;/span> Manager &lt;span style="font-weight:bold">struct&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	store UserStorer
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> &lt;span style="color:#900;font-weight:bold">NewManager&lt;/span>(store UserStorer) &lt;span style="font-weight:bold">*&lt;/span>Manager {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">return&lt;/span> &lt;span style="font-weight:bold">&amp;amp;&lt;/span>Manager{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>		store: store,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> (m &lt;span style="font-weight:bold">*&lt;/span>Manager) &lt;span style="color:#900;font-weight:bold">New&lt;/span>(email, password &lt;span style="color:#458;font-weight:bold">string&lt;/span>) (&lt;span style="font-weight:bold">*&lt;/span>User, &lt;span style="color:#458;font-weight:bold">error&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">...&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The &lt;code>UserStorer&lt;/code> here will likely only have one definition. Even though as
+imports for brevity. &lt;em&gt;All code samples in this article are for illustrative
+purposes only, don&amp;rsquo;t expect them to work as is&lt;/em&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;package&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;users&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;type&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;User&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;struct&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;ID&lt;span style="color:#bbb"&gt; &lt;/span&gt;uuid.UUID&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;Email&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;type&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;UserStorer&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;interface&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;NewUser&lt;/span&gt;(email,&lt;span style="color:#bbb"&gt; &lt;/span&gt;password&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;)&lt;span style="color:#bbb"&gt; &lt;/span&gt;(&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;User,&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;error&lt;/span&gt;)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;type&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;Manager&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;struct&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;store&lt;span style="color:#bbb"&gt; &lt;/span&gt;UserStorer&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;NewManager&lt;/span&gt;(store&lt;span style="color:#bbb"&gt; &lt;/span&gt;UserStorer)&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;Manager&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="font-weight:bold"&gt;return&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;&amp;amp;&lt;/span&gt;Manager{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;store:&lt;span style="color:#bbb"&gt; &lt;/span&gt;store,&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;(m&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;Manager)&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;New&lt;/span&gt;(email,&lt;span style="color:#bbb"&gt; &lt;/span&gt;password&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;)&lt;span style="color:#bbb"&gt; &lt;/span&gt;(&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;User,&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;error&lt;/span&gt;)&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="font-weight:bold"&gt;...&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The &lt;code&gt;UserStorer&lt;/code&gt; here will likely only have one definition. Even though as
 developers we like the idea of having flexibility to swap out the database
 easily, in my experience in a commercial setting it&amp;rsquo;s very unlikely to happen.
 I also don&amp;rsquo;t think it&amp;rsquo;s really needed for testing, I would just write
 integration tests here and run against the DB instead of mocking it. That said,
 I like to have the interface defined here anyway because it fits nicely with the
-philosphy of core package and having it define what the adapters do.&lt;/p>
-&lt;p>Ideally, your core packages won&amp;rsquo;t be dependant on each other and you can keep
+philosphy of core package and having it define what the adapters do.&lt;/p&gt;
+&lt;p&gt;Ideally, your core packages won&amp;rsquo;t be dependant on each other and you can keep
 everything entirely separate, however this often isn&amp;rsquo;t the case. In some simple
 cases, you can just rely on the layer above (the driving adapter, see below) to
 call separate functions in different core packages. For more complex
 dependencies, I think it&amp;rsquo;s fine for the core packages to sometimes be dependant
 on one another (i.e my user manager might include a manager of another domain).
 The Go compiler&amp;rsquo;s blocking of circular dependencies should prevent things from
-getting too complex here.&lt;/p>
-&lt;h2 id="adapters">Adapters&lt;/h2>
-&lt;p>Adapters are what let your core code communicate with the outside world. They
+getting too complex here.&lt;/p&gt;
+&lt;h2 id="adapters"&gt;Adapters&lt;/h2&gt;
+&lt;p&gt;Adapters are what let your core code communicate with the outside world. They
 generally exist either as a wrapper around some third party service in order for
 it to conform to an interface that has been defined in the core, the obvious
 example being your database layer, or as an API calling the functions in your
-core package. These are sometimes referred to as &lt;em>driven&lt;/em> and &lt;em>driving&lt;/em>
-adapters.&lt;/p>
-&lt;h3 id="driven-adapters">Driven Adapters&lt;/h3>
-&lt;p>Driven adapters are those called by your core package, and should satisy the
+core package. These are sometimes referred to as &lt;em&gt;driven&lt;/em&gt; and &lt;em&gt;driving&lt;/em&gt;
+adapters.&lt;/p&gt;
+&lt;h3 id="driven-adapters"&gt;Driven Adapters&lt;/h3&gt;
+&lt;p&gt;Driven adapters are those called by your core package, and should satisy the
 interface defined there. The most common example, and the one I&amp;rsquo;ve used as an
 example below is a database but they could also easily be a key-value store or
 object storage. Beyond that, the same pattern can be used to send analytics
-events or transactional emails.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">package&lt;/span> postgres
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">type&lt;/span> DB &lt;span style="font-weight:bold">struct&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	db &lt;span style="font-weight:bold">*&lt;/span>sqlx.DB
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> &lt;span style="color:#900;font-weight:bold">NewDB&lt;/span>(&lt;span style="color:#998;font-style:italic">/* connection info */&lt;/span>) &lt;span style="font-weight:bold">*&lt;/span>DB { &lt;span style="font-weight:bold">...&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> (db &lt;span style="font-weight:bold">*&lt;/span>DB) &lt;span style="color:#900;font-weight:bold">NewUser&lt;/span>(email, password &lt;span style="color:#458;font-weight:bold">string&lt;/span>) (&lt;span style="font-weight:bold">*&lt;/span>User, &lt;span style="color:#458;font-weight:bold">error&lt;/span>) { &lt;span style="font-weight:bold">...&lt;/span> }
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>I would keep all of the code relating to a single external service in the same
+events or transactional emails.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;package&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;postgres&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;type&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;DB&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;struct&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;db&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;sqlx.DB&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;NewDB&lt;/span&gt;(&lt;span style="color:#998;font-style:italic"&gt;/* connection info */&lt;/span&gt;)&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;DB&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;...&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;(db&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;DB)&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;NewUser&lt;/span&gt;(email,&lt;span style="color:#bbb"&gt; &lt;/span&gt;password&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;)&lt;span style="color:#bbb"&gt; &lt;/span&gt;(&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;User,&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;error&lt;/span&gt;)&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;...&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I would keep all of the code relating to a single external service in the same
 package, so even if you have multiple core packages interacting with one. If
-it&amp;rsquo;s a single db, all of the database code can go in one place&lt;sup id="fnref:2">&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref">2&lt;/a>&lt;/sup>.&lt;/p>
-&lt;h3 id="driving-adapters">Driving Adapters&lt;/h3>
-&lt;p>A driving adapter is one that calls the functions in your core, and makes them
-available externally. For this example I&amp;rsquo;m going to use a simple &lt;em>REST&lt;/em>&lt;sup id="fnref:3">&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref">3&lt;/a>&lt;/sup> API
+it&amp;rsquo;s a single db, all of the database code can go in one place&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h3 id="driving-adapters"&gt;Driving Adapters&lt;/h3&gt;
+&lt;p&gt;A driving adapter is one that calls the functions in your core, and makes them
+available externally. For this example I&amp;rsquo;m going to use a simple &lt;em&gt;REST&lt;/em&gt;&lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt; API
 for our user service, designed for some SPA frontend, as this is what I have
-most commonly encountered.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">package&lt;/span> webapi
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">type&lt;/span> Handlers &lt;span style="font-weight:bold">struct&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	users &lt;span style="font-weight:bold">*&lt;/span>users.Manager
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> &lt;span style="color:#900;font-weight:bold">NewHandlers&lt;/span>(users &lt;span style="font-weight:bold">*&lt;/span>users.Manager) &lt;span style="font-weight:bold">*&lt;/span>Handlers {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">return&lt;/span> &lt;span style="font-weight:bold">&amp;amp;&lt;/span>Handlers{users: users}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> (h &lt;span style="font-weight:bold">*&lt;/span>Handlers) &lt;span style="color:#900;font-weight:bold">Route&lt;/span>(mux &lt;span style="font-weight:bold">*&lt;/span>http.ServeMux) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	mux.&lt;span style="color:#900;font-weight:bold">HandleFunc&lt;/span>(&lt;span style="color:#b84">&amp;#34;POST /register&amp;#34;&lt;/span>, h.handlePostRegister)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> (h &lt;span style="font-weight:bold">*&lt;/span>Handlers) &lt;span style="color:#900;font-weight:bold">handlePostRegister&lt;/span>(w http.ResponseWriter, r &lt;span style="font-weight:bold">*&lt;/span>http.Request) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">var&lt;/span> req postRegisterRequest
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	err &lt;span style="font-weight:bold">:=&lt;/span> json.&lt;span style="color:#900;font-weight:bold">NewDecoder&lt;/span>(r.Body).&lt;span style="color:#900;font-weight:bold">Decode&lt;/span>(&lt;span style="font-weight:bold">&amp;amp;&lt;/span>req)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">if&lt;/span> err &lt;span style="font-weight:bold">!=&lt;/span> &lt;span style="font-weight:bold">nil&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>		&lt;span style="color:#998;font-style:italic">/* handle error */&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	user, err &lt;span style="font-weight:bold">:=&lt;/span> h.users.&lt;span style="color:#900;font-weight:bold">New&lt;/span>(req.Email, req.Password)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">if&lt;/span> err &lt;span style="font-weight:bold">!=&lt;/span> &lt;span style="font-weight:bold">nil&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>		&lt;span style="color:#998;font-style:italic">/* handle error */&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	resp &lt;span style="font-weight:bold">:=&lt;/span> postRegisterResponse{
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>		UserID: user.ID,
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	err = json.&lt;span style="color:#900;font-weight:bold">NewEncoder&lt;/span>(w).&lt;span style="color:#900;font-weight:bold">Encode&lt;/span>(&lt;span style="font-weight:bold">&amp;amp;&lt;/span>resp)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="font-weight:bold">if&lt;/span> err &lt;span style="font-weight:bold">!=&lt;/span> &lt;span style="font-weight:bold">nil&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>		&lt;span style="color:#998;font-style:italic">/* handle error */&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	w.&lt;span style="color:#900;font-weight:bold">WriteHeader&lt;/span>(http.StatusCreated)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>When it comes to factoring this package, I like to divide it by intended
+most commonly encountered.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;package&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;webapi&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;type&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;Handlers&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;struct&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;users&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;users.Manager&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;NewHandlers&lt;/span&gt;(users&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;users.Manager)&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;Handlers&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="font-weight:bold"&gt;return&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;&amp;amp;&lt;/span&gt;Handlers{users:&lt;span style="color:#bbb"&gt; &lt;/span&gt;users}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;(h&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;Handlers)&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;Route&lt;/span&gt;(mux&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;http.ServeMux)&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;mux.&lt;span style="color:#900;font-weight:bold"&gt;HandleFunc&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;POST /register&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;h.handlePostRegister)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;(h&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;Handlers)&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;handlePostRegister&lt;/span&gt;(w&lt;span style="color:#bbb"&gt; &lt;/span&gt;http.ResponseWriter,&lt;span style="color:#bbb"&gt; &lt;/span&gt;r&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;http.Request)&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="font-weight:bold"&gt;var&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;req&lt;span style="color:#bbb"&gt; &lt;/span&gt;postRegisterRequest&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;json.&lt;span style="color:#900;font-weight:bold"&gt;NewDecoder&lt;/span&gt;(r.Body).&lt;span style="color:#900;font-weight:bold"&gt;Decode&lt;/span&gt;(&lt;span style="font-weight:bold"&gt;&amp;amp;&lt;/span&gt;req)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="font-weight:bold"&gt;if&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;!=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;nil&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;&lt;span style="color:#998;font-style:italic"&gt;/* handle error */&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;user,&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;h.users.&lt;span style="color:#900;font-weight:bold"&gt;New&lt;/span&gt;(req.Email,&lt;span style="color:#bbb"&gt; &lt;/span&gt;req.Password)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="font-weight:bold"&gt;if&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;!=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;nil&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;&lt;span style="color:#998;font-style:italic"&gt;/* handle error */&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;resp&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;postRegisterResponse{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;UserID:&lt;span style="color:#bbb"&gt; &lt;/span&gt;user.ID,&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;=&lt;span style="color:#bbb"&gt; &lt;/span&gt;json.&lt;span style="color:#900;font-weight:bold"&gt;NewEncoder&lt;/span&gt;(w).&lt;span style="color:#900;font-weight:bold"&gt;Encode&lt;/span&gt;(&lt;span style="font-weight:bold"&gt;&amp;amp;&lt;/span&gt;resp)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="font-weight:bold"&gt;if&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;!=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;nil&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;&lt;span style="color:#998;font-style:italic"&gt;/* handle error */&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;w.&lt;span style="color:#900;font-weight:bold"&gt;WriteHeader&lt;/span&gt;(http.StatusCreated)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;When it comes to factoring this package, I like to divide it by intended
 consumer, so routes for your SPA frontend go in one place, and webhook handlers
 go in another etc. That way the request and reply formats and expectations of
-all routes in one package is the same, as is the authentication.&lt;/p>
-&lt;h2 id="utilities">Utilities&lt;/h2>
-&lt;p>Utility packages are those that don&amp;rsquo;t fit into either previous category, by both
+all routes in one package is the same, as is the authentication.&lt;/p&gt;
+&lt;h2 id="utilities"&gt;Utilities&lt;/h2&gt;
+&lt;p&gt;Utility packages are those that don&amp;rsquo;t fit into either previous category, by both
 not implementing business logic and not interacting direcltly with an external
 service. Aside from any convenience abstractions that you want to reuse in
 multiple packages, the main thing I expect to fit this category in our web app
-is authorization. Auth &lt;em>kind of&lt;/em> fits in with the driving adapter, but also
+is authorization. Auth &lt;em&gt;kind of&lt;/em&gt; fits in with the driving adapter, but also
 splits of nicely, and if you&amp;rsquo;re exposing multiple APIs you&amp;rsquo;re probably going to
-reuse some of the code.&lt;/p>
-&lt;p>Also, don&amp;rsquo;t take this category as a suggestion to create a &lt;code>utils&lt;/code> package.
-Generically named packages like this are recommended against in go, and &lt;em>A
-little copying is better than a little dependancy&lt;/em>&lt;sup id="fnref:4">&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref">4&lt;/a>&lt;/sup>.&lt;/p>
-&lt;h2 id="conclusion-and-other-thoughts">Conclusion and other thoughts&lt;/h2>
-&lt;p>When it comes to the folder structure, I would advise keeping everything as flat
+reuse some of the code.&lt;/p&gt;
+&lt;p&gt;Also, don&amp;rsquo;t take this category as a suggestion to create a &lt;code&gt;utils&lt;/code&gt; package.
+Generically named packages like this are recommended against in go, and &lt;em&gt;A
+little copying is better than a little dependancy&lt;/em&gt;&lt;sup id="fnref:4"&gt;&lt;a href="#fn:4" class="footnote-ref" role="doc-noteref"&gt;4&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;h2 id="conclusion-and-other-thoughts"&gt;Conclusion and other thoughts&lt;/h2&gt;
+&lt;p&gt;When it comes to the folder structure, I would advise keeping everything as flat
 as possible, Subfolders are nice where you have a bunch of non-go files related
-to a package, such as your database migrations. You probably don&amp;rsquo;t need a &lt;code>src&lt;/code>,
-&lt;code>pkg&lt;/code>, or &lt;code>internal&lt;/code> folder to contain other packages. You can just leave
+to a package, such as your database migrations. You probably don&amp;rsquo;t need a &lt;code&gt;src&lt;/code&gt;,
+&lt;code&gt;pkg&lt;/code&gt;, or &lt;code&gt;internal&lt;/code&gt; folder to contain other packages. You can just leave
 everything in the top level of your repo. These make sense in very large
-projects like &lt;a href="https://github.com/moby/moby">Moby&lt;/a> or
-&lt;a href="https://github.com/kubernetes/kubernetes">Kubernetes&lt;/a>, but for our web service
+projects like &lt;a href="https://github.com/moby/moby"&gt;Moby&lt;/a&gt; or
+&lt;a href="https://github.com/kubernetes/kubernetes"&gt;Kubernetes&lt;/a&gt;, but for our web service
 you&amp;rsquo;re just making things harder to find. Leave it at the top level until that
-starts to cause issues.&lt;/p>
-&lt;/br>
-&lt;p>As I said at the top, this is the layout that I&amp;rsquo;ve arrived at from my experience
+starts to cause issues.&lt;/p&gt;
+&lt;/br&gt;
+&lt;p&gt;As I said at the top, this is the layout that I&amp;rsquo;ve arrived at from my experience
 working on commercial web backends in Go. I think it&amp;rsquo;s a practical level of
 abstraction to stay flexible without spending too much time or adding too much
-complexity.&lt;/p>
-&lt;p>You might think that there isn&amp;rsquo;t actually much to what I have
+complexity.&lt;/p&gt;
+&lt;p&gt;You might think that there isn&amp;rsquo;t actually much to what I have
 suggested here, but that&amp;rsquo;s part of the point. You don&amp;rsquo;t need much abstraction
 and not having it will help reduce the mental load of working on your codebase,
 allowing you to focus on productive work and for new developers to be onboarded
-more easily.&lt;/p>
-&lt;h3 id="further-reading">Further Reading&lt;/h3>
-&lt;ul>
-&lt;li>&lt;a href="https://alistair.cockburn.us/hexagonal-architecture/">Hexagonal architecture&lt;/a> - Alistair Cockburn&lt;/li>
-&lt;li>&lt;a href="https://go.dev/blog/package-names">Package names&lt;/a> - Sameer Ajmani&lt;/li>
-&lt;li>&lt;a href="https://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html">Less is exponentially more&lt;/a> - Rob Pike&lt;/li>
-&lt;/ul>
-&lt;div class="footnotes" role="doc-endnotes">
-&lt;hr>
-&lt;ol>
-&lt;li id="fn:1">
-&lt;p>&lt;a href="https://grugbrain.dev/#grug-on-factring-your-code">Don&amp;rsquo;t factor early&lt;/a>&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:2">
-&lt;p>At least until you start splitting your tables into different schemas.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:3">
-&lt;p>This isn&amp;rsquo;t actually REST, but is often referred to as REST, see
-&lt;a href="https://htmx.org/essays/how-did-rest-come-to-mean-the-opposite-of-rest/">&lt;em>How Did REST Come To Mean The Opposite of REST?&lt;/em>&lt;/a>&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;li id="fn:4">
-&lt;p>From &lt;a href="https://www.youtube.com/watch?v=PAAkCSZUG1c&amp;amp;t=568s">Go Proverbs with Rob Pike&lt;/a>
-at Gopherfest 2015&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink">&amp;#x21a9;&amp;#xfe0e;&lt;/a>&lt;/p>
-&lt;/li>
-&lt;/ol>
-&lt;/div></description><comments>https://toot.io/@mondoman712/114071633084030867</comments></item><item><title>Rgeo — A Go package for basic, fast, local reverse geocoding</title><link>https://samsm.ch/rgeo/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>https://samsm.ch/rgeo/</guid><description>&lt;p>&lt;a href="https://github.com/sams96/rgeo">Rgeo&lt;/a> is a fast, simple solution for local
+more easily.&lt;/p&gt;
+&lt;h3 id="further-reading"&gt;Further Reading&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://alistair.cockburn.us/hexagonal-architecture/"&gt;Hexagonal architecture&lt;/a&gt; - Alistair Cockburn&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://go.dev/blog/package-names"&gt;Package names&lt;/a&gt; - Sameer Ajmani&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://commandcenter.blogspot.com/2012/06/less-is-exponentially-more.html"&gt;Less is exponentially more&lt;/a&gt; - Rob Pike&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;&lt;a href="https://grugbrain.dev/#grug-on-factring-your-code"&gt;Don&amp;rsquo;t factor early&lt;/a&gt;&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;At least until you start splitting your tables into different schemas.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;This isn&amp;rsquo;t actually REST, but is often referred to as REST, see
+&lt;a href="https://htmx.org/essays/how-did-rest-come-to-mean-the-opposite-of-rest/"&gt;&lt;em&gt;How Did REST Come To Mean The Opposite of REST?&lt;/em&gt;&lt;/a&gt;&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:4"&gt;
+&lt;p&gt;From &lt;a href="https://www.youtube.com/watch?v=PAAkCSZUG1c&amp;amp;t=568s"&gt;Go Proverbs with Rob Pike&lt;/a&gt;
+at Gopherfest 2015&amp;#160;&lt;a href="#fnref:4" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description><comments>https://toot.io/@mondoman712/114071633084030867</comments></item><item><title>Rgeo — A Go package for basic, fast, local reverse geocoding</title><link>https://samsm.ch/rgeo/</link><pubDate>Sun, 01 Mar 2020 00:00:00 +0000</pubDate><guid>https://samsm.ch/rgeo/</guid><description>&lt;p&gt;&lt;a href="https://github.com/sams96/rgeo"&gt;Rgeo&lt;/a&gt; is a fast, simple solution for local
 reverse geocoding, Rather than relying on external software or online APIs, rgeo
 packages all of the data it needs in your binary. This means it will only ever
 work down to the level of cities , but if that&amp;rsquo;s all you need then this is the
-library for you.&lt;/p>
-&lt;p>Rgeo uses data from &lt;a href="https://naturalearthdata.com">naturalearthdata.com&lt;/a>, if
+library for you.&lt;/p&gt;
+&lt;p&gt;Rgeo uses data from &lt;a href="https://naturalearthdata.com"&gt;naturalearthdata.com&lt;/a&gt;, if
 your coordinates are going to be near specific borders I would advise checking
 the data beforehand (links to which are in the files). If you want to use your
 own dataset, check out
-&lt;a href="https://github.com/sams96/rgeo/tree/master/datagen">datagen&lt;/a>.&lt;/p>
-&lt;h2 id="key-features">Key Features&lt;/h2>
-&lt;ul>
-&lt;li>&lt;strong>Fast&lt;/strong> - So I haven&amp;rsquo;t &lt;em>actually&lt;/em> benchmarked other reverse geocoding tools
-but on my laptop rgeo can run at under 800ns/op.&lt;/li>
-&lt;li>&lt;strong>Local&lt;/strong> - Rgeo doesn&amp;rsquo;t require pinging some API, most of which either cost
-money to use or have severe rate limits.&lt;/li>
-&lt;li>&lt;strong>Lightweight&lt;/strong> - The rgeo repo is 141MB, which is large for a Go package but
+&lt;a href="https://github.com/sams96/rgeo/tree/master/datagen"&gt;datagen&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="key-features"&gt;Key Features&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fast&lt;/strong&gt; - So I haven&amp;rsquo;t &lt;em&gt;actually&lt;/em&gt; benchmarked other reverse geocoding tools
+but on my laptop rgeo can run at under 800ns/op.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Local&lt;/strong&gt; - Rgeo doesn&amp;rsquo;t require pinging some API, most of which either cost
+money to use or have severe rate limits.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Lightweight&lt;/strong&gt; - The rgeo repo is 141MB, which is large for a Go package but
 compared to the 800GB needed for a full planet install of
-&lt;a href="https://nominatim.org/release-docs/latest/admin/Installation/#hardware">Nominatim&lt;/a>
-it&amp;rsquo;s miniscule.&lt;/li>
-&lt;/ul>
-&lt;h2 id="installation">Installation&lt;/h2>
-&lt;p>Download with&lt;/p>
-&lt;pre>&lt;code>go get github.com/sams96/rgeo
-&lt;/code>&lt;/pre>
-&lt;p>and add&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">import&lt;/span> &lt;span style="color:#b84">&amp;#34;github.com/sams96/rgeo&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>to the top of your Go file to include it in your project.&lt;/p>
-&lt;h2 id="usage">Usage&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>r, err &lt;span style="font-weight:bold">:=&lt;/span> &lt;span style="color:#900;font-weight:bold">New&lt;/span>(Provinces10, Cities10)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">if&lt;/span> err &lt;span style="font-weight:bold">!=&lt;/span> &lt;span style="font-weight:bold">nil&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="color:#998;font-style:italic">// Handle error&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>loc, err &lt;span style="font-weight:bold">:=&lt;/span> r.&lt;span style="color:#900;font-weight:bold">ReverseGeocode&lt;/span>([]&lt;span style="color:#458;font-weight:bold">float64&lt;/span>{&lt;span style="color:#099">141.35&lt;/span>, &lt;span style="color:#099">43.07&lt;/span>})
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">if&lt;/span> err &lt;span style="font-weight:bold">!=&lt;/span> &lt;span style="font-weight:bold">nil&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="color:#998;font-style:italic">// Handle error&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fmt.&lt;span style="color:#900;font-weight:bold">Println&lt;/span>(loc)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#998;font-style:italic">// Output: &amp;lt;Location&amp;gt; Sapporo, Hokkaido, Japan (JPN), Asia&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>First initialise rgeo using &lt;code>rgeo.New&lt;/code>,&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> &lt;span style="color:#900;font-weight:bold">New&lt;/span>(datasets &lt;span style="font-weight:bold">...&lt;/span>&lt;span style="font-weight:bold">func&lt;/span>() []&lt;span style="color:#458;font-weight:bold">byte&lt;/span>) (&lt;span style="font-weight:bold">*&lt;/span>Rgeo, &lt;span style="color:#458;font-weight:bold">error&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>which takes any non-zero number of datasets as arguments. The included datasets
-are:&lt;/p>
-&lt;ul>
-&lt;li>&lt;code>Countries110&lt;/code> - Just country information, smallest and lowest detail of the
-included datasets.&lt;/li>
-&lt;li>&lt;code>Countries10&lt;/code> - The same as above but with more detail.&lt;/li>
-&lt;li>&lt;code>Provinces10&lt;/code> - Includes province information as well as country, so can
-still be used alone.&lt;/li>
-&lt;li>&lt;code>Cities10&lt;/code> - Just city information, if you want provinces and/or countries as
+&lt;a href="https://nominatim.org/release-docs/latest/admin/Installation/#hardware"&gt;Nominatim&lt;/a&gt;
+it&amp;rsquo;s miniscule.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="installation"&gt;Installation&lt;/h2&gt;
+&lt;p&gt;Download with&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;go get github.com/sams96/rgeo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and add&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;import&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;github.com/sams96/rgeo&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;to the top of your Go file to include it in your project.&lt;/p&gt;
+&lt;h2 id="usage"&gt;Usage&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;r,&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;New&lt;/span&gt;(Provinces10,&lt;span style="color:#bbb"&gt; &lt;/span&gt;Cities10)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;if&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;!=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;nil&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#998;font-style:italic"&gt;// Handle error&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;loc,&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;r.&lt;span style="color:#900;font-weight:bold"&gt;ReverseGeocode&lt;/span&gt;([]&lt;span style="color:#458;font-weight:bold"&gt;float64&lt;/span&gt;{&lt;span style="color:#099"&gt;141.35&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#099"&gt;43.07&lt;/span&gt;})&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;if&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;!=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;nil&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#998;font-style:italic"&gt;// Handle error&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fmt.&lt;span style="color:#900;font-weight:bold"&gt;Println&lt;/span&gt;(loc)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#998;font-style:italic"&gt;// Output: &amp;lt;Location&amp;gt; Sapporo, Hokkaido, Japan (JPN), Asia&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;First initialise rgeo using &lt;code&gt;rgeo.New&lt;/code&gt;,&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;New&lt;/span&gt;(datasets&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;...&lt;/span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;()&lt;span style="color:#bbb"&gt; &lt;/span&gt;[]&lt;span style="color:#458;font-weight:bold"&gt;byte&lt;/span&gt;)&lt;span style="color:#bbb"&gt; &lt;/span&gt;(&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;Rgeo,&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;error&lt;/span&gt;)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;which takes any non-zero number of datasets as arguments. The included datasets
+are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Countries110&lt;/code&gt; - Just country information, smallest and lowest detail of the
+included datasets.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Countries10&lt;/code&gt; - The same as above but with more detail.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Provinces10&lt;/code&gt; - Includes province information as well as country, so can
+still be used alone.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Cities10&lt;/code&gt; - Just city information, if you want provinces and/or countries as
 well use one of the above datasets with it.
-Once initialised you can use &lt;code>ReverseGeocode&lt;/code> on the value returned by &lt;code>New&lt;/code>,
-with your coordinates to get the location information. See the &lt;a href="https://pkg.go.dev/github.com/sams96/rgeo">Go
-Docs&lt;/a> for more information on usage.&lt;/li>
-&lt;/ul>
-&lt;p>Then use &lt;code>ReverseGeocode&lt;/code> to get the location information of the given coordinate.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">func&lt;/span> (r &lt;span style="font-weight:bold">*&lt;/span>Rgeo) &lt;span style="color:#900;font-weight:bold">ReverseGeocode&lt;/span>(loc geom.Coord) (Location, &lt;span style="color:#458;font-weight:bold">error&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The input is a &lt;a href="https://github.com/twpayne/go-geom">&lt;code>geom.Coord&lt;/code>&lt;/a>, which is just
-a &lt;code>[]float64&lt;/code> with the longitude in the zeroth position and the latitude in the
-first position (i.e. &lt;code>[]float64{lon, lat}&lt;/code>). &lt;code>ReverseGeocode&lt;/code> returns a
-&lt;code>Location&lt;/code>, which looks like this:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">type&lt;/span> Location &lt;span style="font-weight:bold">struct&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="color:#998;font-style:italic">// Commonly used country name&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	Country &lt;span style="color:#458;font-weight:bold">string&lt;/span> &lt;span style="color:#b84">`json:&amp;#34;country,omitempty&amp;#34;`&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="color:#998;font-style:italic">// Formal name of country&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	CountryLong &lt;span style="color:#458;font-weight:bold">string&lt;/span> &lt;span style="color:#b84">`json:&amp;#34;country_long,omitempty&amp;#34;`&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="color:#998;font-style:italic">// ISO 3166-1 alpha-1 and alpha-2 codes&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	CountryCode2 &lt;span style="color:#458;font-weight:bold">string&lt;/span> &lt;span style="color:#b84">`json:&amp;#34;country_code_2,omitempty&amp;#34;`&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	CountryCode3 &lt;span style="color:#458;font-weight:bold">string&lt;/span> &lt;span style="color:#b84">`json:&amp;#34;country_code_3,omitempty&amp;#34;`&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	Continent &lt;span style="color:#458;font-weight:bold">string&lt;/span> &lt;span style="color:#b84">`json:&amp;#34;continent,omitempty&amp;#34;`&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	Region &lt;span style="color:#458;font-weight:bold">string&lt;/span> &lt;span style="color:#b84">`json:&amp;#34;region,omitempty&amp;#34;`&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	SubRegion &lt;span style="color:#458;font-weight:bold">string&lt;/span> &lt;span style="color:#b84">`json:&amp;#34;subregion,omitempty&amp;#34;`&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	Province &lt;span style="color:#458;font-weight:bold">string&lt;/span> &lt;span style="color:#b84">`json:&amp;#34;province,omitempty&amp;#34;`&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="color:#998;font-style:italic">// ISO 3166-2 code&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	ProvinceCode &lt;span style="color:#458;font-weight:bold">string&lt;/span> &lt;span style="color:#b84">`json:&amp;#34;province_code,omitempty&amp;#34;`&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	City &lt;span style="color:#458;font-weight:bold">string&lt;/span> &lt;span style="color:#b84">`json:&amp;#34;city,omitempty&amp;#34;`&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>So, to put it all together:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-go" data-lang="go">&lt;span style="display:flex;">&lt;span>r, err &lt;span style="font-weight:bold">:=&lt;/span> rgeo.&lt;span style="color:#900;font-weight:bold">New&lt;/span>(Countries110)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">if&lt;/span> err &lt;span style="font-weight:bold">!=&lt;/span> &lt;span style="font-weight:bold">nil&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="color:#998;font-style:italic">// Handle error&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>loc, err &lt;span style="font-weight:bold">:=&lt;/span> r.&lt;span style="color:#900;font-weight:bold">ReverseGeocode&lt;/span>([]&lt;span style="color:#458;font-weight:bold">float64&lt;/span>{&lt;span style="color:#099">0&lt;/span>, &lt;span style="color:#099">52&lt;/span>})
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="font-weight:bold">if&lt;/span> err &lt;span style="font-weight:bold">!=&lt;/span> &lt;span style="font-weight:bold">nil&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>	&lt;span style="color:#998;font-style:italic">// Handle error&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fmt.&lt;span style="color:#900;font-weight:bold">Printf&lt;/span>(&lt;span style="color:#b84">&amp;#34;%s\n&amp;#34;&lt;/span>, loc.Country)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fmt.&lt;span style="color:#900;font-weight:bold">Printf&lt;/span>(&lt;span style="color:#b84">&amp;#34;%s\n&amp;#34;&lt;/span>, loc.CountryLong)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fmt.&lt;span style="color:#900;font-weight:bold">Printf&lt;/span>(&lt;span style="color:#b84">&amp;#34;%s\n&amp;#34;&lt;/span>, loc.CountryCode2)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fmt.&lt;span style="color:#900;font-weight:bold">Printf&lt;/span>(&lt;span style="color:#b84">&amp;#34;%s\n&amp;#34;&lt;/span>, loc.CountryCode3)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fmt.&lt;span style="color:#900;font-weight:bold">Printf&lt;/span>(&lt;span style="color:#b84">&amp;#34;%s\n&amp;#34;&lt;/span>, loc.Continent)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fmt.&lt;span style="color:#900;font-weight:bold">Printf&lt;/span>(&lt;span style="color:#b84">&amp;#34;%s\n&amp;#34;&lt;/span>, loc.Region)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>fmt.&lt;span style="color:#900;font-weight:bold">Printf&lt;/span>(&lt;span style="color:#b84">&amp;#34;%s\n&amp;#34;&lt;/span>, loc.SubRegion)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#998;font-style:italic">// Output: United Kingdom&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#998;font-style:italic">// United Kingdom of Great Britain and Northern Ireland&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#998;font-style:italic">// GB&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#998;font-style:italic">// GBR&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#998;font-style:italic">// Europe&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#998;font-style:italic">// Europe&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#998;font-style:italic">// Northern Europe&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="projects-using-rgeo">Projects using rgeo&lt;/h2>
-&lt;p>Currently the only project that I know of is my own
-&lt;a href="https://github.com/sams96/rgeoSrv">rgeoSrv&lt;/a>, which aims to wrap rgeo into a
+Once initialised you can use &lt;code&gt;ReverseGeocode&lt;/code&gt; on the value returned by &lt;code&gt;New&lt;/code&gt;,
+with your coordinates to get the location information. See the &lt;a href="https://pkg.go.dev/github.com/sams96/rgeo"&gt;Go
+Docs&lt;/a&gt; for more information on usage.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then use &lt;code&gt;ReverseGeocode&lt;/code&gt; to get the location information of the given coordinate.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;(r&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;Rgeo)&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;ReverseGeocode&lt;/span&gt;(loc&lt;span style="color:#bbb"&gt; &lt;/span&gt;geom.Coord)&lt;span style="color:#bbb"&gt; &lt;/span&gt;(Location,&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;error&lt;/span&gt;)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The input is a &lt;a href="https://github.com/twpayne/go-geom"&gt;&lt;code&gt;geom.Coord&lt;/code&gt;&lt;/a&gt;, which is just
+a &lt;code&gt;[]float64&lt;/code&gt; with the longitude in the zeroth position and the latitude in the
+first position (i.e. &lt;code&gt;[]float64{lon, lat}&lt;/code&gt;). &lt;code&gt;ReverseGeocode&lt;/code&gt; returns a
+&lt;code&gt;Location&lt;/code&gt;, which looks like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;type&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;Location&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;struct&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#998;font-style:italic"&gt;// Commonly used country name&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;Country&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;`json:&amp;#34;country,omitempty&amp;#34;`&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#998;font-style:italic"&gt;// Formal name of country&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;CountryLong&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;`json:&amp;#34;country_long,omitempty&amp;#34;`&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#998;font-style:italic"&gt;// ISO 3166-1 alpha-1 and alpha-2 codes&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;CountryCode2&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;`json:&amp;#34;country_code_2,omitempty&amp;#34;`&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;CountryCode3&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;`json:&amp;#34;country_code_3,omitempty&amp;#34;`&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;Continent&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;`json:&amp;#34;continent,omitempty&amp;#34;`&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;Region&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;`json:&amp;#34;region,omitempty&amp;#34;`&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;SubRegion&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;`json:&amp;#34;subregion,omitempty&amp;#34;`&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;Province&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;`json:&amp;#34;province,omitempty&amp;#34;`&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#998;font-style:italic"&gt;// ISO 3166-2 code&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;ProvinceCode&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;`json:&amp;#34;province_code,omitempty&amp;#34;`&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;City&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#458;font-weight:bold"&gt;string&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;`json:&amp;#34;city,omitempty&amp;#34;`&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;So, to put it all together:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;r,&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;rgeo.&lt;span style="color:#900;font-weight:bold"&gt;New&lt;/span&gt;(Countries110)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;if&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;!=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;nil&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#998;font-style:italic"&gt;// Handle error&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;loc,&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;r.&lt;span style="color:#900;font-weight:bold"&gt;ReverseGeocode&lt;/span&gt;([]&lt;span style="color:#458;font-weight:bold"&gt;float64&lt;/span&gt;{&lt;span style="color:#099"&gt;0&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#099"&gt;52&lt;/span&gt;})&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;if&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;!=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;nil&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#998;font-style:italic"&gt;// Handle error&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fmt.&lt;span style="color:#900;font-weight:bold"&gt;Printf&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;%s\n&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;loc.Country)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fmt.&lt;span style="color:#900;font-weight:bold"&gt;Printf&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;%s\n&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;loc.CountryLong)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fmt.&lt;span style="color:#900;font-weight:bold"&gt;Printf&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;%s\n&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;loc.CountryCode2)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fmt.&lt;span style="color:#900;font-weight:bold"&gt;Printf&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;%s\n&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;loc.CountryCode3)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fmt.&lt;span style="color:#900;font-weight:bold"&gt;Printf&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;%s\n&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;loc.Continent)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fmt.&lt;span style="color:#900;font-weight:bold"&gt;Printf&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;%s\n&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;loc.Region)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;fmt.&lt;span style="color:#900;font-weight:bold"&gt;Printf&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;%s\n&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;loc.SubRegion)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#998;font-style:italic"&gt;// Output: United Kingdom&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#998;font-style:italic"&gt;// United Kingdom of Great Britain and Northern Ireland&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#998;font-style:italic"&gt;// GB&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#998;font-style:italic"&gt;// GBR&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#998;font-style:italic"&gt;// Europe&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#998;font-style:italic"&gt;// Europe&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#998;font-style:italic"&gt;// Northern Europe&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="projects-using-rgeo"&gt;Projects using rgeo&lt;/h2&gt;
+&lt;p&gt;Currently the only project that I know of is my own
+&lt;a href="https://github.com/sams96/rgeoSrv"&gt;rgeoSrv&lt;/a&gt;, which aims to wrap rgeo into a
 microservice. I am also planning on writing a command line appication to apply
-IPTC location tags to images that already contain geolocation information.&lt;/p>
-&lt;h2 id="how-it-works">How it works&lt;/h2>
-&lt;p>The data used by rgeo is made from a collection of GeoJSON files aquired from
-&lt;a href="https://github.com/nvkelso/natural-earth-vector/tree/master/geojson">Natural Earth
-Data&lt;/a>,
+IPTC location tags to images that already contain geolocation information.&lt;/p&gt;
+&lt;h2 id="how-it-works"&gt;How it works&lt;/h2&gt;
+&lt;p&gt;The data used by rgeo is made from a collection of GeoJSON files aquired from
+&lt;a href="https://github.com/nvkelso/natural-earth-vector/tree/master/geojson"&gt;Natural Earth
+Data&lt;/a&gt;,
 which are packaged into Go files by
-&lt;a href="https://github.com/sams96/rgeo/tree/master/datagen">datagen&lt;/a>. The go files
+&lt;a href="https://github.com/sams96/rgeo/tree/master/datagen"&gt;datagen&lt;/a&gt;. The go files
 contain functions which return byte slices that contain the base 64 encoded,
 gzipped GeoJSON files. They&amp;rsquo;re packaged into function because that seems to be
 the only way to have the Go compiler ignore them if they aren&amp;rsquo;t used (so your
-program isn&amp;rsquo;t inflated by huge data files that you aren&amp;rsquo;t using).&lt;/p>
-&lt;p>&lt;code>New&lt;/code> takes the datasets, decodes the data and parses the GeoJSON. It creates an
-&lt;code>Rgeo&lt;/code> struct which contains an &lt;a href="https://github.com/golang/geo">s2&lt;/a> shape index,
+program isn&amp;rsquo;t inflated by huge data files that you aren&amp;rsquo;t using).&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;New&lt;/code&gt; takes the datasets, decodes the data and parses the GeoJSON. It creates an
+&lt;code&gt;Rgeo&lt;/code&gt; struct which contains an &lt;a href="https://github.com/golang/geo"&gt;s2&lt;/a&gt; shape index,
 a map to store the location information of each area and an s2 contains point
 query. The shape index contains s2 polygons for each of the areas in the given
 dataset, and the contains point query is what goes from the input coordinates to
-a shape. The map is then used to get the location information from the shape.&lt;/p>
-&lt;p>One thing I discovered through working on this is initialising s2 loops and
+a shape. The map is then used to get the location information from the shape.&lt;/p&gt;
+&lt;p&gt;One thing I discovered through working on this is initialising s2 loops and
 polygons is very slow and there&amp;rsquo;s no way to store them that doesn&amp;rsquo;t have to run
 all the validation code upon loading them. I found that going from creating the
-s2 types every time to using geom&amp;rsquo;s &lt;code>IsPointInRing&lt;/code> function yields a ~100x
+s2 types every time to using geom&amp;rsquo;s &lt;code&gt;IsPointInRing&lt;/code&gt; function yields a ~100x
 speed increase. I used s2 types because I wrote rgeo to be used many times in a
-program rather than a few, and s2&amp;rsquo;s contains point query is &lt;em>very&lt;/em> fast
-(although I don&amp;rsquo;t have any benchmarks to hand).&lt;/p></description></item></channel></rss>
+program rather than a few, and s2&amp;rsquo;s contains point query is &lt;em&gt;very&lt;/em&gt; fast
+(although I don&amp;rsquo;t have any benchmarks to hand).&lt;/p&gt;</description></item></channel></rss>

@@ -8,7 +8,7 @@ categories:
 tags:
 build:
   list: never
-  publishResources: false
+  publishResources: true
   render: always
 ---
 

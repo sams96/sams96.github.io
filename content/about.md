@@ -26,10 +26,13 @@ the whole site [here](/index.xml), and for each [category](/categories/) and
 You could also get updates by email by feeding the RSS links into a service like
 [feedrabbit](https://feedrabbit.com/) or [RSS by email](https://rssby.email/).
 
-
 This site was built with [Hugo](https://gohugo.io) with a modified
 [Anubis](https://github.com/mitrichius/hugo-theme-anubis) theme (with credit to
 the [monochrome](https://github.com/dyutibarma/monochrome) which this site used
 to be based on, [leejo.github.io](https://leejo.github.io) and the default
 [LaTeX](https://www.latex-project.org) theme which were all inspirations for
 this theme), and is hosted on [Github Pages](https://pages.github.com).
+
+Everything on this website is entirely my own work, unless otherwise mentioned.
+I do not use large language models to write any text, and all images are
+produced and edited without the assistance of any "AI".

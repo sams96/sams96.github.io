@@ -1,0 +1,33 @@
+<!-- TODO get image and permalink from page, use to render image and link to page -->
+<!-- TODO set a default width and height -->
+<!-- TODO set a default caption as the image title (but be able to overwrite) -->
+<!-- TODO get alt text from page -->
+{{- $page := site.GetPage (printf "photo/%s" (.Get "img") | printf "%s") }}
+{{- $image := (printf "%s" $page.Params.image | printf "%s%s" $page.RelPermalink | printf "%s") }}
+<figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
+	<a href="{{ $page.RelPermalink }}">
+	<img src="{{ $image }}"
+		 {{- if or (.Get "alt") (.Get "caption") }}
+         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+         {{- end -}}
+         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+		 {{- with .Get "loading" | default "lazy" }} loading="{{ . }}" {{ end -}}
+    /> <!-- Closing img tag -->
+    </a>
+    {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+        <figcaption>
+            {{ with (.Get "title") -}}
+                <h4>{{ . }}</h4>
+            {{- end -}}
+            {{- if or (.Get "caption") (.Get "attr") -}}<p>
+                {{- .Get "caption" | markdownify -}}
+                {{- with .Get "attrlink" }}
+                    <a href="{{ . }}">
+                {{- end -}}
+                {{- .Get "attr" | markdownify -}}
+                {{- if .Get "attrlink" }}</a>{{ end }}</p>
+            {{- end }}
+        </figcaption>
+    {{- end }}
+	</figure>

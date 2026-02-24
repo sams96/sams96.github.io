@@ -1,0 +1,34 @@
+{{ define "main" }}
+
+    <h1>{{ i18n .Title }}</h1>
+
+    <div class="article-info">
+		{{ with .OutputFormats.Get "rss" -}}
+			<a href="{{ .Permalink }}">RSS feed</a>
+		{{ end }}
+	</div>
+
+	{{ $type := .Type }}
+	{{ $.Scratch.Set "count" 1 }}
+
+	<div class="grid-container">
+		{{ range (where .Pages "Type" $type) }}
+			{{ if (eq ($.Scratch.Get "count") 1) }}
+				{{ $.Scratch.Set "count" 0 }}
+					<!-- <h2 class="post-fist">{{ .Date.Format "2006" }}</h2> -->
+				{{ end }}
+			{{ end }}
+
+			{{ $.Scratch.Set "count" 1 }}
+				{{ range (where .Pages "Type" $type) }}
+					{{ if (ne .Params.hidden true) }}
+						<a href="{{ .RelPermalink }}">
+						{{ with .Resources.GetMatch (.Params.image) }}
+							<img src="{{ .RelPermalink }}">
+						{{ end }}
+						</a>
+					{{ end }}
+		{{ end }}
+	</div>
+
+{{ end }}

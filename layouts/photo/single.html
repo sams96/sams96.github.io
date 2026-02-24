@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+    <article class="post">
+        <header>
+            <h1>{{ .Title }}</h1>
+        </header>
+        {{ partial "articleInfoDate.html" . }}
+
+		{{ $image := .Resources.GetMatch (.Params.image) }}
+		{{ with $image }}
+			<a href="{{ .RelPermalink }}">
+			<img src="{{ .RelPermalink }}">
+			</a>
+		{{ end }}
+
+        <div class="content">
+            {{ .Content }}
+        </div>
+
+		<dl>
+		{{ with .Params.metadata.camera }}<dt>Camera</dt><dd>{{ . }}</dd>{{ end }}
+		{{ with .Params.metadata.lens }}<dt>Lens</dt><dd>{{ . }}</dd>{{ end }}
+		{{ with .Params.metadata.film }}<dt>Film</dt><dd>{{ . }}</dd>{{ end }}
+		{{ with .Params.metadata.location }}
+		<dt>Location</dt><dd>{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}</dd>
+		{{ end }}
+		</dl>
+
+        {{ partial "articleInfoFull.html" . }}
+	<meta name="fediverse:creator" content="@mondoman712@toot.io">
+    </article>
+
+{{ end }}

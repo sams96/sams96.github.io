@@ -21,7 +21,7 @@ You can contact me at sam at this domain, or send me a
 I use this blog to post about whatever I find interesting, which so far has been
 {{< catlist >}}If you want to follow, I recommend using RSS. I have a feed for
 the whole site [here](/index.xml), and for each [category](/categories/) and
-[Tag](/tags/) that can be found on their respective pages. Personally I use
+[tag](/tags/) that can be found on their respective pages. Personally I use
 [ReadYou](https://github.com/ReadYouApp/ReadYou), but many others are available.
 You could also get updates by email by feeding the RSS links into a service like
 [feedrabbit](https://feedrabbit.com/) or [RSS by email](https://rssby.email/).

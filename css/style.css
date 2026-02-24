@@ -567,3 +567,31 @@ footer a {
 #mastodon-comments {
 	--comment-padding: 1em;
 }
+
+
+.grid-container {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	max-width: 100%;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: repeat(3, 1fr);
+
+	img {
+		max-width: 100%;
+	}
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+  font-size: small;
+}
+
+dt {
+  grid-column-start: 1;
+}
+
+dd {
+  grid-column-start: 2;
+}

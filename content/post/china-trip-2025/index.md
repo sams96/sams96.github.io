@@ -177,15 +177,16 @@ came with a bucket of raw, unpeeled garlic cloves on the table for you to chew
 on – multiple different types of hot pot that I hadn't heard of before, one with
 a bean flavoured soup base and another that was mostly just a big pot of
 tomatoes and chicken – and the highlight was *烙&zwj;锅 Lao Guo*, which is
-conceptually very similar to Korean barbecue. You have a big hot pan on your
-table to cook various meats and vegetables, with a bowl of spicy dip in the
-centre.
+conceptually similar to hot pot except instead of a pot of hot broth you have a
+large pan on which to cook your various meats and vegetables, with a bowl of
+spicy dip in the centre.
 
 Guiyang also has a lively specialty coffee scene, but at least in the short time
 we spent there I didn't find any coffee I liked as much as what we were having
-in Chengdu. We queued outside Captain George[^5], which is the pioneer of specialty
-coffee in Guiyang, but I didn't think it lived up to the hype.
-
+in Chengdu. We queued outside Captain George[^5], the pioneer of specialty
+coffee in Guiyang, and tried to visit DuiDe Coffee each morning only to find
+it with a large queue each time until the third day. For me neither lived up to
+the hype.
 [^5]: [https://www.instagram.com/captaingeorgecoffee_](https://www.instagram.com/captaingeorgecoffee_)
 
 {{< photo img="24310"
@@ -200,10 +201,9 @@ return.
 
 </br>
 
-Every photo in the series was shot on my Hasselblad 501c with either a 60mm
-f/3.5 CF  lens using Ilford HP5+ shot at ISO 800 and developed in Ilfotec HC
-1:49 for 11 minutes. I scanned them with an Epson V800 and edited them in
-darktable.
+All the photos in the post were shot on my Hasselblad 501c with an 80mm f/2.8 CB
+lens using Ilford HP5+ shot at ISO 800 and developed in Ilfotec HC 1:49 for 11
+minutes. I scanned them with an Epson V800 and edited them in darktable.
 
 </br>
 

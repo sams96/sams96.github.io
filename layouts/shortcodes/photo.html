@@ -10,9 +10,10 @@
 		 {{- if or (.Get "alt") (.Get "caption") }}
          alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
          {{- end -}}
-         {{- with .Get "width" }} width="{{ . }}"{{ end -}}
-         {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+		 height="1000"
+		 width="1000"
 		 {{- with .Get "loading" | default "lazy" }} loading="{{ . }}" {{ end -}}
+		 {{- with .Get "fetchpriority" | default "auto" }} fetchpriority="{{ . }}" {{ end -}}
     /> <!-- Closing img tag -->
     </a>
     {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}

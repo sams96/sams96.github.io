@@ -1,40 +1,34 @@
 ---
 title: 'Notes on a trip to China'
 url: /china-trip-2025
-date:
-# categories:
-#  - travel
-#  - photography
-tags:
-build:
-  list: never
-  publishResources: true
-  render: always
+date: 2026-02-26
+categories:
+ - travel
+ - photography
 ---
 
 In September 2025 my wife and I spent just over 3 week in China, her first time
-back to her home country in 2 years, and my third trip there having been in 2017
+back to her home country in 2 years and my third trip there, having been in 2017
 and 2018. We spent most of our time in my wife's home city of Chengdu, while
-also visited the nearby Chongqing and Guiyang. This post is a collection of my
-thoughts and opinions on the places we visited, along with some photos I took
-during the trip.
+also visited the nearby cities of Chongqing and Guiyang. This post is a
+collection of my thoughts and opinions on the places we visited, along with some
+photos I took during the trip.
 
-<!-- TODO re-add path -->
-{{< photo img="24008" loading="eager"
+{{< photo img="24008" loading="eager" fetchpriority="high"
 	caption="文殊院 Wenshu Temple, Chengdu" >}}
 
 <!--more-->
 
 ## Chengdu
 
-When I first went to Chengdu in 2018, I wasn't very interested in the place,
-it's very flat and generally lacking in visual interest, but I did meet my wife
-there so I do have a bit of a soft spot for the place. When I travel alone I
-tend to spend most of my time just exploring and looking for interesting areas
-to photograph, and Chengdu isn't great for that. Going back with my wife was
-much different, she knew all the best spots and between her missing the food
-she'd grown up with and me having more of an interest than I did last time, we
-spent a lot of time eating.
+When I first went to Chengdu in 2018 I wasn't very interested in the place, it's
+very flat and generally lacking in visual interest, but I did meet my wife there
+so I do have a bit of a soft spot for the place. When I travel alone I tend to
+spend most of my time just exploring and looking for interesting areas to
+photograph, and Chengdu isn't great for that. Going back with my wife was much
+different, she knows all the best spots and between her missing the food she'd
+grown up with and me having more of an interest than I did last time, we spent a
+lot of time eating.
 
 Chengdu is, in my mind, the best food city in the world when it comes to native
 cuisine, not that I'm claiming to be an expert in this regard. My favourites
@@ -52,8 +46,7 @@ middle of your table and a selection of meats and vegetables to cook in it.[^3]
 	bowl, and my tip for if you're like me and not great with spice is to fill
 it mostly with vinegar, this really helps to manage the spiciness.
 
-{{< photo img="24101"
-		caption="均隆滨河路 Junlong Binhe Road, Chengdu" >}}
+{{< photo img="24101" caption="均隆滨河路 Junlong Binhe Road, Chengdu" >}}
 
 There's also a recent boom of nice coffee shops and really good coffee in
 Chengdu. It's not hard to find a specialist coffee shop, they almost always have
@@ -61,25 +54,29 @@ a choice of beans, and that choice almost always includes a sour and fruity
 light roast which made me very happy – my top recommendation is *agua café*.[^4]
 I found walking around Chengdu, particularly in the area near where we stayed,
 around the *牛&zwj;王&zwj;庙 Niuwangmiao* metro station, I was constantly
-seeing nice looking coffee shops, restaurants, and bars that I wanted to visit.
+seeing nice looking restaurants, coffee shops, and bars that I wanted to visit.
 I have the same experience every time we visit Paris.
 
 [^4]: [https://www.instagram.com/cafe.agua](https://www.instagram.com/cafe.agua)
 
 Getting around Chengdu is easy. The street layout feels like it was built with
-the *superblocks* idea in mind. There's something of a grid of large roads, and
-inside the blocks created by this grid are a maze of smaller much quieter
+the *superblocks*[^5] idea in mind. There's something of a grid of large roads,
+and inside the blocks created by this grid are a maze of smaller much quieter
 streets which are much more pleasant to walk on, if you can find a reasonable
 route through. Crossing these large roads is a frustrating experience. First you
 have to get across the slip lane with limited visibility around the corner and
 where no cars will stop for you, then you're waiting multiple minutes on the
 island with no shade and surrounded by people on scooters until you get to
-cross. Chengdu's metro is amazing, the coverage is very good, the platforms tend
-to be very close to ground level so it's quick to get to the trains, and it's
-very fast and frequent.
+cross. On the other hand, Chengdu's metro is amazing, the coverage is very good,
+the platforms tend to be very close to ground level so it's quick to get to the
+trains, and it's very fast and frequent.
 
-{{< photo img="24105"
-	caption="人民公园 People's Park, Chengdu" >}}
+[^5]: Superblocks are an urban planning concept, in which city blocks are
+	combined together, allowing traffic to flow around, but only cars heading to
+	a destination within the superblock are allowed to drive in. The concept is
+	usually associated with it's implementation in Barcelona.
+
+{{< photo img="24105" caption="人民公园 People's Park, Chengdu" >}}
 
 ## The Train
 
@@ -88,8 +85,8 @@ headline being the high speed, we took a train from Chengdu East Station to
 Shapingba in Chongqing, travelling 299km in 62 minutes, which means we
 **averaged** almost 300km/h. I also liked how my wife was able to choose seats
 before booking our tickets, which meant if we weren't able to get seats next to
-each other, we could just travel at a different time – and, we didn't try this
-but, you can order food from a restaurant near a station you're stopping at to
+each other, we could just travel at a different time – and, we didn't try this,
+but you can order food from a restaurant near a station you're stopping at to
 be delivered to your seat.
 
 I'm not a fan of the more airport like experience of the stations. They tend to
@@ -105,8 +102,7 @@ another queue to wait in and crowd to navigate to scan your ticket and board.
 
 ## Chongqing
 
-{{< photo img="24107"
-	caption="朝天门广场 Chaotianmen Square, Chongqing" >}}
+{{< photo img="24107" caption="朝天门广场 Chaotianmen Square, Chongqing" >}}
 
 On my previous visit to Chongqing in 2018 I was really taken by the city. It is,
 at least in terms of urban form and landscape, the total opposite of Chengdu.
@@ -131,8 +127,7 @@ Chongqing, it's considered one of China's *oven cities*. When we were there in
 September it mercifully stayed in the low 30s, but that heat combined with
 seemingly having to walk uphill to get anywhere can be pretty brutal.
 
-{{< photo img="24206"
-	caption="嘉陵江  Jialing River, Chongqing" >}}
+{{< photo img="24206" caption="嘉陵江  Jialing River, Chongqing" >}}
 
 Finding nice coffee in Chongqing wasn't so easy, multiple places we found online
 and tried to visit weren't open when they said they were, which sometimes meant
@@ -141,7 +136,7 @@ Guaguajun coffee on Daijia Alley, which also had a great view over the Jialing
 River.
 
 Chongqing has a huge metro system, including two monorail lines. Line 2 is
-particularly scenic , following the south bank of the Jialing River for a
+particularly scenic, following the south bank of the Jialing River for a
 section. It can often still take quite a bit of effort to get to a train, with
 deep stations and long corridors for transferring between lines, another impact
 of the terrain. One station we visited, *红&zwj;土&zwj;地 Hongtudi*, took 6
@@ -150,8 +145,7 @@ went to *Hongtudi* to experience another form of physical punishment enjoyed
 by Chongqingers – their brutally spicy and mouth-numbing hot pot. Specifically
 for a hot pot restaurant in a 500m long air raid shelter built during WWII.
 
-{{< photo img="24208"
-	caption="长江 Yangtze River, Chongqing" >}}
+{{< photo img="24208" caption="长江 Yangtze River, Chongqing" >}}
 
 ## Guiyang
 
@@ -165,11 +159,10 @@ doesn't have the same sort of super-block structure, but the streets are still
 very car oriented so you end up with a pretty poor pedestrian experience. What
 is interesting is the proliferation of pedestrian underpasses, which exist under
 many four-way junctions around town, and these are often full of shops. This is
-nice but to me the underpasses still make you feel second class compared to
-cars.
+nice as it lets your briefly avoid the heat and not have to wait to cross, but
+to me it just reinforces the feeling of being second class compared to cars.
 
-{{< photo img="24303"
-	caption="南明河 Nanming River, Guiyang" >}}
+{{< photo img="24303" caption="南明河 Nanming River, Guiyang" >}}
 
 The reason to visit Guiyang is the food, it has a very distinct cuisine compared
 to Chengdu and Chongqing (and the rest of China). We tried sour noodles, which
@@ -183,13 +176,12 @@ centre.
 
 Guiyang also has a lively specialty coffee scene, but at least in the short time
 we spent there I didn't find any coffee I liked as much as what we were having
-in Chengdu. We queued outside Captain George[^5], which is the pioneer of specialty
+in Chengdu. We queued outside Captain George[^6], which is the pioneer of specialty
 coffee in Guiyang, but I didn't think it lived up to the hype.
 
-[^5]: [https://www.instagram.com/captaingeorgecoffee_](https://www.instagram.com/captaingeorgecoffee_)
+[^6]: [https://www.instagram.com/captaingeorgecoffee_](https://www.instagram.com/captaingeorgecoffee_)
 
-{{< photo img="24310"
-	caption="南明河 Nanming River, Guiyang" >}}
+{{< photo img="24310" caption="南明河 Nanming River, Guiyang" >}}
 
 ## Parting Thoughts
 

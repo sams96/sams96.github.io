@@ -9,7 +9,9 @@
 		{{ $image := .Resources.GetMatch (.Params.image) }}
 		{{ with $image }}
 			<a href="{{ .RelPermalink }}">
-			<img src="{{ .RelPermalink }}">
+			<img src="{{ .RelPermalink }}"
+			     height="1000"
+				 width="1000">
 			</a>
 		{{ end }}
 

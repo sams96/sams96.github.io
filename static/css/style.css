@@ -6,21 +6,28 @@
 @font-face {
 	font-family: "CMU";
 	font-style: normal;
-	src: url("https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font/font/Serif/cmunrm.woff") format("woff");
+	src: url("/fonts/cmunrm.woff2") format("woff2");
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "CMU";
 	font-weight: bold;
-	src: url("https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font/font/Serif/cmunbx.woff") format("woff");
+	src: url("/fonts/cmunbx.woff2") format("woff2");
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "CMU";
 	font-style: italic;
-	src: url("https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font/font/Serif/cmunti.woff") format("woff");
+	src: url("/fonts/cmunci.woff2") format("woff2");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Computer Modern Typewriter";
+	font-style: normal;
+	src: url("/fonts/cmuntt.woff2") format("woff2");
 	font-display: swap;
 }
 

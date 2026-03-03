@@ -6,21 +6,28 @@
 @font-face {
 	font-family: "CMU";
 	font-style: normal;
-	src: url("https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font/font/Serif/cmunrm.woff") format("woff");
+	src: url("/fonts/cmunrm.woff2") format("woff2");
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "CMU";
 	font-weight: bold;
-	src: url("https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font/font/Serif/cmunbx.woff") format("woff");
+	src: url("/fonts/cmunbx.woff2") format("woff2");
 	font-display: swap;
 }
 
 @font-face {
 	font-family: "CMU";
 	font-style: italic;
-	src: url("https://cdn.jsdelivr.net/gh/dreampulse/computer-modern-web-font/font/Serif/cmunti.woff") format("woff");
+	src: url("/fonts/cmunci.woff2") format("woff2");
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Computer Modern Typewriter";
+	font-style: normal;
+	src: url("/fonts/cmuntt.woff2") format("woff2");
 	font-display: swap;
 }
 
@@ -240,7 +247,7 @@ header a {
 
 .site-header {
     border-bottom: thin solid #f1f1f1;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 }
 
 /* Pages */
@@ -569,7 +576,7 @@ footer a {
 }
 
 
-.grid-container {
+photo-grid {
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	max-width: 100%;
@@ -580,6 +587,19 @@ footer a {
 	img {
 		max-width: 100%;
 	}
+
+	a {
+		border-bottom: 1px solid rgba(163, 29, 29, 0);
+	}
+
+	a:hover,
+	a:focus {
+		border-bottom: 1px solid rgba(163, 29, 29, .5);
+	}
+}
+
+.photo header h1 {
+    margin-top: 0.5em;
 }
 
 dl {
@@ -594,4 +614,12 @@ dt {
 
 dd {
   grid-column-start: 2;
+}
+
+.backlink-item {
+    font-size: small;
+    font-weight: bold;
+    border: none;
+    text-decoration: none;
+    color: #333;
 }

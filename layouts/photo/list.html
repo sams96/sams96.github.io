@@ -13,7 +13,7 @@
 	{{ $type := .Type }}
 	{{ $.Scratch.Set "count" 1 }}
 
-	<div class="grid-container">
+	<photo-grid>
 		{{ range (where .Pages "Type" $type) }}
 			{{ if (eq ($.Scratch.Get "count") 1) }}
 				{{ $.Scratch.Set "count" 0 }}
@@ -31,6 +31,6 @@
 						</a>
 					{{ end }}
 		{{ end }}
-	</div>
+	</photo-grid>
 
 {{ end }}

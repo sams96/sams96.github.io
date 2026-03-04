@@ -7,8 +7,11 @@
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
 	<a href="{{ $page.RelPermalink }}">
 	<img src="{{ $image }}"
-		 {{- if or (.Get "alt") (.Get "caption") }}
-         alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+		 {{- if or $page.Params.title (.Get "caption") }}
+         title="{{ with (.Get "caption") | markdownify | plainify  }}{{ . }}{{ else }}{{ $page.Params.title }}{{ end }}"
+         {{- end -}}
+		 {{- if or $page.Params.alt (.Get "caption") }}
+         alt="{{ with $page.Params.alt }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify }}{{ end }}"
          {{- end -}}
 		 height="1000"
 		 width="1000"

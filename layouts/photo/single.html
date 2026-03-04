@@ -6,7 +6,11 @@
 			<a href="{{ .RelPermalink }}">
 			<img src="{{ .RelPermalink }}"
 			     height="1000"
-				 width="1000">
+				 width="1000"
+		         {{- if or .Params.alt .Params.title }}
+                 alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Params.title }}{{ end }}"
+			     {{ end }}
+		    >
 			</a>
 		{{ end }}
 
@@ -31,7 +35,6 @@
 		{{ partial "backlinks" . }}
 
         {{ partial "articleInfoFull.html" . }}
-	<meta name="fediverse:creator" content="@mondoman712@toot.io">
     </article>
 
 {{ end }}

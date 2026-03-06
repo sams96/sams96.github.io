@@ -7,7 +7,7 @@ type: photo
 alt: >
    Looking down on 3 fishermen and their rods cast out into a river with another
    footpath and a large geometric road bridge on the other side, black and
-  white.
+   white.
 
 metadata:
   camera: Hasselblad 501c

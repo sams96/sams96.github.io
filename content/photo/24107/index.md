@@ -2,6 +2,7 @@
 title: '朝天门广场 Chaotianmen Square'
 url: /photo/24107
 date: 2025-09-09
+datePosted: 2026-02-26
 image: 24107.avif
 type: photo
 alt: >-

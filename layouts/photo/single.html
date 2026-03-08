@@ -17,7 +17,11 @@
         <header>
             <h1>{{ .Title }}</h1>
         </header>
-        {{ partial "articleInfoDate.html" . }}
+		<div class="article-date"
+			{{ with .Params.datePosted }} title="Posted {{ . | time.Format "02 Jan 2006" }}" {{ end }}
+		>
+			{{- .Params.date.Format "02 Jan 2006" }}
+		</div>
 
         <div class="content">
             {{ .Content }}

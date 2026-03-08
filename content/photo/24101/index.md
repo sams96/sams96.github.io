@@ -2,6 +2,7 @@
 title: '均隆滨河路 Junlong Binhe Road '
 url: /photo/24101
 date: 2025-09-03
+datePosted: 2026-02-26
 image: 24101.avif
 type: photo
 alt: >-

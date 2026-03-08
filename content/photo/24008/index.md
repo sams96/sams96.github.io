@@ -2,6 +2,7 @@
 title: 'Wenshu Temple'
 url: /photo/24008
 date: 2025-09-02
+datePosted: 2026-02-26
 image: 24008.avif
 type: photo
 alt: >-

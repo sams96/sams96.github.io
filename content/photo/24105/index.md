@@ -2,6 +2,7 @@
 title: "人民公园 People's Park Chengdu"
 url: /photo/24105
 date: 2025-09-04
+datePosted: 2026-02-26
 image: 24105.avif
 type: photo
 alt: >-

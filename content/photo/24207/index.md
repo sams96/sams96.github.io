@@ -4,7 +4,7 @@ url: /photo/24207
 date: 2025-09-10
 image: 24207.avif
 type: photo
-alt: >
+alt: >-
   A path through a wooded park curves to the right, and straight ahead is an
   apartment building, black and white.
 

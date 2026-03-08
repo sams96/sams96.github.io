@@ -1,12 +1,12 @@
 {{ define "main" }}
 
     <article class="photo">
-		{{ $image := .Resources.GetMatch (.Params.image) }}
+		{{ $image := .Resources.Get (.Params.image) }}
 		{{ with $image }}
 			<a href="{{ .RelPermalink }}">
 			<img src="{{ .RelPermalink }}"
-			     height="1000"
-				 width="1000"
+				 height="{{ .Height }}"
+				 width="{{ .Width }}"
 		         {{- if or .Params.alt .Params.title }}
                  alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Params.title }}{{ end }}"
 			     {{ end }}

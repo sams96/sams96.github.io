@@ -22,7 +22,7 @@
 			{{ end }}
 
 			{{ $.Scratch.Set "count" 1 }}
-				{{ range (where .Pages "Type" $type) }}
+				{{ range sort (where .Pages "Type" $type) "Params.image" "desc" }}
 					{{ if (ne .Params.hidden true) }}
 						<a href="{{ .RelPermalink }}">
 						{{ with .Resources.GetMatch (.Params.image) }}

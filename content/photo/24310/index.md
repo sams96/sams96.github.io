@@ -4,7 +4,7 @@ url: /photo/24310
 date: 2025-09-15
 image: 24310.avif
 type: photo
-alt: >
+alt: >-
   A cluster of tall buildings across a river, meeting a tributary at the centre
   of the image, which has two brdiges crossing. Multiple people are seen walking
   along the river, black and white.

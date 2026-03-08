@@ -1,20 +1,19 @@
 <!-- TODO get image and permalink from page, use to render image and link to page -->
-<!-- TODO set a default width and height -->
 <!-- TODO set a default caption as the image title (but be able to overwrite) -->
 <!-- TODO get alt text from page -->
 {{- $page := site.GetPage (printf "photo/%s" (.Get "img") | printf "%s") }}
-{{- $image := (printf "%s" $page.Params.image | printf "%s%s" $page.RelPermalink | printf "%s") }}
+{{- $image := $page.Resources.Get $page.Params.image }}
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
 	<a href="{{ $page.RelPermalink }}">
-	<img src="{{ $image }}"
+	<img src="{{ $image.RelPermalink }}"
 		 {{- if or $page.Params.title (.Get "caption") }}
          title="{{ with (.Get "caption") | markdownify | plainify  }}{{ . }}{{ else }}{{ $page.Params.title }}{{ end }}"
          {{- end -}}
 		 {{- if or $page.Params.alt (.Get "caption") }}
          alt="{{ with $page.Params.alt }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify }}{{ end }}"
          {{- end -}}
-		 height="1000"
-		 width="1000"
+		 height="{{ $image.Height }}"
+		 width="{{ $image.Width }}"
 		 {{- with .Get "loading" | default "lazy" }} loading="{{ . }}" {{ end -}}
 		 {{- with .Get "fetchpriority" | default "auto" }} fetchpriority="{{ . }}" {{ end -}}
     /> <!-- Closing img tag -->

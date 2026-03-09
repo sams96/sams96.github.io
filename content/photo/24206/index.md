@@ -10,7 +10,7 @@ alt: >-
 
 metadata:
   camera: Hasselblad 501c
-  lens: Zeiss Planar CB 80mm f/2.8
+  lens: Zeiss Planar 80mm f/2.8 CB
   film: Ilford HP5+ @ 800
   location:
     - Chongqing

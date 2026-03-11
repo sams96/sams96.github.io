@@ -32,7 +32,7 @@
 		{{ with .Params.metadata.lens }}<dt>Lens</dt><dd>{{ . }}</dd>{{ end }}
 		{{ with .Params.metadata.film }}<dt>Film</dt><dd>{{ . }}</dd>{{ end }}
 		{{ with .Params.metadata.location }}
-		<dt>Location</dt><dd>{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}</dd>
+		<dt>Location</dt><dd>{{ range $i, $e := . }}{{ if $i }}, {{ end }}{{ $e | markdownify }}{{ end }}</dd>
 		{{ end }}
 		</dl>
 

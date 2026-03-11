@@ -6,7 +6,8 @@ datePosted: 2025-07-20
 image: 19106.avif
 type: photo
 alt: >-
-  TODO alt text
+  A telephone pole with a second angled support pole in front of a white sky in
+  a field with a patch of snow in the background, black and white.
 
 metadata:
   camera: Hasselblad 501c

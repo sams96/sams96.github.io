@@ -6,7 +6,8 @@ datePosted: 2025-07-20
 image: 19105.avif
 type: photo
 alt: >-
-  TODO alt text
+  A grassy hill with odd fence posts starting in the front left and extending
+  rightwards and into the distance, black and white.
 
 metadata:
   camera: Hasselblad 501c

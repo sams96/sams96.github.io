@@ -1,5 +1,5 @@
 ---
-title: 'Wenshu Temple'
+title: '文殊院 Wenshu Temple'
 url: /photo/24008
 date: 2025-09-02
 datePosted: 2026-02-26

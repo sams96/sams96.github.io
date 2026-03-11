@@ -6,7 +6,10 @@ datePosted: 2025-07-20
 image: 19504.avif
 type: photo
 alt: >-
-  TODO alt text
+  In the foreground, a road sign seen from behind at the crossroads of two
+  gravel tracks. A flat field extends behind with pylons and wires above, and some
+  farm buildings behind. Beyond that a partially snow covered mountain, black and
+  white.
 
 metadata:
   camera: Hasselblad 501c

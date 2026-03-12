@@ -1,8 +1,15 @@
     {{ if .Params.date }}
 	<div class="article-date">
 		{{- .Params.date.Format "02 Jan 2006" }}
-		{{- if not (eq .Lastmod .Params.date) }}
-			(Last edit. {{ .Lastmod | time.Format "02 Jan 2006" }})
-		{{ end }}
+		{{- if .Params.modifications }}
+			<span title="{{- range $k, $v := .Params.modifications }} {{ $k }}: {{ $v }}&#013;{{- end }}">
+				{{ $dates := slice }}
+				{{- range $k, $v := .Params.modifications -}}
+					{{ $dates = append $k $dates }}
+				{{- end -}}
+				{{ $dates = $dates | collections.Reverse }}
+				(Last edit. {{ (index $dates 0) | time.Format "02 Jan 2006" -}})
+			</span>
+		{{- end -}}
 	</div>
-    {{ end }}
+     {{ end }}

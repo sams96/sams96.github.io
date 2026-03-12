@@ -6,6 +6,8 @@ categories:
 - photography
 tags:
 - portfolio
+modifications:
+  2026-03-12: Moved images from flickr to /photo/*, fixed some captions
 ---
 
 This year was, unlike the previous few, without any major travel. Although I did
@@ -24,66 +26,18 @@ towards any larger serious projects, although I have started a couple of
 collections of images taken with my phone that could become something
 eventually.
 
-{{< 
-	myfig src="https://live.staticflickr.com/65535/51756460272_d0dbb55af4_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/yd7762"
-	caption="Grand Union Canal" alt="Grand Union Canal"
->}}
-{{< 
-	myfig src="https://live.staticflickr.com/65535/51757537298_39b366a6ba_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/30dqGq"
-	caption="Worcester &amp; Birmingham Canal I" alt="Worcester &amp; Birmingham Canal I"
->}}
-{{< 
-	myfig src="https://live.staticflickr.com/65535/51758163070_c2a4610804_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/Q94Jj6"
-	caption="Worcester &amp; Birmingham Canal II" alt="Worcester &amp; Birmingham Canal II"
->}}
-{{< 
-	myfig src="https://live.staticflickr.com/65535/51758163105_07dbeb35d4_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/6749TD"
-	caption="Limmat" alt="Limmat"
->}}
-{{< 
-	myfig src="https://live.staticflickr.com/65535/51757942799_04102a6905_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/F0096H"
-	caption="Stockwald" alt="Stockwald"
->}}
-{{< 
-	myfig src="https://live.staticflickr.com/65535/50916521992_ec5ba88608_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/50916521992/in/photostream/"
-	caption="Melchsee" alt="Melchsee"
->}}
-{{< 
-	myfig src="https://live.staticflickr.com/65535/50965974786_5a28eb24c3_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/50965974786/in/photostream/"
-	caption="Bettenalp" alt="Bettenalp"
->}}
-{{< 
-	myfig src="https://live.staticflickr.com/65535/51757293141_f59201dd7e_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/682TLp"
-	caption="Balconies I" alt="Balconies I"
->}}
-{{< 
-	myfig src="https://live.staticflickr.com/65535/51757942899_027e6c0f68_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/q1900J"
-	caption="Balconies II" alt="Balconies II"
->}}
-{{< 
-	myfig src="https://live.staticflickr.com/65535/51757537508_ce191f1a6f_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/r841q4"
-	caption="Siedlung Langgrüt"alt="Siedlung Langgrüt"
->}}
-{{< 
-	myfig src="https://live.staticflickr.com/65535/50982876137_06b38db456_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/50982876137/in/photostream/"
-	caption="Fernsehturm Uetliburg" alt="Fernsehturm Uetliburg"
->}}
-{{< 
-	myfig src="https://live.staticflickr.com/65535/51756460572_ec3a8c06aa_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/m2VP7S"
-	caption="Schlittelweg Üetliberg" alt="Schlittelweg Üetliberg"
->}}
+{{< photo img="16704" caption="Grand Union Canal" >}}
+{{< photo img="16711" caption="Worcester &amp; Birmingham Canal I" >}}
+{{< photo img="16712" caption="Worcester &amp; Birmingham Canal II" >}}
+{{< photo img="16907" caption="Sihl" >}}
+{{< photo img="17101" caption="Stockwald" >}}
+{{< photo img="17103" caption="Melchsee" >}}
+{{< photo img="17105" caption="Bettenalp" >}}
+{{< photo img="17108" caption="Balconies I" >}}
+{{< photo img="17204" caption="Balconies II" >}}
+{{< photo img="17205" caption="Siedlung Langgrüt" >}}
+{{< photo img="17304" caption="Fernsehturm &Uuml;etliburg" >}}
+{{< photo img="17306" caption="Schlittelweg Üetliberg" >}}
 
 This year actually came with a change in equipment. I swapped out my Hasselblad
 500C/M for a newer 501C, and with the change gained an 80mm CB lens, which which

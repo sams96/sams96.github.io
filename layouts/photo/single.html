@@ -8,14 +8,14 @@
 				 height="{{ .Height }}"
 				 width="{{ .Width }}"
 		         {{- if or .Params.alt .Params.title }}
-                 alt="{{ with .Params.alt }}{{ . }}{{ else }}{{ .Params.title }}{{ end }}"
+                 alt="{{ with .Params.alt | markdownify }}{{ . }}{{ else }}{{ .Params.title | markdownify }}{{ end }}"
 			     {{ end }}
 		    >
 			</a>
 		{{ end }}
 
         <header>
-            <h1>{{ .Title }}</h1>
+            <h1>{{ .Title | markdownify }}</h1>
         </header>
 		<div class="article-date"
 			{{ with .Params.datePosted }} title="Posted {{ . | time.Format "02 Jan 2006" }}" {{ end }}

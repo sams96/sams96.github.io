@@ -2,17 +2,16 @@
 
     <article class="photo">
 		{{ $image := .Resources.Get (.Params.image) }}
-		{{ with $image }}
-			<a href="{{ .RelPermalink }}">
-			<img src="{{ .RelPermalink }}"
-				 height="{{ .Height }}"
-				 width="{{ .Width }}"
+			<a href="{{ $image.RelPermalink }}">
+			<img src="{{ $image.RelPermalink }}"
+				 height="{{ $image.Height }}"
+				 width="{{ $image.Width }}"
 		         {{- if or .Params.alt .Params.title }}
                  alt="{{ with .Params.alt | markdownify }}{{ . }}{{ else }}{{ .Params.title | markdownify }}{{ end }}"
 			     {{ end }}
+				 fetchpriority="high"
 		    >
 			</a>
-		{{ end }}
 
         <header>
             <h1>{{ .Title | markdownify }}</h1>

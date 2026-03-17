@@ -51,15 +51,18 @@
 <meta name="robots" content="index,follow" />
 <meta name="googlebot" content="index,follow" />
 
-<!-- image tags --> <!-- TODO: add image
-{{ with .Params.image }}
-	<meta itemprop="image" content="{{ . | absURL }}" />
-	<meta property="og:image" content="{{ . | absURL }}" />
+<!-- image tags -->
+{{- with .Resources.Get (.Params.image) }}
+	<meta itemprop="image" content="{{ .Permalink }}" />
+	<meta property="og:image" content="{{ .Permalink }}" />
 {{ else }}
-	<meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
-	<meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
-{{ end }}
--->
+	{{- $img := first 1 (findRESubmatch `<img\s.*?src=(?:'|")([^'">]+)(?:'|")` .Content 1) -}}
+	{{- $link := (index (index $img 0) 1) | strings.TrimPrefix "/" }}
+	{{- if $img -}}
+	<meta itemprop="image" content="{{ if not (strings.HasPrefix $link "http") }}{{ .Site.BaseURL }}{{ end }}{{ $link }}" />
+	<meta property="og:image" content="{{ if not (strings.HasPrefix $link "http") }}{{ .Site.BaseURL }}{{ end }}{{ $link }}" />
+	{{- end -}}
+{{- end -}}
 
 <!-- preload fonts -->
 <link rel="preload" href="/fonts/cmunrm.woff2" as="font" type="font/woff2" crossorigin fetchpriority="high">

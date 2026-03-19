@@ -1,9 +1,9 @@
 ---
-title: 'Chatham Green'
-url: /photo/14507
+title: 'Manhattan Bridge'
+url: /photo/14509
 date: 2019-09-17
 datePosted: 2020-03-15
-image: 14507.avif
+image: 14509.avif
 type: photo
 alt: >-
   TODO alt text

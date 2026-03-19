@@ -6,6 +6,8 @@ categories:
 - photography
 tags:
 - photo series
+modifications:
+  2026-03-19: Moved images from flickr to /photo/*
 ---
 
 Just 15 months after I posted my [Singapore Architecture photo
@@ -15,71 +17,27 @@ suggest, I did explore beyond Manhattan but not as much because I found
 Manhattan to be the most interesting photographically.
 
 <div class="diptych">
-<a href="https://www.flickr.com/gp/ss9679/oV1Xud" title="NY01">
-	<img src="https://live.staticflickr.com/65535/49633040842_b33a8b50d1_b.jpg"
-		width="1024" height="1024" alt="NY01">
-</a>
-
-<a href="https://www.flickr.com/gp/ss9679/59PQ07" title="NY02">
-	<img src="https://live.staticflickr.com/65535/49633042192_1daf8dc26a_b.jpg"
-		width="1024" height="1024" alt="NY02">
-</a>
+{{< photo img="14510" >}}
+{{< photo img="14507" >}}
 </div>
 
 <!--more-->
 
-<a href="https://www.flickr.com/gp/ss9679/1p00N3" title="NY03">
-	<img src="https://live.staticflickr.com/65535/49633044712_b783d582a4_b.jpg"
-		width="1024" height="1024" alt="NY03">
-</a>
-
-<a href="https://www.flickr.com/gp/ss9679/2s95CJ" title="NY04">
-	<img src="https://live.staticflickr.com/65535/49632773191_c76ccb258e_b.jpg"
-		width="1024" height="1024" alt="NY04">
-</a>
-
-<a href="https://www.flickr.com/gp/ss9679/mr1M8a" title="NY05">
-	<img src="https://live.staticflickr.com/65535/49632251568_970b164cab_b.jpg"
-		width="1024" height="1024" alt="NY05">
-</a>
-
-<a href="https://www.flickr.com/gp/ss9679/n792pm" title="NY06">
-	<img src="https://live.staticflickr.com/65535/49633042917_f65c674795_b.jpg"
-		width="1024" height="1024" alt="NY06">
-</a>
-
-<a href="https://www.flickr.com/gp/ss9679/43aKc2" title="NY07">
-	<img src="https://live.staticflickr.com/65535/49632771396_7714e8f194_b.jpg"
-		width="1024" height="1024" alt="NY07">
-</a>
-
-<a href="https://www.flickr.com/gp/ss9679/2C2Hg9" title="NY08">
-	<img src="https://live.staticflickr.com/65535/49632250813_62dcfd4714_b.jpg"
-		width="1024" height="1024" alt="NY08">
-</a>
+{{< photo img="14401" >}}
+{{< photo img="14403" >}}
+{{< photo img="14409" >}}
+{{< photo img="14502" >}}
+{{< photo img="14503" >}}
+{{< photo img="14412" >}}
 
 <div class="diptych">
-<a href="https://www.flickr.com/gp/ss9679/Y301v2" title="NY09">
-	<img src="https://live.staticflickr.com/65535/49632251138_4ec3eba940_b.jpg"
-		width="1024" height="1024" alt="NY09">
-</a>
-
-<a href="https://www.flickr.com/gp/ss9679/0A2oSd" title="NY10">
-	<img src="https://live.staticflickr.com/65535/49632247938_030f53014f_b.jpg"
-		width="1024" height="1024" alt="NY10">
-</a>
+{{< photo img="14411" >}}
+{{< photo img="14511" >}}
 </div>
 
 <div class="diptych">
-<a href="https://www.flickr.com/gp/ss9679/6PjzK0" title="NY11">
-	<img src="https://live.staticflickr.com/65535/49632248943_fab5e1c586_b.jpg"
-		width="1024" height="1024" alt="NY11">
-</a>
-
-<a href="https://www.flickr.com/gp/ss9679/pcar39" title="NY12">
-	<img src="https://live.staticflickr.com/65535/49632770811_baae22e15f_b.jpg"
-		width="1024" height="1024" alt="NY12">
-</a>
+{{< photo img="14509" >}}
+{{< photo img="14508" >}}
 </div>
 
 This series was shot with my Hasselblad 500C/M and CF 150mm lens, on Ilford HP5+

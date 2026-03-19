@@ -1,9 +1,9 @@
 ---
-title: 'Chatham Green'
-url: /photo/14507
+title: 'New York Architecture 07'
+url: /photo/14503
 date: 2019-09-17
 datePosted: 2020-03-15
-image: 14507.avif
+image: 14503.avif
 type: photo
 alt: >-
   TODO alt text

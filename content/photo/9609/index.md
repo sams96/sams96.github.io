@@ -1,16 +1,22 @@
 ---
-date: "2018-09-03"
-title: Scrap Collectors
-url: /scrap-collectors
-categories:
-- photography
-tags:
+title: 'Scrap Collectors'
+url: /photo/9609
+aliases:
+  - /scrap-collectors
+date: 2018-06-25
+datePosted: 2018-09-03
+image: 9609.avif
+type: photo
+alt: >-
+  TODO alt text
+
+metadata:
+  camera: Hasselblad 500C/M
+  lens: Zeiss Sonnar 150mm f/4 CF
+  film: Ilford HP5+ @ 800
+  location:
+    - Hong Kong
 ---
-<a href="https://www.flickr.com/photos/ss9679/29518221107/in/dateposted/"
-		title="Scrap Collectors">
-	<img src="https://farm2.staticflickr.com/1894/29518221107_09a9ff1bfa_b.jpg"
-			alt="Scrap Collectors">
-</a>
 
 I took this photo in Ma Tau Kok, Hong Kong on the way to visit the Kowloon
 Walled City Park. I don't really remember much about my intentions behind the
@@ -26,4 +32,3 @@ guy, especially his head, blends into the background a bit.
 
 I don't actually know if they are scrap collectors, but that's what it looks
 like to me.
-<!--more-->

@@ -19,7 +19,7 @@
 		<div class="article-date"
 			{{ with .Params.datePosted }} title="Posted {{ . | time.Format "02 Jan 2006" }}" {{ end }}
 		>
-			{{- .Params.date.Format "02 Jan 2006" }}
+		{{ with .Params.date }}<time datetime="{{ .Format "2006-01-02" }}">{{- .Format "02 Jan 2006" }}</time>{{ end }}
 		</div>
 
         <div class="content">

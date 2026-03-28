@@ -1,6 +1,6 @@
     {{ if .Params.date }}
 	<div class="article-date">
-		{{- .Params.date.Format "02 Jan 2006" }}
+		{{ with .Params.date }}<time datetime="{{ .Format "2006-01-02" }}">{{- .Format "02 Jan 2006" }}</time>{{ end }}
 		{{- if .Params.modifications }}
 			<span title="{{- range $k, $v := .Params.modifications }} {{ $k }}: {{ $v }}&#013;{{- end }}">
 				{{ $dates := slice }}
@@ -8,8 +8,8 @@
 					{{ $dates = append $k $dates }}
 				{{- end -}}
 				{{ $dates = $dates | collections.Reverse }}
-				(Last edit. {{ (index $dates 0) | time.Format "02 Jan 2006" -}})
+				{{ with (index $dates 0) }} (last edit <time datetime="{{ . | time.Format "2006-01-02" -}}">{{ . | time.Format "02 Jan 2006" -}})</time>{{ end }}
 			</span>
 		{{- end -}}
 	</div>
-     {{ end }}
+    {{ end }}

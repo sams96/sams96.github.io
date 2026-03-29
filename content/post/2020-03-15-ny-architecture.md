@@ -11,7 +11,7 @@ modifications:
 ---
 
 Just 15 months after I posted my [Singapore Architecture photo
-series](/singaporean-architecture), I have decided to revisit this theme with
+series]({{< relref "post/2018-12-02-singapore.md" >}}), I have decided to revisit this theme with
 some photos I took in New York last September. Despite what this series might
 suggest, I did explore beyond Manhattan but not as much because I found
 Manhattan to be the most interesting photographically.

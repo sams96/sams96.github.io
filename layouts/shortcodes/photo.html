@@ -11,7 +11,7 @@
          {{- end -}}
 		 {{- if or $page.Params.alt (.Get "caption") }}
          alt="{{ with $page.Params.alt }}{{ . }}{{ else }}{{ .Get "caption" | markdownify | plainify }}{{ end }}"
-         {{- end -}}
+         {{- end }}
 		 height="{{ $image.Height }}"
 		 width="{{ $image.Width }}"
 		 {{- with .Get "loading" | default "lazy" }} loading="{{ . }}" {{ end -}}

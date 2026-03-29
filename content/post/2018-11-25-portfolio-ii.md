@@ -8,12 +8,12 @@ tags:
 - portfolio
 ---
 
-This set of images begins where the [last portfolio](/portfolio-i) leaves off
-and primarily shows my travels during the summer of 2017, with the last image
-being the only one outside of that. I have again chosen to stick to black and
-white images taken with my Hasselblad for consistency, and because it's what I
-primarily use. I am planning on doing one of these with the colour photos that
-I've taken since I started shooting square format.
+This set of images begins where the [last portfolio]({{< relref "2018-11-09-portfolio-i.md" >}})
+leaves off and primarily shows my travels during the summer of 2017, with the
+last image being the only one outside of that. I have again chosen to stick to
+black and white images taken with my Hasselblad for consistency, and because
+it's what I primarily use. I am planning on doing one of these with the colour
+photos that I've taken since I started shooting square format.
 <!--more-->
 
 {{< myfig src="https://farm5.staticflickr.com/4881/45260077484_a20909e0ac_b.jpg"

@@ -1,5 +1,5 @@
 ---
-title: 'Singaporean Architecture'
+title: 'Singaporean Architecture 01'
 url: /photo/8908
 date: 2018-06-14
 datePosted: 2018-12-02

@@ -6,7 +6,9 @@ datePosted: 2020-11-22
 image: 14110.avif
 type: photo
 alt: >-
-  TODO alt text
+  A wooden door in a concrete wall left of centre, to the right cornered steps
+  rising up two thids of the way up the frame with dark trees in in the
+  background above, black and white
 
 metadata:
   camera: Hasselblad 500C/M

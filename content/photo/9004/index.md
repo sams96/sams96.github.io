@@ -6,7 +6,8 @@ datePosted: 2018-12-02
 image: 9004.avif
 type: photo
 alt: >-
-  TODO alt text
+  A small sections of a modern building, with lots of glass, some pillars and
+  thin beams connecting them, black and white
 
 metadata:
   camera: Hasselblad 500C/M

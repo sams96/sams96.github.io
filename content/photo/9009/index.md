@@ -6,7 +6,8 @@ datePosted: 2018-12-02
 image: 9009.avif
 type: photo
 alt: >-
-  TODO alt text
+  Part of a large modernist building with many pillars, white panels and wide
+  strips of windows angled downwards, in black and white
 
 metadata:
   camera: Hasselblad 500C/M

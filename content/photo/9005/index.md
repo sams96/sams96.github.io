@@ -6,7 +6,8 @@ datePosted: 2018-12-02
 image: 9005.avif
 type: photo
 alt: >-
-  TODO alt text
+  A footbridge between two sections of a large residential building, black and
+  white
 
 metadata:
   camera: Hasselblad 500C/M

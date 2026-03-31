@@ -25,7 +25,9 @@
 				{{ range (sort (where .Pages "Type" $type) "Params.date" "desc").ByParam "Params.image" }}
 					{{ if (ne .Params.hidden true) }}
 						<a href="{{ .RelPermalink }}">
-						{{ with .Resources.GetMatch (.Params.image) }}
+						{{ with .Resources.GetMatch (printf "%s-thumb.avif" (.File.ContentBaseName) | printf "%s") }}
+							<img src="{{ .RelPermalink }}">
+						{{ else with .Resources.GetMatch (.Params.image) }}
 							<img src="{{ .RelPermalink }}">
 						{{ end }}
 						</a>

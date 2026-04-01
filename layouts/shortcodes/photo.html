@@ -4,7 +4,9 @@
 {{- $page := site.GetPage (printf "photo/%s" (.Get "img") | printf "%s") }}
 {{- $image := $page.Resources.Get $page.Params.image }}
 <figure{{ with .Get "class" }} class="{{ . }}"{{ end }}>
-	<a href="{{ $page.RelPermalink }}">
+	<a href="{{ $page.RelPermalink }}"
+   	 {{- with .Get "name" }} name="{{ . }}" {{ end -}}
+    >
 	<img src="{{ $image.RelPermalink }}"
 		 {{- if or $page.Params.title (.Get "caption") }}
          title="{{ with (.Get "caption") | markdownify | plainify  }}{{ . }}{{ else }}{{ $page.Params.title }}{{ end }}"

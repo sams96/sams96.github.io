@@ -6,6 +6,8 @@ categories:
 - photography
 tags:
 - portfolio
+modifications:
+  2026-04-02: Moved images from flickr to /photo/*
 ---
 
 This set of images begins where the [last portfolio]({{< relref "2018-11-09-portfolio-i.md" >}})
@@ -16,42 +18,18 @@ it's what I primarily use. I am planning on doing one of these with the colour
 photos that I've taken since I started shooting square format.
 <!--more-->
 
-{{< myfig src="https://farm5.staticflickr.com/4881/45260077484_a20909e0ac_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/45260077484/" alt="Untitled"
-	caption="Untitled" >}}
-{{< myfig src="https://farm1.staticflickr.com/784/39727749280_d721b89617_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/39727749280/" alt="West Lake"
-	caption="West Lake" >}}
-{{< myfig src="https://farm1.staticflickr.com/786/27601292798_65e7e77c6a_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/27601292798/" alt="Great Wall"
-	caption="Great Wall" >}}
-{{< myfig src="https://farm5.staticflickr.com/4464/37747419706_337c3f2323_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/37747419706/" alt="Koishikawa K&#333;rakuen Garden"
-	caption="Koishikawa K&#333;rakuen Garden" >}}
-{{< myfig src="https://farm5.staticflickr.com/4814/30891949597_b239a7a1c4_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/30891949597/" alt="Tensouchi"
-	caption="Tensouchi" >}}
-{{< myfig src="https://farm2.staticflickr.com/1969/45808891812_7435c22ef9_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/45808891812/" alt="Red Gum"
-	caption="Red Gum" >}}
-{{< myfig src="https://farm2.staticflickr.com/1760/40922135730_59023441f1_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/40922135730/" alt="Tasman Island"
-	caption="Tasman Island" >}}
-{{< myfig src="https://farm5.staticflickr.com/4908/45907948121_ecbe1aa947_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/45907948121/" alt="Lake Gordon"
-	caption="Lake Gordon" >}}
-{{< myfig src="https://farm5.staticflickr.com/4601/38932945371_c58686ce45_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/38932945371/" alt="Adelaide Palm House"
-	caption="Adelaide Palm House" >}}
-{{< myfig src="https://farm5.staticflickr.com/4902/44144817870_e5b6b0696b_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/44144817870/" alt="Escalators"
-	caption="Escalators" >}}
-{{< myfig src="https://farm5.staticflickr.com/4691/39470041022_912d3cfdc4_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/39470041022/" alt="Ulsanbawi"
-	caption="Ulsanbawi" >}}
-{{< myfig src="https://farm5.staticflickr.com/4896/44977963555_6bbb65fe79_b.jpg"
-	link="https://www.flickr.com/photos/ss9679/44977963555/" alt="Clifton Boulevard"
-	caption="Clifton Boulevard" >}}
+{{< photo img="4707" caption="蒙自西路 West Mengzi Road" >}}
+{{< photo img="4807" caption="West Lake" >}}
+{{< photo img="4811" caption="Great Wall" >}}
+{{< photo img="5101" caption="Koishikawa K&#333;rakuen Garden" >}}
+{{< photo img="5104" caption="Tensouchi" >}}
+{{< photo img="5305" caption="Red Gum" >}}
+{{< photo img="5802" caption="Tasman Island" >}}
+{{< photo img="5805" caption="Lake Gordon" >}}
+{{< photo img="5906" caption="Adelaide Palm House" >}}
+{{< photo img="6002" caption="Escalators" >}}
+{{< photo img="6007" caption="Ulsanbawi" >}}
+{{< photo img="6609" caption="Clifton Boulevard" >}}
 
 All of these images were shot on Ilford HP5+, and all but the last one pushed to
 ISO 800, which has become something of a default for me. Also, all [but

@@ -1,7 +1,6 @@
 ---
 title: "Why I Like Small Keyboards"
 date: null
-draft: true
 url: /small-keyboards
 build:
   list: never

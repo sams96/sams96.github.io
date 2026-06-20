@@ -623,3 +623,19 @@ dd {
     text-decoration: none;
     color: #333;
 }
+
+
+kbd {
+	background-color: #eeeeee;
+	border-radius: 3px;
+	border: 1px solid #b4b4b4;
+	box-shadow:
+		0 1px 1px rgb(0 0 0 / 0.2),
+		0 1px 0 0 rgb(255 255 255 / 0.7) inset;
+	color: #333333;
+	font-size: 0.85em;
+	font-weight: bold;
+	line-height: 1;
+	padding: 2px 4px;
+	white-space: nowrap;
+}

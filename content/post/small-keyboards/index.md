@@ -7,7 +7,8 @@ build:
   render: always
 ---
 
-TODO intro
+I use my keyboards a lot, my job as a software engineer involves quite a lot of
+typing, I also spend quite a lot of my spare time in front of a computer.
 
 <!--more-->
 
@@ -19,8 +20,6 @@ difficult by the blank key caps I'd chosen (mostly because they were the
 cheapest available). I kept using it for a while but would increasingly switch
 back to my 60% board (for _DotA_) until the Atreus just stayed in the drawer.
 
-{{< myfig src="corne.avif" caption="TODO" >}}
-
 In 2020 I learned of the Corne keyboard[^corne], a 42 key split keyboard. I also
 got my first software job at around the same time which felt like a good excuse
 for a new keyboard, so I ordered some PCBs from China and got to work ripping
@@ -29,7 +28,8 @@ split layout and having less time to play _DotA_ meant the Corne stuck around. I
 also find the 3x6 layout and 3 thumb keys much more comfortable than the Atreus’
 4x5 layout with one thumb key.
 
-## Okay, but why?
+{{< myfig src="corne.avif" caption="One of my later Cornes"
+	alt="A split, tented, 42 key computer keyboard" >}}
 
 The argument I most commonly see against small keyboards is something along the
 lines of “I’m a programmer I need access to all those symbols” or “I use the F

@@ -2,15 +2,31 @@
 
     <h1>{{ i18n .Title }}</h1>
 
-    <ul class="terms">
-        {{ range $key, $value := .Data.Terms }}
-        <li>
-            <a href="{{ (print $.Data.Plural "/" $key) | absURL }}">
-            {{ $key }}
-            </a>
-            ({{ len $value }})
-        </li>
-        {{ end }}
-    </ul>
-
+	{{ range $term, $pages := .Site.Taxonomies.categories }}
+		<h2 class="post-fist">
+            <a href="{{ (print $.Data.Plural "/" $term) | absURL }}">
+				{{ title $term }}
+			</a>
+		</h2>
+		{{ range first 5 $pages }}
+			{{ if (ne .Params.hidden true) }}
+				<div class="post-short-list">
+					<header>
+						<h2>
+							<a href="{{ .RelPermalink }}">{{ .Title }}</a>
+						</h2>
+					</header>
+					{{ partial "articleInfoDate.html" . }}
+					{{ partial "articleInfoFull.html" . }}
+				</div>
+			{{ end }}
+		{{ end }}
+		{{ if (gt (len $pages) 5) }}
+			<div class="read-more">
+				<a href="{{ (print $.Data.Plural "/" $term) | absURL }}">
+					See more
+				</a>
+			</div>
+		{{ end }}
+	{{ end }}
 {{ end }}

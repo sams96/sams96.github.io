@@ -639,3 +639,9 @@ kbd {
 	padding: 2px 4px;
 	white-space: nowrap;
 }
+
+.post-fist a {
+    border: none;
+    text-decoration: none;
+    color: #333;
+}

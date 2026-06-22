@@ -37,15 +37,15 @@ menu:
       url: /categories/
       weight: 0
 
-    - identifier: tags
-      name: Tags
-      title: Tags
-      url: /tags/
-      weight: 1
+    # - identifier: tags
+    #   name: Tags
+    #   title: Tags
+    #   url: /tags/
+    #   weight: 1
 
 taxonomies:
   category: categories
-  tag: tags
+  # tag: tags
 
 markup:
   highlight:
@@ -62,6 +62,6 @@ markup:
 
 languages:
   en:
-    languageName: "English"
-    languagecode: "en-gb"
+    locale: "English"
+    label: "en-gb"
     weight: 1

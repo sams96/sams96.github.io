@@ -9,17 +9,7 @@
 			</a>
 		</h2>
 		{{ range first 5 $pages }}
-			{{ if (ne .Params.hidden true) }}
-				<div class="post-short-list">
-					<header>
-						<h2>
-							<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-						</h2>
-					</header>
-					{{ partial "articleInfoDate.html" . }}
-					{{ partial "articleInfoFull.html" . }}
-				</div>
-			{{ end }}
+			{{ partial "postShortList.html" . }}
 		{{ end }}
 		{{ if (gt (len $pages) 5) }}
 			<div class="read-more">

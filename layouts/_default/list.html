@@ -23,17 +23,7 @@
 
 			{{ $.Scratch.Set "count" 1 }}
 				{{ range (where .Pages "Type" $type) }}
-					{{ if (ne .Params.hidden true) }}
-						<div class="post-short-list">
-							<header>
-								<h2>
-									<a href="{{ .RelPermalink }}">{{ .Title }}</a>
-								</h2>
-							</header>
-							{{ partial "articleInfoDate.html" . }}
-							{{ partial "articleInfoFull.html" . }}
-						</div>
-					{{ end }}
+					{{ partial "postShortList.html" . }}
 				{{ end }}
 			{{ end }}
 		{{ end }}

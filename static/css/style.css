@@ -259,10 +259,6 @@ main h1 {
     font-weight: 600;
 }
 
-.post-short-list:first-of-type {
-    margin-top: 1em;
-}
-
 /* Articles */
 
 article:not(:last-of-type) {

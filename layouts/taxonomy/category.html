@@ -7,8 +7,8 @@
 			<a href="{{ .Permalink }}" style="margin-left: 1em">RSS feed</a>
 		{{ end }}
     </div>
-    {{ range .Data.Pages }}
-		{{ partial "postList.html" . }}
-    {{ end }}
+	{{ range .Data.Pages }}
+			{{ partial "postList.html" . }}
+	{{ end }}
 
 {{ end }}

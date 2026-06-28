@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hardware on Sam Smith</title><link>https://samsm.ch/categories/hardware/</link><description>Recent content in Hardware on Sam Smith</description><generator>Hugo</generator><language>English</language><lastBuildDate>Sun, 28 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://samsm.ch/categories/hardware/index.xml" rel="self" type="application/rss+xml"/><item><title>Why I Like Small Keyboards</title><link>https://samsm.ch/small-keyboards/</link><pubDate>Sun, 28 Jun 2026 00:00:00 +0000</pubDate><guid>https://samsm.ch/small-keyboards/</guid><description>&lt;p&gt;I use my keyboards a lot, my job as a software engineer involves quite a lot of
+typing, I also spend quite a lot of my spare time in front of a computer. I&amp;rsquo;ve
+been daily driving small keyboards for a while and have been enjoying doing so.
+Here&amp;rsquo;s a bit about which keyboards and why I like them.&lt;/p&gt;
+&lt;/br&gt;
+&lt;p&gt;I built my first keyboard in 2014, a 44 key
+&lt;a href="https://github.com/ryantm/atreus"&gt;Atreus&lt;/a&gt;. I used my school&amp;rsquo;s laser cutter to
+cut sheets of clear acrylic for the case, hand-wired all the keys and diodes to
+a microcontroller board, and made liberal use of a hot glue gun. I spent a good
+while learning the layout, which was made more difficult by the blank key caps
+I&amp;rsquo;d chosen &amp;ndash; mostly because they were the cheapest available. I kept using it
+for a while but would increasingly switch back to a more standard 60%&lt;sup id="fnref:1"&gt;&lt;a href="#fn:1" class="footnote-ref" role="doc-noteref"&gt;1&lt;/a&gt;&lt;/sup&gt;
+board, I was playing a lot of &lt;em&gt;DotA&lt;/em&gt; at the time which was tricky with the
+smaller keyboard, until the Atreus just stayed in the drawer.&lt;/p&gt;
+&lt;p&gt;In 2020 I found out about the &lt;a href="https://github.com/foostan/crkbd"&gt;Corne
+keyboard&lt;/a&gt;, a 42 key split keyboard. I also got
+my first software job at around the same time which felt like a good excuse for
+a new keyboard, so got to work ripping apart the old Atreus for its switches and
+key caps, and since custom PCBs have gotten a lot cheaper I could get both a
+nice tidy circuit board as well as a sort of case made the same way&lt;sup id="fnref:2"&gt;&lt;a href="#fn:2" class="footnote-ref" role="doc-noteref"&gt;2&lt;/a&gt;&lt;/sup&gt;. Both
+the improved ergonomics of the split layout and me having less time for and
+interest in &lt;em&gt;DotA&lt;/em&gt; meant the Corne stuck around. I also find the 3x6 layout and
+3 thumb keys per side much more comfortable than the Atreus’ 4x5 layout with one
+thumb key.&lt;/p&gt;
+&lt;figure&gt;
+	&lt;img src="corne.avif"
+ alt="A split, tented, 42 key computer keyboard" loading="lazy" /&gt; &lt;figcaption&gt;
+ &lt;p&gt;One of my later Cornes&lt;/p&gt;
+ &lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The argument I most commonly see against small keyboards is something along the
+lines of &amp;ldquo;I’m a programmer, I need access to all those symbols&amp;rdquo; or &amp;ldquo;I use the
+function keys all the time&amp;rdquo;. To me this argument seems backwards, you want the
+keys you use the most to be as close to the home row as possible, meaning that
+you don’t need to move your entire hand to reach them.&lt;/p&gt;
+&lt;p&gt;For example, to press the opening bracket &lt;kbd&gt;(&lt;/kbd&gt; key, something I’ve been
+doing a lot of since I started writing Clojure professionally last year, on a
+standard keyboard you hold the shift key with your pinky and then reach two rows
+up from the home row to press the &lt;kbd&gt;9&lt;/kbd&gt; key. To do the same on my Corne,
+I hold the &lt;kbd&gt;lower&lt;/kbd&gt; key with my left thumb to activate the lower layer,
+and then press the &lt;kbd&gt;o&lt;/kbd&gt; key just one row away from home with my right
+ring finger, which is much more comfortable.&lt;/p&gt;
+&lt;p&gt;Or as another example, instead of having to reach three rows up from the home
+row to the function row, which for me means moving my entire hand, with my corne
+I simply hold the &lt;kbd&gt;raise&lt;/kbd&gt; key to activate the upper layer and then I
+have access to all of the function keys easily.&lt;/p&gt;
+&lt;p&gt;The big downside to using a keyboard like this is learning where all these keys
+are, particularly the ones you don’t use very often. Having the symbols and
+function keys you do use often available on another layer close to the home row
+is great, but for the keys you don’t use often it&amp;rsquo;s nice to be able to look down
+and just see that key, reach over and press it. Standard keyboards optimise for
+accessability and ease of use, having more keys means it&amp;rsquo;s easier to know where
+to find everything. A smaller keyboard makes more sense for those willing to
+learn the layout in order to type more efficiently&lt;sup id="fnref:3"&gt;&lt;a href="#fn:3" class="footnote-ref" role="doc-noteref"&gt;3&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+&lt;/br&gt;
+&lt;p&gt;Some people take this idea further, with 36 key keyboards that eschew the outer
+most column of keys to reduce the burden on the pinkies. There are tricks to get
+more utility out of the most accessable keys, like using &lt;a href="https://precondition.github.io/home-row-mods"&gt;home row
+modifiers&lt;/a&gt;. I haven&amp;rsquo;t tried going
+that far yet but it is interesting &amp;ndash; I have found 42 keys to be a sweet spot
+giving both the benefits I&amp;rsquo;ve explained above, as well as being similar enough
+to a standard keyboard that it hasn&amp;rsquo;t impacted my ability to type on anything
+else.&lt;/p&gt;
+&lt;div class="footnotes" role="doc-endnotes"&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;Keyboards are often sized using percentages. A standard full sized
+keyboard has just over 100 keys, so the percentage reflects roughly how many
+keys the board has.&amp;#160;&lt;a href="#fnref:1" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:2"&gt;
+&lt;p&gt;I say &lt;em&gt;sort of case&lt;/em&gt; because it was just a top plate and base plate
+made like circuit boards just without any actual circuits printed on them.
+The sides were left open.&amp;#160;&lt;a href="#fnref:2" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id="fn:3"&gt;
+&lt;p&gt;I&amp;rsquo;m not someone that&amp;rsquo;s typing numbers into a spreadsheet all day but
+for those people that are a numpad is useful. If I needed one I would add a
+dedicated numpad next to my small keyboard, rather than switch back to full
+size.&amp;#160;&lt;a href="#fnref:3" class="footnote-backref" role="doc-backlink"&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</description></item></channel></rss>

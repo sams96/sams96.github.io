@@ -61,6 +61,11 @@ nav,
 section,
 summary {
 	display: block;
+
+	sup {
+		vertical-align: top;
+		font-size: 0.6em;
+	}
 }
 
 .container {
@@ -636,8 +641,11 @@ kbd {
 	white-space: nowrap;
 }
 
-.post-fist a {
-    border: none;
-    text-decoration: none;
-    color: #333;
+.post-fist {
+	margin-bottom: 0.3em;
+	a {
+		border: none;
+		text-decoration: none;
+		color: #333;
+	}
 }

@@ -42,7 +42,7 @@ thumb key.
 	made like circuit boards just without any actual circuits printed on them.
 	The sides were left open.
 
-{{< myfig src="corne.avif" caption="One of my later Cornes"
+{{< myfig src="small-keyboards/corne.avif" caption="One of my later Cornes"
 	alt="A split, tented, 42 key computer keyboard" >}}
 
 The argument I most commonly see against small keyboards is something along the

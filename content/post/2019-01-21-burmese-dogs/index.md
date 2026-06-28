@@ -26,25 +26,25 @@ during July 2018. I found the similarities between Burma as I visited it and how
 George Orwell wrote about it to be quite interesting, especially with regards to
 the dogs.
 
-{{< myfig src="burmese-dogs-02.jpg" >}}
+{{< myfig src="/burmese-dogs/burmese-dogs-02.jpg" >}}
 
-{{< myfig src="burmese-dogs-03.jpg" >}}
+{{< myfig src="/burmese-dogs/burmese-dogs-03.jpg" >}}
 
-{{< myfig src="burmese-dogs-04.jpg" >}}
+{{< myfig src="/burmese-dogs/burmese-dogs-04.jpg" >}}
 
-{{< myfig src="burmese-dogs-05.jpg" >}}
+{{< myfig src="/burmese-dogs/burmese-dogs-05.jpg" >}}
 
-{{< myfig src="burmese-dogs-06.jpg" >}}
+{{< myfig src="/burmese-dogs/burmese-dogs-06.jpg" >}}
 
-{{< myfig src="burmese-dogs-07.jpg" >}}
+{{< myfig src="/burmese-dogs/burmese-dogs-07.jpg" >}}
 
-{{< myfig src="burmese-dogs-08.jpg" >}}
+{{< myfig src="/burmese-dogs/burmese-dogs-08.jpg" >}}
 
 <div class="diptych">
-{{< myfig src="burmese-dogs-09.jpg" >}}
-{{< myfig src="burmese-dogs-10.jpg" >}}
+{{< myfig src="/burmese-dogs/burmese-dogs-09.jpg" >}}
+{{< myfig src="/burmese-dogs/burmese-dogs-10.jpg" >}}
 </div>
 
-{{< myfig src="burmese-dogs-11.jpg" >}}
+{{< myfig src="/burmese-dogs/burmese-dogs-11.jpg" >}}
 
-{{< myfig src="burmese-dogs-12.jpg" >}}
+{{< myfig src="/burmese-dogs/burmese-dogs-12.jpg" >}}

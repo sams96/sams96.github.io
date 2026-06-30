@@ -1,6 +1,6 @@
 ---
 title: 'Edgeland Nottingham 23'
-url: /photo/6311
+url: /photos/6311
 date: 2017-10-23
 datePosted: 2020-03-29
 image: 6311.avif

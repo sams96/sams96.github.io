@@ -1,6 +1,6 @@
 ---
 title: 'Adelaide Palm House'
-url: /photo/5906
+url: /photos/5906
 date: 2017-08-24
 datePosted: 2018-11-25
 image: 5906.avif

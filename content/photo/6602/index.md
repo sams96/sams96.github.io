@@ -1,6 +1,6 @@
 ---
 title: 'Edgeland Nottingham 05'
-url: /photo/6602
+url: /photos/6602
 date: 2017-11-08
 datePosted: 2020-03-29
 image: 6602.avif

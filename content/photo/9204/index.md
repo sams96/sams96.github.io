@@ -1,6 +1,6 @@
 ---
 title: 'Macaque'
-url: /photo/9204
+url: /photos/9204
 date: 2018-06-20
 datePosted: 2019-06-18
 image: 9204.avif

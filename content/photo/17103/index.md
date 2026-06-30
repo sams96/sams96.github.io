@@ -1,6 +1,6 @@
 ---
 title: 'Melchsee'
-url: /photo/17103
+url: /photos/17103
 date: 2020-09-30
 datePosted: 2021-12-19
 image: 17103.avif

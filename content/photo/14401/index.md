@@ -1,6 +1,6 @@
 ---
 title: 'New York Architecture 03'
-url: /photo/14401
+url: /photos/14401
 date: 2019-09-16
 datePosted: 2020-03-15
 image: 14401.avif

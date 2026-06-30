@@ -1,6 +1,6 @@
 ---
 title: 'Escalators'
-url: /photo/6002
+url: /photos/6002
 date: 2017-09-03
 datePosted: 2018-11-25
 image: 6002.avif

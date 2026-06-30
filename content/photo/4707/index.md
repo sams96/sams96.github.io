@@ -1,6 +1,6 @@
 ---
 title: '蒙自西路 West Mengzi Road'
-url: /photo/4707
+url: /photos/4707
 date: 2017-06-11
 datePosted: 2018-11-25
 image: 4707.avif

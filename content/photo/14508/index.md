@@ -1,6 +1,6 @@
 ---
 title: 'Brooklyn Bridge'
-url: /photo/14508
+url: /photos/14508
 date: 2019-09-17
 datePosted: 2020-03-15
 image: 14508.avif

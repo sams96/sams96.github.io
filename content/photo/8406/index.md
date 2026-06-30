@@ -1,6 +1,6 @@
 ---
 title: 'Subways 02'
-url: /photo/8406
+url: /photos/8406
 date: 2018-05-01
 datePosted: 2018-09-07
 image: 8406.avif

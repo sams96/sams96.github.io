@@ -1,6 +1,6 @@
 ---
 title: 'Fernsehturm &Uuml;etliburg'
-url: /photo/17304
+url: /photos/17304
 date: 2020-11-29
 datePosted: 2021-12-19
 image: 17304.avif

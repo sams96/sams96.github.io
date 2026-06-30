@@ -1,6 +1,6 @@
 ---
 title: 'Tensouchi'
-url: /photo/5104
+url: /photos/5104
 date: 2017-06-29
 datePosted: 2018-11-25
 image: 5104.avif

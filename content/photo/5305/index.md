@@ -1,6 +1,6 @@
 ---
 title: 'Red Gum'
-url: /photo/5305
+url: /photos/5305
 date: 2017-07-17
 datePosted: 2018-11-25
 image: 5305.avif

@@ -1,6 +1,6 @@
 ---
 title: 'Brinklow Tower'
-url: /photo/12609
+url: /photos/12609
 date: 2019-01-02
 datePosted: 2020-11-22
 image: 12609.avif

@@ -1,6 +1,6 @@
 ---
 title: 'Edgeland Nottingham 19'
-url: /photo/7106
+url: /photos/7106
 date: 2018-01-28
 datePosted: 2020-03-29
 image: 7106.avif

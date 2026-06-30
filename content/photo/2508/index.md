@@ -1,6 +1,6 @@
 ---
 title: 'Under the Bridge'
-url: /photo/2508
+url: /photos/2508
 date: 2016-04-14
 datePosted: 2018-11-09
 image: 2508.avif

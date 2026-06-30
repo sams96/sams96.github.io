@@ -1,6 +1,6 @@
 ---
 title: 'Scrap Collectors'
-url: /photo/9609
+url: /photos/9609
 aliases:
   - /scrap-collectors
 date: 2018-06-25

@@ -1,6 +1,6 @@
 ---
 title: 'Schlittelweg Üetliberg'
-url: /photo/17306
+url: /photos/17306
 date: 2020-11-29
 datePosted: 2021-12-19
 image: 17306.avif

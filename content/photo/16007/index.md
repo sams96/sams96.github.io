@@ -1,6 +1,6 @@
 ---
 title: 'Huajiang Riverside Park'
-url: /photo/16007
+url: /photos/16007
 date: 2019-12-02
 datePosted: 2020-11-22
 image: 16007.avif

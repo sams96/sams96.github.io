@@ -1,6 +1,6 @@
 ---
 title: 'Subways 01'
-url: /photo/8405
+url: /photos/8405
 date: 2018-05-01
 datePosted: 2018-09-07
 image: 8405.avif

@@ -1,6 +1,6 @@
 ---
 title: 'Great Wall'
-url: /photo/4811
+url: /photos/4811
 date: 2017-06-20
 datePosted: 2018-11-25
 image: 4811.avif

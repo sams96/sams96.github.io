@@ -1,6 +1,6 @@
 ---
 title: 'Standout 03'
-url: /photo/20301
+url: /photos/20301
 date: 2021-09-21
 datePosted: 2025-07-20
 image: 20301.avif

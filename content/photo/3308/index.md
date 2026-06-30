@@ -1,6 +1,6 @@
 ---
 title: ''
-url: /photo/3308
+url: /photos/3308
 date: 2016-07-17
 datePosted: 2018-11-09
 image: 3308.avif

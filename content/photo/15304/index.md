@@ -1,6 +1,6 @@
 ---
 title: 'Hualien Breakwater'
-url: /photo/15304
+url: /photos/15304
 date: 2019-11-04
 datePosted: 2020-11-22
 image: 15304.avif

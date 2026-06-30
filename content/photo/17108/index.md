@@ -1,6 +1,6 @@
 ---
 title: 'Balconies I'
-url: /photo/17108
+url: /photos/17108
 date: 2020-10-08
 datePosted: 2021-12-19
 image: 17108.avif

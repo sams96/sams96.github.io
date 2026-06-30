@@ -1,6 +1,6 @@
 ---
 title: 'New York Architecture 01'
-url: /photo/14510
+url: /photos/14510
 date: 2019-09-17
 datePosted: 2020-03-15
 image: 14510.avif

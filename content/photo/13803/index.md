@@ -1,6 +1,6 @@
 ---
 title: 'Wollaton Deer'
-url: /photo/13803
+url: /photos/13803
 date: 2019-05-30
 datePosted: 2020-11-22
 image: 13803.avif

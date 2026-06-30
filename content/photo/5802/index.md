@@ -1,6 +1,6 @@
 ---
 title: 'Tasman Island'
-url: /photo/5802
+url: /photos/5802
 date: 2017-08-13
 datePosted: 2018-11-25
 image: 5802.avif

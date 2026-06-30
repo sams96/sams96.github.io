@@ -1,6 +1,6 @@
 ---
 title: 'Two Leaves'
-url: /photo/8101
+url: /photos/8101
 date: 2018-04-12
 datePosted: 2019-06-18
 image: 8101.avif

@@ -1,6 +1,6 @@
 ---
 title: 'Singaporean Architecture 08'
-url: /photo/8909
+url: /photos/8909
 date: 2018-06-14
 datePosted: 2018-12-02
 image: 8909.avif

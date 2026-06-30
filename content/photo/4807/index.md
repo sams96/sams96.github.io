@@ -1,6 +1,6 @@
 ---
 title: 'West Lake'
-url: /photo/4807
+url: /photos/4807
 date: 2017-06-17
 datePosted: 2018-11-25
 image: 4807.avif

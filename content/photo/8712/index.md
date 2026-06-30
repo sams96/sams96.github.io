@@ -1,6 +1,6 @@
 ---
 title: 'Subways 12'
-url: /photo/8712
+url: /photos/8712
 date: 2018-05-12
 datePosted: 2018-09-07
 image: 8712.avif

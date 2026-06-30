@@ -1,6 +1,6 @@
 ---
 title: 'Yuzhong'
-url: /photo/10906
+url: /photos/10906
 date: 2018-08-16
 datePosted: 2019-06-18
 image: 10906.avif

@@ -1,6 +1,6 @@
 ---
 title: 'Standout 02'
-url: /photo/23510
+url: /photos/23510
 date: 2024-05-12
 datePosted: 2025-07-20
 image: 23510.avif

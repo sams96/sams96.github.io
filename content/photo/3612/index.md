@@ -1,6 +1,6 @@
 ---
 title: 'Matterhorn'
-url: /photo/3612
+url: /photos/3612
 date: 2016-07-30
 datePosted: 2018-11-09
 image: 3612.avif

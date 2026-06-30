@@ -1,6 +1,6 @@
 ---
 title: 'Bickenhill Plantation'
-url: /photo/4408
+url: /photos/4408
 date: 2017-04-16
 datePosted: 2018-11-09
 image: 4408.avif

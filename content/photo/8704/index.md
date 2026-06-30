@@ -1,6 +1,6 @@
 ---
 title: 'Subways 04'
-url: /photo/8704
+url: /photos/8704
 date: 2018-05-12
 datePosted: 2018-09-07
 image: 8704.avif

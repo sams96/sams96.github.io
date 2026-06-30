@@ -1,6 +1,6 @@
 ---
 title: 'Tarn Hows Road'
-url: /photo/4609
+url: /photos/4609
 date: 2017-04-30
 datePosted: 2018-11-09
 image: 4609.avif

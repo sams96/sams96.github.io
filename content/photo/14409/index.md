@@ -1,6 +1,6 @@
 ---
 title: 'New York Architecture 05'
-url: /photo/14409
+url: /photos/14409
 date: 2019-09-16
 datePosted: 2020-03-15
 image: 14409.avif

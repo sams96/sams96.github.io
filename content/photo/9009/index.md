@@ -1,6 +1,6 @@
 ---
 title: 'Singaporean Architecture 05'
-url: /photo/9009
+url: /photos/9009
 date: 2018-06-15
 datePosted: 2018-12-02
 image: 9009.avif

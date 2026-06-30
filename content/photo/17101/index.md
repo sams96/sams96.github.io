@@ -1,6 +1,6 @@
 ---
 title: 'Stockwald'
-url: /photo/17101
+url: /photos/17101
 date: 2020-09-30
 datePosted: 2021-12-19
 image: 17101.avif

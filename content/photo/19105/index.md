@@ -1,6 +1,6 @@
 ---
 title: 'Standout 07'
-url: /photo/19105
+url: /photos/19105
 date: 2021-03-10
 datePosted: 2025-07-20
 image: 19105.avif

@@ -1,6 +1,6 @@
 ---
 title: 'Koishikawa Kōrakuen Garden'
-url: /photo/5101
+url: /photos/5101
 date: 2017-06-29
 datePosted: 2018-11-25
 image: 5101.avif

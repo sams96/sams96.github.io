@@ -1,6 +1,6 @@
 ---
 title: 'Bettenalp'
-url: /photo/17105
+url: /photos/17105
 date: 2020-09-30
 datePosted: 2021-12-19
 image: 17105.avif

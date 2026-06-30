@@ -1,6 +1,6 @@
 ---
 title: 'Ronghu Lake'
-url: /photo/10711
+url: /photos/10711
 date: 2018-08-12
 datePosted: 2019-06-18
 image: 10711.avif

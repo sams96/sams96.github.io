@@ -1,6 +1,6 @@
 ---
 title: 'Nyhavn'
-url: /photo/4503
+url: /photos/4503
 date: 2017-04-20
 datePosted: 2018-11-09
 image: 4503.avif

@@ -1,6 +1,6 @@
 ---
 title: 'Cavern Cascade'
-url: /photo/8505
+url: /photos/8505
 date: 2018-05-05
 datePosted: 2019-06-18
 image: 8505.avif

@@ -1,6 +1,6 @@
 ---
 title: 'Power Lines'
-url: /photo/16510
+url: /photos/16510
 date: 2019-12-28
 datePosted: 2020-11-22
 image: 16510.avif

@@ -1,6 +1,6 @@
 ---
 title: '鹅岭公园 Eling Park'
-url: /photo/24207
+url: /photos/24207
 date: 2025-09-10
 datePosted: 2026-02-26
 image: 24207.avif

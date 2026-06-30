@@ -1,6 +1,6 @@
 ---
 title: 'Ulsanbawi'
-url: /photo/6007
+url: /photos/6007
 date: 2017-09-06
 datePosted: 2018-11-25
 image: 6007.avif

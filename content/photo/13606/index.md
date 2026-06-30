@@ -1,6 +1,6 @@
 ---
 title: 'Llangrannog Beach'
-url: /photo/13606
+url: /photos/13606
 date: 2019-05-04
 datePosted: 2020-11-22
 image: 13606.avif

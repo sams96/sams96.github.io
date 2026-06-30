@@ -1,6 +1,6 @@
 ---
 title: '文殊院 Wenshu Temple'
-url: /photo/24008
+url: /photos/24008
 date: 2025-09-02
 datePosted: 2026-02-26
 image: 24008.avif

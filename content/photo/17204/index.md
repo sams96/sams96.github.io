@@ -1,6 +1,6 @@
 ---
 title: 'Balconies II'
-url: /photo/17204
+url: /photos/17204
 date: 2020-11-22
 datePosted: 2021-12-19
 image: 17204.avif

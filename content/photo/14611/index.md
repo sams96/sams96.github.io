@@ -1,6 +1,6 @@
 ---
 title: 'Americana Submarine'
-url: /photo/14611
+url: /photos/14611
 date: 2019-09-22
 datePosted: 2020-11-22
 image: 14611.avif

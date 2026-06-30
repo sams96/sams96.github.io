@@ -1,6 +1,6 @@
 ---
 title: 'Ruined House'
-url: /photo/3207
+url: /photos/3207
 date: 2016-06-05
 datePosted: 2019-11-09
 image: 3207.avif

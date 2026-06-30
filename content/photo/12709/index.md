@@ -1,6 +1,6 @@
 ---
 title: 'Edgeland Nottingham 08'
-url: /photo/12709
+url: /photos/12709
 date: 2019-01-20
 datePosted: 2020-03-29
 image: 12709.avif

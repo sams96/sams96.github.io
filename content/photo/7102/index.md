@@ -1,6 +1,6 @@
 ---
 title: 'Clifton Bridge'
-url: /photo/7102
+url: /photos/7102
 date: 2018-01-28
 datePosted: 2019-06-18
 image: 7102.avif

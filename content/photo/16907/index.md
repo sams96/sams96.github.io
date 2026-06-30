@@ -1,6 +1,6 @@
 ---
 title: 'Sihl'
-url: /photo/16907
+url: /photos/16907
 date: 2020-07-18
 datePosted: 2021-12-19
 image: 16907.avif

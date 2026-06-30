@@ -1,6 +1,6 @@
 ---
 title: 'New York Architecture 10'
-url: /photo/14511
+url: /photos/14511
 date: 2019-09-17
 datePosted: 2020-03-15
 image: 14511.avif

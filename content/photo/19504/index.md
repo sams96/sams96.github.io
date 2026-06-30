@@ -1,6 +1,6 @@
 ---
 title: 'Standout 05'
-url: /photo/19504
+url: /photos/19504
 date: 2021-04-13
 datePosted: 2025-07-20
 image: 19504.avif

@@ -1,6 +1,6 @@
 ---
 title: '南明河 Nanming River'
-url: /photo/24310
+url: /photos/24310
 date: 2025-09-15
 datePosted: 2026-02-26
 image: 24310.avif

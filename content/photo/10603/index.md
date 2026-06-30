@@ -1,6 +1,6 @@
 ---
 title: "Queen's Road Central"
-url: /photo/10603
+url: /photos/10603
 date: 2018-08-01
 datePosted: 2019-06-18
 image: 10603.avif

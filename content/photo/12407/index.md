@@ -1,6 +1,6 @@
 ---
 title: 'Towards Triquivijate'
-url: /photo/12407
+url: /photos/12407
 date: 2018-12-18
 datePosted: 2019-06-18
 image: 12407.avif

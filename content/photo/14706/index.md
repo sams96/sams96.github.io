@@ -1,6 +1,6 @@
 ---
 title: 'Hiliard Towers'
-url: /photo/14706
+url: /photos/14706
 date: 2019-09-24
 datePosted: 2020-11-22
 image: 14706.avif

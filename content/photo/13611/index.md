@@ -1,6 +1,6 @@
 ---
 title: 'Talley Woodland'
-url: /photo/13611
+url: /photos/13611
 date: 2019-05-06
 datePosted: 2020-11-22
 image: 13611.avif

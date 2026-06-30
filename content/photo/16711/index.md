@@ -1,6 +1,6 @@
 ---
 title: 'Worcester & Birmingham Canal I'
-url: /photo/16711
+url: /photos/16711
 date: 2020-05-17
 datePosted: 2021-12-19
 image: 16711.avif

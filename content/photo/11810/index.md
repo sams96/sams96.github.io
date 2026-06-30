@@ -1,6 +1,6 @@
 ---
 title: 'Edgeland Nottingham 12'
-url: /photo/11810
+url: /photos/11810
 date: 2018-11-06
 datePosted: 2020-03-29
 image: 11810.avif

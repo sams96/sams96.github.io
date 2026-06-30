@@ -1,6 +1,6 @@
 ---
 title: 'Edgeland Nottingham 02'
-url: /photo/12010
+url: /photos/12010
 date: 2018-01-18
 datePosted: 2020-03-29
 image: 12010.avif

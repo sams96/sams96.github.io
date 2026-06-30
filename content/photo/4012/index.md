@@ -1,6 +1,6 @@
 ---
 title: 'Wye'
-url: /photo/4012
+url: /photos/4012
 date: 2017-04-02
 datePosted: 2018-11-09
 image: 4012.avif

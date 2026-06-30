@@ -1,6 +1,6 @@
 ---
 title: 'Chatham Green'
-url: /photo/14507
+url: /photos/14507
 date: 2019-09-17
 datePosted: 2020-03-15
 image: 14507.avif

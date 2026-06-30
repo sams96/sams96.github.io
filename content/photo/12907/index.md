@@ -1,6 +1,6 @@
 ---
 title: 'Wollaton Oak'
-url: /photo/12907
+url: /photos/12907
 date: 2019-01-31
 datePosted: 2020-11-22
 image: 12907.avif

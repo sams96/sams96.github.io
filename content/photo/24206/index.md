@@ -1,6 +1,6 @@
 ---
 title: '嘉陵江  Jialing River'
-url: /photo/24206
+url: /photos/24206
 date: 2025-09-10
 datePosted: 2026-02-26
 image: 24206.avif

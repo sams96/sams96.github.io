@@ -1,6 +1,6 @@
 ---
 title: 'Rocks'
-url: /photo/3902
+url: /photos/3902
 date: 2017-03-04
 datePosted: 2018-11-09
 image: 3902.avif

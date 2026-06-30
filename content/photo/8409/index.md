@@ -1,6 +1,6 @@
 ---
 title: 'Subways 10'
-url: /photo/8409
+url: /photos/8409
 date: 2018-05-01
 datePosted: 2018-09-07
 image: 8409.avif

@@ -1,6 +1,6 @@
 ---
 title: 'Lake Gordon'
-url: /photo/5805
+url: /photos/5805
 date: 2017-08-14
 datePosted: 2018-11-25
 image: 5805.avif

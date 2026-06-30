@@ -1,6 +1,6 @@
 ---
 title: 'Nordic Pavilion'
-url: /photo/14110
+url: /photos/14110
 date: 2019-07-07
 datePosted: 2020-11-22
 image: 14110.avif

@@ -1,6 +1,6 @@
 ---
 title: 'Victoria Harbour'
-url: /photo/10601
+url: /photos/10601
 date: 2018-08-01
 datePosted: 2019-06-18
 image: 10601.avif

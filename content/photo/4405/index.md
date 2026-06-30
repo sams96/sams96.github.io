@@ -1,6 +1,6 @@
 ---
 title: 'Fire Exit'
-url: /photo/4405
+url: /photos/4405
 date: 2017-04-16
 datePosted: 2018-11-09
 image: 4405.avif

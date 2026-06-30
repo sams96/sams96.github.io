@@ -1,6 +1,6 @@
 ---
 title: '长江 Yangtze River'
-url: /photo/24208
+url: /photos/24208
 date: 2025-09-11
 datePosted: 2026-02-26
 image: 24208.avif

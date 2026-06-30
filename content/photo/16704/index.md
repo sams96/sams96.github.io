@@ -1,6 +1,6 @@
 ---
 title: 'Grand Union Canal'
-url: /photo/16704
+url: /photos/16704
 date: 2020-05-09
 datePosted: 2021-12-19
 image: 16704.avif

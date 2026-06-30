@@ -16,6 +16,7 @@ params:
     programming
   mainSections:
     - post
+    - photo
 
 menu:
   main:

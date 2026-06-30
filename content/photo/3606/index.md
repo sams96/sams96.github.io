@@ -1,6 +1,6 @@
 ---
 title: 'Wetzsteinhorn'
-url: /photo/3606
+url: /photos/3606
 date: 2016-07-29
 datePosted: 2018-11-09
 image: 3606.avif

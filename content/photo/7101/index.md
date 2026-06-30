@@ -1,6 +1,6 @@
 ---
 title: 'Edgeland Nottingham 14'
-url: /photo/7101
+url: /photos/7101
 date: 2018-01-28
 datePosted: 2020-03-29
 image: 7101.avif

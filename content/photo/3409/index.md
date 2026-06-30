@@ -1,6 +1,6 @@
 ---
 title: 'Mauerpark Karaoke'
-url: /photo/3409
+url: /photos/3409
 date: 2016-07-24
 datePosted: 2018-11-09
 image: 3409.avif

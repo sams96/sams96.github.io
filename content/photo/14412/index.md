@@ -1,6 +1,6 @@
 ---
 title: 'New York Architecture 08'
-url: /photo/14412
+url: /photos/14412
 date: 2019-09-17
 datePosted: 2020-03-15
 image: 14412.avif

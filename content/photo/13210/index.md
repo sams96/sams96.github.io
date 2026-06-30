@@ -1,6 +1,6 @@
 ---
 title: 'Edgeland Nottingham 10'
-url: /photo/13210
+url: /photos/13210
 date: 2019-02-10
 datePosted: 2020-03-29
 image: 13210.avif

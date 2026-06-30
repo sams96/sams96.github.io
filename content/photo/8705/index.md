@@ -1,6 +1,6 @@
 ---
 title: 'Subways 05'
-url: /photo/8705
+url: /photos/8705
 date: 2018-05-12
 datePosted: 2018-09-07
 image: 8705.avif

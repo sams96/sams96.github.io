@@ -1,8 +1,6 @@
 {{ define "main" }}
 
-    <h1>{{ i18n .Title }}</h1>
-
-	<p><i>This page is a work in progess</i></p><br/>
+    <h1>{{ .Title }}</h1>
 
     <div class="article-info">
 		{{ with .OutputFormats.Get "rss" -}}

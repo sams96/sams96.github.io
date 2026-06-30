@@ -16,7 +16,6 @@ params:
     programming
   mainSections:
     - post
-    - photo
 
 menu:
   main:
@@ -37,6 +36,12 @@ menu:
       title: Categories
       url: /categories/
       weight: 0
+
+    - identifier: photos
+      name: Photos
+      title: Photos
+      url: /photos/
+      weight: 1
 
     # - identifier: tags
     #   name: Tags

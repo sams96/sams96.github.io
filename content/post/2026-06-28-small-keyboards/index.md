@@ -69,7 +69,7 @@ are, particularly the ones you don’t use very often. Having the symbols and
 function keys you do use often available on another layer close to the home row
 is great, but for the keys you don’t use often it's nice to be able to look down
 and just see that key, reach over and press it. Standard keyboards optimise for
-accessability and ease of use, having more keys means it's easier to know where
+accessibility and ease of use, having more keys means it's easier to know where
 to find everything. A smaller keyboard makes more sense for those willing to
 learn the layout in order to type more efficiently[^numpad].
 
@@ -82,7 +82,7 @@ learn the layout in order to type more efficiently[^numpad].
 
 Some people take this idea further, with 36 key keyboards that eschew the outer
 most column of keys to reduce the burden on the pinkies. There are tricks to get
-more utility out of the most accessable keys, like using [home row
+more utility out of the most accessible keys, like using [home row
 modifiers](https://precondition.github.io/home-row-mods). I haven't tried going
 that far yet but it is interesting -- I have found 42 keys to be a sweet spot
 giving both the benefits I've explained above, as well as being similar enough

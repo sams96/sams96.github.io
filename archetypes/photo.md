@@ -1,6 +1,6 @@
 ---
 title: ''
-url: /photo/{{ .File.ContentBaseName }}
+url: /photos/{{ .File.ContentBaseName }}
 date:
 datePosted: {{ .Date | time.Format "2006-01-02" }}
 image: {{ .File.ContentBaseName }}.avif

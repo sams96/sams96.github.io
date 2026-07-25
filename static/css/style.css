@@ -367,10 +367,6 @@ article figure {
     margin: 0 auto .5em;
 }
 
-.diptych figure {
-	margin: 0;
-}
-
 article img + p:not(:empty),
 article figure + p:not(:empty),
 .diptych + p:not(:empty) {
@@ -524,32 +520,26 @@ footer a {
     }
 }
 
-.diptych {
-	display: block;
-	width: 89em;
-	margin: 0 auto 0.5em;
-	position: relative;
-	right: 21.5em;
-	overflow: auto;
-}
+@media only screen and (min-width: 77.5em) {
+    .diptych {
+        display: grid;
+        grid-template-columns: repeat(2, 100%);
+        gap: 0.5em;
+        justify-content: center;
+        align-items: start;
 
-.diptych img {
-	height: auto;
-	width: 42em;
-	box-sizing: border-box;
-	float: left;
-	margin: 0 .25em 0em;
-}
+        margin-top: 1em;
+        margin-bottom: -1em;
 
-@media only screen and (max-width: 88em) {
-	.diptych {
-		width: 100%;
-		position: static;
-	}
+    	figure {
+	        margin: 0;
+	        height: max-content;
+	    }
 
-	.diptych img {
-		margin: 0 auto .5em;
-	}
+	    img {
+	    	margin: 0;
+	    }
+    }
 }
 
 #mastodon-stats {

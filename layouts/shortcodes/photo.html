@@ -16,6 +16,7 @@
          {{- end }}
 		 height="{{ $image.Height }}"
 		 width="{{ $image.Width }}"
+		 id="{{ .Get "img" }}"
 		 {{- with .Get "loading" | default "lazy" }} loading="{{ . }}" {{ end -}}
 		 {{- with .Get "fetchpriority" | default "auto" }} fetchpriority="{{ . }}" {{ end -}}
     /> <!-- Closing img tag -->

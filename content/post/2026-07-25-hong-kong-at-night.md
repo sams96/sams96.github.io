@@ -37,15 +37,16 @@ categories:
 
 {{< photo img="10606" caption="Central Plaza" >}}
 
-A number of the photos above were taken after I went to an opening night event
-for an exhibition of photos by one of my faviourite photographers [Michael
-Kenna](https://www.michaelkenna.com/), who was also at the opening for a Q&A. I
-arrived at [Blue Lotus Gallery](https://bluelotus-gallery.com/)'s location in
-Chai Wan, on the very Eastern end of Hong Kong, on time for when the event was
-starting only to find out that the event and exhibition wasn't there --- but
-rather it was a pop up in Central, at the other end of the island. Thankfully
-there was someone from the gallery still there to tell me where I should be, and
-she let me ride in her taxi to the exhibition.
+I took these photos in June and August of 2018. A number of them were taken
+after I went to an opening night event for an exhibition of photos by one of my
+faviourite photographers [Michael Kenna](https://www.michaelkenna.com/), who was
+also at the opening for a Q&A. I arrived at [Blue Lotus
+Gallery](https://bluelotus-gallery.com/)'s location in Chai Wan, on the very
+Eastern end of Hong Kong, on time for when the event was starting only to find
+out that the event and exhibition wasn't there --- but rather it was a pop up in
+Central, at the other end of the island. Thankfully there was someone from the
+gallery still there to tell me where I should be, and she let me ride in her
+taxi to the exhibition.
 
 I arrived after the Q&A had finished so I went up to Kenna for a quick chat ---
 I don't remember exactly what was said, but I do remember that he patiently

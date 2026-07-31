@@ -165,10 +165,6 @@ blockquote {
     padding-right: 0.1em;
 }
 
-figcaption{
-	font-style: italic;
-}
-
 footer.bq {
 	font-style: normal;
 	float: right;
@@ -200,6 +196,7 @@ ul ol, ol ol, ul ul {
 }
 
 figcaption {
+	font-style: italic;
 	display: block;
 	color: var(--color-grey);
 	line-height: 1em; /* 24px/16px */
@@ -367,6 +364,10 @@ article figure {
     margin: 0 auto .5em;
 }
 
+article figure:has(figcaption) img {
+	margin-bottom: 0.5em;
+}
+
 article img + p:not(:empty),
 article figure + p:not(:empty),
 .diptych + p:not(:empty) {
@@ -522,24 +523,35 @@ footer a {
 
 @media only screen and (min-width: 77.5em) {
     .diptych {
-        display: grid;
-        grid-template-columns: repeat(2, 100%);
-        gap: 0.5em;
-        justify-content: center;
-        align-items: start;
+        columns: 2;
+        column-gap: 0.5em;
 
-        margin-top: 1em;
-        margin-bottom: -1em;
+        width: calc((100% * 2) + 0.5em);
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
 
-    	figure {
-	        margin: 0;
-	        height: max-content;
-	    }
 
-	    img {
-	    	margin: 0;
-	    }
+        figure {
+            margin: 0 0 1em 0;
+            break-inside: avoid;
+        }
+
+        img {
+            margin-top: 0;
+        }
+
+        figcaption {
+            margin-bottom: 0;
+        }
     }
+
+	.diptych:not(:has(figcaption)) {
+		margin-bottom: 0.5em;
+		figure, img {
+			margin-bottom: 0;
+		}
+	}
 }
 
 #mastodon-stats {

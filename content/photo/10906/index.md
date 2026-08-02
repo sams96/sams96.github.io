@@ -6,7 +6,8 @@ datePosted: 2019-06-18
 image: 10906.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo looking across a large river at a dense cluster of medium
+  and large skyscrapers, with boats on the river at the base
 
 metadata:
   camera: Hasselblad 500C/M

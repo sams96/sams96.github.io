@@ -6,7 +6,8 @@ datePosted: 2020-11-22
 image: 13803.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a silhouette of a tree at the edge of a lake, under
+  which are two deer
 
 metadata:
   camera: Hasselblad 500C/M

@@ -6,7 +6,8 @@ datePosted: 2019-06-18
 image: 10601.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black and white photo showing a night scene showing the skyline of Hong Kong
+  with victoria harbour in the centre
 
 metadata:
   camera: Hasselblad 500C/M

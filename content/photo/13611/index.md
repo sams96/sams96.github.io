@@ -6,7 +6,8 @@ datePosted: 2020-11-22
 image: 13611.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of an unpaved road through a forest of tall pines on a
+  slope
 
 metadata:
   camera: Hasselblad 500C/M

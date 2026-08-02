@@ -6,7 +6,8 @@ datePosted: 2020-03-29
 image: 12010.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a brick house behind a small grassy area with a few
+  small bare trees
 
 metadata:
   camera: Hasselblad 500C/M

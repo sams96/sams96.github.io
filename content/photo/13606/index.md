@@ -6,7 +6,9 @@ datePosted: 2020-11-22
 image: 13606.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo from the inside of a cave at the side of a beach, with
+  rough white waters and then a cliff at the other end of the beach with 2 large
+  houses on the side
 
 metadata:
   camera: Hasselblad 500C/M

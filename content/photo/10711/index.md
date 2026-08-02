@@ -6,7 +6,8 @@ datePosted: 2019-06-18
 image: 10711.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of an ancient looking small boat on a lake with an ornate
+  bridge between many trees in the background
 
 metadata:
   camera: Hasselblad 500C/M

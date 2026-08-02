@@ -6,7 +6,8 @@ datePosted: 2020-03-29
 image: 12810.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black and white photo of the base of a tree surrouned by a square of old wood
+  and metal fencing in a large and mostly empty field
 
 metadata:
   camera: Hasselblad 500C/M

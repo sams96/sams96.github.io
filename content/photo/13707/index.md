@@ -6,7 +6,8 @@ datePosted: 2020-03-29
 image: 13707.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo looking through a hedgerow across the roofs of some brick
+  houses with farmland heading into the horizon
 
 metadata:
   camera: Hasselblad 500C/M

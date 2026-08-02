@@ -6,7 +6,8 @@ datePosted: 2020-03-29
 image: 12812.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black and white photo of the base of a tree, the trunk of which is wrapped in
+  a wire mesh
 
 metadata:
   camera: Hasselblad 500C/M

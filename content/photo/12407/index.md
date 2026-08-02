@@ -6,7 +6,10 @@ datePosted: 2019-06-18
 image: 12407.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black and white photo showing silhouetted hills with 3 electricity pylons on
+  the left, heading into the distance, with the top wire between them decorated
+  with periodic lights. Some star streaks can be seen around the centre of the
+  frame
 
 metadata:
   camera: Hasselblad 500C/M

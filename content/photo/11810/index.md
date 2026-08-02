@@ -6,7 +6,9 @@ datePosted: 2020-03-29
 image: 11810.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo looking down at a narrow road in between dense vegetation
+  and the base of a large electricity pylon in the top right corner of the
+  image
 
 metadata:
   camera: Hasselblad 500C/M

@@ -6,7 +6,8 @@ datePosted: 2020-03-29
 image: 12806.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black and white photo of a stream emerging from a concrete pipe, surrounded by
+  a forest of bare trees
 
 metadata:
   camera: Hasselblad 500C/M

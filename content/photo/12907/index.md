@@ -6,7 +6,8 @@ datePosted: 2020-11-22
 image: 12907.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a large old bare oak tree in the fog, with frost on the
+  surrounding grass
 
 metadata:
   camera: Hasselblad 500C/M

@@ -6,7 +6,8 @@ datePosted: 2020-03-29
 image: 13201.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a ford through a stream surrounded by a lot of
+  vegetation including bare trees
 
 metadata:
   camera: Hasselblad 500C/M

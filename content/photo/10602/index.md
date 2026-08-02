@@ -6,7 +6,9 @@ datePosted: 2026-07-25
 image: 10602.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a street corner with pedestrian crossing indicator in
+  front of a large concrete pillar which is flanked by metal fences and an older
+  brick building
 
 metadata:
   camera: Hasselblad 500C/M

@@ -6,7 +6,9 @@ datePosted: 2019-06-18
 image: 10603.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black and white photo of a street from above at night, lined by tall
+  buildings. A truck with two people at the rear sits at the junction while some
+  streaked lights suggests a car passes
 
 metadata:
   camera: Hasselblad 500C/M

@@ -6,7 +6,8 @@ datePosted: 2026-07-25
 image: 10606.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo looking sligtly upwards at the facards of three
+  skyscrapers
 
 metadata:
   camera: Hasselblad 500C/M

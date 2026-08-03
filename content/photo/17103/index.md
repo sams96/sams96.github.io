@@ -6,7 +6,8 @@ datePosted: 2021-12-19
 image: 17103.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a mountainous scene looking down at a lake, streaks of
+  snow partially cover the ground
 
 metadata:
   camera: Hasselblad 501c

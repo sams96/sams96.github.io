@@ -6,7 +6,7 @@ datePosted: 2020-03-15
 image: 14401.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo looking up at 5 New York City skyscrapers
 
 metadata:
   camera: Hasselblad 500C/M

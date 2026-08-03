@@ -6,7 +6,8 @@ datePosted: 2020-11-22
 image: 15304.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a breakwater made of large concrete shapes protruding
+  from a rocky beach, being hit by small waves
 
 metadata:
   camera: Hasselblad 500C/M

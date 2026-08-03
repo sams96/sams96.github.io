@@ -6,7 +6,8 @@ datePosted: 2020-03-15
 image: 14502.avif
 type: photo
 alt: >-
-  TODO alt text
+	Black & white photo looking up at the corner of an art deco building behind
+    some trees
 
 metadata:
   camera: Hasselblad 500C/M

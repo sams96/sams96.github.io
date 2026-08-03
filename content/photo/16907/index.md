@@ -6,7 +6,8 @@ datePosted: 2021-12-19
 image: 16907.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a tall concrete pillar in a river, with a poster of a
+  nature scene near the base
 
 metadata:
   camera: Hasselblad 501c

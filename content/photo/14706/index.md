@@ -6,7 +6,8 @@ datePosted: 2020-11-22
 image: 14706.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo looking up at a rounded curvy brutalist apartment tower
+  behind some trees
 
 metadata:
   camera: Hasselblad 500C/M

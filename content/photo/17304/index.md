@@ -6,7 +6,8 @@ datePosted: 2021-12-19
 image: 17304.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a frosty pine forest with a TV tower in the fog in the
+  background
 
 metadata:
   camera: Hasselblad 501c

@@ -6,7 +6,8 @@ datePosted: 2020-03-15
 image: 14503.avif
 type: photo
 alt: >-
-  TODO alt text
+	Black & white photo looking up some older New York apartments, with only one
+    behind being lit by the sun
 
 metadata:
   camera: Hasselblad 500C/M

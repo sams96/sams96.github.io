@@ -6,7 +6,8 @@ datePosted: 2021-12-19
 image: 17205.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a dead leaf covered grassy patch with 3 trees in front
+  of an apartment building
 
 metadata:
   camera: Hasselblad 501c

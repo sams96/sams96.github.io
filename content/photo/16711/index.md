@@ -6,7 +6,7 @@ datePosted: 2021-12-19
 image: 16711.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo looking down through a tree at a canal and towpath
 
 metadata:
   camera: Hasselblad 501c

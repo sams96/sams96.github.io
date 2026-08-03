@@ -6,7 +6,8 @@ datePosted: 2020-11-22
 image: 16510.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a dramatic cloudy sky with a small electricity pylon
+  and power lines silhouetted in front
 
 metadata:
   camera: Hasselblad 500C/M

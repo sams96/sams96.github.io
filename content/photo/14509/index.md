@@ -6,7 +6,8 @@ datePosted: 2020-03-15
 image: 14509.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of the Manhattan Bridge, with the Brooklyn side pier at
+  the centre
 
 metadata:
   camera: Hasselblad 500C/M

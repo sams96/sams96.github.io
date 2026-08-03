@@ -6,7 +6,8 @@ datePosted: 2020-11-22
 image: 14611.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a corner shop called Americana Submarine taken across a
+  junction underneath an elevated railway
 
 metadata:
   camera: Hasselblad 500C/M

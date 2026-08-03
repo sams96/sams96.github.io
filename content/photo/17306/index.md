@@ -6,7 +6,7 @@ datePosted: 2021-12-19
 image: 17306.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a tree with a padded coushin strapped to the base
 
 metadata:
   camera: Hasselblad 501c

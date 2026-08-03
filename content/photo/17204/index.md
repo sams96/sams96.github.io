@@ -6,7 +6,7 @@ datePosted: 2021-12-19
 image: 17204.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of an apartment building behind a few trees
 
 metadata:
   camera: Hasselblad 501c

@@ -6,7 +6,7 @@ datePosted: 2020-03-15
 image: 14510.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a brick apartment building behind a row of trees
 
 metadata:
   camera: Hasselblad 500C/M

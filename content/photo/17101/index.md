@@ -6,7 +6,8 @@ datePosted: 2021-12-19
 image: 17101.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a narrow road snakeing into the distance, with a tall
+  partially wooded cliff taking up the entire background
 
 metadata:
   camera: Hasselblad 501c

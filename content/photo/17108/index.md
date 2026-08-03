@@ -6,7 +6,7 @@ datePosted: 2021-12-19
 image: 17108.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a section of a 70s apartment building with 4 balconies
 
 metadata:
   camera: Hasselblad 501c

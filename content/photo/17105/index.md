@@ -6,7 +6,7 @@ datePosted: 2021-12-19
 image: 17105.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo looking down at a cloud inversion in a mountain valley
 
 metadata:
   camera: Hasselblad 501c

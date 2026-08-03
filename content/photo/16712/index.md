@@ -6,7 +6,7 @@ datePosted: 2021-12-19
 image: 16712.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of an old bridge over a narrow canal
 
 metadata:
   camera: Hasselblad 501c

@@ -6,7 +6,8 @@ datePosted: 2020-03-15
 image: 14511.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo from and looking through the Willamsburg bridge, with the
+  Empire State and Chrysler buildings visible between the bridge's beams
 
 metadata:
   camera: Hasselblad 500C/M

@@ -6,7 +6,8 @@ datePosted: 2020-11-22
 image: 16007.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a park underneath a motorway, with 4 large concrete
+  pillars on the right to centre of the image, and another on the left
 
 metadata:
   camera: Hasselblad 500C/M

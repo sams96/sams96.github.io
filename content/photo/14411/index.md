@@ -6,7 +6,8 @@ datePosted: 2020-03-15
 image: 14411.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo looking through the bottom deck of the Queensboro Bridge
+  at the Empire State & Chrysler buildings
 
 metadata:
   camera: Hasselblad 500C/M

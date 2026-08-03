@@ -6,7 +6,8 @@ datePosted: 2021-12-19
 image: 16704.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo looking across a canal at the path and hedgerow on the
+  other side, with two small billboards covered in graffiti
 
 metadata:
   camera: Hasselblad 501c

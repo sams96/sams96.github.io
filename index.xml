@@ -1,4 +1,234 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Smith</title><link>https://samsm.ch/</link><description>Recent content on Sam Smith</description><generator>Hugo</generator><language>English</language><lastBuildDate>Sat, 25 Jul 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://samsm.ch/index.xml" rel="self" type="application/rss+xml"/><item><title>Hong Kong at Night</title><link>https://samsm.ch/hong-kong-at-night/</link><pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate><guid>https://samsm.ch/hong-kong-at-night/</guid><description>&lt;figure&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sam Smith</title><link>https://samsm.ch/</link><description>Recent content on Sam Smith</description><generator>Hugo</generator><language>English</language><lastBuildDate>Sun, 16 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://samsm.ch/index.xml" rel="self" type="application/rss+xml"/><item><title>Paperless cloud backups</title><link>https://samsm.ch/paperless-cloud-backups/</link><pubDate>Sun, 16 Aug 2026 00:00:00 +0000</pubDate><guid>https://samsm.ch/paperless-cloud-backups/</guid><description>&lt;p&gt;I store all of my important (and many not so important) documents in my
+&lt;a href="https://paperless-ngx.com/"&gt;Paperless-ngx&lt;/a&gt; instance running on my homelab.
+Given this importance, I wanted to add an additional backup of my documents and
+the metadata. Having them in cloud storage, while not ideal for privacy reasons,
+would also give me a way to access the documents easily if I am unable to
+directly for whatever reason.&lt;/p&gt;
+&lt;/br&gt;
+&lt;p&gt;Skip ahead to see the config for &lt;a href="https://samsm.ch/paperless-cloud-backups/#scheduled-backups"&gt;&lt;strong&gt;scheduled backups&lt;/strong&gt;&lt;/a&gt;
+or &lt;a href="https://samsm.ch/paperless-cloud-backups/#backup-on-change"&gt;&lt;strong&gt;backup on change&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;/br&gt;
+&lt;p&gt;I chose to use Dropbox for my backups, because I have a lot of space available
+from sending invites years ago, and I have it synced onto my laptop which then
+gives me an additional backup there too. The methods below could also easily be
+applied to other cloud storage solutions.&lt;/p&gt;
+&lt;p&gt;My initial instinct on how to solve this was to just run the dropbox daemon on
+my homelab and create a symlink to wherever paperless stores my documents. I
+quickly found that this wouldn&amp;rsquo;t work for a couple of reasons:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The dropbox daemon doesn&amp;rsquo;t run on Arm, and my homelab is a Raspberry Pi.&lt;/li&gt;
+&lt;li&gt;Paperless doesn&amp;rsquo;t store metadata in a way that&amp;rsquo;s easy to backup.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;To solve 1., I spent sometime looking into dropbox sync scripts that do work on
+the Pi, and then writing my own script to do the same thing, but I wasn&amp;rsquo;t happy
+with any of these. It didn&amp;rsquo;t take too much of this research before I was
+reminded of the existance of &lt;a href="https://rclone.org/"&gt;Rclone&lt;/a&gt;, which is much more
+robust than any of these scripts and allows me to do a one way sync, which is
+ideal for my backup. It does bring a new problem to solve, which is that Rclone
+doesn&amp;rsquo;t run as a daemon, it needs to be triggered somehow to sync.&lt;/p&gt;
+&lt;p&gt;The solution to 2. is the &lt;a href="https://docs.paperless-ngx.com/administration/#exporter"&gt;Paperless document exporter
+script&lt;/a&gt;. This is
+Paperless&amp;rsquo; recommended backup solution, it does provide all of the metadata and
+there&amp;rsquo;s an equivalent import script should the backup need to be restored.
+Perfect, almost. This has the same issue as Rclone, in that it needs to be
+triggered somehow.&lt;/p&gt;
+&lt;p&gt;So now we have two scripts that need to be run in sequence, frequently enough
+such that my backup is kept sufficiently up to date. And I guess now is the time
+to mention that I&amp;rsquo;m running Paperless in docker and intend to keep using the
+supplied image, so the backup should happen in my docker compose file.&lt;/p&gt;
+&lt;h2 id="scheduled-backups"&gt;Scheduled backups&lt;/h2&gt;
+&lt;p&gt;A simple timed schedule is a classic way to run backups, so that&amp;rsquo;s what I went
+with initially. Using the official Rclone docker image and
+&lt;a href="https://github.com/mcuadros/ofelia"&gt;Ofelia&lt;/a&gt; to trigger the document export and
+then Rclone sync. Below is an abbreviated docker compose file with hourly
+backups added. The full version is available
+&lt;a href="https://gist.github.com/sams96/dc97a06fcb669465d0ca44d4041b2cad"&gt;here&lt;/a&gt;, but if
+you plan to use this I recommend basing yours on &lt;a href="https://github.com/paperless-ngx/paperless-ngx/tree/main/docker/compose"&gt;a more up to date compose file
+from
+Paperless&lt;/a&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000080"&gt;services&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;broker&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;...&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;db&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;...&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;webserver&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;...&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;volumes&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;- export:/usr/src/paperless/export&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;...&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;labels&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;ofelia.enabled&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;ofelia.job-exec.export-job.schedule&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;@hourly&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;ofelia.job-exec.export-job.command&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;document_exporter --no-thumbnail ../export&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;rclone&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;container_name&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;rclone&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;image&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;rclone/rclone:latest&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;profiles&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;[&lt;span style="color:#b84"&gt;&amp;#34;rclone&amp;#34;&lt;/span&gt;]&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;volumes&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;- export:/data&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;- ./rclone/config:/root/.config/rclone&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;labels&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;ofelia.enabled&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;command&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;copy /data &amp;lt;remote:location&amp;gt;&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;ofelia&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;image&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;mcuadros/ofelia:latest&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;restart&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;unless-stopped&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;depends_on&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;- webserver&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;command&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;daemon --docker&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;volumes&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;- /var/run/docker.sock:/var/run/docker.sock:ro&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;labels&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#998;font-style:italic"&gt;# backup job is run 5 minutes after the hour to give the export time to run&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;ofelia.job-run.backup.schedule&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;0 5 * * * *&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;ofelia.job-run.backup.container&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;rclone&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000080"&gt;volumes&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;export&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;To set up the rclone remote, run the following and follow the wizard&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$ docker compose run -ti --entrypoint&lt;span style="font-weight:bold"&gt;=&lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;rclone config&amp;#34;&lt;/span&gt; rclone
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;and replace &lt;code&gt;&amp;lt;remote:location&amp;gt;&lt;/code&gt; with the name you gave your remote and the
+folder where you want your backup to live, I use &lt;code&gt;dropbox:paperless&lt;/code&gt;. Dropbox
+isn&amp;rsquo;t the only option, rclone can sync with many different cloud storage
+providers, details of which are available on &lt;a href="https://rclone.org/docs/"&gt;their docs
+page&lt;/a&gt;.&lt;/p&gt;
+&lt;/br&gt;
+&lt;p&gt;Rather than figure out running Rclone once the document exporter has finished, I
+just set it to run 5 minutes later, which works well enough. I used this setup
+for around 6 months with no issues.&lt;/p&gt;
+&lt;p&gt;However, I don&amp;rsquo;t actually update documents in Paperless that often, maybe once
+or twice a week, so it feels unnecessary to run the backups every hour but then
+I don&amp;rsquo;t want to leave documents un-backed up for too long. Ideally the backups
+could be triggered when I actually do something in Paperless.&lt;/p&gt;
+&lt;h2 id="backup-on-change"&gt;Backup on change&lt;/h2&gt;
+&lt;p&gt;Paperless provides the ability to send webhooks on document addition and update,
+as part of their &lt;a href="https://docs.paperless-ngx.com/usage/#workflows"&gt;workflows
+feature&lt;/a&gt;, so my next idea is
+using this to trigger the document export and sync job instead of doing it
+hourly. To do this I created &lt;a href="https://github.com/sams96/float"&gt;float&lt;/a&gt;. The idea
+of float is essentially to provide similar functionality to Ofelia, but
+triggered by webhooks instead of on a schedule.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-yaml" data-lang="yaml"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000080"&gt;services&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;broker&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;...&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;db&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;...&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;webserver&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;...&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;volumes&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;- export:/usr/src/paperless/export&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;...&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;rclone&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;container_name&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;rclone&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;image&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;rclone/rclone:latest&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;profiles&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;[&lt;span style="color:#b84"&gt;&amp;#34;rclone&amp;#34;&lt;/span&gt;]&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;volumes&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;- export:/data&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;- ./rclone/config:/config/rclone&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;command&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;copy /data [remote:location]&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;float&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;container_name&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;float&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;image&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;ghcr.io/sams96/float:latest&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;ports&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;- &lt;span style="color:#b84"&gt;&amp;#34;41232:41232&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;volumes&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;- /var/run/docker.sock:/var/run/docker.sock:ro&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;environment&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;FLOAT_CMD&lt;/span&gt;:&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;docker exec -d paperless-webserver document_exporter /usr/src/paperless/export &amp;amp;&amp;amp; docker start rclone&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#000080"&gt;volumes&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#000080"&gt;export&lt;/span&gt;:&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The same rclone set up &lt;a href="https://samsm.ch/paperless-cloud-backups/#:~:text=To%20set%20up%20the%20rclone%20remote"&gt;as
+above&lt;/a&gt; is needed, and then you
+will need to create a workflow in paperless to send the webhook, I have included
+a screenshot below to show the settings I use.&lt;/p&gt;
+&lt;p&gt;Float will debounce the requests to avoid running a backup on every change. The
+default debounce duration is 15 minutes, and this can be configured with the
+environment variable &lt;code&gt;FLOAT_DEBOUNCE_TIME&lt;/code&gt;, which uses duration strings from
+Go&amp;rsquo;s time package, which &lt;a href="https://pkg.go.dev/time#ParseDuration"&gt;are specified&lt;/a&gt;
+as such:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A duration string is a possibly signed sequence of decimal numbers, each with optional fraction and a unit suffix, such as &amp;ldquo;300ms&amp;rdquo;, &amp;ldquo;-1.5h&amp;rdquo; or &amp;ldquo;2h45m&amp;rdquo;. Valid time units are &amp;ldquo;ns&amp;rdquo;, &amp;ldquo;us&amp;rdquo; (or &amp;ldquo;µs&amp;rdquo;), &amp;ldquo;ms&amp;rdquo;, &amp;ldquo;s&amp;rdquo;, &amp;ldquo;m&amp;rdquo;, &amp;ldquo;h&amp;rdquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src="https://samsm.ch/paperless-cloud-backups/workflow.png" alt="Screenshot of paperless edit workflow screen, with triggers on “Document
+Added” and “Document Updated” both with filename filters of “*” and content
+matching disabled. There’s also a webhook action with the url
+“http://float:41232”"&gt;&lt;/p&gt;
+&lt;h2 id="on-float"&gt;On float&lt;/h2&gt;
+&lt;p&gt;The source code for float is very short so I&amp;rsquo;m just going to include it in full
+below. Rather than use the docker API and labels like Ofelia, I decided to just
+pass in a command to run, and base the container on the &lt;a href="https://hub.docker.com/_/docker"&gt;docker base
+image&lt;/a&gt;, which gives the container access to
+docker.&lt;/p&gt;
+&lt;p&gt;I do think Ofelia&amp;rsquo;s label based configuration is much nicer though, so
+if I get some more motivation to work on float copying that would be one of the
+improvements I would make. I would also like it to handle multiple commands with
+independant webhooks and debounce timers, but I haven&amp;rsquo;t had the need for that.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-go" data-lang="go"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;package&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;main&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;import&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;(&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;log&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;net/http&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;os&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;os/exec&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;sync&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;time&amp;#34;&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;var&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;debounceDefault&lt;span style="color:#bbb"&gt; &lt;/span&gt;=&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#099"&gt;15&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;time.Minute&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;main&lt;/span&gt;()&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;debounceStr&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;os.&lt;span style="color:#900;font-weight:bold"&gt;Getenv&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;FLOAT_DEBOUNCE_TIME&amp;#34;&lt;/span&gt;)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;debounceDur,&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;time.&lt;span style="color:#900;font-weight:bold"&gt;ParseDuration&lt;/span&gt;(debounceStr)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="font-weight:bold"&gt;if&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;!=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;nil&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;log.&lt;span style="color:#900;font-weight:bold"&gt;Println&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;Failed to parse debounce duration; using default of&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;debounceDefault.&lt;span style="color:#900;font-weight:bold"&gt;String&lt;/span&gt;())&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;debounceDur&lt;span style="color:#bbb"&gt; &lt;/span&gt;=&lt;span style="color:#bbb"&gt; &lt;/span&gt;debounceDefault&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;c&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;os.&lt;span style="color:#900;font-weight:bold"&gt;Getenv&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;FLOAT_CMD&amp;#34;&lt;/span&gt;)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;debounced&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;debouncer&lt;/span&gt;(debounceDur,&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;()&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;cmd&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;exec.&lt;span style="color:#900;font-weight:bold"&gt;Command&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;/bin/sh&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;-c&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;c)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;cmd.Stdout,&lt;span style="color:#bbb"&gt; &lt;/span&gt;cmd.Stderr&lt;span style="color:#bbb"&gt; &lt;/span&gt;=&lt;span style="color:#bbb"&gt; &lt;/span&gt;log.&lt;span style="color:#900;font-weight:bold"&gt;Writer&lt;/span&gt;(),&lt;span style="color:#bbb"&gt; &lt;/span&gt;log.&lt;span style="color:#900;font-weight:bold"&gt;Writer&lt;/span&gt;()&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;cmd.&lt;span style="color:#900;font-weight:bold"&gt;Run&lt;/span&gt;()&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;&lt;span style="font-weight:bold"&gt;if&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;err&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;!=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;nil&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;			&lt;/span&gt;log.&lt;span style="color:#900;font-weight:bold"&gt;Println&lt;/span&gt;(err)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;})&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;log.&lt;span style="color:#900;font-weight:bold"&gt;Println&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;float started with debounce duration:&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;debounceDur.&lt;span style="color:#900;font-weight:bold"&gt;String&lt;/span&gt;(),&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#b84"&gt;&amp;#34;command:&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt; &lt;/span&gt;c)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;log.&lt;span style="color:#900;font-weight:bold"&gt;Fatal&lt;/span&gt;(http.&lt;span style="color:#900;font-weight:bold"&gt;ListenAndServe&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;0.0.0.0:41232&amp;#34;&lt;/span&gt;,&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;http.&lt;span style="color:#900;font-weight:bold"&gt;HandlerFunc&lt;/span&gt;(&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;(w&lt;span style="color:#bbb"&gt; &lt;/span&gt;http.ResponseWriter,&lt;span style="color:#bbb"&gt; &lt;/span&gt;r&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;http.Request)&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;			&lt;/span&gt;log.&lt;span style="color:#900;font-weight:bold"&gt;Println&lt;/span&gt;(&lt;span style="color:#b84"&gt;&amp;#34;request received&amp;#34;&lt;/span&gt;)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;			&lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;debounced&lt;/span&gt;()&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;			&lt;/span&gt;w.&lt;span style="color:#900;font-weight:bold"&gt;WriteHeader&lt;/span&gt;(http.StatusNoContent)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;})),&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#998;font-style:italic"&gt;// credit to https://github.com/bep/debounce&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="color:#900;font-weight:bold"&gt;debouncer&lt;/span&gt;(after&lt;span style="color:#bbb"&gt; &lt;/span&gt;time.Duration,&lt;span style="color:#bbb"&gt; &lt;/span&gt;f&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;())&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;()&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;d&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;:=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;&amp;amp;&lt;/span&gt;&lt;span style="font-weight:bold"&gt;struct&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;mu&lt;span style="color:#bbb"&gt; &lt;/span&gt;sync.Mutex&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;after&lt;span style="color:#bbb"&gt; &lt;/span&gt;time.Duration&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;timer&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;*&lt;/span&gt;time.Timer&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;}{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;after:&lt;span style="color:#bbb"&gt; &lt;/span&gt;after,&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;&lt;span style="font-weight:bold"&gt;return&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;func&lt;/span&gt;()&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;d.mu.&lt;span style="color:#900;font-weight:bold"&gt;Lock&lt;/span&gt;()&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;&lt;span style="font-weight:bold"&gt;defer&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;d.mu.&lt;span style="color:#900;font-weight:bold"&gt;Unlock&lt;/span&gt;()&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;&lt;span style="font-weight:bold"&gt;if&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;d.timer&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;!=&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;&lt;span style="font-weight:bold"&gt;nil&lt;/span&gt;&lt;span style="color:#bbb"&gt; &lt;/span&gt;{&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;			&lt;/span&gt;d.timer.&lt;span style="color:#900;font-weight:bold"&gt;Reset&lt;/span&gt;(d.after)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;			&lt;/span&gt;&lt;span style="font-weight:bold"&gt;return&lt;/span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;		&lt;/span&gt;d.timer&lt;span style="color:#bbb"&gt; &lt;/span&gt;=&lt;span style="color:#bbb"&gt; &lt;/span&gt;time.&lt;span style="color:#900;font-weight:bold"&gt;AfterFunc&lt;/span&gt;(d.after,&lt;span style="color:#bbb"&gt; &lt;/span&gt;f)&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#bbb"&gt;	&lt;/span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}&lt;span style="color:#bbb"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Hong Kong at Night</title><link>https://samsm.ch/hong-kong-at-night/</link><pubDate>Sat, 25 Jul 2026 00:00:00 +0000</pubDate><guid>https://samsm.ch/hong-kong-at-night/</guid><description>&lt;figure&gt;
 	&lt;a href="https://samsm.ch/photos/10601/"&gt;
 	&lt;img src="https://samsm.ch/photos/10601/10601.avif"
  title="Victoria Harbour"
@@ -1320,8 +1550,8 @@ from Thailand was actually the first film I&amp;rsquo;ve posted to a lab due to 
 out of chems and Corona, and they were annoyingly lost before they made it
 there.&lt;/p&gt;
 &lt;p&gt;I didn&amp;rsquo;t do as much towards photo series in 2019 as I would&amp;rsquo;ve liked to. I did
-make together my &lt;a href="https://samsm.ch/ny-architecture"&gt;New York Architecture post&lt;/a&gt; and put together
-&lt;a href="https://samsm.ch/edgeland-nottingham"&gt;a series of images I shot in Nottingham&lt;/a&gt; since I started
+make together my &lt;a href="https://samsm.ch/ny-architecture/"&gt;New York Architecture post&lt;/a&gt; and put together
+&lt;a href="https://samsm.ch/edgeland-nottingham/"&gt;a series of images I shot in Nottingham&lt;/a&gt; since I started
 studying there. I did think about starting a series many times throughout the
 year but I left Nottingham in June and didn&amp;rsquo;t know where I was going to be in
 the longer term so I didn&amp;rsquo;t want to start anything big that I wouldn&amp;rsquo;t be able
@@ -2198,7 +2428,7 @@ all the validation code upon loading them. I found that going from creating the
 s2 types every time to using geom&amp;rsquo;s &lt;code&gt;IsPointInRing&lt;/code&gt; function yields a ~100x
 speed increase. I used s2 types because I wrote rgeo to be used many times in a
 program rather than a few, and s2&amp;rsquo;s contains point query is &lt;em&gt;very&lt;/em&gt; fast
-(although I don&amp;rsquo;t have any benchmarks to hand).&lt;/p&gt;</description></item><item><title>Campus Lights Updates and Out-takes</title><link>https://samsm.ch/campus-lights-updates/</link><pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate><guid>https://samsm.ch/campus-lights-updates/</guid><description>&lt;p&gt;It&amp;rsquo;s 5 months since I posted my project &lt;a href="https://samsm.ch/campus-lights-updates/"&gt;Campus Lights&lt;/a&gt;.
+(although I don&amp;rsquo;t have any benchmarks to hand).&lt;/p&gt;</description></item><item><title>Campus Lights Updates and Out-takes</title><link>https://samsm.ch/campus-lights-updates/</link><pubDate>Wed, 24 Jul 2019 00:00:00 +0000</pubDate><guid>https://samsm.ch/campus-lights-updates/</guid><description>&lt;p&gt;It&amp;rsquo;s 5 months since I posted my project &lt;a href="https://samsm.ch/campus-lights/"&gt;Campus Lights&lt;/a&gt;.
 Sadly I didn&amp;rsquo;t manage to make any progress with getting anything changed on
 campus, the person I&amp;rsquo;d emailed didn&amp;rsquo;t get back to me and my exams &amp;amp; dissertation
 took precedence so I didn&amp;rsquo;t pursue it any further.&lt;/p&gt;
@@ -2985,9 +3215,9 @@ photos that I&amp;rsquo;ve taken since I started shooting square format.&lt;/p&g
 	&lt;/figure&gt;
 &lt;/p&gt;
 &lt;p&gt;All of these images were shot on Ilford HP5+, and all but the last one pushed to
-ISO 800, which has become something of a default for me. Also, all &lt;a href="https://samsm.ch/portfolio-ii/#gordon"&gt;but
+ISO 800, which has become something of a default for me. Also, all &lt;a href="https://samsm.ch/portfolio-ii/#5805"&gt;but
 one&lt;/a&gt; of these images were shot with the 150mm lens, which I bought in
-March of 2017 and also used for the last four images in &lt;a href="https://samsm.ch/portfolio-i"&gt;Portfolio
+March of 2017 and also used for the last four images in &lt;a href="https://samsm.ch/portfolio-i/"&gt;Portfolio
 I&lt;/a&gt;. I seem to use both of the lenses I own for my Hasselblad (the
 60mm and 150mm) pretty evenly but I find most of the images that I take that I
 really like have been with the 150mm.&lt;/p&gt;</description></item><item><title>Qingdao Diptych</title><link>https://samsm.ch/qingdao-diptych/</link><pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate><guid>https://samsm.ch/qingdao-diptych/</guid><description>&lt;div class="diptych"&gt;

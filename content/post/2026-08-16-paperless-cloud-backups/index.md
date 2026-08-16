@@ -156,7 +156,7 @@ services:
     volumes:
       - export:/data
       - ./rclone/config:/config/rclone
-    command: "copy /data [remote:location]"
+    command: "copy /data <remote:location>"
 
   float:
     container_name: float

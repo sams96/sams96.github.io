@@ -63,7 +63,6 @@ from
 Paperless](https://github.com/paperless-ngx/paperless-ngx/tree/main/docker/compose).
 
 ```yaml
-version: "3.4"
 services:
   broker: ...
   db: ...
@@ -81,12 +80,13 @@ services:
   rclone:
     container_name: rclone
     image: rclone/rclone:latest
+    profiles: ["rclone"]
     volumes:
       - export:/data
-      - ./rclone/config:/root/.config/rclone # Place Rclone config here
+      - ./rclone/config:/root/.config/rclone
     labels:
       ofelia.enabled: "true"
-    command: "copy /data [remote:location]"
+    command: "copy /data <remote:location>"
 
   ofelia:
     image: mcuadros/ofelia:latest
@@ -105,6 +105,11 @@ volumes:
   export:
 ```
 
+To set up the rclone remote, run the following and follow the wizard
+```bash
+$ docker compose run -ti --entrypoint="rclone config" rclone
+```
+
 Rather than figure out running Rclone once the document exporter has
 finished, I just set it to run 5 minutes later, which works well enough. I've
 been using this for the past ~6 months with no issues.
@@ -113,6 +118,14 @@ However, I don't actually update documents in Paperless that often, maybe once
 or twice a week, so it feels unnecessary to run the backups every hour but then
 I don't want to leave documents un-backed up for too long. Ideally the backups
 could be triggered when I actually do something in Paperless.
+
+
+TODO: on setting up rclone in container
+
+TODO: replace [remote:location] with dropbox:paperless
+
+TODO: explain profiles?
+
 
 ## Backup on change
 
@@ -123,3 +136,107 @@ using this to trigger the document export and sync job instead of doing it
 hourly. To do this I created [float](https://github.com/sams96/float). The idea
 of float is essentially to provide similar functionality to Ofelia, but
 triggered by webhooks instead of on a schedule.
+
+```yaml
+services:
+  broker: ...
+  db: ...
+  webserver:
+    ...
+    volumes:
+      - export:/usr/src/paperless/export
+      ...
+
+  rclone:
+    container_name: rclone
+    image: rclone/rclone:latest
+    profiles: ["rclone"]
+    volumes:
+      - export:/data
+      - ./rclone/config:/config/rclone
+    command: "copy /data [remote:location]"
+
+  float:
+    container_name: float
+    image: ghcr.io/sams96/float:latest
+    ports:
+      - "41232:41232"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      FLOAT_CMD: "docker exec -d paperless-webserver document_exporter /usr/src/paperless/export && docker start rclone"
+
+volumes:
+  export:
+```
+
+![TODO: alt text](/workflow.png)
+
+
+## On float
+
+```go
+package main
+
+import (
+	"log"
+	"net/http"
+	"os"
+	"os/exec"
+	"sync"
+	"time"
+)
+
+var debounceDefault = 15 * time.Minute
+
+func main() {
+	debounceStr := os.Getenv("FLOAT_DEBOUNCE_TIME")
+	debounceDur, err := time.ParseDuration(debounceStr)
+	if err != nil {
+		log.Println("Failed to parse debounce duration; using default of", debounceDefault.String())
+		debounceDur = debounceDefault
+	}
+
+	c := os.Getenv("FLOAT_CMD")
+	debounced := debouncer(debounceDur, func() {
+		cmd := exec.Command("/bin/sh", "-c", c)
+		cmd.Stdout, cmd.Stderr = log.Writer(), log.Writer()
+		err := cmd.Run()
+		if err != nil {
+			log.Println(err)
+		}
+	})
+
+	log.Println("float started with debounce duration:", debounceDur.String(), "command:", c)
+	log.Fatal(http.ListenAndServe("0.0.0.0:41232",
+		http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+			log.Println("request received")
+			debounced()
+			w.WriteHeader(http.StatusNoContent)
+		})),
+	)
+}
+
+// credit to https://github.com/bep/debounce
+func debouncer(after time.Duration, f func()) func() {
+	d := &struct {
+		mu    sync.Mutex
+		after time.Duration
+		timer *time.Timer
+	}{
+		after: after,
+	}
+
+	return func() {
+		d.mu.Lock()
+		defer d.mu.Unlock()
+
+		if d.timer != nil {
+			d.timer.Reset(d.after)
+			return
+		}
+
+		d.timer = time.AfterFunc(d.after, f)
+	}
+}
+```

@@ -20,8 +20,8 @@ there.
 <!--more-->
 
 I didn't do as much towards photo series in 2019 as I would've liked to. I did
-make together my [New York Architecture post](/ny-architecture) and put together
-[a series of images I shot in Nottingham](/edgeland-nottingham) since I started
+make together my [New York Architecture post](/ny-architecture/) and put together
+[a series of images I shot in Nottingham](/edgeland-nottingham/) since I started
 studying there. I did think about starting a series many times throughout the
 year but I left Nottingham in June and didn't know where I was going to be in
 the longer term so I didn't want to start anything big that I wouldn't be able

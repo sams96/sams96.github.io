@@ -10,7 +10,7 @@ tags:
 - UK
 ---
 
-It's 5 months since I posted my project [Campus Lights]({{< relref "post/2019-07-24-campus-lights-updates.md" >}}).
+It's 5 months since I posted my project [Campus Lights](/campus-lights/).
 Sadly I didn't manage to make any progress with getting anything changed on
 campus, the person I'd emailed didn't get back to me and my exams & dissertation
 took precedence so I didn't pursue it any further.

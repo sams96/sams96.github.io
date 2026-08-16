@@ -33,8 +33,8 @@ photos that I've taken since I started shooting square format.
 
 All of these images were shot on Ilford HP5+, and all but the last one pushed to
 ISO 800, which has become something of a default for me. Also, all [but
-one](#gordon) of these images were shot with the 150mm lens, which I bought in
+one](#5805) of these images were shot with the 150mm lens, which I bought in
 March of 2017 and also used for the last four images in [Portfolio
-I](/portfolio-i). I seem to use both of the lenses I own for my Hasselblad (the
+I](/portfolio-i/). I seem to use both of the lenses I own for my Hasselblad (the
 60mm and 150mm) pretty evenly but I find most of the images that I take that I
 really like have been with the 150mm.

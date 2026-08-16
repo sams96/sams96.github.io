@@ -1,13 +1,10 @@
 ---
 title: Paperless cloud backups
-url: /paperless-cloud-backup
-date:
-# categories:
-#   - homelab
-tags:
-build:
-  list: never
-  render: always
+url: /paperless-cloud-backups
+date: 2026-08-16
+categories:
+  - homelab
+  - programming
 ---
 
 I store all of my important (and many not so important) documents in my
@@ -17,12 +14,17 @@ the metadata. Having them in cloud storage, while not ideal for privacy reasons,
 would also give me a way to access the documents easily if I am unable to
 directly for whatever reason.
 <!--more-->
+</br>
 
-I chose to use Dropbox for this, because I have a lot of space available from
-sending invites years ago, and I have it synced onto my laptop which then gives
-me an additional backup there too.
+Skip ahead to see the config for [**scheduled backups**](#scheduled-backups)
+or [**backup on change**](#backup-on-change).
 
 </br>
+
+I chose to use Dropbox for my backups, because I have a lot of space available
+from sending invites years ago, and I have it synced onto my laptop which then
+gives me an additional backup there too. The methods below could also easily be
+applied to other cloud storage solutions.
 
 My initial instinct on how to solve this was to just run the dropbox daemon on
 my homelab and create a symlink to wherever paperless stores my documents. I
@@ -50,7 +52,7 @@ such that my backup is kept sufficiently up to date. And I guess now is the time
 to mention that I'm running Paperless in docker and intend to keep using the
 supplied image, so the backup should happen in my docker compose file.
 
-## Scheduling the backup
+## Scheduled backups
 
 A simple timed schedule is a classic way to run backups, so that's what I went
 with initially. Using the official Rclone docker image and
@@ -109,22 +111,22 @@ To set up the rclone remote, run the following and follow the wizard
 ```bash
 $ docker compose run -ti --entrypoint="rclone config" rclone
 ```
+and replace `<remote:location>` with the name you gave your remote and the
+folder where you want your backup to live, I use `dropbox:paperless`. Dropbox
+isn't the only option, rclone can sync with many different cloud storage
+providers, details of which are available on [their docs
+page](https://rclone.org/docs/).
 
-Rather than figure out running Rclone once the document exporter has
-finished, I just set it to run 5 minutes later, which works well enough. I've
-been using this for the past ~6 months with no issues.
+</br>
+
+Rather than figure out running Rclone once the document exporter has finished, I
+just set it to run 5 minutes later, which works well enough. I used this setup
+for around 6 months with no issues.
 
 However, I don't actually update documents in Paperless that often, maybe once
 or twice a week, so it feels unnecessary to run the backups every hour but then
 I don't want to leave documents un-backed up for too long. Ideally the backups
 could be triggered when I actually do something in Paperless.
-
-
-TODO: on setting up rclone in container
-
-TODO: replace [remote:location] with dropbox:paperless
-
-TODO: explain profiles?
 
 
 ## Backup on change
@@ -170,10 +172,37 @@ volumes:
   export:
 ```
 
-![TODO: alt text](/workflow.png)
+The same rclone set up [as
+above](#:~:text=To%20set%20up%20the%20rclone%20remote) is needed, and then you
+will need to create a workflow in paperless to send the webhook, I have included
+a screenshot below to show the settings I use.
+
+Float will debounce the requests to avoid running a backup on every change. The
+default debounce duration is 15 minutes, and this can be configured with the
+environment variable `FLOAT_DEBOUNCE_TIME`, which uses duration strings from
+Go's time package, which [are specified](https://pkg.go.dev/time#ParseDuration)
+as such:
+
+> A duration string is a possibly signed sequence of decimal numbers, each with optional fraction and a unit suffix, such as "300ms", "-1.5h" or "2h45m". Valid time units are "ns", "us" (or "µs"), "ms", "s", "m", "h".
+
+![Screenshot of paperless edit workflow screen, with triggers on "Document
+Added" and "Document Updated" both with filename filters of "*" and content
+matching disabled. There's also a webhook action with the url
+"http://float:41232"](/workflow.png)
 
 
 ## On float
+
+The source code for float is very short so I'm just going to include it in full
+below. Rather than use the docker API and labels like Ofelia, I decided to just
+pass in a command to run, and base the container on the [docker base
+image](https://hub.docker.com/_/docker), which gives the container access to
+docker.
+
+I do think Ofelia's label based configuration is much nicer though, so
+if I get some more motivation to work on float copying that would be one of the
+improvements I would make. I would also like it to handle multiple commands with
+independant webhooks and debounce timers, but I haven't had the need for that.
 
 ```go
 package main

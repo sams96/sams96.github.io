@@ -6,7 +6,8 @@ datePosted: 2018-11-09
 image: 3308.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of rocks in a lake with the far side of the lake barely
+  visible due to low cloud
 
 metadata:
   camera: Hasselblad 500C/M

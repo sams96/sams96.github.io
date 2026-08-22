@@ -6,7 +6,8 @@ datePosted: 2018-11-09
 image: 4609.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a country road weaving through a moor with a few trees
+  on either side and some larger hills in the background
 
 metadata:
   camera: Hasselblad 500C/M

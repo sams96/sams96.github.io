@@ -6,7 +6,8 @@ datePosted: 2018-11-09
 image: 3409.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a crowd sat on a slope watching a performer in the
+  foreground
 
 metadata:
   camera: Hasselblad 500C/M

@@ -6,7 +6,9 @@ datePosted: 2018-11-09
 image: 3606.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a vast forested valley with the mountain at the top of
+  the frame being above the tree line, and the corner of a dam peeking out at
+  the top of the valley
 
 metadata:
   camera: Hasselblad 500C/M

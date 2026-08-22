@@ -6,7 +6,8 @@ datePosted: 2018-11-09
 image: 3612.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of the Matterhorn on the lower left of the frame with a
+  partly cloudy sky above
 
 metadata:
   camera: Hasselblad 500C/M

@@ -6,7 +6,8 @@ datePosted: 2018-11-09
 image: 4503.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo looking down at the bow of a wooden boat covered in
+  various items including a large dog sat on a cushion
 
 metadata:
   camera: Hasselblad 500C/M

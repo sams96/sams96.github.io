@@ -6,7 +6,7 @@ datePosted: 2018-11-09
 image: 4408.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a thick forest with a white birch tree in the centre
 
 metadata:
   camera: Hasselblad 500C/M

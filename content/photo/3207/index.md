@@ -6,7 +6,8 @@ datePosted: 2019-11-09
 image: 3207.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of some low ruined dry stone walls that once formed a
+  house, with a dead tree to the left and a clear sky above
 
 metadata:
   camera: Hasselblad 500C/M

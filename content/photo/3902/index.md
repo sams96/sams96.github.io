@@ -6,7 +6,8 @@ datePosted: 2018-11-09
 image: 3902.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of some large boulders with bits of small plants peeking
+  out between
 
 metadata:
   camera: Hasselblad 500C/M

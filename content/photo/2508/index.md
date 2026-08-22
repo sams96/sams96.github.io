@@ -6,7 +6,8 @@ datePosted: 2018-11-09
 image: 2508.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a graffitied brick wall with two tall openings and a
+  lamp post to the right
 
 metadata:
   camera: Hasselblad 500C/M

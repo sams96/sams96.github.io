@@ -6,7 +6,8 @@ datePosted: 2018-11-09
 image: 4012.avif
 type: photo
 alt: >-
-  TODO alt text
+  Black & white photo of a dead tree in from of a leafless forest, and next to a
+  dark but somewhat reflective river which takes up the lower third of the frame
 
 metadata:
   camera: Hasselblad 500C/M

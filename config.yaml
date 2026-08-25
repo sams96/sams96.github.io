@@ -71,3 +71,7 @@ languages:
     locale: "English"
     label: "en-gb"
     weight: 1
+
+security:
+  exec:
+    osEnv: '^HUGO_'

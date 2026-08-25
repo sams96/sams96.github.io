@@ -4,6 +4,8 @@ url: /hong-kong-at-night
 date: 2026-07-25
 categories:
  - photography
+modifications:
+  2026-08-25: 1500mm -> 150mm
 ---
 
 {{< photo img="10601" loading="eager" fetchpriority="high"
@@ -66,6 +68,6 @@ mini tripod I bought didn't come with a tripod head, so even once I had that it
 was still awkward.
 
 Every photo in the series was shot on my Hasselblad 500C/M with either a 60mm
-f/3.5 CF or 1500mm f/4 CF lens using Ilford HP5+ shot at ISO 800 and developed
+f/3.5 CF or 150mm f/4 CF lens using Ilford HP5+ shot at ISO 800 and developed
 in Ilfotec HC 1:49 for 11 minutes. I scanned them with an Epson V800 and edited
 them in darktable.

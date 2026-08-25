@@ -56,7 +56,7 @@ jobs:
       - name: Build
         run: hugo --minify
         env:
-          HUGO_tpmpyaiw: ${{ secrets.HUGO_tpmpyaiw }}
+          HUGO_TPMPYAIW: ${{ secrets.HUGO_TPMPYAIW }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

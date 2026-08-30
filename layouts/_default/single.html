@@ -9,12 +9,14 @@
             {{ .Content }}
         </div>
 
+		{{ if not .Params.noreply }}
 		</br>
 		<small>
 			Reply to this post {{ printf `<%s mailto:%s?subject=Re: %s"> <b>by Email</b></a>` "a href=\"" (getenv "HUGO_TPMPYAIW") .Title | safeHTML }}
 		</small>
+		{{ end }}
 
-        {{ partial "articleInfoFull.html" . }}
+		{{ partial "articleInfoFull.html" . }}
 
 		{{ with .Params.tootlink }}
 			<div id="mastodon-comments">

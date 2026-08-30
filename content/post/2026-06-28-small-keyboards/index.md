@@ -4,6 +4,7 @@ url: /small-keyboards
 date: 2026-06-28
 categories:
  - hardware
+tootLink: "https://toot.io/@mondoman712/116828036185448241"
 ---
 
 I use my keyboards a lot, my job as a software engineer involves quite a lot of

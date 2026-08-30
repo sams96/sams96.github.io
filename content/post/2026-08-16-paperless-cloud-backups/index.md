@@ -5,6 +5,7 @@ date: 2026-08-16
 categories:
   - homelab
   - programming
+tootLink: "https://toot.io/@mondoman712/117105282248832964"
 ---
 
 I store all of my important (and many not so important) documents in my

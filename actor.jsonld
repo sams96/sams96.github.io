@@ -4,8 +4,9 @@
     "https://w3id.org/fep/b06c"
   ],
   "id": "https://samsm.ch/actor.jsonld",
-  "type": "Organization",
+  "type": "Person",
   "name": "Sam Smith",
+  "preferredUsername": "sam",
   "summary": "My blog! I write about (mostly analog) photography and (mostly golang)\nprogramming\n",
   "pollOnly": true,
   "updateInterval": "P1D",
@@ -402,4 +403,11 @@
           }]
     }
   }
+  "url": {
+    "type": "Link",
+    "mediatype": "text/html",
+    "href": "https://samsm.ch/"
+  }
+  "webfinger": "sam@samsm.ch",
+  "cc": "as:Public"
 }

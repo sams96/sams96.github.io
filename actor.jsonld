@@ -402,12 +402,12 @@
             }
           }]
     }
-  }
+  },
   "url": {
     "type": "Link",
     "mediatype": "text/html",
     "href": "https://samsm.ch/"
-  }
+  },
   "webfinger": "sam@samsm.ch",
   "cc": "as:Public"
 }

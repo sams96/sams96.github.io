@@ -4,3 +4,5 @@ github.com/sams96/hugo-activitypub v0.0.0-20260905082538-d48956243a23 h1:0FG6rY/
 github.com/sams96/hugo-activitypub v0.0.0-20260905082538-d48956243a23/go.mod h1:XbE0X2GZu/pBw1StcDoqSs5rKqGYMORuMOH1QY+SjpI=
 github.com/sams96/hugo-activitypub v0.0.0-20260905083226-2200cc556507 h1:m7V5el6O6ttMAhwu49WlqTBV/YPS7oJXrbMQ6VlMuDw=
 github.com/sams96/hugo-activitypub v0.0.0-20260905083226-2200cc556507/go.mod h1:XbE0X2GZu/pBw1StcDoqSs5rKqGYMORuMOH1QY+SjpI=
+github.com/sams96/hugo-activitypub v0.0.0-20260905084505-ac3dc1d8ab57 h1:aD0zRhS3ssNaDVs/a6so91RSHWWi969WtlfcpqMPTFY=
+github.com/sams96/hugo-activitypub v0.0.0-20260905084505-ac3dc1d8ab57/go.mod h1:XbE0X2GZu/pBw1StcDoqSs5rKqGYMORuMOH1QY+SjpI=

@@ -1,0 +1,10 @@
+{
+  "subject": "acct:sam@samsm.ch",
+  "links": [
+    {
+      "rel": "self",
+      "type": "application/activity+json",
+      "href": "https://samsm.ch/actor.json"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/fep/b06c"
+  ],
+  "id": "https://samsm.ch/qingdao-diptych/",
+  "type": "Article",
+  "name": "Qingdao Diptych",
+  "summary": "\u003cdiv class=\"diptych\"\u003e\n\n\n\n\u003cfigure\u003e\n\t\u003ca href=\"/photos/11207/\"\u003e\n\t\u003cimg src=\"/photos/11207/11207.avif\"\n         title=\"Moon over Qingdao\"\n         alt=\"Colour photo of a busy beach at sunset with large hotels adjacent and the moon in the sky above\"\n\t\t height=\"999\"\n\t\t width=\"999\"\n\t\t id=\"11207\" loading=\"lazy\"  fetchpriority=\"auto\" /\u003e \n    \u003c/a\u003e\n\t\u003c/figure\u003e\n\n\n\n\n\u003cfigure\u003e\n\t\u003ca href=\"/photos/11210/\"\u003e\n\t\u003cimg src=\"/photos/11210/11210.avif\"\n         title=\"Huiquan Cape\"\n         alt=\"Colour photo of a peninsula in the sea with a large hotel to the left and a small forested hill to the right, with multiple ships in the background, taken during blue hour\"\n\t\t height=\"1000\"\n\t\t width=\"1000\"\n\t\t id=\"11210\" loading=\"lazy\"  fetchpriority=\"auto\" /\u003e \n    \u003c/a\u003e\n\t\u003c/figure\u003e\n\n\u003c/div\u003e\n\u003cp\u003eThis is a pair of photos that I took from the top floor of a pagoda in\n小鱼山公园 (Xiaoyushan park, or Little Fish Hill\nPark) in Qingdao, China.\u003c/p\u003e",
+  "content": "\u003cdiv class=\"diptych\"\u003e\n\n\n\n\u003cfigure\u003e\n\t\u003ca href=\"/photos/11207/\"\u003e\n\t\u003cimg src=\"/photos/11207/11207.avif\"\n         title=\"Moon over Qingdao\"\n         alt=\"Colour photo of a busy beach at sunset with large hotels adjacent and the moon in the sky above\"\n\t\t height=\"999\"\n\t\t width=\"999\"\n\t\t id=\"11207\" loading=\"lazy\"  fetchpriority=\"auto\" /\u003e \n    \u003c/a\u003e\n\t\u003c/figure\u003e\n\n\n\n\n\u003cfigure\u003e\n\t\u003ca href=\"/photos/11210/\"\u003e\n\t\u003cimg src=\"/photos/11210/11210.avif\"\n         title=\"Huiquan Cape\"\n         alt=\"Colour photo of a peninsula in the sea with a large hotel to the left and a small forested hill to the right, with multiple ships in the background, taken during blue hour\"\n\t\t height=\"1000\"\n\t\t width=\"1000\"\n\t\t id=\"11210\" loading=\"lazy\"  fetchpriority=\"auto\" /\u003e \n    \u003c/a\u003e\n\t\u003c/figure\u003e\n\n\u003c/div\u003e\n\u003cp\u003eThis is a pair of photos that I took from the top floor of a pagoda in\n小鱼山公园 (Xiaoyushan park, or Little Fish Hill\nPark) in Qingdao, China.\u003c/p\u003e",
+  "url": "https://samsm.ch/qingdao-diptych/",
+  "published": "2018-11-21T00:00:00Z",
+  "attributedTo": "https://samsm.ch/actor.jsonld",
+  "to": ["https://www.w3.org/ns/activitystreams#Public"]
+}

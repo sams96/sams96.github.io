@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/fep/b06c"
+  ],
+  "id": "https://samsm.ch/photos/23503/",
+  "type": "Article",
+  "name": "Standout 06",
+  "summary": "",
+  "content": "",
+  "url": "https://samsm.ch/photos/23503/",
+  "published": "2024-05-12T00:00:00Z",
+  "attributedTo": "https://samsm.ch/actor.jsonld",
+  "to": ["https://www.w3.org/ns/activitystreams#Public"]
+}

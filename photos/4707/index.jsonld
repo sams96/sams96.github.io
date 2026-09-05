@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/fep/b06c"
+  ],
+  "id": "https://samsm.ch/photos/4707/",
+  "type": "Article",
+  "name": "蒙自西路 West Mengzi Road",
+  "summary": "",
+  "content": "",
+  "url": "https://samsm.ch/photos/4707/",
+  "published": "2017-06-11T00:00:00Z",
+  "attributedTo": "https://samsm.ch/actor.jsonld",
+  "to": ["https://www.w3.org/ns/activitystreams#Public"]
+}

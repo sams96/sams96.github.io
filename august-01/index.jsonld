@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/fep/b06c"
+  ],
+  "id": "https://samsm.ch/august-01/",
+  "type": "Article",
+  "name": "August 01",
+  "summary": "\u003cp\u003eAugust 01 is Swiss national day, and one of the few days of the year that it\u0026rsquo;s\nlegal to set off fireworks here in Zurich. I decided to head out in the evening\nwith my digital camera to see the fireworks and take a few photos, primarily\njust for myself and maybe to put a few on my Instagram story (hence the vertial\ncompositions). In the end I thought I had a nice little atmospheric photo series\nwhich would fit nicely here.\u003c/p\u003e\n\u003cfigure\u003e\u003ca href=\"https://www.flickr.com/gp/ss9679/23Sopq\"\u003e\n\t\u003cimg src=\"https://live.staticflickr.com/65535/51355630358_6ae2d1a26e_h.jpg\" loading=\"lazy\" /\u003e \u003c/a\u003e\n\u003c/figure\u003e",
+  "content": "\u003cp\u003eAugust 01 is Swiss national day, and one of the few days of the year that it\u0026rsquo;s\nlegal to set off fireworks here in Zurich. I decided to head out in the evening\nwith my digital camera to see the fireworks and take a few photos, primarily\njust for myself and maybe to put a few on my Instagram story (hence the vertial\ncompositions). In the end I thought I had a nice little atmospheric photo series\nwhich would fit nicely here.\u003c/p\u003e\n\u003cfigure\u003e\u003ca href=\"https://www.flickr.com/gp/ss9679/23Sopq\"\u003e\n\t\u003cimg src=\"https://live.staticflickr.com/65535/51355630358_6ae2d1a26e_h.jpg\" loading=\"lazy\" /\u003e \u003c/a\u003e\n\u003c/figure\u003e\n\n\u003cp\u003e\u003cfigure\u003e\u003ca href=\"https://www.flickr.com/gp/ss9679/3Sb77D\"\u003e\n\t\u003cimg src=\"https://live.staticflickr.com/65535/51355402696_39b5777a8d_h.jpg\" loading=\"lazy\" /\u003e \u003c/a\u003e\n\u003c/figure\u003e\n\n\u003cfigure\u003e\n\t\u003cimg src=\"https://live.staticflickr.com/65535/51355402471_da0d001689_h.jpg\" loading=\"lazy\" /\u003e \n\u003c/figure\u003e\n\n\u003cfigure\u003e\n\t\u003cimg src=\"https://live.staticflickr.com/65535/51355402521_715292695a_h.jpg\" loading=\"lazy\" /\u003e \n\u003c/figure\u003e\n\n\u003cfigure\u003e\n\t\u003cimg src=\"https://live.staticflickr.com/65535/51356417910_7db8357fa5_h.jpg\" loading=\"lazy\" /\u003e \n\u003c/figure\u003e\n\n\u003cfigure\u003e\n\t\u003cimg src=\"https://live.staticflickr.com/65535/51354659772_495640c83d_h.jpg\" loading=\"lazy\" /\u003e \n\u003c/figure\u003e\n\u003c/p\u003e",
+  "url": "https://samsm.ch/august-01/",
+  "published": "2021-08-03T00:00:00Z",
+  "attributedTo": "https://samsm.ch/actor.jsonld",
+  "to": ["https://www.w3.org/ns/activitystreams#Public"]
+}

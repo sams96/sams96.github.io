@@ -1,0 +1,10 @@
+{
+  "@context": ["https://www.w3.org/ns/activitystreams", "https://w3id.org/fep/5711"],
+  "id": "https://samsm.ch/inbox.jsonld",
+  "type": "OrderedCollection",
+  "summary": "Inbox of Sam Smith",
+  "attributedTo": "https://samsm.ch/actor.jsonld",
+  "to": "as:Public",
+  "inboxOf": "https://samsm.ch/actor.jsonld",
+  "totalItems": 0
+}

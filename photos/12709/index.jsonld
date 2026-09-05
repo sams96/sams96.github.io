@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/fep/b06c"
+  ],
+  "id": "https://samsm.ch/photos/12709/",
+  "type": "Article",
+  "name": "Edgeland Nottingham 08",
+  "summary": "",
+  "content": "",
+  "url": "https://samsm.ch/photos/12709/",
+  "published": "2019-01-20T00:00:00Z",
+  "attributedTo": "https://samsm.ch/actor.jsonld",
+  "to": ["https://www.w3.org/ns/activitystreams#Public"]
+}

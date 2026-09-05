@@ -1,0 +1,405 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/fep/b06c"
+  ],
+  "id": "https://samsm.ch/actor.jsonld",
+  "type": "Organization",
+  "name": "Sam Smith",
+  "summary": "My blog! I write about (mostly analog) photography and (mostly golang)\nprogramming\n",
+  "pollOnly": true,
+  "updateInterval": "P1D",
+  "inbox": "https://samsm.ch/inbox.jsonld",
+  "outbox": {
+    "id": "https://samsm.ch/outbox.jsonld",
+    "totalItems": 24,
+    "first": {
+      "id": "https://samsm.ch/outbox/1.jsonld",
+      "orderedItems": [{
+            "id": "https://samsm.ch/paperless-cloud-backups/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2026-08-16T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/paperless-cloud-backups/",
+              "type": "Article",
+              "name": "Paperless cloud backups",
+              "summary": "\u003cp\u003eI store all of my important (and many not so important) documents in my\n\u003ca href=\"https://paperless-ngx.com/\"\u003ePaperless-ngx\u003c/a\u003e instance running on my homelab.\nGiven this importance, I wanted to add an additional backup of my documents and\nthe metadata. Having them in cloud storage, while not ideal for privacy reasons,\nwould also give me a way to access the documents easily if I am unable to\ndirectly for whatever reason.\u003c/p\u003e",
+              "url": "https://samsm.ch/paperless-cloud-backups/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/hong-kong-at-night/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2026-07-25T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/hong-kong-at-night/",
+              "type": "Article",
+              "name": "Hong Kong at Night",
+              "summary": "\u003cfigure\u003e\n\t\u003ca href=\"/photos/10601/\"\u003e\n\t\u003cimg src=\"/photos/10601/10601.avif\"\n         title=\"Victoria Harbour\"\n         alt=\"Black and white photo showing a night scene showing the skyline of Hong Kong with victoria harbour in the centre\"\n\t\t height=\"1000\"\n\t\t width=\"1000\"\n\t\t id=\"10601\" loading=\"eager\"  fetchpriority=\"high\" /\u003e \n    \u003c/a\u003e\u003cfigcaption\u003e\n            \u003cp\u003eVictoria Harbour\u003c/p\u003e\n        \u003c/figcaption\u003e\n\t\u003c/figure\u003e",
+              "url": "https://samsm.ch/hong-kong-at-night/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/small-keyboards/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2026-06-28T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/small-keyboards/",
+              "type": "Article",
+              "name": "Why I Like Small Keyboards",
+              "summary": "\u003cp\u003eI use my keyboards a lot, my job as a software engineer involves quite a lot of\ntyping, I also spend quite a lot of my spare time in front of a computer. I\u0026rsquo;ve\nbeen daily driving small keyboards for a while and have been enjoying doing so.\nHere\u0026rsquo;s a bit about which keyboards and why I like them.\u003c/p\u003e",
+              "url": "https://samsm.ch/small-keyboards/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/china-trip-2025/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2026-02-26T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/china-trip-2025/",
+              "type": "Article",
+              "name": "Notes on a trip to China",
+              "summary": "\u003cp\u003eIn September 2025 my wife and I spent just over 3 week in China, her first time\nback to her home country in 2 years and my third trip there, having been in 2017\nand 2018. We spent most of our time in my wife\u0026rsquo;s home city of Chengdu, while\nalso visited the nearby cities of Chongqing and Guiyang. This post is a\ncollection of my thoughts and opinions on the places we visited, along with some\nphotos I took during the trip.\u003c/p\u003e\n\n\n\n\u003cfigure\u003e\n\t\u003ca href=\"/photos/24008/\"\u003e\n\t\u003cimg src=\"/photos/24008/24008.avif\"\n         title=\"文殊院 Wenshu Temple, Chengdu\"\n         alt=\"A large, 3 storey Chinese temple building obscured by trees, 3 of which are visible as trunks in the foreground. In the lower third of the image a paved path from which two of the trees protrude, black and white.\"\n\t\t height=\"1000\"\n\t\t width=\"1000\"\n\t\t id=\"24008\" loading=\"eager\"  fetchpriority=\"high\" /\u003e \n    \u003c/a\u003e\u003cfigcaption\u003e\n            \u003cp\u003e文殊院 Wenshu Temple, Chengdu\u003c/p\u003e\n        \u003c/figcaption\u003e\n\t\u003c/figure\u003e",
+              "url": "https://samsm.ch/china-trip-2025/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/this-site-is-moving/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2026-01-14T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/this-site-is-moving/",
+              "type": "Article",
+              "name": "This site is moving",
+              "summary": "\u003cp\u003eI have finally bought a domain for this website and it is moving to \u003ca href=\"https://samsm.ch\"\u003esamsm.ch\u003c/a\u003e. It will continue to be available at \u003ca href=\"http://sams96.github.io\"\u003esams96.github.io\u003c/a\u003e for the time being but that should change at some point and will do so without warning.\u003c/p\u003e",
+              "url": "https://samsm.ch/this-site-is-moving/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/standout/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2025-07-20T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/standout/",
+              "type": "Article",
+              "name": "Photo Series: Standout",
+              "summary": "\u003cp\u003eStandout is a short series of shots taken in Switzerland between March 2021 and\nMay 2024. They are photos showing telephone poles, electricity pylons,\nsignposts, and fence posts standing out.\u003c/p\u003e\n\n\n\n\u003cfigure\u003e\n\t\u003ca href=\"/photos/19106/\"\u003e\n\t\u003cimg src=\"/photos/19106/19106.avif\"\n         title=\"Standout 01\"\n         alt=\"A telephone pole with a second angled support pole in front of a white sky in a field with a patch of snow in the background, black and white.\"\n\t\t height=\"1000\"\n\t\t width=\"1000\"\n\t\t id=\"19106\" loading=\"eager\"  fetchpriority=\"high\" /\u003e \n    \u003c/a\u003e\n\t\u003c/figure\u003e",
+              "url": "https://samsm.ch/standout/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/always-sort-by-ID/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2025-05-27T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/always-sort-by-ID/",
+              "type": "Article",
+              "name": "Always Sort by ID — An Interesting Gotcha",
+              "summary": "\u003cp\u003eIf you\u0026rsquo;re writing a database query for your web service and there\u0026rsquo;s pagination,\nyou should always sort by a unique field like ID. This should also be done on\ntop of any other sorting. Otherwise you can get double entries or lose results\nacross pages.\u003c/p\u003e",
+              "url": "https://samsm.ch/always-sort-by-ID/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/rgeo-5-years-on/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2025-03-08T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/rgeo-5-years-on/",
+              "type": "Article",
+              "name": "Rgeo — 5 Years On",
+              "summary": "\u003cp\u003e5 years ago I wrote \u003ca href=\"https://github.com/sams96/rgeo\"\u003eRgeo\u003c/a\u003e, a small Go package\nfor reverse geocoding (you input some coordinates, it gives you information\nabout the location). Today I am putting the projected on an indefinite hiatus.\u003c/p\u003e",
+              "url": "https://samsm.ch/rgeo-5-years-on/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/go-project-layout/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2025-02-26T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/go-project-layout/",
+              "type": "Article",
+              "name": "Applying Hexagonal Architecture to a Mid-Size Go Backend",
+              "summary": "\u003cp\u003eI\u0026rsquo;ve been working on web backends in Go for the past 5 years, and on various\nprojects of covering a range of ages from brand new greenfield projects to one\nbuilt on top of a core that predates the Go language. The needs of these\nbackends tend not to be overly complex, handling user management, payments, and\na relativly simple product. They\u0026rsquo;re maintained by teams of 2-20 backend\nengineers and work with a SPA web frontend communicating with JSON over HTTP.\u003c/p\u003e\n\u003cp\u003eWith my most recent work being mostly greenfield, I\u0026rsquo;ve been thinking more about\nhow I can apply what I\u0026rsquo;ve learned from my colleagues working on older projects,\nand avoid decisions made in the name of moving fast which cause a lot of pain\nfurther down the line.\u003c/p\u003e",
+              "url": "https://samsm.ch/go-project-layout/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/portfolio-v/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2021-12-19T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/portfolio-v/",
+              "type": "Article",
+              "name": "Portfolio V - 2020",
+              "summary": "\u003cp\u003eThis year was, unlike the previous few, without any major travel. Although I did\nmove from the UK to Switzerland, which did give me a new place to explore and\nphotograph. Even with that I took a fraction of the number of photos I usually\ntake in a year in 2020, which left me with not much to choose from for this\nselection. I chose to still put it together though because I like that this has\nbecome somewhat of a yearly reflection (even if it does take me the better part\nof the next year to put them together) and I thought that given it was somewhat\nof an interesting year it could be nice to have this record.\u003c/p\u003e",
+              "url": "https://samsm.ch/portfolio-v/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/august-01/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2021-08-03T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/august-01/",
+              "type": "Article",
+              "name": "August 01",
+              "summary": "\u003cp\u003eAugust 01 is Swiss national day, and one of the few days of the year that it\u0026rsquo;s\nlegal to set off fireworks here in Zurich. I decided to head out in the evening\nwith my digital camera to see the fireworks and take a few photos, primarily\njust for myself and maybe to put a few on my Instagram story (hence the vertial\ncompositions). In the end I thought I had a nice little atmospheric photo series\nwhich would fit nicely here.\u003c/p\u003e\n\u003cfigure\u003e\u003ca href=\"https://www.flickr.com/gp/ss9679/23Sopq\"\u003e\n\t\u003cimg src=\"https://live.staticflickr.com/65535/51355630358_6ae2d1a26e_h.jpg\" loading=\"lazy\" /\u003e \u003c/a\u003e\n\u003c/figure\u003e",
+              "url": "https://samsm.ch/august-01/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/portfolio-iv/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2020-11-22T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/portfolio-iv/",
+              "type": "Article",
+              "name": "Portfolio IV - 2019",
+              "summary": "\u003cp\u003e2019 was another active year for me, with a trip to Venice in July and then a\nlong trip to Barcelona, the U.S, Vietnam, Thailand but mostly Taiwan. I only\nshot colour film in Vietnam and Thailand so those won\u0026rsquo;t appear here, and my film\nfrom Thailand was actually the first film I\u0026rsquo;ve posted to a lab due to running\nout of chems and Corona, and they were annoyingly lost before they made it\nthere.\u003c/p\u003e",
+              "url": "https://samsm.ch/portfolio-iv/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/edgeland-nottingham/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2020-03-29T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/edgeland-nottingham/",
+              "type": "Article",
+              "name": "Edgeland Nottingham",
+              "summary": "\u003cp\u003eI was recently looking through all the photos I took during my 4 years living in\nNottingham to see if I could come up with some kind of series out of them. After\ncutting it down to all the black \u0026amp; white images that turned out reasonably I had\njust over 200 photos so I needed to come up with some more specific ideas. One\ntheme I tend to shoot a lot is where nature meets the built environment, which\nlead me to put together this series. I got the title, and some inspiration, from\n\u003ca href=\"https://www.robinfriend.co.uk/bastard-countryside\"\u003eRobin Friend\u0026rsquo;s Bastard\nCountryside\u003c/a\u003e (watch \u003ca href=\"https://www.youtube.com/watch?v=EkS_jxaej90\"\u003ethis\nvideo\u003c/a\u003e for a good introduction).\n\n\n\n\u003cfigure\u003e\n\t\u003ca href=\"/photos/13707/\"\u003e\n\t\u003cimg src=\"/photos/13707/13707.avif\"\n         title=\"Edgeland Nottingham 01\"\n         alt=\"Black \u0026amp; white photo looking through a hedgerow across the roofs of some brick houses with farmland heading into the horizon\"\n\t\t height=\"1000\"\n\t\t width=\"1000\"\n\t\t id=\"13707\" loading=\"lazy\"  fetchpriority=\"auto\" /\u003e \n    \u003c/a\u003e\n\t\u003c/figure\u003e\n\u003c/p\u003e",
+              "url": "https://samsm.ch/edgeland-nottingham/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/ny-architecture/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2020-03-15T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/ny-architecture/",
+              "type": "Article",
+              "name": "Photo Series: New York Architecture",
+              "summary": "\u003cp\u003eJust 15 months after I posted my \u003ca href=\"/singaporean-architecture/\"\u003eSingapore Architecture photo\nseries\u003c/a\u003e, I have decided to revisit this theme with\nsome photos I took in New York last September. Despite what this series might\nsuggest, I did explore beyond Manhattan but not as much because I found\nManhattan to be the most interesting photographically.\u003c/p\u003e\n\u003cdiv class=\"diptych\"\u003e\n\n\n\n\u003cfigure\u003e\n\t\u003ca href=\"/photos/14510/\"\u003e\n\t\u003cimg src=\"/photos/14510/14510.avif\"\n         title=\"New York Architecture 01\"\n         alt=\"Black \u0026amp; white photo of a brick apartment building behind a row of trees\"\n\t\t height=\"1000\"\n\t\t width=\"1000\"\n\t\t id=\"14510\" loading=\"lazy\"  fetchpriority=\"auto\" /\u003e \n    \u003c/a\u003e\n\t\u003c/figure\u003e\n\n\n\n\n\u003cfigure\u003e\n\t\u003ca href=\"/photos/14507/\"\u003e\n\t\u003cimg src=\"/photos/14507/14507.avif\"\n         title=\"Chatham Green\"\n         alt=\"Black \u0026amp; white photo of a wide modernist apartment block with a tall windowless tower in the centre\"\n\t\t height=\"999\"\n\t\t width=\"1000\"\n\t\t id=\"14507\" loading=\"lazy\"  fetchpriority=\"auto\" /\u003e \n    \u003c/a\u003e\n\t\u003c/figure\u003e\n\n\u003c/div\u003e",
+              "url": "https://samsm.ch/ny-architecture/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/rgeo/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2020-03-01T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/rgeo/",
+              "type": "Article",
+              "name": "Rgeo — A Go package for basic, fast, local reverse geocoding",
+              "summary": "\u003cp\u003e\u003ca href=\"https://github.com/sams96/rgeo\"\u003eRgeo\u003c/a\u003e is a fast, simple solution for local\nreverse geocoding, Rather than relying on external software or online APIs, rgeo\npackages all of the data it needs in your binary. This means it will only ever\nwork down to the level of cities , but if that\u0026rsquo;s all you need then this is the\nlibrary for you.\u003c/p\u003e",
+              "url": "https://samsm.ch/rgeo/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/campus-lights-updates/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2019-07-24T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/campus-lights-updates/",
+              "type": "Article",
+              "name": "Campus Lights Updates and Out-takes",
+              "summary": "\u003cp\u003eIt\u0026rsquo;s 5 months since I posted my project \u003ca href=\"/campus-lights/\"\u003eCampus Lights\u003c/a\u003e.\nSadly I didn\u0026rsquo;t manage to make any progress with getting anything changed on\ncampus, the person I\u0026rsquo;d emailed didn\u0026rsquo;t get back to me and my exams \u0026amp; dissertation\ntook precedence so I didn\u0026rsquo;t pursue it any further.\u003c/p\u003e",
+              "url": "https://samsm.ch/campus-lights-updates/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/portfolio-iii/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2019-06-18T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/portfolio-iii/",
+              "type": "Article",
+              "name": "Portfolio III - 2018",
+              "summary": "\u003cp\u003eHaving finished my \u003ca href=\"/portfolio-ii/\"\u003elast portfolio\u003c/a\u003e\nat the end of 2017 I can now start doing them yearly, so this one covers 2018.\nThis includes two trips to the Canary islands, one to Gran Canaria in March and\nanother to Fuerteventura in December as well as another long trip around Asia in\nthe summer.\u003c/p\u003e",
+              "url": "https://samsm.ch/portfolio-iii/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/campus-lights/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2019-02-16T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/campus-lights/",
+              "type": "Article",
+              "name": "Campus Lights",
+              "summary": "\u003cp\u003eAs an astronomy student and hobbyist, light pollution has sort of become my\nenvironmental issue of choice. Not only is it an annoyance to astronomers, but\nalso damaging to wildlife as well as our health and is a large energy sink. I\nhave taken particular notice of the amount of light pollution on my university\u0026rsquo;s\ncampus lately as I am back living on campus after 2 years of living elsewhere,\nand my dissertation involves using the telescope on the roof of the physics\nbuilding. This is a university that seems to boast about being \u003cem\u003egreen\u003c/em\u003e but seems\nto ignore this aspect of the environment.\u003c/p\u003e",
+              "url": "https://samsm.ch/campus-lights/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/burmese-dogs/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2019-01-21T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/burmese-dogs/",
+              "type": "Article",
+              "name": "Burmese Dogs",
+              "summary": "\u003cblockquote\u003e\"The pariah curs were baying the moon - it was only a quarter full\nand nearly down by midnight, but the dogs slept all day in the heat, and they\nhad begun their moon-choruses already\" \u003cfooter class=\"bq\"\u003e- George Orwell\u003c/footer\u003e\n\u003c/blockquote\u003e\u003cbr\u003e\n\u003cfigure\u003e\n\t\u003cimg src=\"https://samsm.ch/burmese-dogs/burmese-dogs-01.jpg\" loading=\"lazy\" /\u003e \n\u003c/figure\u003e",
+              "url": "https://samsm.ch/burmese-dogs/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/singaporean-architecture/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2018-12-02T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/singaporean-architecture/",
+              "type": "Article",
+              "name": "Photo Series: Singaporean Architecture",
+              "summary": "\u003cp\u003eIn another attempt at post-shooting photo series creation, I have put together a\ncollection of architecture shots I took during my brief stay in Singapore in\nJune of 2018.\u003c/p\u003e\n\n\n\n\u003cfigure\u003e\n\t\u003ca href=\"/photos/8908/\"\u003e\n\t\u003cimg src=\"/photos/8908/8908.avif\"\n         title=\"Singaporean Architecture 01\"\n         alt=\"TODO alt text\"\n\t\t height=\"999\"\n\t\t width=\"1000\"\n\t\t id=\"8908\" loading=\"lazy\"  fetchpriority=\"auto\" /\u003e \n    \u003c/a\u003e\n\t\u003c/figure\u003e",
+              "url": "https://samsm.ch/singaporean-architecture/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/portfolio-ii/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2018-11-25T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/portfolio-ii/",
+              "type": "Article",
+              "name": "Portfolio II",
+              "summary": "\u003cp\u003eThis set of images begins where the \u003ca href=\"/portfolio-i/\"\u003elast portfolio\u003c/a\u003e\nleaves off and primarily shows my travels during the summer of 2017, with the\nlast image being the only one outside of that. I have again chosen to stick to\nblack and white images taken with my Hasselblad for consistency, and because\nit\u0026rsquo;s what I primarily use. I am planning on doing one of these with the colour\nphotos that I\u0026rsquo;ve taken since I started shooting square format.\u003c/p\u003e",
+              "url": "https://samsm.ch/portfolio-ii/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/qingdao-diptych/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2018-11-21T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/qingdao-diptych/",
+              "type": "Article",
+              "name": "Qingdao Diptych",
+              "summary": "\u003cdiv class=\"diptych\"\u003e\n\n\n\n\u003cfigure\u003e\n\t\u003ca href=\"/photos/11207/\"\u003e\n\t\u003cimg src=\"/photos/11207/11207.avif\"\n         title=\"Moon over Qingdao\"\n         alt=\"Colour photo of a busy beach at sunset with large hotels adjacent and the moon in the sky above\"\n\t\t height=\"999\"\n\t\t width=\"999\"\n\t\t id=\"11207\" loading=\"lazy\"  fetchpriority=\"auto\" /\u003e \n    \u003c/a\u003e\n\t\u003c/figure\u003e\n\n\n\n\n\u003cfigure\u003e\n\t\u003ca href=\"/photos/11210/\"\u003e\n\t\u003cimg src=\"/photos/11210/11210.avif\"\n         title=\"Huiquan Cape\"\n         alt=\"Colour photo of a peninsula in the sea with a large hotel to the left and a small forested hill to the right, with multiple ships in the background, taken during blue hour\"\n\t\t height=\"1000\"\n\t\t width=\"1000\"\n\t\t id=\"11210\" loading=\"lazy\"  fetchpriority=\"auto\" /\u003e \n    \u003c/a\u003e\n\t\u003c/figure\u003e\n\n\u003c/div\u003e\n\u003cp\u003eThis is a pair of photos that I took from the top floor of a pagoda in\n小鱼山公园 (Xiaoyushan park, or Little Fish Hill\nPark) in Qingdao, China.\u003c/p\u003e",
+              "url": "https://samsm.ch/qingdao-diptych/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/portfolio-i/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2018-11-09T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/portfolio-i/",
+              "type": "Article",
+              "name": "Portfolio I",
+              "summary": "\u003cp\u003eThis series of photographs represents approximately a years worth of work,\nstarting in \u003ctime\u003eApril 2016\u003c/time\u003e when I got my Hasselblad. I chose to start\nthen not because I feel that the change of camera increased the quality of\nimages that I was producing but rather I wanted to keep the format consistent\nthroughout. Also it was about a year after I started shooting film, and when I\nstarted pursuing photography as a hobby.\u003c/p\u003e",
+              "url": "https://samsm.ch/portfolio-i/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          },{
+            "id": "https://samsm.ch/subways/#create",
+            "type": "Create",
+            "summary": "Sam Smith created an article",
+            "actor": "https://samsm.ch/actor.jsonld",
+            "to": "as:Public",
+            "published": "2018-09-07T00:00:00Z",
+            "object": {
+              "id": "https://samsm.ch/subways/",
+              "type": "Article",
+              "name": "Subways",
+              "summary": "\u003cp\u003eThis is the remnants of a failed attempt at a photo project looking at\nBirmingham\u0026rsquo;s pedestrian subways. I never really thought it was a very good idea\nfor a project but I decided to give it a go anyway because I wanted to try\nshooting a project and it was the best idea that I had, also the subways are the\nsort of thing that I usually like to shoot anyway.\u003c/p\u003e\n\n\n\n\u003cfigure\u003e\n\t\u003ca href=\"/photos/8405/\"\u003e\n\t\u003cimg src=\"/photos/8405/8405.avif\"\n         title=\"Subways 1\"\n         alt=\"TODO alt text\"\n\t\t height=\"999\"\n\t\t width=\"1000\"\n\t\t id=\"8405\" loading=\"lazy\"  fetchpriority=\"auto\" /\u003e \n    \u003c/a\u003e\u003cfigcaption\u003e\n            \u003cp\u003eSubways 1\u003c/p\u003e\n        \u003c/figcaption\u003e\n\t\u003c/figure\u003e",
+              "url": "https://samsm.ch/subways/",
+              "attributedTo": "https://samsm.ch/actor.jsonld",
+              "to": "as:Public"
+            }
+          }]
+    }
+  }
+}

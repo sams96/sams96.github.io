@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/fep/b06c"
+  ],
+  "id": "https://samsm.ch/photos/9304/",
+  "type": "Article",
+  "name": "Queen's Road East Underpass",
+  "summary": "",
+  "content": "",
+  "url": "https://samsm.ch/photos/9304/",
+  "published": "2018-06-22T00:00:00Z",
+  "attributedTo": "https://samsm.ch/actor.jsonld",
+  "to": ["https://www.w3.org/ns/activitystreams#Public"]
+}

@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/fep/b06c"
+  ],
+  "id": "https://samsm.ch/photos/16007/",
+  "type": "Article",
+  "name": "Huajiang Riverside Park",
+  "summary": "",
+  "content": "",
+  "url": "https://samsm.ch/photos/16007/",
+  "published": "2019-12-02T00:00:00Z",
+  "attributedTo": "https://samsm.ch/actor.jsonld",
+  "to": ["https://www.w3.org/ns/activitystreams#Public"]
+}

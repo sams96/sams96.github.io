@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/fep/b06c"
+  ],
+  "id": "https://samsm.ch/photos/9609/",
+  "type": "Article",
+  "name": "Scrap Collectors",
+  "summary": "\u003cp\u003eI took this photo in Ma Tau Kok, Hong Kong on the way to visit the Kowloon\nWalled City Park. I don\u0026rsquo;t really remember much about my intentions behind the\nphoto beyond \u003cem\u003ethis looks cool\u003c/em\u003e, although that is how I shoot most of the time.\nIn hindsight, I would\u0026rsquo;ve liked to have framed slightly to the right to show a\nbit more of the truck and a bit less of the side of the building but I think\noverall the framing is quite interesting. The depth of field puts a slight\nsoftness on the shop fronts which I think works well to make the two guys on the\ntrucks stand out a bit as well as giving the road, and that piece of litter, a\nmore noticeable softness in the foreground. The one guy on the right stands out\nreally well, framed perfectly in front of the white board, but I think the other\nguy, especially his head, blends into the background a bit.\u003c/p\u003e\n\u003cp\u003eI don\u0026rsquo;t actually know if they are scrap collectors, but that\u0026rsquo;s what it looks\nlike to me.\u003c/p\u003e",
+  "content": "\u003cp\u003eI took this photo in Ma Tau Kok, Hong Kong on the way to visit the Kowloon\nWalled City Park. I don\u0026rsquo;t really remember much about my intentions behind the\nphoto beyond \u003cem\u003ethis looks cool\u003c/em\u003e, although that is how I shoot most of the time.\nIn hindsight, I would\u0026rsquo;ve liked to have framed slightly to the right to show a\nbit more of the truck and a bit less of the side of the building but I think\noverall the framing is quite interesting. The depth of field puts a slight\nsoftness on the shop fronts which I think works well to make the two guys on the\ntrucks stand out a bit as well as giving the road, and that piece of litter, a\nmore noticeable softness in the foreground. The one guy on the right stands out\nreally well, framed perfectly in front of the white board, but I think the other\nguy, especially his head, blends into the background a bit.\u003c/p\u003e\n\u003cp\u003eI don\u0026rsquo;t actually know if they are scrap collectors, but that\u0026rsquo;s what it looks\nlike to me.\u003c/p\u003e\n",
+  "url": "https://samsm.ch/photos/9609/",
+  "published": "2018-06-25T00:00:00Z",
+  "attributedTo": "https://samsm.ch/actor.jsonld",
+  "to": ["https://www.w3.org/ns/activitystreams#Public"]
+}

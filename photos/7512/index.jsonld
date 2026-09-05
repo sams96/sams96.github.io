@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/fep/b06c"
+  ],
+  "id": "https://samsm.ch/photos/7512/",
+  "type": "Article",
+  "name": "Barranco de los Mocanes",
+  "summary": "",
+  "content": "",
+  "url": "https://samsm.ch/photos/7512/",
+  "published": "2018-03-13T00:00:00Z",
+  "attributedTo": "https://samsm.ch/actor.jsonld",
+  "to": ["https://www.w3.org/ns/activitystreams#Public"]
+}

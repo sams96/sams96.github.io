@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/fep/b06c"
+  ],
+  "id": "https://samsm.ch/this-site-is-moving/",
+  "type": "Article",
+  "name": "This site is moving",
+  "summary": "\u003cp\u003eI have finally bought a domain for this website and it is moving to \u003ca href=\"https://samsm.ch\"\u003esamsm.ch\u003c/a\u003e. It will continue to be available at \u003ca href=\"http://sams96.github.io\"\u003esams96.github.io\u003c/a\u003e for the time being but that should change at some point and will do so without warning.\u003c/p\u003e",
+  "content": "\u003cp\u003eI have finally bought a domain for this website and it is moving to \u003ca href=\"https://samsm.ch\"\u003esamsm.ch\u003c/a\u003e. It will continue to be available at \u003ca href=\"http://sams96.github.io\"\u003esams96.github.io\u003c/a\u003e for the time being but that should change at some point and will do so without warning.\u003c/p\u003e\n",
+  "url": "https://samsm.ch/this-site-is-moving/",
+  "published": "2026-01-14T00:00:00Z",
+  "attributedTo": "https://samsm.ch/actor.jsonld",
+  "to": ["https://www.w3.org/ns/activitystreams#Public"]
+}

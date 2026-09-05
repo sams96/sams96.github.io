@@ -16,6 +16,8 @@ params:
     programming
   mainSections:
     - post
+  activitypoll:
+    username: sam
 
 menu:
   main:
@@ -80,7 +82,6 @@ security:
 module:
   imports:
     - path: github.com/sams96/hugo-activitypub
-
 
 outputs:
   home:

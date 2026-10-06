@@ -1,0 +1,15 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/activitystreams",
+    "https://w3id.org/fep/b06c"
+  ],
+  "id": "https://samsm.ch/photos/12211/",
+  "type": "Article",
+  "name": "Campus Lights 23",
+  "summary": "",
+  "content": "",
+  "url": "https://samsm.ch/photos/12211/",
+  "published": "2018-11-29T00:00:00Z",
+  "attributedTo": "https://samsm.ch/actor.jsonld",
+  "to": ["https://www.w3.org/ns/activitystreams#Public"]
+}

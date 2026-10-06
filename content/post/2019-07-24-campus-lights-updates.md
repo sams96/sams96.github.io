@@ -25,24 +25,19 @@ version of the project and I am very happy with how it turned out.
 Also reddit user [ISUOnFilm](https://www.reddit.com/user/ISUOnFilm) created
 [their own version](https://www.reddit.com/r/AnalogCommunity/comments/axqfab/campus_lights_2_my_version_of_a_project_by/)
 of the project which I think turned out really well.
-{{< myfig src="https://live.staticflickr.com/65535/48366107342_cc00f4b651_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/X932W6" alt="Campus Lights 10"
+{{< photo img="11903" alt="Campus Lights 10"
 	caption="Replacement for Campus Lights 10 in Emulsive version" >}}
-{{< myfig src="https://live.staticflickr.com/65535/48365976091_d2be5d79f1_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/1r5U0L" alt="Campus Lights 24"
+{{< photo img="11607" alt="Campus Lights 24"
 	caption="Replacement for Campus Lights 24 in Emulsive version" >}}
 
 The following 3 photos are ones that I took for the project, didn't make it into
 the final cut but I still wanted to share.
 
-{{< myfig src="https://live.staticflickr.com/65535/48365982971_a562428381_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/x06ue6" alt="Campus Lights Out-take 1"
+{{< photo img="11701" alt="Campus Lights Out-take 1"
 	caption="Campus Lights Out-take 1" >}}
-{{< myfig src="https://live.staticflickr.com/65535/48365984271_ac0d5f5e18_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/034t81" alt="Campus Lights Out-take 2"
+{{< photo img="11909" alt="Campus Lights Out-take 2"
 	caption="Campus Lights Out-take 2" >}}
-{{< myfig src="https://live.staticflickr.com/65535/48366118977_03fa2d6a43_b.jpg"
-	link="https://www.flickr.com/gp/ss9679/278p73" alt="Campus Lights Out-take 3"
+{{< photo img="12209" alt="Campus Lights Out-take 3"
 	caption="Campus Lights Out-take 3" >}}
 
 Overall I am very pleased with how the project turned out and with how it was
